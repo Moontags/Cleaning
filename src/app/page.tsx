@@ -145,7 +145,7 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold" style={{ marginBottom: '1.5rem' }}>
             {t('home.hero.cta')}
           </h2>
-          <p className="text-xl text-gray-100 max-w-2xl mx-auto" style={{ marginBottom: '2rem' }}>
+          <p className="text-xl text-gray-100 mx-auto" style={{ marginBottom: '2rem' }}>
             {t('contact.subtitle')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center" style={{ gap: '1rem' }}>

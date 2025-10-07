@@ -101,10 +101,10 @@ export default function PricingPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#003580] to-[#0047ab] text-white section-padding">
         <div className="section-container text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
             {t('pricing.title')}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto mb-8">
+          <p className="text-xl  md:text-2xl text-gray-100 mx-auto mb-8">
             {t('pricing.subtitle')}
           </p>
           <div className="flex flex-wrap justify-center gap-8 text-sm">
