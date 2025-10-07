@@ -26,11 +26,11 @@ export default function OrderPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Tässä voisi lähettää datan backendiin
+   
     console.log('Form submitted:', formData);
     setIsSubmitted(true);
     
-    // Reset form after 3 seconds
+   
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
@@ -78,7 +78,7 @@ export default function OrderPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             {t('order.title')}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-100 mx-auto">
             {t('order.subtitle')}
           </p>
         </div>
