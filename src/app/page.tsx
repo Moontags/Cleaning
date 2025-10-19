@@ -24,9 +24,10 @@ export default function HomePage() {
       description: t('services.industrial.desc'),
     },
     {
-      icon: Sparkles,
-      title: t('services.window.title'),
-      description: t('services.window.desc'),
+      // PÄIVITYS: Ikkunanpesu korvattu Rakennusten loppusiivouksella
+      icon: Sparkles, // Ikonin voi pitää samana, koska se sopii siivouksen lopputulokseen
+      title: t('services.construction_end.title'),
+      description: t('services.construction_end.desc'),
     },
   ];
 
@@ -66,12 +67,6 @@ export default function HomePage() {
               {t('home.hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row justify-center" style={{ gap: '1rem' }}>
-              {/* <Link href="/order" className="btn-primary bg-white text-[#003580] hover:bg-gray-100">
-                {t('home.hero.cta')}
-              </Link>
-              <Link href="/contact" className="btn-secondary border-white text-white hover:bg-white/10">
-                {t('home.hero.contact')}
-              </Link> */}
             </div>
           </div>
         </div>
