@@ -25,8 +25,8 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: t('contact.address'),
-      value: 'Esimerkkikatu 1, 00100 Helsinki, Suomi',
-      link: 'https://maps.google.com/?q=Helsinki',
+      value: 'Petsamonkatu, 11120 Riihimäki, Suomi',
+      link: 'https://maps.google.com/?q=Riihimäki',
       color: 'bg-red-500',
     },
     {
@@ -187,13 +187,13 @@ export default function ContactPage() {
               <div className="bg-gradient-to-br from-gray-100 to-gray-200 h-[500px] flex items-center justify-center relative">
                 <div className="text-center z-10" style={{ padding: '2rem' }}>
                   <MapPin className="h-16 w-16 text-[#003580] mx-auto" style={{ marginBottom: '1rem' }} />
-                  <h3 className="text-xl font-bold text-gray-800" style={{ marginBottom: '0.5rem' }}>Helsinki</h3>
+                  <h3 className="text-xl font-bold text-gray-800" style={{ marginBottom: '0.5rem' }}>Riihimäki</h3>
                   <p className="text-gray-600" style={{ marginBottom: '1.5rem' }}>
-                    Esimerkkikatu 1<br />
-                    00100 Helsinki, Suomi
+                    Petsamonkatu<br />
+                    11120 Riihimäki, Suomi
                   </p>
                   <a 
-                    href="https://maps.google.com/?q=Helsinki"
+                    href="https://maps.google.com/?q=Riihimäki"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block bg-[#003580] hover:bg-[#002b66] text-white rounded-lg transition-colors font-semibold"

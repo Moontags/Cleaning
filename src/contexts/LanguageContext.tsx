@@ -24,7 +24,7 @@ const translations = {
     
     // Etusivu
     'home.hero.title': 'Ammattitaitoista siivousta yrityksille',
-    'home.hero.subtitle': 'Luotettava kumppanisi puhtauden ylläpidossa. Keskitymme yritysten, toimistojen ja yhteisöjen siivouspalveluihin.',
+    'home.hero.subtitle': 'Luotettava kumppanisi puhtauden ylläpidossa. Keskitymme yritysten, toimistojen ja yhteisöjen siivouspalveluihin Pääkaupunkiseudun ja Kanta-Hämeen alueella.',
     'home.hero.cta': 'Pyydä tarjous',
     'home.hero.contact': 'Ota yhteyttä',
     
@@ -90,6 +90,11 @@ const translations = {
     // Tietoja
     'about.title': 'Tietoja meistä',
     'about.subtitle': 'Luotettava kumppanisi puhtauden ylläpidossa',
+    'about.story.title': 'Tarinamme', // UUSI
+    'about.story.p1': 'Olemme pitkän kokemuksen siivousalla omaava yritys ja toimimme Kanta-Hämeen ja Pääkaupunkiseudun alueella.', // UUSI
+    'about.story.p2': 'Tiimimme koostuu koulutetuista ammattilaisista, jotka ovat sitoutuneet tarjoamaan korkeinta laatua jokaisessa työkohteessa. Käytämme ympäristöystävällisiä puhdistusaineita ja moderneja menetelmiä varmistaaksemme sekä tehokkuuden että turvallisuuden.', // UUSI
+    'about.story.p3': 'Uskomme pitkäaikaisiin asiakassuhteisiin ja räätälöimme palvelumme jokaisen asiakkaan yksilöllisten tarpeiden mukaan. Tavoitteemme on olla enemmän kuin pelkkä palveluntarjoaja – haluamme olla luotettava kumppanisi puhtauden ylläpidossa.', // UUSI
+    'about.values.title': 'Arvomme', // UUSI
   },
   en: {
     // Navigation
@@ -101,7 +106,7 @@ const translations = {
     
     // Homepage
     'home.hero.title': 'Professional Cleaning for Businesses',
-    'home.hero.subtitle': 'Your reliable partner in maintaining cleanliness. We focus on cleaning services for companies, offices, and organizations.',
+    'home.hero.subtitle': 'Your reliable partner in maintaining cleanliness. We focus on cleaning services for companies, offices, and organizations In the Helsinki metropolitan area and the Kanta-Häme region.',
     'home.hero.cta': 'Request Quote',
     'home.hero.contact': 'Contact Us',
     
@@ -167,6 +172,11 @@ const translations = {
     // About
     'about.title': 'About Us',
     'about.subtitle': 'Your reliable partner in maintaining cleanliness',
+    'about.story.title': 'Our Story', // UUSI
+    'about.story.p1': 'We are a company with long experience in the cleaning industry and operate in the Kanta-Häme and Helsinki metropolitan areas.', // UUSI
+    'about.story.p2': 'Our team consists of trained professionals committed to providing the highest quality in every workplace. We use eco-friendly cleaning agents and modern methods to ensure both efficiency and safety.', // UUSI
+    'about.story.p3': 'We believe in long-term customer relationships and tailor our services to the individual needs of each client. Our goal is to be more than just a service provider – we want to be your trusted partner in maintaining cleanliness.', // UUSI
+    'about.values.title': 'Our Values', // UUSI
   },
 };
 

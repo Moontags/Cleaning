@@ -89,8 +89,8 @@ export default function Footer() {
               <li className="flex items-start" style={{ gap: '0.5rem' }}>
                 <MapPin className="h-5 w-5 flex-shrink-0" style={{ marginTop: '0.125rem' }} />
                 <span className="text-gray-300">
-                  Esimerkkikatu 1<br />
-                  00100 Helsinki
+                  Petsamonkatu<br />
+                  11120 Riihimäki, Suomi
                 </span>
               </li>
             </ul>

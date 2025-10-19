@@ -48,23 +48,16 @@ export default function AboutPage() {
       {/* Story Section */}
       <section className="section-container section-padding">
         <div style={{ maxWidth: '56rem', margin: '0 auto' }}>
-          <h2 className="heading-2 text-center" style={{ marginBottom: '2rem' }}>Tarinamme</h2>
+          <h2 className="heading-2 text-center" style={{ marginBottom: '2rem' }}>{t('about.story.title')}</h2>
           <div className="text-body" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <p>
-              Siivousote on perustettu vuonna 2025 vastaamaan yritysten kasvavaan tarpeeseen 
-              luotettavista ja ammattitaitoisista siivouspalveluista. Olemme kasvaneet pienestä 
-              paikallisesta yrityksestä alueemme luotetuimmaksi yrityssiivoustoimijaksi.
+             {t('about.story.p1')}
             </p>
             <p>
-              Tiimimme koostuu koulutetuista ammattilaisista, jotka ovat sitoutuneet 
-              tarjoamaan korkeinta laatua jokaisessa työkohteessa. Käytämme ympäristöystävällisiä 
-              puhdistusaineita ja moderneja menetelmiä varmistaaksemme sekä tehokkuuden että 
-              turvallisuuden.
+              {t('about.story.p2')}
             </p>
             <p>
-              Uskomme pitkäaikaisiin asiakassuhteisiin ja räätälöimme palvelumme jokaisen 
-              asiakkaan yksilöllisten tarpeiden mukaan. Tavoitteemme on olla enemmän kuin 
-              pelkkä palveluntarjoaja – haluamme olla luotettava kumppanisi puhtauden ylläpidossa.
+              {t('about.story.p3')}
             </p>
           </div>
         </div>
@@ -73,7 +66,7 @@ export default function AboutPage() {
       {/* Values Section */}
       <section className="bg-gray-50 section-padding">
         <div className="section-container">
-          <h2 className="heading-2 text-center" style={{ marginBottom: '3rem' }}>Arvomme</h2>
+          <h2 className="heading-2 text-center" style={{ marginBottom: '3rem' }}>{t('about.values.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" style={{ gap: '2rem' }}>
             {values.map((value, index) => (
               <div 
@@ -96,27 +89,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      {/* <section className="section-container section-padding">
-        <div className="grid grid-cols-2 md:grid-cols-4 text-center" style={{ gap: '2rem' }}>
-          <div>
-            <div className="text-4xl md:text-5xl font-bold text-[#003580]" style={{ marginBottom: '0.5rem' }}>10+</div>
-            <div className="text-gray-600">Vuotta kokemusta</div>
-          </div>
-          <div>
-            <div className="text-4xl md:text-5xl font-bold text-[#003580]" style={{ marginBottom: '0.5rem' }}>200+</div>
-            <div className="text-gray-600">Tyytyväistä asiakasta</div>
-          </div>
-          <div>
-            <div className="text-4xl md:text-5xl font-bold text-[#003580]" style={{ marginBottom: '0.5rem' }}>50+</div>
-            <div className="text-gray-600">Ammattitaitoista työntekijää</div>
-          </div>
-          <div>
-            <div className="text-4xl md:text-5xl font-bold text-[#003580]" style={{ marginBottom: '0.5rem' }}>100%</div>
-            <div className="text-gray-600">Asiakastyytyväisyys</div>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 }
