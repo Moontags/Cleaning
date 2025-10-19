@@ -447,7 +447,7 @@ export default function PricingPage() {
           <h2 className="text-3xl md:text-4xl font-bold" style={{ marginBottom: '1.5rem' }}>
             Aloita puhtaampi työympäristö tänään
           </h2>
-          <p className="text-xl text-gray-100 mx-auto" style={{ marginBottom: '2rem', maxWidth: '42rem' }}>
+          <p className="text-xl text-gray-100 mx-auto" style={{ marginBottom: '2rem' }}>
             Pyydä ilmainen tarjous ja saat vastauksen 24 tunnin sisällä!
           </p>
           <Link href="/order" className="btn-primary bg-white text-[#003580] hover:bg-gray-100 inline-block">

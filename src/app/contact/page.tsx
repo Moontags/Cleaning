@@ -282,7 +282,7 @@ export default function ContactPage() {
           <h2 className="text-3xl md:text-4xl font-bold" style={{ marginBottom: '1.5rem' }}>
             Valmis aloittamaan yhteistyön?
           </h2>
-          <p className="text-xl text-gray-100 mx-auto" style={{ marginBottom: '2rem', maxWidth: '42rem' }}>
+          <p className="text-xl text-gray-100 mx-auto" style={{ marginBottom: '2rem',  }}>
             Ota yhteyttä jo tänään ja saat ilmaisen tarjouksen 24 tunnin sisällä!
           </p>
           <div className="flex flex-col sm:flex-row justify-center" style={{ gap: '1rem' }}>
