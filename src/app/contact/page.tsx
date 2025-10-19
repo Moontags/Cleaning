@@ -25,7 +25,8 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: t('contact.address'),
-      value: 'Petsamonkatu, 11120 Riihimäki, Suomi',
+     
+      value: `${t('contact.address.line1')}, ${t('contact.address.line2')}`, 
       link: 'https://maps.google.com/?q=Riihimäki',
       color: 'bg-red-500',
     },
@@ -91,7 +92,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: '3rem' }}>
           {/* Left Column - Contact Methods */}
           <div>
-            <h2 className="heading-2" style={{ marginBottom: '2rem' }}>Tavat ottaa yhteyttä</h2>
+            <h2 className="heading-2" style={{ marginBottom: '2rem' }}>{t('contact.methods.title')}</h2>
             
             {/* Quick Contact Cards */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
@@ -102,8 +103,8 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900" style={{ marginBottom: '0.5rem' }}>Soita meille</h3>
-                    <p className="text-gray-600" style={{ marginBottom: '0.75rem' }}>Nopein tapa saada vastaus kysymyksiisi</p>
+                    <h3 className="font-semibold text-gray-900" style={{ marginBottom: '0.5rem' }}>{t('contact.phone_card.title')}</h3>
+                    <p className="text-gray-600" style={{ marginBottom: '0.75rem' }}>{t('contact.phone_card.desc')}</p>
                     <a 
                       href="tel:+358401234567"
                       className="inline-block bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors font-semibold"
@@ -122,8 +123,8 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900" style={{ marginBottom: '0.5rem' }}>Lähetä sähköpostia</h3>
-                    <p className="text-gray-600" style={{ marginBottom: '0.75rem' }}>Vastaamme 24 tunnin sisällä</p>
+                    <h3 className="font-semibold text-gray-900" style={{ marginBottom: '0.5rem' }}>{t('contact.email_card.title')}</h3>
+                    <p className="text-gray-600" style={{ marginBottom: '0.75rem' }}>{t('contact.email_card.desc')}</p>
                     <a 
                       href="mailto:info@siivousote.fi"
                       className="inline-block bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors font-semibold"
@@ -142,14 +143,14 @@ export default function ContactPage() {
                     <MessageCircle className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900" style={{ marginBottom: '0.5rem' }}>Täytä tarjouslomake</h3>
-                    <p className="text-gray-600" style={{ marginBottom: '0.75rem' }}>Saat räätälöidyn tarjouksen tarpeisiisi</p>
+                    <h3 className="font-semibold text-gray-900" style={{ marginBottom: '0.5rem' }}>{t('contact.form_card.title')}</h3>
+                    <p className="text-gray-600" style={{ marginBottom: '0.75rem' }}>{t('contact.form_card.desc')}</p>
                     <Link 
                       href="/order"
                       className="inline-block bg-purple-500 hover:bg-purple-600 text-white rounded-lg transition-colors font-semibold"
                       style={{ padding: '0.5rem 1.5rem' }}
                     >
-                      Pyydä tarjous →
+                      {t('contact.form_card.button')}
                     </Link>
                   </div>
                 </div>
@@ -162,8 +163,8 @@ export default function ContactPage() {
                     <Youtube className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900" style={{ marginBottom: '0.5rem' }}>Katso videoitamme</h3>
-                    <p className="text-gray-600" style={{ marginBottom: '0.75rem' }}>Tutustu palveluihimme YouTube-kanavaltamme</p>
+                    <h3 className="font-semibold text-gray-900" style={{ marginBottom: '0.5rem' }}>{t('contact.youtube_card.title')}</h3>
+                    <p className="text-gray-600" style={{ marginBottom: '0.75rem' }}>{t('contact.youtube_card.desc')}</p>
                     <a 
                       href="https://youtube.com"
                       target="_blank"
@@ -171,7 +172,7 @@ export default function ContactPage() {
                       className="inline-block bg-red-500 hover:bg-red-600 text-white rounded-lg transition-colors font-semibold"
                       style={{ padding: '0.5rem 1.5rem' }}
                     >
-                      YouTube-kanava →
+                      {t('contact.youtube_card.button')}
                     </a>
                   </div>
                 </div>
@@ -181,16 +182,16 @@ export default function ContactPage() {
 
           {/* Right Column - Map */}
           <div>
-            <h2 className="heading-2" style={{ marginBottom: '2rem' }}>Toimistomme sijainti</h2>
+            <h2 className="heading-2" style={{ marginBottom: '2rem' }}>{t('contact.map.title')}</h2>
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               {/* Map Placeholder */}
               <div className="bg-gradient-to-br from-gray-100 to-gray-200 h-[500px] flex items-center justify-center relative">
                 <div className="text-center z-10" style={{ padding: '2rem' }}>
                   <MapPin className="h-16 w-16 text-[#003580] mx-auto" style={{ marginBottom: '1rem' }} />
-                  <h3 className="text-xl font-bold text-gray-800" style={{ marginBottom: '0.5rem' }}>Riihimäki</h3>
+                  <h3 className="text-xl font-bold text-gray-800" style={{ marginBottom: '0.5rem' }}>{t('contact.map.location')}</h3>
                   <p className="text-gray-600" style={{ marginBottom: '1.5rem' }}>
-                    Petsamonkatu<br />
-                    11120 Riihimäki, Suomi
+                    {t('contact.map.address1')}<br />
+                    {t('contact.map.address2')}
                   </p>
                   <a 
                     href="https://maps.google.com/?q=Riihimäki"
@@ -199,7 +200,7 @@ export default function ContactPage() {
                     className="inline-block bg-[#003580] hover:bg-[#002b66] text-white rounded-lg transition-colors font-semibold"
                     style={{ padding: '0.75rem 1.5rem' }}
                   >
-                    Avaa Google Mapsissa →
+                    {t('contact.map.button')}
                   </a>
                 </div>
                 {/* Decorative elements */}
@@ -211,11 +212,11 @@ export default function ContactPage() {
               <div className="bg-[#003580] text-white" style={{ padding: '1.5rem' }}>
                 <div className="flex items-center justify-between">
                   <div>
-                    <h4 className="font-semibold" style={{ marginBottom: '0.25rem' }}>Aukioloajat</h4>
-                    <p className="text-gray-200">Maanantai - Perjantai</p>
+                    <h4 className="font-semibold" style={{ marginBottom: '0.25rem' }}>{t('contact.map.hours_title')}</h4>
+                    <p className="text-gray-200">{t('contact.map.hours_period')}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-2xl font-bold">8:00 - 16:00</p>
+                    <p className="text-2xl font-bold">{t('contact.hours.value')}</p>
                   </div>
                 </div>
               </div>
@@ -227,49 +228,45 @@ export default function ContactPage() {
       {/* FAQ Section */}
       <section className="bg-gray-50 section-padding">
         <div className="section-container">
-          <h2 className="heading-2 text-center" style={{ marginBottom: '3rem' }}>Usein kysytyt kysymykset</h2>
+          <h2 className="heading-2 text-center" style={{ marginBottom: '3rem' }}>{t('contact.faq.title')}</h2>
           <div style={{ maxWidth: '48rem', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <details className="bg-white rounded-lg shadow-md group" style={{ padding: '1.5rem' }}>
               <summary className="font-semibold text-[#003580] cursor-pointer list-none flex items-center justify-between">
-                Kuinka nopeasti voitte aloittaa?
+                {t('contact.faq1.title')}
                 <span className="text-2xl group-open:rotate-45 transition-transform" style={{ marginLeft: '1rem' }}>+</span>
               </summary>
               <p className="text-gray-600" style={{ marginTop: '1rem' }}>
-                Voimme yleensä aloittaa palvelun 1-2 viikon sisällä yhteydenotosta. 
-                Kiireellisissä tapauksissa pystymme usein järjestämään nopeammankin aloituksen.
+                {t('contact.faq1.desc')}
               </p>
             </details>
 
             <details className="bg-white rounded-lg shadow-md group" style={{ padding: '1.5rem' }}>
               <summary className="font-semibold text-[#003580] cursor-pointer list-none flex items-center justify-between">
-                Onko henkilökuntanne vakuutettu?
+                {t('contact.faq2.title')}
                 <span className="text-2xl group-open:rotate-45 transition-transform" style={{ marginLeft: '1rem' }}>+</span>
               </summary>
               <p className="text-gray-600" style={{ marginTop: '1rem' }}>
-                Kyllä, kaikki työntekijämme ovat täysin vakuutettuja ja taustaltaan tarkastettuja. 
-                Voit luottaa siihen, että tilasi ovat turvallisissa käsissä.
+                {t('contact.faq2.desc')}
               </p>
             </details>
 
             <details className="bg-white rounded-lg shadow-md group" style={{ padding: '1.5rem' }}>
               <summary className="font-semibold text-[#003580] cursor-pointer list-none flex items-center justify-between">
-                Mitä siivousvälineitä käytätte?
+                {t('contact.faq3.title')}
                 <span className="text-2xl group-open:rotate-45 transition-transform" style={{ marginLeft: '1rem' }}>+</span>
               </summary>
               <p className="text-gray-600" style={{ marginTop: '1rem' }}>
-                Käytämme ympäristöystävällisiä ja tehokkaita puhdistusaineita sekä ammattitason 
-                siivousvälineitä. Kaikki välineet ja aineet sisältyvät palvelun hintaan.
+                {t('contact.faq3.desc')}
               </p>
             </details>
 
             <details className="bg-white rounded-lg shadow-md group" style={{ padding: '1.5rem' }}>
               <summary className="font-semibold text-[#003580] cursor-pointer list-none flex items-center justify-between">
-                Voitteko tulla myös viikonloppuisin?
+                {t('contact.faq4.title')}
                 <span className="text-2xl group-open:rotate-45 transition-transform" style={{ marginLeft: '1rem' }}>+</span>
               </summary>
               <p className="text-gray-600" style={{ marginTop: '1rem' }}>
-                Kyllä, tarjoamme myös viikonloppu- ja iltapalveluja erikseen sovittaessa. 
-                Räätälöimme aikataulut teidän tarpeittenne mukaan.
+                {t('contact.faq4.desc')}
               </p>
             </details>
           </div>
@@ -280,17 +277,17 @@ export default function ContactPage() {
       <section className="bg-[#003580] text-white section-padding">
         <div className="section-container text-center">
           <h2 className="text-3xl md:text-4xl font-bold" style={{ marginBottom: '1.5rem' }}>
-            Valmis aloittamaan yhteistyön?
+            {t('contact.cta.title')}
           </h2>
           <p className="text-xl text-gray-100 mx-auto" style={{ marginBottom: '2rem',  }}>
-            Ota yhteyttä jo tänään ja saat ilmaisen tarjouksen 24 tunnin sisällä!
+            {t('contact.cta.desc')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center" style={{ gap: '1rem' }}>
             <Link href="/order" className="btn-primary bg-white text-[#003580] hover:bg-gray-100">
               {t('nav.order')}
             </Link>
             <a href="tel:+358401234567" className="btn-secondary border-white text-white hover:bg-white/10">
-              Soita: +358 40 123 4567
+              {t('contact.cta.phone_number')}
             </a>
           </div>
         </div>
