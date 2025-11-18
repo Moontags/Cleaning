@@ -218,18 +218,35 @@ const translations = {
     'order.form.service.office': 'Toimistosiivoukset',
     'order.form.service.business': 'Liiketilojen siivous',
     'order.form.service.industrial': 'Teollisuussiivoukset',
+    'order.form.service.home_cleaning': 'Kotisiivous', 
     'order.form.service.construction_end': 'Rakennusten loppusiivous', 
     'order.form.service.other': 'Muu palvelu',
     'order.form.message': 'Lisätietoja',
     'order.form.submit': 'Lähetä tarjouspyyntö',
+    'order.form.required_fields': '* Pakolliset kentät',
+
+    // UUSI: Paikkamerkkien käännökset
+    'order.form.placeholder.company': 'Yrityksen nimi',
+    'order.form.placeholder.contact': 'Nimi',
+    'order.form.placeholder.email': 'sähköposti@esimerkki.fi', 
+    'order.form.placeholder.phone': '+358 40 123 4567',
+    'order.form.placeholder.service_select': 'Valitse palvelu',
+    'order.form.placeholder.message': 'Kerro meille tarkemmin tarpeistasi...',
     
-    // Tietoja MEISTÄ - PÄIVITETTY
+    // UUSI: Jatkotoimenpiteet (Mitä tapahtuu seuraavaksi?)
+    'order.next.title': 'Mitä tapahtuu seuraavaksi?',
+    'order.next.step1': 'Käsittelemme tarjouspyyntösi 24 tunnin sisällä',
+    'order.next.step2': 'Otamme sinuun yhteyttä ja tarvittaessa sovimme tapaamisen',
+    'order.next.step3': 'Lähetämme räätälöidyn tarjouksen yrityksellesi',
+    'order.next.step4': 'Aloitamme palvelun sopimuksen mukaisesti', 
+
+    // Tietoja MEISTÄ
     'about.title': 'Tietoja meistä',
     'about.subtitle': 'Luotettava kumppunisi puhtauden ylläpidossa',
     'about.story.title': 'Tarinamme', 
     'about.story.p1': 'Olemme uusi kotimainen siivousyritys, jonka tiimillä on jo kuitenkin pitkä ja monipuolinen kokemus siivousalalta.',
     'about.story.p2': 'Vaikka yrityksemme on nuori, tiimimme koostuu koulutetuista ammattilaisista, jotka ovat vuosien varrella hankkineet laajan osaamisen ja ovat sitoutuneet tarjoamaan korkeinta laatua jokaisessa työkohteessa. Käytämme ympäristöystävällisiä puhdistusaineita ja moderneja menetelmiä varmistaaksemme sekä tehokkuuden että turvallisuuden.',
-    'about.story.p3': 'Uskomme pitkäaikaisiin asiakassuhteisiin ja räätälöimme palvelumme jokaisen asiakkaan yksilöllisten tarpeiden mukaan. Tavoitteemme on olla luotettava kumppanisi puhtauden ylläpidossa.',
+    'about.story.p3': 'Uskomme pitkäaikaisiin asiakassuhteisiin ja räätälöimme palvelumme jokaisen asiakkaan yksilöllisten tarpeiden mukaan. Tavoitteemme on olla luotettava kumppunisi puhtauden ylläpidossa.',
     'about.values.title': 'Arvomme', 
   },
   en: {
@@ -327,7 +344,7 @@ const translations = {
     'pricing.quote': 'Quote',
     'pricing.popular': 'MOST POPULAR',
     'pricing.starting_from': 'Starting from',
-    'pricing.unit_hourly': '€/hour', // NEW ADDITION
+    'pricing.unit_hourly': '€/hour', 
     
     // Pricing Cards
     'pricing.office.desc': 'Regular cleaning for offices',
@@ -437,10 +454,27 @@ const translations = {
     'order.form.service.office': 'Office Cleaning',
     'order.form.service.business': 'Commercial Cleaning',
     'order.form.service.industrial': 'Industrial Cleaning',
-    'order.form.service.construction_end': 'Post-Construction Cleaning', // NEW ADDED
+    'order.form.service.home_cleaning': 'Home Cleaning', 
+    'order.form.service.construction_end': 'Post-Construction Cleaning', 
     'order.form.service.other': 'Other Service',
     'order.form.message': 'Additional Information',
     'order.form.submit': 'Send Quote Request',
+    'order.form.required_fields': '* Required fields',
+
+    // UUSI: Paikkamerkkien käännökset
+    'order.form.placeholder.company': 'Company Name',
+    'order.form.placeholder.contact': 'Name',
+    'order.form.placeholder.email': 'email@example.com',
+    'order.form.placeholder.phone': '+358 40 123 4567',
+    'order.form.placeholder.service_select': 'Select Service',
+    'order.form.placeholder.message': 'Tell us more about your needs...',
+
+    // UUSI: Jatkotoimenpiteet (What happens next?)
+    'order.next.title': 'What happens next?',
+    'order.next.step1': 'We will process your quote request within 24 hours',
+    'order.next.step2': 'We will contact you and arrange a meeting if necessary',
+    'order.next.step3': 'We will send a tailored quote for your company',
+    'order.next.step4': 'We start the service as agreed in the contract',
     
     // About - UPDATED
     'about.title': 'About Us',

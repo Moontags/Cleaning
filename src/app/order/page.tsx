@@ -48,7 +48,7 @@ export default function OrderPage() {
     { value: 'office', label: t('order.form.service.office') },
     { value: 'business', label: t('order.form.service.business') },
     { value: 'industrial', label: t('order.form.service.industrial') },
-    { value: 'window', label: t('order.form.service.window') },
+    { value: 'home_cleaning', label: t('order.form.service.home_cleaning') }, 
     { value: 'other', label: t('order.form.service.other') },
   ];
 
@@ -102,7 +102,8 @@ export default function OrderPage() {
                 required
                 className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#003580] focus:border-transparent outline-none transition"
                 style={{ padding: '0.75rem 1rem' }}
-                placeholder="Yrityksen nimi"
+                // KORJAUS: Paikkamerkki käännettäväksi
+                placeholder={t('order.form.placeholder.company')}
               />
             </div>
 
@@ -120,7 +121,8 @@ export default function OrderPage() {
                 required
                 className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#003580] focus:border-transparent outline-none transition"
                 style={{ padding: '0.75rem 1rem' }}
-                placeholder="Nimi"
+                // KORJAUS: Paikkamerkki käännettäväksi
+                placeholder={t('order.form.placeholder.contact')}
               />
             </div>
 
@@ -139,7 +141,8 @@ export default function OrderPage() {
                   required
                   className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#003580] focus:border-transparent outline-none transition"
                   style={{ padding: '0.75rem 1rem' }}
-                  placeholder="email@example.com"
+                  // KORJAUS: Paikkamerkki käännettäväksi
+                  placeholder={t('order.form.placeholder.email')}
                 />
               </div>
 
@@ -156,7 +159,8 @@ export default function OrderPage() {
                   required
                   className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#003580] focus:border-transparent outline-none transition"
                   style={{ padding: '0.75rem 1rem' }}
-                  placeholder="+358 40 123 4567"
+                  // KORJAUS: Paikkamerkki käännettäväksi
+                  placeholder={t('order.form.placeholder.phone')}
                 />
               </div>
             </div>
@@ -175,7 +179,8 @@ export default function OrderPage() {
                 className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#003580] focus:border-transparent outline-none transition bg-white"
                 style={{ padding: '0.75rem 1rem' }}
               >
-                <option value="">Valitse palvelu</option>
+                {/* KORJAUS: Oletusvalinnan teksti käännettäväksi */}
+                <option value="">{t('order.form.placeholder.service_select')}</option>
                 {services.map((service) => (
                   <option key={service.value} value={service.value}>
                     {service.label}
@@ -197,7 +202,8 @@ export default function OrderPage() {
                 rows={6}
                 className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#003580] focus:border-transparent outline-none transition resize-none"
                 style={{ padding: '0.75rem 1rem' }}
-                placeholder="Kerro meille tarkemmin tarpeistasi..."
+                // KORJAUS: Paikkamerkki käännettäväksi
+                placeholder={t('order.form.placeholder.message')}
               />
             </div>
 
@@ -211,30 +217,32 @@ export default function OrderPage() {
               <span>{t('order.form.submit')}</span>
             </button>
 
-            <p className="text-sm text-gray-500 text-center" style={{ marginTop: '1rem' }}>
-              * Pakolliset kentät
+           <p className="text-sm text-gray-500 text-center" style={{ marginTop: '1rem' }}>
+              {t('order.form.required_fields')} 
             </p>
           </form>
 
-          {/* Additional Info */}
+          {/* Additional Info - KORJATTU KÄYTTÄMÄÄN KÄÄNNÖSAVAIMIA */}
           <div className="bg-blue-50 border border-blue-200 rounded-xl" style={{ marginTop: '2rem', padding: '1.5rem' }}>
-            <h3 className="font-semibold text-[#003580]" style={{ marginBottom: '0.75rem' }}>Mitä tapahtuu seuraavaksi?</h3>
+            <h3 className="font-semibold text-[#003580]" style={{ marginBottom: '0.75rem' }}>
+              {t('order.next.title')}
+            </h3>
             <ol style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }} className="text-gray-700">
               <li className="flex items-start">
                 <span className="font-semibold text-[#003580]" style={{ marginRight: '0.5rem' }}>1.</span>
-                <span>Käsittelemme tarjouspyyntösi 24 tunnin sisällä</span>
+                <span>{t('order.next.step1')}</span>
               </li>
               <li className="flex items-start">
                 <span className="font-semibold text-[#003580]" style={{ marginRight: '0.5rem' }}>2.</span>
-                <span>Otamme sinuun yhteyttä ja tarvittaessa sovimme tapaamisen</span>
+                <span>{t('order.next.step2')}</span>
               </li>
               <li className="flex items-start">
                 <span className="font-semibold text-[#003580]" style={{ marginRight: '0.5rem' }}>3.</span>
-                <span>Lähetämme räätälöidyn tarjouksen yrityksellesi</span>
+                <span>{t('order.next.step3')}</span>
               </li>
               <li className="flex items-start">
                 <span className="font-semibold text-[#003580]" style={{ marginRight: '0.5rem' }}>4.</span>
-                <span>Aloitamme palvelun sopimuksen mukaisesti</span>
+                <span>{t('order.next.step4')}</span>
               </li>
             </ol>
           </div>
