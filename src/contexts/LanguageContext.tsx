@@ -223,13 +223,13 @@ const translations = {
     'order.form.message': 'Lisätietoja',
     'order.form.submit': 'Lähetä tarjouspyyntö',
     
-    // Tietoja
+    // Tietoja MEISTÄ - PÄIVITETTY
     'about.title': 'Tietoja meistä',
     'about.subtitle': 'Luotettava kumppunisi puhtauden ylläpidossa',
     'about.story.title': 'Tarinamme', 
-    'about.story.p1': 'Olemme kotimainen pitkän kokemuksen siivousalla omaava yritys ja toimimme Kanta-Hämeen ja Pääkaupunkiseudun alueella.',
-    'about.story.p2': 'Tiimimme koostuu koulutetuista ammattilaisista, jotka ovat sitoutuneet tarjoamaan korkeinta laatua jokaisessa työkohteessa. Käytämme ympäristöystävällisiä puhdistusaineita ja moderneja menetelmiä varmistaaksemme sekä tehokkuuden että turvallisuuden.',
-    'about.story.p3': 'Uskomme pitkäaikaisiin asiakassuhteisiin ja räätälöimme palvelumme jokaisen asiakkaan yksilöllisten tarpeiden mukaan. Tavoitteemme on olla enemmän kuin pelkkä palveluntarjoaja – haluamme olla luotettava kumppunisi puhtauden ylläpidossa.',
+    'about.story.p1': 'Olemme uusi kotimainen siivousyritys, jonka tiimillä on jo kuitenkin pitkä ja monipuolinen kokemus siivousalalta.',
+    'about.story.p2': 'Vaikka yrityksemme on nuori, tiimimme koostuu koulutetuista ammattilaisista, jotka ovat vuosien varrella hankkineet laajan osaamisen ja ovat sitoutuneet tarjoamaan korkeinta laatua jokaisessa työkohteessa. Käytämme ympäristöystävällisiä puhdistusaineita ja moderneja menetelmiä varmistaaksemme sekä tehokkuuden että turvallisuuden.',
+    'about.story.p3': 'Uskomme pitkäaikaisiin asiakassuhteisiin ja räätälöimme palvelumme jokaisen asiakkaan yksilöllisten tarpeiden mukaan. Tavoitteemme on olla luotettava kumppanisi puhtauden ylläpidossa.',
     'about.values.title': 'Arvomme', 
   },
   en: {
@@ -442,12 +442,12 @@ const translations = {
     'order.form.message': 'Additional Information',
     'order.form.submit': 'Send Quote Request',
     
-    // About
+    // About - UPDATED
     'about.title': 'About Us',
     'about.subtitle': 'Your reliable partner in maintaining cleanliness',
     'about.story.title': 'Our Story', 
-    'about.story.p1': 'We are Domestic a company with long experience in the cleaning industry and operate in the Kanta-Häme and Helsinki metropolitan areas.', 
-    'about.story.p2': 'Our team consists of trained professionals committed to providing the highest quality in every workplace. We use eco-friendly cleaning agents and modern methods to ensure both efficiency and safety.',
+    'about.story.p1': 'We are a new domestic cleaning company with a team that has long and diverse experience in the cleaning industry.', 
+    'about.story.p2': 'Although our company is young, our team consists of trained professionals who have gained extensive expertise over the years and are committed to providing the highest quality in every workplace. We use eco-friendly cleaning agents and modern methods to ensure both efficiency and safety.',
     'about.story.p3': 'We believe in long-term customer relationships and tailor our services to the individual needs of each client. Our goal is to be more than just a service provider – we want to be your trusted partner in maintaining cleanliness.', 
     'about.values.title': 'Our Values',
   },
