@@ -21,8 +21,8 @@ export default function PricingPage() {
         t('pricing.office.feature6'),
         t('pricing.office.feature7'),
       ],
-      priceFrom: '25',
-      priceUnit: t('pricing.unit_hourly'), // Käännettävä yksikkö
+      priceFrom: '38',
+      priceUnit: t('pricing.unit_hourly'),
       popular: false,
     },
     {
@@ -38,9 +38,9 @@ export default function PricingPage() {
         t('pricing.business.feature6'),
         t('pricing.business.feature7'),
       ],
-      priceFrom: '30',
-      priceUnit: t('pricing.unit_hourly'), // Käännettävä yksikkö
-      popular: true,
+      priceFrom: '42',
+      priceUnit: t('pricing.unit_hourly'),
+      popular: false,
     },
     {
       icon: Factory,
@@ -55,7 +55,7 @@ export default function PricingPage() {
         t('pricing.industrial.feature6'),
         t('pricing.industrial.feature7'),
       ],
-      priceFrom: t('pricing.quote'), // Käännetty "Tarjous"
+      priceFrom: t('pricing.quote'),
       priceUnit: '',
       popular: false,
     },
@@ -72,7 +72,7 @@ export default function PricingPage() {
         t('pricing.construction.feature6'),
         t('pricing.construction.feature7'),
       ],
-      priceFrom: t('pricing.quote'), // Käännetty "Tarjous"
+      priceFrom: t('pricing.quote'),
       priceUnit: '',
       popular: false,
     },
@@ -118,21 +118,12 @@ export default function PricingPage() {
           {pricingPlans.map((plan, index) => (
             <div 
               key={index}
-              className={`bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col ${
-                plan.popular ? 'ring-4 ring-[#003580] transform lg:scale-105' : ''
-              }`}
+              className={`bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col`}
             >
-              {plan.popular && (
-                <div className="bg-gradient-to-r from-[#003580] to-[#0047ab] text-white text-center font-bold flex items-center justify-center" style={{ padding: '0.75rem', fontSize: '0.875rem', gap: '0.5rem' }}>
-                  <Star className="h-4 w-4 fill-current" />
-                  <span>{t('pricing.popular')}</span>
-                  <Star className="h-4 w-4 fill-current" />
-                </div>
-              )}
               
               <div className="flex-grow flex flex-col" style={{ padding: '1.5rem' }}>
-                <div className={`${plan.popular ? 'bg-gradient-to-br from-[#003580] to-[#0047ab]' : 'bg-gray-100'} w-16 h-16 rounded-xl flex items-center justify-center`} style={{ marginBottom: '1rem' }}>
-                  <plan.icon className={`h-8 w-8 ${plan.popular ? 'text-white' : 'text-[#003580]'}`} />
+                <div className={`bg-gray-100 w-16 h-16 rounded-xl flex items-center justify-center`} style={{ marginBottom: '1rem' }}>
+                  <plan.icon className={`h-8 w-8 text-[#003580]`} />
                 </div>
                 
                 <h3 className="text-2xl font-bold text-[#003580]" style={{ marginBottom: '0.5rem' }}>
@@ -168,11 +159,7 @@ export default function PricingPage() {
                 
                 <Link 
                   href="/order"
-                  className={`block text-center rounded-lg font-semibold transition-all ${
-                    plan.popular 
-                      ? 'bg-gradient-to-r from-[#003580] to-[#0047ab] text-white hover:shadow-lg transform hover:-translate-y-0.5' 
-                      : 'bg-gray-100 text-[#003580] hover:bg-gray-200'
-                  }`}
+                  className={`block text-center rounded-lg font-semibold transition-all bg-gray-100 text-[#003580] hover:bg-gray-200`}
                   style={{ padding: '0.75rem 1.5rem' }}
                 >
                   {t('home.hero.cta')}
