@@ -24,7 +24,7 @@ const translations = {
     
     // Etusivu
     'home.hero.title': 'Ammattitaitoista siivousta yrityksille',
-    'home.hero.subtitle': 'Luotettava kumppanisi puhtauden ylläpidossa. Keskitymme yritysten, toimistojen ja yhteisöjen siivouspalveluihin Pääkaupunkiseudun ja Kanta-Hämeen alueella.',
+    'home.hero.subtitle': 'Luotettava kumppanisi puhtauden ylläpidossa. Keskitymme yritysten, yhteisöjen, sekä kotien siivouspalveluihin Pääkaupunkiseudun ja Kanta-Hämeen alueella.',
     'home.hero.cta': 'Pyydä tarjous',
     'home.hero.contact': 'Ota yhteyttä',
     
@@ -259,7 +259,7 @@ const translations = {
     
     // Homepage
     'home.hero.title': 'Professional Cleaning for Businesses',
-    'home.hero.subtitle': 'Your reliable partner in maintaining cleanliness. We focus on cleaning services for companies, offices, and organizations In the Helsinki metropolitan area and the Kanta-Häme region.',
+    'home.hero.subtitle': 'Your reliable partner in maintaining cleanliness. We focus on cleaning services for companies, offices, organizations and home In the Helsinki metropolitan area and the Kanta-Häme region.',
     'home.hero.cta': 'Request Quote',
     'home.hero.contact': 'Contact Us',
     
