@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Building2, Store, Factory, Sparkles, CheckCircle, Users, Leaf, Clock, Home, Construction } from 'lucide-react'; 
+import { Building2, Store, Factory, CheckCircle, Users, Leaf, Clock, Home, Construction } from 'lucide-react'; 
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function HomePage() {
@@ -61,7 +61,7 @@ export default function HomePage() {
   return (
     <div>
       {/* Hero Section - Moderni gradient tausta */}
-      <section className="relative bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#0056d6] text-white overflow-hidden" style={{ minHeight: '600px' }}>
+      <section className="relative bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#0056d6] text-white overflow-hidden">
         {/* Dekoratiiviset tausta-elementit */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
@@ -71,10 +71,10 @@ export default function HomePage() {
         <div className="section-container section-padding relative z-10">
           <div className="text-center" style={{ maxWidth: '64rem', margin: '0 auto' }}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold animate-fade-in" style={{ marginBottom: '1.5rem' }}>
-              {t('home.hero.title')}
+              {t('home.hero.title')} {/* UUSI OTSIKKO */}
             </h1>
             <p className="text-xl md:text-2xl text-blue-50 leading-relaxed" style={{ marginBottom: '2rem' }}>
-              {t('home.hero.subtitle')}
+              {t('home.hero.subtitle')} {/* UUSI ALAOTSIKKO */}
             </p>
             <div className="flex flex-col sm:flex-row justify-center" style={{ gap: '1rem' }}>
             </div>
@@ -89,7 +89,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Section - Glassmorphism kortit */}
+      {/* Services Section - Glassmorphism kortit - MARGIN KORJATTU */}
       <section className="section-container section-padding" style={{ marginTop: '-3rem' }}>
         <div className="text-center" style={{ marginBottom: '4rem' }}>
           <h2 className="heading-2 text-[#003580]">{t('services.title')}</h2>

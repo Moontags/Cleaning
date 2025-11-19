@@ -24,7 +24,7 @@ const translations = {
     
     // Etusivu
     'home.hero.title': 'Ammattitaitoista siivousta yrityksille',
-    'home.hero.subtitle': 'Luotettava kumppanisi puhtauden ylläpidossa. Keskitymme yritysten, yhteisöjen, sekä kotien siivouspalveluihin Pääkaupunkiseudun ja Kanta-Hämeen alueella.',
+    'home.hero.subtitle': 'Tarjoamme siivouspalveluita Pääkaupunkiseudun ja Kanta-Hämeen alueella.',
     'home.hero.cta': 'Pyydä tarjous',
     'home.hero.contact': 'Ota yhteyttä',
     
@@ -61,7 +61,7 @@ const translations = {
     
     // Yhteystiedot 
     'contact.title': 'Ota yhteyttä',
-    'contact.subtitle': 'Olemme valmiina palvelemaan sinua. Ota yhteyttä, niin keskustellaan tarpeistasi.',
+    'contact.subtitle': 'Olemme valmiina palvelemaan sinua.',
     'contact.info.title': 'Yhteystiedot',
     'contact.email': 'Sähköposti',
     'contact.phone': 'Puhelin',
@@ -244,7 +244,7 @@ const translations = {
 
     // Tietoja MEISTÄ
     'about.title': 'Tietoja meistä',
-    'about.subtitle': 'Luotettava kumppunisi puhtauden ylläpidossa',
+    'about.subtitle': 'Luotettava kumppanisi puhtauden ylläpidossa',
     'about.story.title': 'Tarinamme', 
     'about.story.p1': 'Olemme uusi kotimainen siivousyritys, jonka tiimillä on jo pitkä ja monipuolinen kokemus siivousalalta.',
     'about.story.p2': 'Vaikka yrityksemme on nuori, tiimimme koostuu koulutetuista ammattilaisista, jotka ovat vuosien varrella hankkineet laajan osaamisen ja ovat sitoutuneet tarjoamaan korkeinta laatua jokaisessa työkohteessa. Käytämme ympäristöystävällisiä puhdistusaineita ja moderneja menetelmiä varmistaaksemme sekä tehokkuuden että turvallisuuden.',
@@ -261,7 +261,7 @@ const translations = {
     
     // Homepage
     'home.hero.title': 'Professional Cleaning for Businesses',
-    'home.hero.subtitle': 'Your reliable partner in maintaining cleanliness. We focus on cleaning services for companies, offices, organizations and home In the Helsinki metropolitan area and the Kanta-Häme region.',
+    'home.hero.subtitle': 'We offer cleaning services in the Helsinki metropolitan area and the Kanta-Häme region',
     'home.hero.cta': 'Request Quote',
     'home.hero.contact': 'Contact Us',
     
