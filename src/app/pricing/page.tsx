@@ -98,48 +98,61 @@ export default function PricingPage() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#003580] to-[#0047ab] text-white section-padding">
-        <div className="section-container text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+      {/* Hero Section - Moderni gradient */}
+      <section className="relative bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#0056d6] text-white section-padding overflow-hidden">
+        {/* Dekoratiiviset tausta-elementit */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="section-container text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold animate-fade-in" style={{ marginBottom: '1.5rem' }}>
             {t('pricing.title')}
           </h1>
-          <p className="text-xl  md:text-2xl text-gray-100 mx-auto">
+          <p className="text-xl md:text-2xl text-blue-50 mx-auto leading-relaxed">
             {t('pricing.subtitle')}
           </p>
-      
+        </div>
+
+        {/* Aalto-efekti */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+            <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 80C1200 80 1320 70 1380 65L1440 60V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+          </svg>
         </div>
       </section>
 
-      {/* Pricing Cards */}
-      <section className="section-container section-padding">
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" style={{ gap: '2rem' }}> 
+      {/* Pricing Cards - Glassmorphism */}
+      <section className="section-container section-padding" style={{ marginTop: '-3rem' }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" style={{ gap: '1.5rem' }}> 
           {pricingPlans.map((plan, index) => (
             <div 
               key={index}
-              className={`bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col`}
+              className="group relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col border border-gray-100 transform hover:-translate-y-2"
             >
+              {/* Hover gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#003580]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
-              <div className="flex-grow flex flex-col" style={{ padding: '1.5rem' }}>
-                <div className={`bg-gray-100 w-16 h-16 rounded-xl flex items-center justify-center`} style={{ marginBottom: '1rem' }}>
-                  <plan.icon className={`h-8 w-8 text-[#003580]`} />
+              <div className="flex-grow flex flex-col relative z-10" style={{ padding: '2rem' }}>
+                <div className="bg-gradient-to-br from-[#003580] to-[#0047ab] w-16 h-16 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg" style={{ marginBottom: '1.25rem' }}>
+                  <plan.icon className="h-8 w-8 text-white" />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-[#003580]" style={{ marginBottom: '0.5rem' }}>
+                <h3 className="text-2xl font-bold text-[#003580] group-hover:text-[#0047ab] transition-colors" style={{ marginBottom: '0.75rem' }}>
                   {plan.name}
                 </h3>
                 
-                <p className="text-gray-600" style={{ marginBottom: '1.5rem', minHeight: '3rem' }}>
+                <p className="text-gray-600 leading-relaxed" style={{ marginBottom: '1.5rem', minHeight: '3rem' }}>
                   {plan.description}
                 </p>
                 
                 <div style={{ marginBottom: '1.5rem' }}>
                   <div className="flex items-baseline">
-                    <span className="text-4xl md:text-5xl font-bold text-[#003580]">
+                    <span className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#003580] to-[#0047ab] bg-clip-text text-transparent">
                       {plan.priceFrom}
                     </span>
-                    <span className="text-gray-600" style={{ marginLeft: '0.5rem' }}>
+                    <span className="text-gray-600 font-medium" style={{ marginLeft: '0.5rem' }}>
                       {plan.priceUnit}
                     </span>
                   </div>
@@ -151,7 +164,9 @@ export default function PricingPage() {
                 <ul className="flex-grow" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '1.5rem' }}>
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <Check className="h-5 w-5 text-green-500 flex-shrink-0" style={{ marginRight: '0.75rem', marginTop: '0.125rem' }} />
+                      <div className="bg-green-50 rounded-full p-1 flex-shrink-0" style={{ marginRight: '0.75rem' }}>
+                        <Check className="h-4 w-4 text-green-600" />
+                      </div>
                       <span className="text-gray-700 text-sm leading-tight">{feature}</span>
                     </li>
                   ))}
@@ -159,261 +174,184 @@ export default function PricingPage() {
                 
                 <Link 
                   href="/order"
-                  className={`block text-center rounded-lg font-semibold transition-all bg-gray-100 text-[#003580] hover:bg-gray-200`}
-                  style={{ padding: '0.75rem 1.5rem' }}
+                  className="block text-center rounded-xl font-semibold transition-all bg-gradient-to-r from-[#003580] to-[#0047ab] text-white hover:shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-0.5"
+                  style={{ padding: '0.875rem 1.5rem' }}
                 >
                   {t('home.hero.cta')}
                 </Link>
               </div>
+
+              {/* Dekoratiivinen elementti */}
+              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-[#003580]/5 rounded-full blur-2xl group-hover:bg-[#003580]/10 transition-colors"></div>
             </div>
           ))}
         </div>
 
         {/* Info text */}
         <div style={{ marginTop: '3rem', textAlign: 'center' }}>
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-lg">
             {t('pricing.info_text')}
           </p>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="bg-gray-50 section-padding">
+      {/* Benefits Section - Modernit kortit */}
+      <section className="relative bg-gradient-to-b from-gray-50 to-white section-padding">
         <div className="section-container">
-          <h2 className="heading-2 text-center" style={{ marginBottom: '3rem' }}>{t('pricing.benefits.title')}</h2>
+          <h2 className="heading-2 text-center text-[#003580]" style={{ marginBottom: '3rem' }}>{t('pricing.benefits.title')}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: '2rem', marginBottom: '3rem' }}>
             {benefits.map((benefit, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow text-center"
-                style={{ padding: '2rem' }}
+                className="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 text-center border border-gray-100 transform hover:-translate-y-2"
+                style={{ padding: '2.5rem' }}
               >
-                <div className="bg-[#003580] w-16 h-16 rounded-full flex items-center justify-center mx-auto" style={{ marginBottom: '1rem' }}>
-                  <benefit.icon className="h-8 w-8 text-white" />
+                <div className="bg-gradient-to-br from-[#003580] to-[#0047ab] w-20 h-20 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300" style={{ marginBottom: '1.25rem' }}>
+                  <benefit.icon className="h-10 w-10 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-[#003580]" style={{ marginBottom: '0.75rem' }}>
+                <h3 className="text-xl font-bold text-[#003580] group-hover:text-[#0047ab] transition-colors" style={{ marginBottom: '0.75rem' }}>
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
             ))}
           </div>
 
-          {/* Detailed inclusions */}
-          <div className="bg-white rounded-xl shadow-lg" style={{ maxWidth: '64rem', margin: '0 auto', padding: '2rem' }}>
-            <h3 className="text-2xl font-bold text-[#003580] text-center" style={{ marginBottom: '1.5rem' }}>
+          {/* Detailed inclusions - Modernisoidtu */}
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100" style={{ maxWidth: '64rem', margin: '0 auto', padding: '2.5rem' }}>
+            <h3 className="text-2xl font-bold text-[#003580] text-center" style={{ marginBottom: '2rem' }}>
               {t('pricing.inclusions.title')}
             </h3>
             <div className="grid md:grid-cols-2" style={{ gap: '1.5rem' }}>
-              <div className="flex items-start" style={{ gap: '0.75rem' }}>
-                <div className="bg-green-100 rounded-full flex-shrink-0" style={{ padding: '0.25rem' }}>
-                  <Check className="h-5 w-5 text-green-600" />
+              {[1, 2, 3, 4, 5, 6].map((num) => (
+                <div key={num} className="flex items-start group" style={{ gap: '1rem' }}>
+                  <div className="bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex-shrink-0 p-2 shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <Check className="h-5 w-5 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900" style={{ marginBottom: '0.25rem' }}>{t(`pricing.inclusions${num}.title`)}</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">{t(`pricing.inclusions${num}.desc`)}</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900" style={{ marginBottom: '0.25rem' }}>{t('pricing.inclusions1.title')}</h4>
-                  <p className="text-gray-600 text-sm">{t('pricing.inclusions1.desc')}</p>
-                </div>
-              </div>
-
-              <div className="flex items-start" style={{ gap: '0.75rem' }}>
-                <div className="bg-green-100 rounded-full flex-shrink-0" style={{ padding: '0.25rem' }}>
-                  <Check className="h-5 w-5 text-green-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900" style={{ marginBottom: '0.25rem' }}>{t('pricing.inclusions2.title')}</h4>
-                  <p className="text-gray-600 text-sm">{t('pricing.inclusions2.desc')}</p>
-                </div>
-              </div>
-
-              <div className="flex items-start" style={{ gap: '0.75rem' }}>
-                <div className="bg-green-100 rounded-full flex-shrink-0" style={{ padding: '0.25rem' }}>
-                  <Check className="h-5 w-5 text-green-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900" style={{ marginBottom: '0.25rem' }}>{t('pricing.inclusions3.title')}</h4>
-                  <p className="text-gray-600 text-sm">{t('pricing.inclusions3.desc')}</p>
-                </div>
-              </div>
-
-              <div className="flex items-start" style={{ gap: '0.75rem' }}>
-                <div className="bg-green-100 rounded-full flex-shrink-0" style={{ padding: '0.25rem' }}>
-                  <Check className="h-5 w-5 text-green-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900" style={{ marginBottom: '0.25rem' }}>{t('pricing.inclusions4.title')}</h4>
-                  <p className="text-gray-600 text-sm">{t('pricing.inclusions4.desc')}</p>
-                </div>
-              </div>
-
-              <div className="flex items-start" style={{ gap: '0.75rem' }}>
-                <div className="bg-green-100 rounded-full flex-shrink-0" style={{ padding: '0.25rem' }}>
-                  <Check className="h-5 w-5 text-green-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900" style={{ marginBottom: '0.25rem' }}>{t('pricing.inclusions5.title')}</h4>
-                  <p className="text-gray-600 text-sm">{t('pricing.inclusions5.desc')}</p>
-                </div>
-              </div>
-
-              <div className="flex items-start" style={{ gap: '0.75rem' }}>
-                <div className="bg-green-100 rounded-full flex-shrink-0" style={{ padding: '0.25rem' }}>
-                  <Check className="h-5 w-5 text-green-600" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900" style={{ marginBottom: '0.25rem' }}>{t('pricing.inclusions6.title')}</h4>
-                  <p className="text-gray-600 text-sm">{t('pricing.inclusions6.desc')}</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Custom Quote Section */}
+      {/* Custom Quote Section - Moderni gradient */}
       <section className="section-container section-padding">
-        <div className="bg-gradient-to-br from-[#003580] to-[#0047ab] rounded-2xl text-white text-center" style={{ padding: '3rem 2rem' }}>
-          <h2 className="text-3xl md:text-4xl font-bold" style={{ marginBottom: '1rem' }}>
-            {t('pricing.custom_cta.title')}
-          </h2>
-          <p className="text-xl text-gray-100 mx-auto" style={{ marginBottom: '2rem', maxWidth: '42rem' }}>
-            {t('pricing.custom_cta.desc')}
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center" style={{ gap: '1rem' }}>
-            <Link 
-              href="/order" 
-              className="btn-primary bg-white text-[#003580] hover:bg-gray-100"
-            >
-              {t('pricing.contact.cta')}
-            </Link>
-            <a 
-              href="tel:+358401234567" 
-              className="btn-secondary border-white text-white hover:bg-white/10"
-            >
-              Soita: +358 40 123 4567
-            </a>
+        <div className="relative bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#0056d6] rounded-2xl text-white text-center overflow-hidden" style={{ padding: '3rem 2rem' }}>
+          {/* Dekoratiiviset elementit */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 right-10 w-48 h-48 bg-white rounded-full blur-3xl"></div>
+            <div className="absolute bottom-10 left-10 w-64 h-64 bg-blue-300 rounded-full blur-3xl"></div>
+          </div>
+
+          <div className="relative z-10">
+            <h2 className="text-3xl md:text-4xl font-bold" style={{ marginBottom: '1rem' }}>
+              {t('pricing.custom_cta.title')}
+            </h2>
+            <p className="text-xl text-blue-50 mx-auto" style={{ marginBottom: '2rem' }}>
+              {t('pricing.custom_cta.desc').split('. ')[0]}.<br />
+              {t('pricing.custom_cta.desc').split('. ')[1]}
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center" style={{ gap: '1rem' }}>
+              <Link 
+                href="/order" 
+                className="btn-primary bg-white text-[#003580] hover:bg-gray-100"
+              >
+                {t('pricing.contact.cta')}
+              </Link>
+              <a 
+                href="tel:+358401234567" 
+                className="btn-secondary border-white text-white hover:bg-white/10"
+              >
+                Soita: +358 40 123 4567
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Comparison Table */}
-      <section className="bg-gray-50 section-padding">
+      {/* Comparison Table - Modernisoidtu */}
+      <section className="relative bg-gradient-to-b from-gray-50 to-white section-padding">
         <div className="section-container">
-          <h2 className="heading-2 text-center" style={{ marginBottom: '3rem' }}>{t('pricing.compare.title')}</h2>
+          <h2 className="heading-2 text-center text-[#003580]" style={{ marginBottom: '3rem' }}>{t('pricing.compare.title')}</h2>
           <div className="overflow-x-auto">
-            <table className="w-full bg-white rounded-xl shadow-lg overflow-hidden">
-              <thead className="bg-[#003580] text-white">
+            <table className="w-full bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+              <thead className="bg-gradient-to-r from-[#003580] to-[#0047ab] text-white">
                 <tr>
-                  <th className="text-left font-semibold" style={{ padding: '1rem 1.5rem' }}>{t('pricing.compare.feature')}</th>
-                  <th className="text-center font-semibold" style={{ padding: '1rem 1.5rem' }}>{t('pricing.compare.office')}</th>
-                  <th className="text-center font-semibold" style={{ padding: '1rem 1.5rem' }}>{t('pricing.compare.business')}</th>
-                  <th className="text-center font-semibold" style={{ padding: '1rem 1.5rem' }}>{t('pricing.compare.industrial')}</th>
-                  <th className="text-center font-semibold" style={{ padding: '1rem 1.5rem' }}>{t('pricing.compare.construction_end')}</th>
+                  <th className="text-left font-semibold" style={{ padding: '1.25rem 1.5rem' }}>{t('pricing.compare.feature')}</th>
+                  <th className="text-center font-semibold" style={{ padding: '1.25rem 1.5rem' }}>{t('pricing.compare.office')}</th>
+                  <th className="text-center font-semibold" style={{ padding: '1.25rem 1.5rem' }}>{t('pricing.compare.business')}</th>
+                  <th className="text-center font-semibold" style={{ padding: '1.25rem 1.5rem' }}>{t('pricing.compare.industrial')}</th>
+                  <th className="text-center font-semibold" style={{ padding: '1.25rem 1.5rem' }}>{t('pricing.compare.construction_end')}</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200">
-                <tr className="hover:bg-gray-50">
-                  <td className="font-medium text-gray-900" style={{ padding: '1rem 1.5rem' }}>{t('pricing.compare.regular')}</td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}>-</td> 
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="font-medium text-gray-900" style={{ padding: '1rem 1.5rem' }}>{t('pricing.compare.special')}</td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}>-</td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td> 
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="font-medium text-gray-900" style={{ padding: '1rem 1.5rem' }}>{t('pricing.compare.height_work')}</td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}>-</td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}>-</td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td> 
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td> 
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="font-medium text-gray-900" style={{ padding: '1rem 1.5rem' }}>{t('pricing.compare.weekend')}</td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="font-medium text-gray-900" style={{ padding: '1rem 1.5rem' }}>{t('pricing.compare.eco')}</td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                </tr>
-                <tr className="hover:bg-gray-50">
-                  <td className="font-medium text-gray-900" style={{ padding: '1rem 1.5rem' }}>{t('pricing.compare.quality_control')}</td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                  <td style={{ padding: '1rem 1.5rem', textAlign: 'center' }}><Check className="h-5 w-5 text-green-500 mx-auto" /></td>
-                </tr>
+              <tbody className="divide-y divide-gray-100">
+                {[
+                  { key: 'regular', checks: [true, true, true, false] },
+                  { key: 'special', checks: [false, true, true, true] },
+                  { key: 'height_work', checks: [false, false, true, true] },
+                  { key: 'weekend', checks: [true, true, true, true] },
+                  { key: 'eco', checks: [true, true, true, true] },
+                  { key: 'quality_control', checks: [true, true, true, true] },
+                ].map((row, idx) => (
+                  <tr key={idx} className="hover:bg-blue-50/50 transition-colors">
+                    <td className="font-medium text-gray-900" style={{ padding: '1.25rem 1.5rem' }}>{t(`pricing.compare.${row.key}`)}</td>
+                    {row.checks.map((hasCheck, colIdx) => (
+                      <td key={colIdx} style={{ padding: '1.25rem 1.5rem', textAlign: 'center' }}>
+                        {hasCheck ? (
+                          <div className="bg-green-50 rounded-full p-1.5 inline-block">
+                            <Check className="h-5 w-5 text-green-600" />
+                          </div>
+                        ) : (
+                          <span className="text-gray-400">-</span>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Section - Modernisoidtu */}
       <section className="section-container section-padding">
-        <h2 className="heading-2 text-center" style={{ marginBottom: '3rem' }}>{t('pricing.faq.title')}</h2>
+        <h2 className="heading-2 text-center text-[#003580]" style={{ marginBottom: '3rem' }}>{t('pricing.faq.title')}</h2>
         <div style={{ maxWidth: '48rem', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          <details className="bg-white rounded-lg shadow-md group" style={{ padding: '1.5rem' }}>
-            <summary className="font-semibold text-[#003580] cursor-pointer list-none flex items-center justify-between">
-              {t('pricing.faq1.title')}
-              <span className="text-2xl group-open:rotate-45 transition-transform" style={{ marginLeft: '1rem' }}>+</span>
-            </summary>
-            <p className="text-gray-600" style={{ marginTop: '1rem' }}>
-              {t('pricing.faq1.desc')}
-            </p>
-          </details>
-
-          <details className="bg-white rounded-lg shadow-md group" style={{ padding: '1.5rem' }}>
-            <summary className="font-semibold text-[#003580] cursor-pointer list-none flex items-center justify-between">
-              {t('pricing.faq2.title')}
-              <span className="text-2xl group-open:rotate-45 transition-transform" style={{ marginLeft: '1rem' }}>+</span>
-            </summary>
-            <p className="text-gray-600" style={{ marginTop: '1rem' }}>
-              {t('pricing.faq2.desc')}
-            </p>
-          </details>
-
-          <details className="bg-white rounded-lg shadow-md group" style={{ padding: '1.5rem' }}>
-            <summary className="font-semibold text-[#003580] cursor-pointer list-none flex items-center justify-between">
-              {t('pricing.faq3.title')}
-              <span className="text-2xl group-open:rotate-45 transition-transform" style={{ marginLeft: '1rem' }}>+</span>
-            </summary>
-            <p className="text-gray-600" style={{ marginTop: '1rem' }}>
-              {t('pricing.faq3.desc')}
-            </p>
-          </details>
-
-          <details className="bg-white rounded-lg shadow-md group" style={{ padding: '1.5rem' }}>
-            <summary className="font-semibold text-[#003580] cursor-pointer list-none flex items-center justify-between">
-              {t('pricing.faq4.title')}
-              <span className="text-2xl group-open:rotate-45 transition-transform" style={{ marginLeft: '1rem' }}>+</span>
-            </summary>
-            <p className="text-gray-600" style={{ marginTop: '1rem' }}>
-              {t('pricing.faq4.desc')}
-            </p>
-          </details>
+          {[1, 2, 3, 4].map((num) => (
+            <details key={num} className="group bg-white/90 backdrop-blur-sm rounded-xl shadow-md hover:shadow-lg transition-all border border-gray-100" style={{ padding: '1.5rem' }}>
+              <summary className="font-semibold text-[#003580] cursor-pointer list-none flex items-center justify-between group-hover:text-[#0047ab] transition-colors">
+                {t(`pricing.faq${num}.title`)}
+                <span className="text-2xl group-open:rotate-45 transition-transform bg-gradient-to-br from-[#003580] to-[#0047ab] w-8 h-8 rounded-lg flex items-center justify-center text-white" style={{ marginLeft: '1rem' }}>+</span>
+              </summary>
+              <p className="text-gray-600 leading-relaxed" style={{ marginTop: '1rem' }}>
+                {t(`pricing.faq${num}.desc`)}
+              </p>
+            </details>
+          ))}
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="bg-[#003580] text-white section-padding">
-        <div className="section-container text-center">
+      {/* Final CTA - Moderni gradient */}
+      <section className="relative bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#0056d6] text-white section-padding overflow-hidden">
+        {/* Dekoratiiviset elementit */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-20 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-20 w-80 h-80 bg-blue-300 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="section-container text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold" style={{ marginBottom: '1.5rem' }}>
             {t('pricing.final_cta.title')}
           </h2>
-          <p className="text-xl text-gray-100 mx-auto" style={{ marginBottom: '2rem' }}>
+          <p className="text-xl text-blue-50 mx-auto" style={{ marginBottom: '2rem' }}>
             {t('pricing.final_cta.desc')}
           </p>
           <Link href="/order" className="btn-primary bg-white text-[#003580] hover:bg-gray-100 inline-block">
@@ -421,6 +359,23 @@ export default function PricingPage() {
           </Link>
         </div>
       </section>
+
+      <style jsx>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in {
+          animation: fade-in 0.8s ease-out;
+        }
+      `}</style>
     </div>
   );
 }

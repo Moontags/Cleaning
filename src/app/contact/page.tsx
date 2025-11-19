@@ -13,59 +13,114 @@ export default function ContactPage() {
       title: t('contact.email'),
       value: 'info@siivousote.fi',
       link: 'mailto:info@siivousote.fi',
-      color: 'bg-blue-500',
     },
     {
       icon: Phone,
       title: t('contact.phone'),
       value: '+358 40 123 4567',
       link: 'tel:+358401234567',
-      color: 'bg-green-500',
     },
     {
       icon: MapPin,
       title: t('contact.address'),
-     
       value: `${t('contact.address.line1')}, ${t('contact.address.line2')}`, 
       link: 'https://maps.google.com/?q=Riihimäki',
-      color: 'bg-red-500',
     },
     {
       icon: Clock,
       title: t('contact.hours'),
       value: t('contact.hours.value'),
       link: null,
-      color: 'bg-purple-500',
+    },
+  ];
+
+  const quickContact = [
+    {
+      icon: Phone,
+      title: t('contact.phone_card.title'),
+      desc: t('contact.phone_card.desc'),
+      link: 'tel:+358401234567',
+      linkText: '+358 40 123 4567',
+      borderColor: 'border-[#003580]',
+      iconBg: 'bg-gradient-to-br from-[#003580] to-[#0047ab]',
+      buttonBg: 'bg-gradient-to-r from-[#003580] to-[#0047ab] hover:shadow-lg',
+    },
+    {
+      icon: Mail,
+      title: t('contact.email_card.title'),
+      desc: t('contact.email_card.desc'),
+      link: 'mailto:info@siivousote.fi',
+      linkText: 'info@siivousote.fi',
+      borderColor: 'border-[#003580]',
+      iconBg: 'bg-gradient-to-br from-[#003580] to-[#0047ab]',
+      buttonBg: 'bg-gradient-to-r from-[#003580] to-[#0047ab] hover:shadow-lg',
+    },
+    {
+      icon: MessageCircle,
+      title: t('contact.form_card.title'),
+      desc: t('contact.form_card.desc'),
+      link: '/order',
+      linkText: t('contact.form_card.button'),
+      borderColor: 'border-[#003580]',
+      iconBg: 'bg-gradient-to-br from-[#003580] to-[#0047ab]',
+      buttonBg: 'bg-gradient-to-r from-[#003580] to-[#0047ab] hover:shadow-lg',
+      isInternal: true,
+    },
+    {
+      icon: Youtube,
+      title: t('contact.youtube_card.title'),
+      desc: t('contact.youtube_card.desc'),
+      link: 'https://youtube.com',
+      linkText: t('contact.youtube_card.button'),
+      borderColor: 'border-[#003580]',
+      iconBg: 'bg-gradient-to-br from-[#003580] to-[#0047ab]',
+      buttonBg: 'bg-gradient-to-r from-[#003580] to-[#0047ab] hover:shadow-lg',
+      isExternal: true,
     },
   ];
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#003580] to-[#0047ab] text-white section-padding">
-        <div style={{ maxWidth: '80rem', margin: '0 auto', paddingLeft: '1rem', paddingRight: '1rem', textAlign: 'center' }}>
+      {/* Hero Section - Moderni gradient */}
+      <section className="relative bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#0056d6] text-white section-padding overflow-hidden">
+        {/* Dekoratiiviset tausta-elementit */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
+        </div>
+
+        <div style={{ maxWidth: '80rem', margin: '0 auto', paddingLeft: '1rem', paddingRight: '1rem', textAlign: 'center' }} className="relative z-10">
           <div style={{ maxWidth: '48rem', margin: '0 auto' }}>
-            <h1 style={{ fontSize: 'clamp(2.25rem, 5vw, 3.75rem)', fontWeight: '700', marginBottom: '1.5rem', color: 'white' }}>
+            <h1 className="animate-fade-in" style={{ fontSize: 'clamp(2.25rem, 5vw, 3.75rem)', fontWeight: '700', marginBottom: '1.5rem', color: 'white' }}>
               {t('contact.title')}
             </h1>
-            <p style={{ fontSize: 'clamp(1.25rem, 3vw, 1.5rem)', color: 'rgb(229, 231, 235)' }}>
+            <p className="text-blue-50" style={{ fontSize: 'clamp(1.25rem, 3vw, 1.5rem)' }}>
               {t('contact.subtitle')}
             </p>
           </div>
         </div>
+
+        {/* Aalto-efekti */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+            <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 80C1200 80 1320 70 1380 65L1440 60V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+          </svg>
+        </div>
       </section>
 
-      {/* Contact Information Grid */}
-      <section className="section-container section-padding">
+      {/* Contact Information Grid - Modernisoidtu */}
+      <section className="section-container section-padding" style={{ marginTop: '-3rem' }}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" style={{ gap: '1.5rem', marginBottom: '4rem' }}>
           {contactInfo.map((info, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+              className="group relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 transform hover:-translate-y-2"
             >
-              <div className={`${info.color} h-2`}></div>
-              <div style={{ padding: '1.5rem' }}>
-                <div className={`${info.color} w-14 h-14 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform`} style={{ marginBottom: '1rem' }}>
+              {/* Hover gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#003580]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              <div className="relative z-10" style={{ padding: '2rem' }}>
+                <div className="bg-gradient-to-br from-[#003580] to-[#0047ab] w-14 h-14 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg" style={{ marginBottom: '1.25rem' }}>
                   <info.icon className="h-7 w-7 text-white" />
                 </div>
                 <h3 className="font-semibold text-[#003580] text-lg" style={{ marginBottom: '0.75rem' }}>
@@ -74,7 +129,7 @@ export default function ContactPage() {
                 {info.link ? (
                   <a 
                     href={info.link}
-                    className="text-gray-700 hover:text-[#003580] transition-colors font-medium"
+                    className="text-gray-700 hover:text-[#0047ab] transition-colors font-medium"
                     target={info.link.startsWith('http') ? '_blank' : undefined}
                     rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                   >
@@ -84,6 +139,9 @@ export default function ContactPage() {
                   <p className="text-gray-700 font-medium">{info.value}</p>
                 )}
               </div>
+
+              {/* Dekoratiivinen elementti */}
+              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-[#003580]/5 rounded-full blur-2xl group-hover:bg-[#003580]/10 transition-colors"></div>
             </div>
           ))}
         </div>
@@ -92,104 +150,63 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2" style={{ gap: '3rem' }}>
           {/* Left Column - Contact Methods */}
           <div>
-            <h2 className="heading-2" style={{ marginBottom: '2rem' }}>{t('contact.methods.title')}</h2>
+            <h2 className="heading-2 text-[#003580]" style={{ marginBottom: '2rem' }}>{t('contact.methods.title')}</h2>
             
-            {/* Quick Contact Cards */}
+            {/* Quick Contact Cards - Valkoiset glassmorphism-kortit */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              {/* Phone Card */}
-              <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-xl border-l-4 border-green-500" style={{ padding: '1.5rem' }}>
-                <div className="flex items-start" style={{ gap: '1rem' }}>
-                  <div className="bg-green-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900" style={{ marginBottom: '0.5rem' }}>{t('contact.phone_card.title')}</h3>
-                    <p className="text-gray-600" style={{ marginBottom: '0.75rem' }}>{t('contact.phone_card.desc')}</p>
-                    <a 
-                      href="tel:+358401234567"
-                      className="inline-block bg-green-500 hover:bg-green-600 text-white rounded-lg transition-colors font-semibold"
-                      style={{ padding: '0.5rem 1.5rem' }}
-                    >
-                      +358 40 123 4567
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Email Card */}
-              <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl border-l-4 border-blue-500" style={{ padding: '1.5rem' }}>
-                <div className="flex items-start" style={{ gap: '1rem' }}>
-                  <div className="bg-blue-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900" style={{ marginBottom: '0.5rem' }}>{t('contact.email_card.title')}</h3>
-                    <p className="text-gray-600" style={{ marginBottom: '0.75rem' }}>{t('contact.email_card.desc')}</p>
-                    <a 
-                      href="mailto:info@siivousote.fi"
-                      className="inline-block bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors font-semibold"
-                      style={{ padding: '0.5rem 1.5rem' }}
-                    >
-                      info@siivousote.fi
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Form Card */}
-              <div className="bg-gradient-to-r from-purple-50 to-purple-100 rounded-xl border-l-4 border-purple-500" style={{ padding: '1.5rem' }}>
-                <div className="flex items-start" style={{ gap: '1rem' }}>
-                  <div className="bg-purple-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MessageCircle className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900" style={{ marginBottom: '0.5rem' }}>{t('contact.form_card.title')}</h3>
-                    <p className="text-gray-600" style={{ marginBottom: '0.75rem' }}>{t('contact.form_card.desc')}</p>
-                    <Link 
-                      href="/order"
-                      className="inline-block bg-purple-500 hover:bg-purple-600 text-white rounded-lg transition-colors font-semibold"
-                      style={{ padding: '0.5rem 1.5rem' }}
-                    >
-                      {t('contact.form_card.button')}
-                    </Link>
+              {quickContact.map((card, index) => (
+                <div key={index} className={`group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-100 shadow-md hover:shadow-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-1`} style={{ padding: '1.5rem' }}>
+                  {/* Border accent */}
+                  <div className={`absolute left-0 top-0 bottom-0 w-1 ${card.borderColor}`}></div>
+                  
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#003580]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  <div className="flex items-start relative z-10" style={{ gap: '1rem', marginLeft: '0.5rem' }}>
+                    <div className={`${card.iconBg} w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300`}>
+                      <card.icon className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-[#003580]" style={{ marginBottom: '0.5rem' }}>{card.title}</h3>
+                      <p className="text-gray-600 leading-relaxed" style={{ marginBottom: '0.75rem' }}>{card.desc}</p>
+                      {card.isInternal ? (
+                        <Link 
+                          href={card.link}
+                          className={`inline-block ${card.buttonBg} text-white rounded-lg transition-all duration-300 font-semibold shadow-md`}
+                          style={{ padding: '0.625rem 1.5rem' }}
+                        >
+                          {card.linkText}
+                        </Link>
+                      ) : (
+                        <a 
+                          href={card.link}
+                          target={card.isExternal ? '_blank' : undefined}
+                          rel={card.isExternal ? 'noopener noreferrer' : undefined}
+                          className={`inline-block ${card.buttonBg} text-white rounded-lg transition-all duration-300 font-semibold shadow-md`}
+                          style={{ padding: '0.625rem 1.5rem' }}
+                        >
+                          {card.linkText}
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {/* YouTube Card */}
-              <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-xl border-l-4 border-red-500" style={{ padding: '1.5rem' }}>
-                <div className="flex items-start" style={{ gap: '1rem' }}>
-                  <div className="bg-red-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Youtube className="h-6 w-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900" style={{ marginBottom: '0.5rem' }}>{t('contact.youtube_card.title')}</h3>
-                    <p className="text-gray-600" style={{ marginBottom: '0.75rem' }}>{t('contact.youtube_card.desc')}</p>
-                    <a 
-                      href="https://youtube.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block bg-red-500 hover:bg-red-600 text-white rounded-lg transition-colors font-semibold"
-                      style={{ padding: '0.5rem 1.5rem' }}
-                    >
-                      {t('contact.youtube_card.button')}
-                    </a>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
           {/* Right Column - Map */}
           <div>
-            <h2 className="heading-2" style={{ marginBottom: '2rem' }}>{t('contact.map.title')}</h2>
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+            <h2 className="heading-2 text-[#003580]" style={{ marginBottom: '2rem' }}>{t('contact.map.title')}</h2>
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden border border-gray-100">
               {/* Map Placeholder */}
-              <div className="bg-gradient-to-br from-gray-100 to-gray-200 h-[500px] flex items-center justify-center relative">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 h-[500px] flex items-center justify-center relative overflow-hidden">
                 <div className="text-center z-10" style={{ padding: '2rem' }}>
-                  <MapPin className="h-16 w-16 text-[#003580] mx-auto" style={{ marginBottom: '1rem' }} />
-                  <h3 className="text-xl font-bold text-gray-800" style={{ marginBottom: '0.5rem' }}>{t('contact.map.location')}</h3>
-                  <p className="text-gray-600" style={{ marginBottom: '1.5rem' }}>
+                  <div className="bg-gradient-to-br from-[#003580] to-[#0047ab] w-20 h-20 rounded-2xl flex items-center justify-center mx-auto shadow-xl" style={{ marginBottom: '1.5rem' }}>
+                    <MapPin className="h-10 w-10 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-[#003580]" style={{ marginBottom: '0.75rem' }}>{t('contact.map.location')}</h3>
+                  <p className="text-gray-600 leading-relaxed" style={{ marginBottom: '1.5rem' }}>
                     {t('contact.map.address1')}<br />
                     {t('contact.map.address2')}
                   </p>
@@ -197,8 +214,8 @@ export default function ContactPage() {
                     href="https://maps.google.com/?q=Riihimäki"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-[#003580] hover:bg-[#002b66] text-white rounded-lg transition-colors font-semibold"
-                    style={{ padding: '0.75rem 1.5rem' }}
+                    className="inline-block bg-gradient-to-r from-[#003580] to-[#0047ab] hover:shadow-lg text-white rounded-lg transition-all duration-300 font-semibold shadow-md"
+                    style={{ padding: '0.875rem 1.5rem' }}
                   >
                     {t('contact.map.button')}
                   </a>
@@ -209,11 +226,11 @@ export default function ContactPage() {
               </div>
               
               {/* Business Hours Info */}
-              <div className="bg-[#003580] text-white" style={{ padding: '1.5rem' }}>
+              <div className="bg-gradient-to-r from-[#003580] to-[#0047ab] text-white" style={{ padding: '1.5rem' }}>
                 <div className="flex items-center justify-between">
                   <div>
                     <h4 className="font-semibold" style={{ marginBottom: '0.25rem' }}>{t('contact.map.hours_title')}</h4>
-                    <p className="text-gray-200">{t('contact.map.hours_period')}</p>
+                    <p className="text-blue-100">{t('contact.map.hours_period')}</p>
                   </div>
                   <div className="text-right">
                     <p className="text-2xl font-bold">{t('contact.hours.value')}</p>
@@ -225,61 +242,39 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="bg-gray-50 section-padding">
+      {/* FAQ Section - Modernisoidtu */}
+      <section className="relative bg-gradient-to-b from-gray-50 to-white section-padding">
         <div className="section-container">
-          <h2 className="heading-2 text-center" style={{ marginBottom: '3rem' }}>{t('contact.faq.title')}</h2>
+          <h2 className="heading-2 text-center text-[#003580]" style={{ marginBottom: '3rem' }}>{t('contact.faq.title')}</h2>
           <div style={{ maxWidth: '48rem', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <details className="bg-white rounded-lg shadow-md group" style={{ padding: '1.5rem' }}>
-              <summary className="font-semibold text-[#003580] cursor-pointer list-none flex items-center justify-between">
-                {t('contact.faq1.title')}
-                <span className="text-2xl group-open:rotate-45 transition-transform" style={{ marginLeft: '1rem' }}>+</span>
-              </summary>
-              <p className="text-gray-600" style={{ marginTop: '1rem' }}>
-                {t('contact.faq1.desc')}
-              </p>
-            </details>
-
-            <details className="bg-white rounded-lg shadow-md group" style={{ padding: '1.5rem' }}>
-              <summary className="font-semibold text-[#003580] cursor-pointer list-none flex items-center justify-between">
-                {t('contact.faq2.title')}
-                <span className="text-2xl group-open:rotate-45 transition-transform" style={{ marginLeft: '1rem' }}>+</span>
-              </summary>
-              <p className="text-gray-600" style={{ marginTop: '1rem' }}>
-                {t('contact.faq2.desc')}
-              </p>
-            </details>
-
-            <details className="bg-white rounded-lg shadow-md group" style={{ padding: '1.5rem' }}>
-              <summary className="font-semibold text-[#003580] cursor-pointer list-none flex items-center justify-between">
-                {t('contact.faq3.title')}
-                <span className="text-2xl group-open:rotate-45 transition-transform" style={{ marginLeft: '1rem' }}>+</span>
-              </summary>
-              <p className="text-gray-600" style={{ marginTop: '1rem' }}>
-                {t('contact.faq3.desc')}
-              </p>
-            </details>
-
-            <details className="bg-white rounded-lg shadow-md group" style={{ padding: '1.5rem' }}>
-              <summary className="font-semibold text-[#003580] cursor-pointer list-none flex items-center justify-between">
-                {t('contact.faq4.title')}
-                <span className="text-2xl group-open:rotate-45 transition-transform" style={{ marginLeft: '1rem' }}>+</span>
-              </summary>
-              <p className="text-gray-600" style={{ marginTop: '1rem' }}>
-                {t('contact.faq4.desc')}
-              </p>
-            </details>
+            {[1, 2, 3, 4].map((num) => (
+              <details key={num} className="group bg-white/90 backdrop-blur-sm rounded-xl shadow-md hover:shadow-lg transition-all border border-gray-100" style={{ padding: '1.5rem' }}>
+                <summary className="font-semibold text-[#003580] cursor-pointer list-none flex items-center justify-between group-hover:text-[#0047ab] transition-colors">
+                  {t(`contact.faq${num}.title`)}
+                  <span className="text-2xl group-open:rotate-45 transition-transform bg-gradient-to-br from-[#003580] to-[#0047ab] w-8 h-8 rounded-lg flex items-center justify-center text-white" style={{ marginLeft: '1rem' }}>+</span>
+                </summary>
+                <p className="text-gray-600 leading-relaxed" style={{ marginTop: '1rem' }}>
+                  {t(`contact.faq${num}.desc`)}
+                </p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-[#003580] text-white section-padding">
-        <div className="section-container text-center">
+      {/* CTA Section - Moderni gradient */}
+      <section className="relative bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#0056d6] text-white section-padding overflow-hidden">
+        {/* Dekoratiiviset elementit */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 right-20 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-20 w-80 h-80 bg-blue-300 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="section-container text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold" style={{ marginBottom: '1.5rem' }}>
             {t('contact.cta.title')}
           </h2>
-          <p className="text-xl text-gray-100 mx-auto" style={{ marginBottom: '2rem',  }}>
+          <p className="text-xl text-blue-50 mx-auto" style={{ marginBottom: '2rem' }}>
             {t('contact.cta.desc')}
           </p>
           <div className="flex flex-col sm:flex-row justify-center" style={{ gap: '1rem' }}>
@@ -292,6 +287,23 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      <style jsx>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in {
+          animation: fade-in 0.8s ease-out;
+        }
+      `}</style>
     </div>
   );
 }

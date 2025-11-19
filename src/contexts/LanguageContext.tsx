@@ -39,7 +39,7 @@ const translations = {
     'services.home_cleaning.title': 'Kotisiivous',
     'services.home_cleaning.desc': 'Laadukkaat kotisiivouspalvelut säännöllisesti tai kertaluontoisesti.',
     
-    'services.construction_end.title': 'Rakennusten loppusiivous',
+    'services.construction_end.title': 'Loppusiivoukset',
     'services.construction_end.desc': 'Perusteellinen siivous rakennusprojektien jälkeen, valmiina luovutukseen.',
     
     // Miksi valita meidät
@@ -246,7 +246,7 @@ const translations = {
     'about.title': 'Tietoja meistä',
     'about.subtitle': 'Luotettava kumppunisi puhtauden ylläpidossa',
     'about.story.title': 'Tarinamme', 
-    'about.story.p1': 'Olemme uusi kotimainen siivousyritys, jonka tiimillä on jo kuitenkin pitkä ja monipuolinen kokemus siivousalalta.',
+    'about.story.p1': 'Olemme uusi kotimainen siivousyritys, jonka tiimillä on jo pitkä ja monipuolinen kokemus siivousalalta.',
     'about.story.p2': 'Vaikka yrityksemme on nuori, tiimimme koostuu koulutetuista ammattilaisista, jotka ovat vuosien varrella hankkineet laajan osaamisen ja ovat sitoutuneet tarjoamaan korkeinta laatua jokaisessa työkohteessa. Käytämme ympäristöystävällisiä puhdistusaineita ja moderneja menetelmiä varmistaaksemme sekä tehokkuuden että turvallisuuden.',
     'about.story.p3': 'Uskomme pitkäaikaisiin asiakassuhteisiin ja räätälöimme palvelumme jokaisen asiakkaan yksilöllisten tarpeiden mukaan. Tavoitteemme on olla luotettava kumppanisi puhtauden ylläpidossa.',
     'about.values.title': 'Arvomme', 
