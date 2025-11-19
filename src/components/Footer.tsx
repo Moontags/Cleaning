@@ -53,14 +53,17 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Services - KORJATTU VIRHEET JA LISÄTTY KOTISIIOUS + LOPPUSIIVOUS */}
           <div>
             <h4 className="text-lg font-semibold" style={{ marginBottom: '1rem' }}>{t('footer.services')}</h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <li className="text-gray-300">{t('services.office.title')}</li>
               <li className="text-gray-300">{t('services.business.title')}</li>
               <li className="text-gray-300">{t('services.industrial.title')}</li>
-              <li className="text-gray-300">{t('services.window.title')}</li>
+              {/* UUSI: Kotisiivous (lisätty aiemmin LanguageContextiin) */}
+              <li className="text-gray-300">{t('services.home_cleaning.title')}</li> 
+              {/* KORJAUS: services.window.title -> services.construction_end.title (lisätty aiemmin LanguageContextiin) */}
+              <li className="text-gray-300">{t('services.construction_end.title')}</li> 
             </ul>
           </div>
 

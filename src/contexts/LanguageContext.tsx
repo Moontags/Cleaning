@@ -36,6 +36,8 @@ const translations = {
     'services.business.desc': 'Kauppojen, ravintoloiden ja muiden liiketilojen puhtaanapito.',
     'services.industrial.title': 'Teollisuussiivoukset',
     'services.industrial.desc': 'Vaativat teollisuusympäristöjen siivoukset turvallisesti.',
+    'services.home_cleaning.title': 'Kotisiivous',
+    'services.home_cleaning.desc': 'Laadukkaat kotisiivouspalvelut säännöllisesti tai kertaluontoisesti.',
     
     'services.construction_end.title': 'Rakennusten loppusiivous',
     'services.construction_end.desc': 'Perusteellinen siivous rakennusprojektien jälkeen, valmiina luovutukseen.',
@@ -271,6 +273,8 @@ const translations = {
     'services.business.desc': 'Maintenance of shops, restaurants, and other commercial spaces.',
     'services.industrial.title': 'Industrial Cleaning',
     'services.industrial.desc': 'Demanding industrial environment cleaning done safely.',
+    'services.home_cleaning.title': 'Home Cleaning',
+    'services.home_cleaning.desc': 'High-quality home cleaning services, regularly or one-time.',
     
     // NEW SERVICE ADDED: POST-CONSTRUCTION CLEANING
     'services.construction_end.title': 'Post-Construction Cleaning',

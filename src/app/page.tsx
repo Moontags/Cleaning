@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Building2, Store, Factory, Sparkles, CheckCircle, Users, Leaf, Clock } from 'lucide-react';
+// Päivitetyt kuvakkeet: Lisätty Home ja Construction
+import { Building2, Store, Factory, Sparkles, CheckCircle, Users, Leaf, Clock, Home, Construction } from 'lucide-react'; 
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function HomePage() {
@@ -24,8 +25,14 @@ export default function HomePage() {
       description: t('services.industrial.desc'),
     },
     {
-      // PÄIVITYS: Ikkunanpesu korvattu Rakennusten loppusiivouksella
-      icon: Sparkles, // Ikonin voi pitää samana, koska se sopii siivouksen lopputulokseen
+      // UUSI: Kotisiivous
+      icon: Home, 
+      title: t('services.home_cleaning.title'),
+      description: t('services.home_cleaning.desc'),
+    },
+    {
+      // Rakennusten loppusiivous
+      icon: Construction, 
       title: t('services.construction_end.title'),
       description: t('services.construction_end.desc'),
     },
@@ -85,7 +92,7 @@ export default function HomePage() {
           <h2 className="heading-2">{t('services.title')}</h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" style={{ gap: '2rem' }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5" style={{ gap: '2rem' }}> {/* Muutettu lg:grid-cols-5 */}
           {services.map((service, index) => (
             <div 
               key={index}
