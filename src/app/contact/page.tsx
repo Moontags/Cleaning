@@ -17,8 +17,8 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: t('contact.phone'),
-      value: '+358 40 123 4567',
-      link: 'tel:+358401234567',
+      value: '+358 40 2183270',
+      link: 'tel:+358402183270',
     },
     {
       icon: MapPin,
@@ -39,8 +39,8 @@ export default function ContactPage() {
       icon: Phone,
       title: t('contact.phone_card.title'),
       desc: t('contact.phone_card.desc'),
-      link: 'tel:+358401234567',
-      linkText: '+358 40 123 4567',
+      link: 'tel:+358402183270',
+      linkText: '+358 40 2183270',
       borderColor: 'border-[#003580]',
       iconBg: 'bg-gradient-to-br from-[#003580] to-[#0047ab]',
       buttonBg: 'bg-gradient-to-r from-[#003580] to-[#0047ab] hover:shadow-lg',

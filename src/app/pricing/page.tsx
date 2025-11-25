@@ -266,10 +266,10 @@ export default function PricingPage() {
                 {t('pricing.contact.cta')}
               </Link>
               <a 
-                href="tel:+358401234567" 
+                href="tel:+358402183270" 
                 className="btn-secondary border-white text-white hover:bg-white/10"
               >
-                Soita: +358 40 123 4567
+                Soita: +358 40 218 3270
               </a>
             </div>
           </div>

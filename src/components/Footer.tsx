@@ -124,7 +124,7 @@ export default function Footer() {
                     href="tel:+358401234567" 
                     className="text-blue-200 hover:text-white transition-colors duration-300"
                   >
-                    +358 40 123 4567
+                    +358 40 2183270
                   </a>
                 </div>
               </li>
