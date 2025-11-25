@@ -48,8 +48,8 @@ const translations = {
     'why.professional.desc': 'Koulutettu henkilökunta ja vuosien kokemus alalta.',
     'why.reliable.title': 'Luotettavuus',
     'why.reliable.desc': 'Sovitut aikataulut pitävät ja laatu on taattua.',
-    'why.eco.title': 'Ympäristöystävällisyys',
-    'why.eco.desc': 'Käytämme ekologisia ja tehokkaita puhdistusaineita.',
+    'why.eco.title': 'Vastuullinen valinta',
+    'why.eco.desc': 'Käytämme ensisijaisesti luontoa kunnioittavia puhdistusaineita.',
     'why.flexible.title': 'Joustavuus',
     'why.flexible.desc': 'Räätälöimme palvelumme asiakkaan tarpeiden mukaan.',
     
@@ -96,7 +96,7 @@ const translations = {
     'contact.faq2.title': 'Onko henkilökuntanne vakuutettu?',
     'contact.faq2.desc': 'Kyllä, kaikki työntekijämme ovat täysin vakuutettuja ja taustaltaan tarkastettuja. Voit luottaa siihen, että tilasi ovat turvallisissa käsissä.',
     'contact.faq3.title': 'Mitä siivousvälineitä käytätte?',
-    'contact.faq3.desc': 'Käytämme ympäristöystävällisiä ja tehokkaita puhdistusaineita sekä ammattitason siivousvälineitä. Kaikki välineet ja aineet sisältyvät palvelun hintaan.',
+    'contact.faq3.desc': 'Käytämme ensisijaisesti luontoa kunnioittavia, tehokkaita puhdistusaineita sekä ammattitason siivousvälineitä. Kaikki välineet ja aineet sisältyvät palvelun hintaan.',
     'contact.faq4.title': 'Voitteko tulla myös viikonloppuisin?',
     'contact.faq4.desc': 'Kyllä, tarjoamme myös viikonloppu- ja iltapalveluja erikseen sovittaessa. Räätälöimme aikataulut teidän tarpeittenne mukaan.',
     'contact.cta.title': 'Valmis aloittamaan yhteistyön?',
@@ -166,8 +166,8 @@ const translations = {
     'pricing.inclusions1.desc': 'Kaikki tarvittavat siivousvälineet ja -aineet sisältyvät hintaan.',
     'pricing.inclusions2.title': 'Vakuutettu henkilöstö',
     'pricing.inclusions2.desc': 'Kaikki työntekijämme ovat vakuutettuja ja taustaltaan tarkastettuja.',
-    'pricing.inclusions3.title': 'Ympäristöystävälliset aineet',
-    'pricing.inclusions3.desc': 'Käytämme ekologisia ja tehokkaita puhdistusaineita.',
+    'pricing.inclusions3.title': 'Vastuulliset aineet',
+    'pricing.inclusions3.desc': 'Käytämme ensisijaisesti luontoa kunnioittavia puhdistusaineita.',
     'pricing.inclusions4.title': 'Laadunvalvonta',
     'pricing.inclusions4.desc': 'Säännölliset tarkastukset ja laadun seuranta.',
     'pricing.inclusions5.title': 'Joustavat sopimukset',
@@ -248,7 +248,7 @@ const translations = {
     'about.story.title': 'Tarinamme', 
     'about.story.p1': 'Olemme uusi kotimainen siivousyritys, jonka tiimillä on jo pitkä ja monipuolinen kokemus siivousalalta.',
     'about.story.p2': 'Vaikka yrityksemme on nuori, tiimimme koostuu koulutetuista ammattilaisista, jotka ovat vuosien varrella hankkineet laajan osaamisen ja ovat sitoutuneet tarjoamaan korkeinta laatua jokaisessa työkohteessa. Käytämme ympäristöystävällisiä puhdistusaineita ja moderneja menetelmiä varmistaaksemme sekä tehokkuuden että turvallisuuden.',
-    'about.story.p3': 'Uskomme pitkäaikaisiin asiakassuhteisiin ja räätälöimme palvelumme jokaisen asiakkaan yksilöllisten tarpeiden mukaan. Tavoitteemme on olla luotettava kumppanisi puhtauden ylläpidossa.',
+    'about.story.p3': 'Uskomme pitkäaikaisiin asiakassuhteisiin ja räätälöimme palvelumme jokaisen asiakkaan yksilöllisten tarpeiden mukaan. Tavoitteemme on olla luotettava kumppunisi puhtauden ylläpidossa.',
     'about.values.title': 'Arvomme', 
   },
   en: {
@@ -286,8 +286,8 @@ const translations = {
     'why.professional.desc': 'Trained staff and years of industry experience.',
     'why.reliable.title': 'Reliability',
     'why.reliable.desc': 'Agreed schedules are kept and quality is guaranteed.',
-    'why.eco.title': 'Eco-Friendly',
-    'why.eco.desc': 'We use ecological and effective cleaning products.',
+    'why.eco.title': 'Responsible Approach',
+    'why.eco.desc': 'We primarily use effective cleaning products that respect the environment.',
     'why.flexible.title': 'Flexibility',
     'why.flexible.desc': 'We tailor our services to customer needs.',
     
@@ -334,12 +334,12 @@ const translations = {
     'contact.faq2.title': 'Is your staff insured?',
     'contact.faq2.desc': 'Yes, all our employees are fully insured and background-checked. You can trust that your premises are in safe hands.',
     'contact.faq3.title': 'What cleaning equipment do you use?',
-    'contact.faq3.desc': 'We use eco-friendly and effective cleaning agents as well as professional-grade equipment. All equipment and agents are included in the service price.',
+    'contact.faq3.desc': 'We primarily use effective cleaning agents that respect the environment, as well as professional-grade equipment. All equipment and agents are included in the service price.',
     'contact.faq4.title': 'Can you also come on weekends?',
     'contact.faq4.desc': 'Yes, we also offer weekend and evening services by separate arrangement. We tailor the schedules to your needs.',
     'contact.cta.title': 'Ready to start cooperation?',
     'contact.cta.desc': 'Contact us today and get a free quote within 24 hours!',
-    'contact.cta.phone_number': 'Call: +358 40 123 4567',
+    'contact.cta.phone_number': 'Call: +358 40 218 3270',
     
     // Pricing (PricingPage) - ADDED (OLD + NEW KEYS)
     'pricing.title': 'Pricing',
@@ -404,8 +404,8 @@ const translations = {
     'pricing.inclusions1.desc': 'All necessary cleaning equipment and agents are included in the price.',
     'pricing.inclusions2.title': 'Insured personnel',
     'pricing.inclusions2.desc': 'All our employees are insured and background-checked.',
-    'pricing.inclusions3.title': 'Eco-friendly agents',
-    'pricing.inclusions3.desc': 'We use ecological and effective cleaning products.',
+    'pricing.inclusions3.title': 'Responsible agents',
+    'pricing.inclusions3.desc': 'We primarily use effective cleaning products that respect the environment.',
     'pricing.inclusions4.title': 'Quality control',
     'pricing.inclusions4.desc': 'Regular inspections and quality monitoring.',
     'pricing.inclusions5.title': 'Flexible contracts',
@@ -413,7 +413,7 @@ const translations = {
     'pricing.inclusions6.title': 'Customer support',
     'pricing.inclusions6.desc': 'Always reachable if you need assistance or changes.',
     
-    // Custom Quote CTA
+    // Räätälöity tarjous CTA
     'pricing.custom_cta.title': 'Need a tailored solution?',
     'pricing.custom_cta.desc': 'Every company is different, and we understand that your needs may be unique. Contact us, and we will plan a cleaning solution and pricing that suits your business.',
     
@@ -469,7 +469,7 @@ const translations = {
     'order.form.placeholder.company': 'Company Name',
     'order.form.placeholder.contact': 'Name',
     'order.form.placeholder.email': 'email@example.com',
-    'order.form.placeholder.phone': '+358 40 123 4567',
+    'order.form.placeholder.phone': '+358 40 218 3270',
     'order.form.placeholder.service_select': 'Select Service',
     'order.form.placeholder.message': 'Tell us more about your needs...',
 
