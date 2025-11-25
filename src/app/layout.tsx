@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   title: 'Siivousote - Ammattitaitoista siivousta yrityksille',
   description: 'Luotettava kumppanisi puhtauden ylläpidossa. Keskitymme yritysten, toimistojen ja yhteisöjen siivouspalveluihin.',
   keywords: 'siivous, yrityssiivous, toimistosiivoukset, liiketilat, teollisuussiivous',
+ 
+  icons: {
+    icon: '/logo.svg', 
+  },
 };
 
 export default function RootLayout({
