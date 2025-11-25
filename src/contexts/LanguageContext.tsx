@@ -225,7 +225,10 @@ const translations = {
     'order.form.service.other': 'Muu palvelu',
     'order.form.message': 'Lisätietoja',
     'order.form.submit': 'Lähetä tarjouspyyntö',
+    'order.form.sending': 'Lähetetään...',
     'order.form.required_fields': '* Pakolliset kentät',
+    'order.success.title': 'Kiitos yhteydenotostasi!',
+    'order.success.message': 'Käsittelemme tarjouspyyntösi 24 tunnin sisällä ja otamme sinuun yhteyttä.',
 
     // UUSI: Paikkamerkkien käännökset
     'order.form.placeholder.company': 'Yrityksen nimi',
@@ -463,7 +466,10 @@ const translations = {
     'order.form.service.other': 'Other Service',
     'order.form.message': 'Additional Information',
     'order.form.submit': 'Send Quote Request',
+    'order.form.sending': 'Sending...',
     'order.form.required_fields': '* Required fields',
+    'order.success.title': 'Thank you for contacting us!',
+    'order.success.message': 'We will process your quote request within 24 hours and contact you.',
 
     // UUSI: Paikkamerkkien käännökset
     'order.form.placeholder.company': 'Company Name',

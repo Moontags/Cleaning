@@ -1,55 +1,75 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Send, CheckCircle } from 'lucide-react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useState } from "react";
+import { Send, CheckCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function OrderPage() {
   const { t } = useLanguage();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
-    company: '',
-    contact: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: '',
+    company: "",
+    contact: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-   
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    
-   
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        company: '',
-        contact: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: '',
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
-    }, 3000);
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          data.error || "Lähetys epäonnistui / Submission failed"
+        );
+      }
+
+      // Success
+      setIsSubmitted(true);
+    } catch (err) {
+      console.error("Form submission error:", err);
+      setError(
+        err instanceof Error ? err.message : "Tuntematon virhe / Unknown error"
+      );
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const services = [
-    { value: 'office', label: t('order.form.service.office') },
-    { value: 'business', label: t('order.form.service.business') },
-    { value: 'industrial', label: t('order.form.service.industrial') },
-    { value: 'home_cleaning', label: t('order.form.service.home_cleaning') }, 
-    { value: 'other', label: t('order.form.service.other') },
+    { value: "office", label: t("order.form.service.office") },
+    { value: "business", label: t("order.form.service.business") },
+    { value: "industrial", label: t("order.form.service.industrial") },
+    { value: "home_cleaning", label: t("order.form.service.home_cleaning") },
+    { value: "other", label: t("order.form.service.other") },
   ];
 
   if (isSubmitted) {
@@ -60,11 +80,9 @@ export default function OrderPage() {
             <CheckCircle className="h-10 w-10 text-green-600" />
           </div>
           <h2 className="text-3xl font-bold text-[#003580] mb-4">
-            Kiitos yhteydenotostasi!
+            {t("order.success.title")}
           </h2>
-          <p className="text-gray-600 text-lg">
-            Otamme sinuun yhteyttä mahdollisimman pian.
-          </p>
+          <p className="text-gray-600 text-lg">{t("order.success.message")}</p>
         </div>
       </div>
     );
@@ -76,22 +94,35 @@ export default function OrderPage() {
       <section className="bg-gradient-to-br from-[#003580] to-[#0047ab] text-white section-padding">
         <div className="section-container text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            {t('order.title')}
+            {t("order.title")}
           </h1>
           <p className="text-xl md:text-2xl text-gray-100 mx-auto">
-            {t('order.subtitle')}
+            {t("order.subtitle")}
           </p>
         </div>
       </section>
 
       {/* Form Section */}
       <section className="section-container section-padding">
-        <div style={{ maxWidth: '48rem', margin: '0 auto' }}>
-          <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-lg" style={{ padding: '2rem' }}>
+        <div style={{ maxWidth: "48rem", margin: "0 auto" }}>
+          {error && (
+            <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+              <p className="text-red-800 text-sm">{error}</p>
+            </div>
+          )}
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white rounded-xl shadow-lg"
+            style={{ padding: "2rem" }}
+          >
             {/* Company Name */}
-            <div style={{ marginBottom: '1.5rem' }}>
-              <label htmlFor="company" className="block text-sm font-semibold text-gray-700" style={{ marginBottom: '0.5rem' }}>
-                {t('order.form.company')} *
+            <div style={{ marginBottom: "1.5rem" }}>
+              <label
+                htmlFor="company"
+                className="block text-sm font-semibold text-gray-700"
+                style={{ marginBottom: "0.5rem" }}
+              >
+                {t("order.form.company")} *
               </label>
               <input
                 type="text"
@@ -101,16 +132,20 @@ export default function OrderPage() {
                 onChange={handleChange}
                 required
                 className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#003580] focus:border-transparent outline-none transition"
-                style={{ padding: '0.75rem 1rem' }}
+                style={{ padding: "0.75rem 1rem" }}
                 // KORJAUS: Paikkamerkki käännettäväksi
-                placeholder={t('order.form.placeholder.company')}
+                placeholder={t("order.form.placeholder.company")}
               />
             </div>
 
             {/* Contact Person */}
-            <div style={{ marginBottom: '1.5rem' }}>
-              <label htmlFor="contact" className="block text-sm font-semibold text-gray-700" style={{ marginBottom: '0.5rem' }}>
-                {t('order.form.contact')} *
+            <div style={{ marginBottom: "1.5rem" }}>
+              <label
+                htmlFor="contact"
+                className="block text-sm font-semibold text-gray-700"
+                style={{ marginBottom: "0.5rem" }}
+              >
+                {t("order.form.contact")} *
               </label>
               <input
                 type="text"
@@ -120,17 +155,24 @@ export default function OrderPage() {
                 onChange={handleChange}
                 required
                 className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#003580] focus:border-transparent outline-none transition"
-                style={{ padding: '0.75rem 1rem' }}
+                style={{ padding: "0.75rem 1rem" }}
                 // KORJAUS: Paikkamerkki käännettäväksi
-                placeholder={t('order.form.placeholder.contact')}
+                placeholder={t("order.form.placeholder.contact")}
               />
             </div>
 
             {/* Email and Phone */}
-            <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: '1.5rem', marginBottom: '1.5rem' }}>
+            <div
+              className="grid grid-cols-1 md:grid-cols-2"
+              style={{ gap: "1.5rem", marginBottom: "1.5rem" }}
+            >
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-700" style={{ marginBottom: '0.5rem' }}>
-                  {t('order.form.email')} *
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-semibold text-gray-700"
+                  style={{ marginBottom: "0.5rem" }}
+                >
+                  {t("order.form.email")} *
                 </label>
                 <input
                   type="email"
@@ -140,15 +182,19 @@ export default function OrderPage() {
                   onChange={handleChange}
                   required
                   className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#003580] focus:border-transparent outline-none transition"
-                  style={{ padding: '0.75rem 1rem' }}
+                  style={{ padding: "0.75rem 1rem" }}
                   // KORJAUS: Paikkamerkki käännettäväksi
-                  placeholder={t('order.form.placeholder.email')}
+                  placeholder={t("order.form.placeholder.email")}
                 />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-semibold text-gray-700" style={{ marginBottom: '0.5rem' }}>
-                  {t('order.form.phone')} *
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-semibold text-gray-700"
+                  style={{ marginBottom: "0.5rem" }}
+                >
+                  {t("order.form.phone")} *
                 </label>
                 <input
                   type="tel"
@@ -158,17 +204,21 @@ export default function OrderPage() {
                   onChange={handleChange}
                   required
                   className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#003580] focus:border-transparent outline-none transition"
-                  style={{ padding: '0.75rem 1rem' }}
+                  style={{ padding: "0.75rem 1rem" }}
                   // KORJAUS: Paikkamerkki käännettäväksi
-                  placeholder={t('order.form.placeholder.phone')}
+                  placeholder={t("order.form.placeholder.phone")}
                 />
               </div>
             </div>
 
             {/* Service Selection */}
-            <div style={{ marginBottom: '1.5rem' }}>
-              <label htmlFor="service" className="block text-sm font-semibold text-gray-700" style={{ marginBottom: '0.5rem' }}>
-                {t('order.form.service')} *
+            <div style={{ marginBottom: "1.5rem" }}>
+              <label
+                htmlFor="service"
+                className="block text-sm font-semibold text-gray-700"
+                style={{ marginBottom: "0.5rem" }}
+              >
+                {t("order.form.service")} *
               </label>
               <select
                 id="service"
@@ -177,10 +227,12 @@ export default function OrderPage() {
                 onChange={handleChange}
                 required
                 className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#003580] focus:border-transparent outline-none transition bg-white"
-                style={{ padding: '0.75rem 1rem' }}
+                style={{ padding: "0.75rem 1rem" }}
               >
                 {/* KORJAUS: Oletusvalinnan teksti käännettäväksi */}
-                <option value="">{t('order.form.placeholder.service_select')}</option>
+                <option value="">
+                  {t("order.form.placeholder.service_select")}
+                </option>
                 {services.map((service) => (
                   <option key={service.value} value={service.value}>
                     {service.label}
@@ -190,9 +242,13 @@ export default function OrderPage() {
             </div>
 
             {/* Message */}
-            <div style={{ marginBottom: '1.5rem' }}>
-              <label htmlFor="message" className="block text-sm font-semibold text-gray-700" style={{ marginBottom: '0.5rem' }}>
-                {t('order.form.message')}
+            <div style={{ marginBottom: "1.5rem" }}>
+              <label
+                htmlFor="message"
+                className="block text-sm font-semibold text-gray-700"
+                style={{ marginBottom: "0.5rem" }}
+              >
+                {t("order.form.message")}
               </label>
               <textarea
                 id="message"
@@ -201,48 +257,89 @@ export default function OrderPage() {
                 onChange={handleChange}
                 rows={6}
                 className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#003580] focus:border-transparent outline-none transition resize-none"
-                style={{ padding: '0.75rem 1rem' }}
+                style={{ padding: "0.75rem 1rem" }}
                 // KORJAUS: Paikkamerkki käännettäväksi
-                placeholder={t('order.form.placeholder.message')}
+                placeholder={t("order.form.placeholder.message")}
               />
             </div>
 
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full btn-primary flex items-center justify-center"
-              style={{ gap: '0.5rem' }}
+              disabled={isLoading}
+              className={`w-full btn-primary flex items-center justify-center ${
+                isLoading ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+              style={{ gap: "0.5rem" }}
             >
               <Send className="h-5 w-5" />
-              <span>{t('order.form.submit')}</span>
+              <span>
+                {isLoading ? t("order.form.sending") : t("order.form.submit")}
+              </span>
             </button>
 
-           <p className="text-sm text-gray-500 text-center" style={{ marginTop: '1rem' }}>
-              {t('order.form.required_fields')} 
+            <p
+              className="text-sm text-gray-500 text-center"
+              style={{ marginTop: "1rem" }}
+            >
+              {t("order.form.required_fields")}
             </p>
           </form>
 
           {/* Additional Info - KORJATTU KÄYTTÄMÄÄN KÄÄNNÖSAVAIMIA */}
-          <div className="bg-blue-50 border border-blue-200 rounded-xl" style={{ marginTop: '2rem', padding: '1.5rem' }}>
-            <h3 className="font-semibold text-[#003580]" style={{ marginBottom: '0.75rem' }}>
-              {t('order.next.title')}
+          <div
+            className="bg-blue-50 border border-blue-200 rounded-xl"
+            style={{ marginTop: "2rem", padding: "1.5rem" }}
+          >
+            <h3
+              className="font-semibold text-[#003580]"
+              style={{ marginBottom: "0.75rem" }}
+            >
+              {t("order.next.title")}
             </h3>
-            <ol style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }} className="text-gray-700">
+            <ol
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.5rem",
+              }}
+              className="text-gray-700"
+            >
               <li className="flex items-start">
-                <span className="font-semibold text-[#003580]" style={{ marginRight: '0.5rem' }}>1.</span>
-                <span>{t('order.next.step1')}</span>
+                <span
+                  className="font-semibold text-[#003580]"
+                  style={{ marginRight: "0.5rem" }}
+                >
+                  1.
+                </span>
+                <span>{t("order.next.step1")}</span>
               </li>
               <li className="flex items-start">
-                <span className="font-semibold text-[#003580]" style={{ marginRight: '0.5rem' }}>2.</span>
-                <span>{t('order.next.step2')}</span>
+                <span
+                  className="font-semibold text-[#003580]"
+                  style={{ marginRight: "0.5rem" }}
+                >
+                  2.
+                </span>
+                <span>{t("order.next.step2")}</span>
               </li>
               <li className="flex items-start">
-                <span className="font-semibold text-[#003580]" style={{ marginRight: '0.5rem' }}>3.</span>
-                <span>{t('order.next.step3')}</span>
+                <span
+                  className="font-semibold text-[#003580]"
+                  style={{ marginRight: "0.5rem" }}
+                >
+                  3.
+                </span>
+                <span>{t("order.next.step3")}</span>
               </li>
               <li className="flex items-start">
-                <span className="font-semibold text-[#003580]" style={{ marginRight: '0.5rem' }}>4.</span>
-                <span>{t('order.next.step4')}</span>
+                <span
+                  className="font-semibold text-[#003580]"
+                  style={{ marginRight: "0.5rem" }}
+                >
+                  4.
+                </span>
+                <span>{t("order.next.step4")}</span>
               </li>
             </ol>
           </div>
