@@ -124,7 +124,7 @@ export default function Footer() {
                     href="tel:+358401234567" 
                     className="text-blue-200 hover:text-white transition-colors duration-300"
                   >
-                    +358 40 2183270
+                    +358 40 218 3270
                   </a>
                 </div>
               </li>
@@ -135,7 +135,7 @@ export default function Footer() {
                 <div className="flex-1">
                   <span className="text-blue-200">
                     Petsamonkatu<br />
-                    11120 Riihimäki, Suomi
+                    11120 Riihimäki
                   </span>
                 </div>
               </li>
