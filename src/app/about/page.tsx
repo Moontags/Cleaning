@@ -2,7 +2,7 @@
 
 import { Award, Heart, Shield, TrendingUp } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import WaveBottom from '@/components/WaveBottom';
+import Hero from '@/components/Hero';
 
 export default function AboutPage() {
   const { t } = useLanguage();
@@ -32,28 +32,12 @@ export default function AboutPage() {
 
   return (
     <div>
-      {/* Hero Section - Moderni gradient */}
-      <section className="relative bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#0056d6] text-white section-padding overflow-hidden">
-        {/* Dekoratiiviset tausta-elementit */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="section-container text-center relative z-10">
-          <div style={{ maxWidth: '48rem', margin: '0 auto' }}>
-            <h1 className="text-4xl md:text-5xl font-bold animate-fade-in" style={{ marginBottom: '1.5rem' }}>
-              {t('about.title')}
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-50 leading-relaxed">
-              {t('about.subtitle')}
-            </p>
-          </div>
-        </div>
-
-        {/* Aalto-efekti */}
-        <WaveBottom />
-      </section>
+      <Hero
+        variant="main"
+        title={t('about.title')}
+        subtitle={t('about.subtitle')}
+        maxWidth="48rem"
+      />
 
       {/* Story Section - Moderni korttiasettelu */}
       <section className="section-container section-padding" style={{ marginTop: '-3rem' }}>
@@ -112,23 +96,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-fade-in {
-          animation: fade-in 0.8s ease-out;
-        }
-      `}</style>
     </div>
   );
 }

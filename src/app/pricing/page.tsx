@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Check, Building2, Store, Factory, Star, Shield, Clock, Home } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import WaveBottom from '@/components/WaveBottom';
+import Hero from '@/components/Hero';
 
 export default function PricingPage() {
   const { t } = useLanguage();
@@ -99,26 +99,11 @@ export default function PricingPage() {
 
   return (
     <div>
-      {/* Hero Section - Moderni gradient */}
-      <section className="relative bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#0056d6] text-white section-padding overflow-hidden">
-        {/* Dekoratiiviset tausta-elementit */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="section-container text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold animate-fade-in" style={{ marginBottom: '1.5rem' }}>
-            {t('pricing.title')}
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-50 mx-auto leading-relaxed">
-            {t('pricing.subtitle')}
-          </p>
-        </div>
-
-        {/* Aalto-efekti */}
-        <WaveBottom />
-      </section>
+      <Hero
+        variant="main"
+        title={t('pricing.title')}
+        subtitle={t('pricing.subtitle')}
+      />
 
       {/* Pricing Cards - Glassmorphism */}
       <section className="section-container section-padding" style={{ marginTop: '-3rem' }}>

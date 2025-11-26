@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import WaveBottom from "@/components/WaveBottom";
+import Hero from "@/components/Hero";
 
 export default function ContactPage() {
   const { t } = useLanguage();
@@ -71,48 +71,14 @@ export default function ContactPage() {
 
   return (
     <div>
-      {/* Hero Section - Moderni gradient */}
-      <section className="relative bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#0056d6] text-white section-padding overflow-hidden">
-        {/* Dekoratiiviset tausta-elementit */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
-        </div>
-
-        <div
-          style={{
-            maxWidth: "80rem",
-            margin: "0 auto",
-            paddingLeft: "1rem",
-            paddingRight: "1rem",
-            textAlign: "center",
-          }}
-          className="relative z-10"
-        >
-          <div style={{ maxWidth: "48rem", margin: "0 auto" }}>
-            <h1
-              className="animate-fade-in"
-              style={{
-                fontSize: "clamp(2.25rem, 5vw, 3.75rem)",
-                fontWeight: "700",
-                marginBottom: "1.5rem",
-                color: "white",
-              }}
-            >
-              {t("contact.title")}
-            </h1>
-            <p
-              className="text-blue-50"
-              style={{ fontSize: "clamp(1.25rem, 3vw, 1.5rem)" }}
-            >
-              {t("contact.subtitle")}
-            </p>
-          </div>
-        </div>
-
-        {/* Aalto-efekti */}
-        <WaveBottom />
-      </section>
+      <Hero
+        variant="main"
+        title={t("contact.title")}
+        subtitle={t("contact.subtitle")}
+        maxWidth="48rem"
+        titleClassName="text-4xl md:text-5xl lg:text-6xl font-bold animate-fade-in"
+        subtitleClassName="text-xl md:text-2xl text-blue-50 leading-relaxed"
+      />
 
       {/* Contact Information Grid - Modernisoidtu */}
       <section

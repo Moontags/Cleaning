@@ -97,20 +97,45 @@ export default function Footer() {
                 gap: "0.75rem",
               }}
             >
-              <li className="text-blue-200 hover:text-white transition-colors duration-300 cursor-default">
-                {t("services.office.title")}
+              <li>
+                <Link
+                  href="/services/office-cleaning"
+                  className="text-blue-200 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block"
+                >
+                  {t("services.office.title")}
+                </Link>
               </li>
-              <li className="text-blue-200 hover:text-white transition-colors duration-300 cursor-default">
-                {t("services.business.title")}
+              <li>
+                <Link
+                  href="/services/commercial-cleaning"
+                  className="text-blue-200 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block"
+                >
+                  {t("services.business.title")}
+                </Link>
               </li>
-              <li className="text-blue-200 hover:text-white transition-colors duration-300 cursor-default">
-                {t("services.industrial.title")}
+              <li>
+                <Link
+                  href="/services/industrial-cleaning"
+                  className="text-blue-200 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block"
+                >
+                  {t("services.industrial.title")}
+                </Link>
               </li>
-              <li className="text-blue-200 hover:text-white transition-colors duration-300 cursor-default">
-                {t("services.home_cleaning.title")}
+              <li>
+                <Link
+                  href="/services/home-cleaning"
+                  className="text-blue-200 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block"
+                >
+                  {t("services.home_cleaning.title")}
+                </Link>
               </li>
-              <li className="text-blue-200 hover:text-white transition-colors duration-300 cursor-default">
-                {t("services.construction_end.title")}
+              <li>
+                <Link
+                  href="/services/post-construction-cleaning"
+                  className="text-blue-200 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block"
+                >
+                  {t("services.construction_end.title")}
+                </Link>
               </li>
             </ul>
           </div>

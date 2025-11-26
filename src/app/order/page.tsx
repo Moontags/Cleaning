@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import Hero from "@/components/Hero";
 
 export default function OrderPage() {
   const { t } = useLanguage();
@@ -90,17 +91,11 @@ export default function OrderPage() {
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-[#003580] to-[#0047ab] text-white section-padding">
-        <div className="section-container text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            {t("order.title")}
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-100 mx-auto">
-            {t("order.subtitle")}
-          </p>
-        </div>
-      </section>
+      <Hero
+        variant="simple"
+        title={t("order.title")}
+        subtitle={t("order.subtitle")}
+      />
 
       {/* Form Section */}
       <section className="section-container section-padding">
