@@ -17,7 +17,7 @@ const translations = {
   fi: {
     // Navigaatio
     'nav.home': 'Etusivu',
-    'nav.about': 'Tietoja',
+    'nav.about': 'Tarinamme',
     'nav.pricing': 'Hinnasto',
     'nav.contact': 'Yhteystiedot',
     'nav.order': 'Tilaa siivous',
