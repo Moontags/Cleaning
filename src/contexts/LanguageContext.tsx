@@ -25,7 +25,7 @@ const translations = {
     "nav.order": "Tilaa siivous",
 
     // Etusivu
-    "home.hero.title": "Ammattitaitoista siivousta reippaalla otteella",
+    "home.hero.title": "Siivouspalvelua reippaalla otteella",
     "home.hero.subtitle":
       "Tarjoamme siivouspalveluita Pääkaupunkiseudun ja Kanta-Hämeen alueella.",
     "home.hero.cta": "Pyydä tarjous",
