@@ -95,6 +95,9 @@ export default function OrderPage() {
         variant="simple"
         title={t("order.title")}
         subtitle={t("order.subtitle")}
+        imageSrc="/images/sky.jpg"
+        imageAlt={t('order.title')}
+        imagePriority
       />
 
       {/* Form Section */}

@@ -35,7 +35,7 @@ export default function Header() {
       <nav className="section-container">
         <div className="flex justify-between items-center h-20">
           {/* Logo - Modernisoidtu */}
-          <Link href="/" className="flex items-center space-x-2 flex-shrink-0 group">
+          <Link href="/" aria-label="Siivousote" onClick={() => setIsMenuOpen(false)} className="flex items-center space-x-2 flex-shrink-0 group">
             <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#003580] to-[#0047ab] bg-clip-text text-transparent group-hover:from-[#0047ab] group-hover:to-[#0056d6] transition-all duration-300">
               Siivousote
             </div>
@@ -58,7 +58,6 @@ export default function Header() {
                   className={`relative text-base font-medium transition-all duration-300 whitespace-nowrap text-gray-700 hover:text-[#003580]`}
                 >
                   {t('services.title')}
-                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-[#003580] to-[#0047ab] transition-all duration-300 ${desktopServicesOpen ? 'w-full' : 'w-0 group-hover:w-full'}`} />
                 </button>
 
                 <div className={`absolute left-0 top-full mt-1 w-64 bg-white rounded-lg shadow-lg ring-1 ring-black/5 ${desktopServicesOpen ? 'block' : 'hidden'}`}>

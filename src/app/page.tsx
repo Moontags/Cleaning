@@ -101,9 +101,7 @@ export default function HomePage() {
         className="section-container section-padding"
         style={{ marginTop: "-3rem" }}
       >
-        <div className="text-center" style={{ marginBottom: "4rem" }}>
-          <h2 className="heading-2 text-[#003580]">{t("services.title")}</h2>
-        </div>
+        
 
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5"

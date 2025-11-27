@@ -27,7 +27,7 @@ const translations = {
     // Etusivu
     "home.hero.title": "Siivouspalvelua reippaalla otteella",
     "home.hero.subtitle":
-      "Tarjoamme siivouspalveluita Pääkaupunkiseudun ja Kanta-Hämeen alueella.",
+      "Pääkaupunkiseudun ja Kanta-Hämeen alueella",
     "home.hero.cta": "Pyydä tarjous",
     "home.hero.contact": "Ota yhteyttä",
 
@@ -286,7 +286,7 @@ const translations = {
     "about.story.p2":
       "Vaikka yrityksemme on nuori, tiimimme koostuu koulutetuista ammattilaisista, jotka ovat vuosien varrella hankkineet laajan osaamisen ja ovat sitoutuneet tarjoamaan korkeinta laatua jokaisessa työkohteessa. Käytämme ympäristöystävällisiä puhdistusaineita ja moderneja menetelmiä varmistaaksemme sekä tehokkuuden että turvallisuuden.",
     "about.story.p3":
-      "Uskomme pitkäaikaisiin asiakassuhteisiin ja räätälöimme palvelumme jokaisen asiakkaan yksilöllisten tarpeiden mukaan. Tavoitteemme on olla luotettava kumppunisi puhtauden ylläpidossa.",
+      "Uskomme pitkäaikaisiin asiakassuhteisiin ja räätälöimme palvelumme jokaisen asiakkaan yksilöllisten tarpeiden mukaan. Tavoitteemme on olla luotettava kumppanisi puhtauden ylläpidossa.",
     "about.values.title": "Arvomme",
 
     // OFFICE CLEANING PAGE
@@ -523,7 +523,7 @@ const translations = {
     // Homepage
     "home.hero.title": "Professional Cleaning for Businesses",
     "home.hero.subtitle":
-      "We offer cleaning services in the Helsinki metropolitan area and the Kanta-Häme region",
+      "Helsinki metropolitan area and the Kanta-Häme region",
     "home.hero.cta": "Request Quote",
     "home.hero.contact": "Contact Us",
 
