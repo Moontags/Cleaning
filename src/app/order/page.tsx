@@ -285,60 +285,16 @@ export default function OrderPage() {
           </form>
 
           {/* Additional Info - KORJATTU KÄYTTÄMÄÄN KÄÄNNÖSAVAIMIA */}
-          <div
-            className="bg-blue-50 border border-blue-200 rounded-xl"
-            style={{ marginTop: "2rem", padding: "1.5rem" }}
-          >
-            <h3
-              className="font-semibold text-[#003580]"
-              style={{ marginBottom: "0.75rem" }}
-            >
-              {t("order.next.title")}
-            </h3>
-            <ol
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.5rem",
-              }}
-              className="text-gray-700"
-            >
-              <li className="flex items-start">
-                <span
-                  className="font-semibold text-[#003580]"
-                  style={{ marginRight: "0.5rem" }}
-                >
-                  1.
-                </span>
-                <span>{t("order.next.step1")}</span>
-              </li>
-              <li className="flex items-start">
-                <span
-                  className="font-semibold text-[#003580]"
-                  style={{ marginRight: "0.5rem" }}
-                >
-                  2.
-                </span>
-                <span>{t("order.next.step2")}</span>
-              </li>
-              <li className="flex items-start">
-                <span
-                  className="font-semibold text-[#003580]"
-                  style={{ marginRight: "0.5rem" }}
-                >
-                  3.
-                </span>
-                <span>{t("order.next.step3")}</span>
-              </li>
-              <li className="flex items-start">
-                <span
-                  className="font-semibold text-[#003580]"
-                  style={{ marginRight: "0.5rem" }}
-                >
-                  4.
-                </span>
-                <span>{t("order.next.step4")}</span>
-              </li>
+          <div className="bg-white/6 backdrop-blur-sm p-5 rounded-xl" style={{ marginTop: '2rem' }}>
+            <h3 className="font-semibold text-[#003580] mb-3">{t('order.next.title')}</h3>
+
+            <ol className="flex flex-col gap-4 text-gray-700">
+              {[t('order.next.step1'), t('order.next.step2'), t('order.next.step3'), t('order.next.step4')].map((step, i) => (
+                <li key={i} className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-[#003580] text-white flex items-center justify-center font-semibold flex-shrink-0">{i + 1}</div>
+                  <div className="flex-1">{step}</div>
+                </li>
+              ))}
             </ol>
           </div>
         </div>
