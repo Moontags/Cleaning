@@ -79,7 +79,7 @@ const translations = {
     "contact.hours": "Aukioloajat",
     "contact.hours.value": "Ma-Pe 8:00-16:00",
     "contact.address.line1": "Petsamonkatu",
-    "contact.address.line2": "11120 Riihimäki, Suomi",
+    "contact.address.line2": "11120 Riihimäki",
 
     "contact.methods.title": "Tavat ottaa yhteyttä",
     "contact.phone_card.title": "Soita meille",
