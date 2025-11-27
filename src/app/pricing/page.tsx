@@ -58,12 +58,12 @@ export default function PricingPage() {
         t('pricing.industrial.feature6'),
         t('pricing.industrial.feature7'),
       ],
-      priceFrom: t('pricing.quote'),
-      priceUnit: '',
+      priceFrom: '46',
+      priceUnit: t('pricing.unit_hourly'),
       popular: false,
     },
     {
-      icon: Home, 
+      icon: Home,
       name: t('services.construction_end.title'),
       description: t('pricing.construction.desc'),
       features: [
@@ -75,8 +75,22 @@ export default function PricingPage() {
         t('pricing.construction.feature6'),
         t('pricing.construction.feature7'),
       ],
-      priceFrom: t('pricing.quote'),
-      priceUnit: '',
+      priceFrom: '50',
+      priceUnit: t('pricing.unit_hourly'),
+      popular: false,
+    },
+    {
+      icon: Home,
+      name: t('services.home_cleaning.title'),
+      description: t('pricing.home.desc'),
+      features: [
+        t('pricing.home.feature1'),
+        t('pricing.home.feature2'),
+        t('pricing.home.feature3'),
+        t('pricing.home.min_charge'),
+      ],
+      priceFrom: '45',
+      priceUnit: t('pricing.unit_hourly'),
       popular: false,
     },
   ];
@@ -111,7 +125,7 @@ export default function PricingPage() {
       />
       {/* Pricing Cards - Card component */}
       <section className="section-container section-padding" style={{ marginTop: '-3rem' }}>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" style={{ gap: '1.25rem' }}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5" style={{ gap: '1.25rem' }}>
           {pricingPlans.map((plan, index) => (
             <Card
               key={index}
@@ -183,50 +197,7 @@ export default function PricingPage() {
 
       {/* Custom Quote section removed per request */}
 
-      {/* Comparison Table - Modernisoidtu */}
-      <section className="relative bg-gradient-to-b from-gray-50 to-white section-padding">
-        <div className="section-container">
-          <h2 className="heading-2 text-center text-[#003580]" style={{ marginBottom: '3rem' }}>{t('pricing.compare.title')}</h2>
-          <div className="overflow-x-auto">
-            <table className="w-full bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-              <thead className="bg-gradient-to-r from-[#003580] to-[#0047ab] text-white">
-                <tr>
-                  <th className="text-left font-semibold" style={{ padding: '1.25rem 1.5rem' }}>{t('pricing.compare.feature')}</th>
-                  <th className="text-center font-semibold" style={{ padding: '1.25rem 1.5rem' }}>{t('pricing.compare.office')}</th>
-                  <th className="text-center font-semibold" style={{ padding: '1.25rem 1.5rem' }}>{t('pricing.compare.business')}</th>
-                  <th className="text-center font-semibold" style={{ padding: '1.25rem 1.5rem' }}>{t('pricing.compare.industrial')}</th>
-                  <th className="text-center font-semibold" style={{ padding: '1.25rem 1.5rem' }}>{t('pricing.compare.construction_end')}</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-100">
-                {[
-                  { key: 'regular', checks: [true, true, true, false] },
-                  { key: 'special', checks: [false, true, true, true] },
-                  { key: 'height_work', checks: [false, false, true, true] },
-                  { key: 'weekend', checks: [true, true, true, true] },
-                  { key: 'eco', checks: [true, true, true, true] },
-                  { key: 'quality_control', checks: [true, true, true, true] },
-                ].map((row, idx) => (
-                  <tr key={idx} className="hover:bg-blue-50/50 transition-colors">
-                    <td className="font-medium text-gray-900" style={{ padding: '1.25rem 1.5rem' }}>{t(`pricing.compare.${row.key}`)}</td>
-                    {row.checks.map((hasCheck, colIdx) => (
-                      <td key={colIdx} style={{ padding: '1.25rem 1.5rem', textAlign: 'center' }}>
-                        {hasCheck ? (
-                          <div className="bg-green-50 rounded-full p-1.5 inline-block">
-                            <Check className="h-5 w-5 text-green-600" />
-                          </div>
-                        ) : (
-                          <span className="text-gray-400">-</span>
-                        )}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
+      {/* Comparison table removed as requested */}
 
       {/* FAQ Section - Modernisoidtu */}
       <section className="section-container section-padding">

@@ -163,6 +163,13 @@ const translations = {
     "pricing.construction.feature6": "Nopea reagointi aikatauluihin",
     "pricing.construction.feature7": "Kattava laaduntarkastus",
 
+    // HOME CLEANING (Kotisiivous) pricing texts
+    "pricing.home.desc": "Kotisiivoukset ja kertaluontoiset kotipalvelut",
+    "pricing.home.feature1": "Keittiön ja pintojen perusteellinen puhdistus",
+    "pricing.home.feature2": "Kylpyhuoneen ja WC:n desinfiointi",
+    "pricing.home.feature3": "Lattioiden imurointi ja pesu",
+    "pricing.home.min_charge": "Minimiveloitus 2 tuntia!",
+
     "pricing.info_text":
       "* Hinnat ovat alkaen-hintoja ja voivat vaihdella kohteen koon, sijainnin ja palvelun laajuuden mukaan.",
 
@@ -663,6 +670,13 @@ const translations = {
     "pricing.construction.feature5": "Finishing and polishing",
     "pricing.construction.feature6": "Quick response to schedules",
     "pricing.construction.feature7": "Comprehensive quality check",
+
+    // HOME CLEANING (Kotisiivous) pricing texts
+    "pricing.home.desc": "Home cleaning services and one-time home visits",
+    "pricing.home.feature1": "Thorough kitchen and surface cleaning",
+    "pricing.home.feature2": "Bathroom and toilet disinfection",
+    "pricing.home.feature3": "Vacuuming and floor washing",
+    "pricing.home.min_charge": "Minimum charge: 2 hours!",
 
     "pricing.info_text":
       '* Prices are "starting from" prices and may vary based on the size, location, and scope of the service.',
