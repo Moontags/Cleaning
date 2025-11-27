@@ -37,6 +37,9 @@ export default function AboutPage() {
         title={t('about.title')}
         subtitle={t('about.subtitle')}
         maxWidth="48rem"
+        imageSrc="/images/sky.jpg"
+        imageAlt={t('about.title')}
+        imagePriority
       />
 
       {/* Story Section - Moderni korttiasettelu */}

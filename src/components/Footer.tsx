@@ -123,20 +123,21 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services/home-cleaning"
-                  className="text-blue-200 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block"
-                >
-                  {t("services.home_cleaning.title")}
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/services/post-construction-cleaning"
                   className="text-blue-200 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block"
                 >
                   {t("services.construction_end.title")}
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/services/home-cleaning"
+                  className="text-blue-200 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block"
+                >
+                  {t("services.home_cleaning.title")}
+                </Link>
+              </li>
+              
             </ul>
           </div>
 

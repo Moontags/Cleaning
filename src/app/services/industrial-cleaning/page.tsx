@@ -52,6 +52,8 @@ export default function IndustrialCleaningPage() {
         variant="service"
         title={t("service.industrial.hero.title")}
         subtitle={t("service.industrial.hero.subtitle")}
+        imageSrc="/images/sky.jpg"
+        imageAlt={t('service.industrial.hero.title')}
         ctaButton={{ text: t("service.industrial.cta.button") }}
       />
 
@@ -156,7 +158,7 @@ export default function IndustrialCleaningPage() {
             </p>
             <Link
               href="/order"
-              className="inline-flex items-center gap-2 bg-white text-[#003580] px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 hover:gap-3"
+              className="inline-flex items-center gap-2 bg-white text-[#003580] px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 hover:gap-3"
             >
               {t("service.industrial.cta.button")}
               <ArrowRight className="w-5 h-5" />

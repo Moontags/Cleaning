@@ -78,6 +78,9 @@ export default function ContactPage() {
         maxWidth="48rem"
         titleClassName="text-4xl md:text-5xl lg:text-6xl font-bold animate-fade-in"
         subtitleClassName="text-xl md:text-2xl text-blue-50 leading-relaxed"
+        imageSrc="/images/sky.jpg"
+        imageAlt={t('contact.title')}
+        imagePriority
       />
 
       {/* Contact Information Grid - Modernisoidtu */}
@@ -377,7 +380,7 @@ export default function ContactPage() {
               {t("nav.order")}
             </Link>
             <a
-              href="tel:+358401234567"
+              href="tel:+358402183270"
               className="btn-secondary border-white text-white hover:bg-white/10"
             >
               {t("contact.cta.phone_number")}

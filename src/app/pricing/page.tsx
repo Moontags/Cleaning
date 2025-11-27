@@ -103,6 +103,9 @@ export default function PricingPage() {
         variant="main"
         title={t('pricing.title')}
         subtitle={t('pricing.subtitle')}
+        imageSrc="/images/sky.jpg"
+        imageAlt={t('pricing.title')}
+        imagePriority
       />
 
       {/* Pricing Cards - Glassmorphism */}

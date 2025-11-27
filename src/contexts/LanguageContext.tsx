@@ -18,7 +18,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 const translations = {
   fi: {
     // Navigaatio
-    "nav.home": "Etusivu",
+    "nav.home": "Palvelumme",
     "nav.about": "Tarinamme",
     "nav.pricing": "Hinnasto",
     "nav.contact": "Yhteystiedot",
@@ -115,7 +115,7 @@ const translations = {
     "contact.cta.title": "Valmis aloittamaan yhteistyön?",
     "contact.cta.desc":
       "Ota yhteyttä jo tänään ja saat ilmaisen tarjouksen 24 tunnin sisällä!",
-    "contact.cta.phone_number": "Soita: +358 40 123 4567",
+    "contact.cta.phone_number": "Soita: +358 40 218 3270",
 
     // Hinnasto (PricingPage) - LISÄTTY (VANHAT + UUDET AVAIMET)
     "pricing.title": "Hinnasto",
@@ -514,7 +514,7 @@ const translations = {
   },
   en: {
     // Navigation
-    "nav.home": "Home",
+    "nav.home": "Services",
     "nav.about": "About",
     "nav.pricing": "Pricing",
     "nav.contact": "Contact",
@@ -528,7 +528,7 @@ const translations = {
     "home.hero.contact": "Contact Us",
 
     // Services
-    "services.title": "Our Services",
+    "services.title": "Services",
     "services.office.title": "Office Cleaning",
     "services.office.desc":
       "Regular and one-time office cleaning by professionals.",

@@ -12,11 +12,21 @@ export default function Header() {
   const pathname = usePathname();
 
   const navigation = [
-    { name: t('nav.home'), href: '/' },
     { name: t('nav.about'), href: '/about' },
     { name: t('nav.pricing'), href: '/pricing' },
     { name: t('nav.contact'), href: '/contact' },
   ];
+
+  const services = [
+    { name: t('services.office.title'), href: '/services/office-cleaning' },
+    { name: t('services.business.title'), href: '/services/commercial-cleaning' },
+    { name: t('services.industrial.title'), href: '/services/industrial-cleaning' },
+    { name: t('services.construction_end.title'), href: '/services/post-construction-cleaning' },
+    { name: t('services.home_cleaning.title'), href: '/services/home-cleaning' },
+  ];
+
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
 
   const isActive = (href: string) => pathname === href;
 
@@ -26,7 +36,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo - Modernisoidtu */}
           <Link href="/" className="flex items-center space-x-2 flex-shrink-0 group">
-            <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#003580] to-[#0047ab] bg-clip-text text-transparent group-hover:from-[#0047ab] group-hover:to-[#0056d6] transition-all duration-300">
+            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#003580] to-[#0047ab] bg-clip-text text-transparent group-hover:from-[#0047ab] group-hover:to-[#0056d6] transition-all duration-300">
               Siivousote
             </div>
           </Link>
@@ -34,6 +44,34 @@ export default function Header() {
           {/* Desktop Navigation - Centered */}
           <div className="hidden lg:flex items-center justify-center flex-1" style={{ marginLeft: '2rem', marginRight: '2rem' }}>
             <div className="flex items-center" style={{ gap: '2rem' }}>
+              {/* Palvelut dropdown (desktop) */}
+              <div
+                className="relative"
+                onMouseEnter={() => setDesktopServicesOpen(true)}
+                onMouseLeave={() => setDesktopServicesOpen(false)}
+                onFocusCapture={() => setDesktopServicesOpen(true)}
+                onBlurCapture={() => setDesktopServicesOpen(false)}
+              >
+                <button
+                  aria-haspopup="true"
+                  aria-expanded={desktopServicesOpen}
+                  className={`relative text-base font-medium transition-all duration-300 whitespace-nowrap text-gray-700 hover:text-[#003580]`}
+                >
+                  {t('services.title')}
+                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-[#003580] to-[#0047ab] transition-all duration-300 ${desktopServicesOpen ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                </button>
+
+                <div className={`absolute left-0 top-full mt-1 w-64 bg-white rounded-lg shadow-lg ring-1 ring-black/5 ${desktopServicesOpen ? 'block' : 'hidden'}`}>
+                  <div className="py-2">
+                    {services.map((svc) => (
+                      <Link key={svc.href} href={svc.href} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                        {svc.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -116,6 +154,27 @@ export default function Header() {
         {isMenuOpen && (
           <div className="lg:hidden border-t border-gray-100 bg-white/95 backdrop-blur-sm rounded-b-2xl shadow-lg" style={{ paddingTop: '1rem', paddingBottom: '1rem', marginTop: '0.5rem' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+              <div>
+                <button
+                  onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                  className={`w-full text-left relative text-base font-medium transition-all duration-300 overflow-hidden ${
+                    mobileServicesOpen ? 'text-[#003580] font-semibold bg-gradient-to-r from-blue-50 to-blue-100' : 'text-gray-700 hover:text-[#003580] hover:bg-gray-50'
+                  }`}
+                  style={{ padding: '0.875rem 1rem', borderRadius: '0.75rem' }}
+                >
+                  {t('services.title')}
+                </button>
+                {mobileServicesOpen && (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', paddingLeft: '0.5rem', marginTop: '0.5rem' }}>
+                    {services.map((svc) => (
+                      <Link key={svc.href} href={svc.href} onClick={() => { setIsMenuOpen(false); setMobileServicesOpen(false); }} className="block text-gray-700 hover:text-[#003580] px-4 py-2 rounded-md">
+                        {svc.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               {navigation.map((item) => (
                 <Link
                   key={item.name}

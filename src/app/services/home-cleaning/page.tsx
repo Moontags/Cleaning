@@ -62,6 +62,8 @@ export default function HomeCleaningPage() {
         variant="service"
         title={t("service.home.hero.title")}
         subtitle={t("service.home.hero.subtitle")}
+        imageSrc="/images/sky.jpg"
+        imageAlt={t('service.home.hero.title')}
         ctaButton={{ text: t("service.home.cta.button") }}
       />
 
@@ -169,7 +171,7 @@ export default function HomeCleaningPage() {
             </p>
             <Link
               href="/order"
-              className="inline-flex items-center gap-2 bg-white text-[#003580] px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 hover:gap-3"
+              className="inline-flex items-center gap-2 bg-white text-[#003580] px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 hover:gap-3"
             >
               {t("service.home.cta.button")}
               <ArrowRight className="w-5 h-5" />

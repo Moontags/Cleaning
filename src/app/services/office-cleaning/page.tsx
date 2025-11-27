@@ -69,6 +69,8 @@ export default function OfficeCleaningPage() {
         title={t("service.office.hero.title")}
         subtitle={t("service.office.hero.subtitle")}
         ctaButton={{ text: t("service.office.cta.button") }}
+        imageSrc="/images/sky.jpg"
+        imageAlt={t('service.office.hero.title')}
       />
 
       {/* Introduction */}
@@ -154,19 +156,21 @@ export default function OfficeCleaningPage() {
           >
             {t("service.office.frequency.title")}
           </h2>
-          <ul className="space-y-4 flex flex-col gap-8">
-            {frequencies.map((frequency, index) => (
-              <li
-                key={index}
-                className="bg-white shadow-sm border-l-2 border-blue-700 pl-8 hover:shadow-md transition-shadow duration-300"
-              >
-                <h3 className="text-lg font-semibold text-[#003580] mb-2">
-                  {frequency.title}
-                </h3>
-                <p className="text-gray-600">{frequency.description}</p>
-              </li>
-            ))}
-          </ul>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {frequencies.map((frequency, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-[#003580] hover:translate-x-1"
+                >
+                  <h3 className="text-lg font-semibold text-[#003580] mb-2">
+                    {frequency.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{frequency.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -190,7 +194,7 @@ export default function OfficeCleaningPage() {
             </p>
             <Link
               href="/order"
-              className="inline-flex items-center gap-2 bg-white text-[#003580] px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 hover:gap-3"
+              className="inline-flex items-center gap-2 bg-white text-[#003580] px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 hover:gap-3"
             >
               {t("service.office.cta.button")}
               <ArrowRight className="w-5 h-5" />
