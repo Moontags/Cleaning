@@ -52,6 +52,10 @@ export default function Hero({
         top: "top-20 left-10 w-72 h-72",
         bottom: "bottom-20 right-10 w-96 h-96",
       },
+      // MUOKKAUS 1: Matalampi korkeus mobiilissa (24rem)
+      minHeightClass: "min-h-[24rem] md:min-h-[var(--hero-height)]", 
+      // MUOKKAUS 2: Lisätty luokka sisällön kohdistamiseen alas vain mobiilissa
+      contentPositionClass: "flex flex-col justify-end md:justify-center",
     },
     service: {
       background: "bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#003580]",
@@ -91,7 +95,7 @@ export default function Hero({
     <>
       <section
         className={`relative ${
-          variant === "main" ? "min-h-[var(--hero-height)]" : ""
+          variant === "main" ? config.minHeightClass : ""
         } ${config.background} text-white overflow-hidden`}
       >
         {/** Render background image if provided */}
@@ -122,7 +126,10 @@ export default function Hero({
           </div>
         )}
 
-        <div className={`section-container ${config.padding} ${variant === 'service' ? config.paddingClass : ''} relative z-10`}>
+        <div 
+            // KORJAUS TÄHÄN: Lisätty flex-säiliö ja pystysuunnan kohdistus
+            className={`section-container ${config.padding} ${variant === 'service' ? config.paddingClass : ''} relative z-10 h-full ${variant === 'main' ? config.contentPositionClass : ''}`}
+        >
           <div
             className={config.alignment}
             style={
