@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Header() {
@@ -44,26 +44,36 @@ export default function Header() {
           {/* Desktop Navigation - Centered */}
           <div className="hidden lg:flex items-center justify-center flex-1" style={{ marginLeft: '2rem', marginRight: '2rem' }}>
             <div className="flex items-center" style={{ gap: '2rem' }}>
-              {/* Palvelut dropdown (desktop) */}
+              {/* Palvelut dropdown (desktop) - KORJATTU */}
               <div
                 className="relative"
                 onMouseEnter={() => setDesktopServicesOpen(true)}
                 onMouseLeave={() => setDesktopServicesOpen(false)}
-                onFocusCapture={() => setDesktopServicesOpen(true)}
-                onBlurCapture={() => setDesktopServicesOpen(false)}
               >
                 <button
                   aria-haspopup="true"
                   aria-expanded={desktopServicesOpen}
-                  className={`relative text-base font-medium transition-all duration-300 whitespace-nowrap text-gray-700 hover:text-[#003580]`}
+                  className="relative text-base font-medium transition-all duration-300 whitespace-nowrap text-gray-700 hover:text-[#003580] flex items-center gap-1"
+                  style={{ paddingBottom: '0.25rem' }}
                 >
                   {t('services.title')}
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${desktopServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
 
-                <div className={`absolute left-0 top-full mt-1 w-64 bg-white rounded-lg shadow-lg ring-1 ring-black/5 ${desktopServicesOpen ? 'block' : 'hidden'}`}>
+                {/* Dropdown menu - PARANNETTU */}
+                <div 
+                  className={`absolute left-0 top-full mt-2 w-64 bg-white rounded-lg shadow-xl ring-1 ring-black/5 transition-all duration-200 ${
+                    desktopServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                  }`}
+                  style={{ zIndex: 100 }}
+                >
                   <div className="py-2">
                     {services.map((svc) => (
-                      <Link key={svc.href} href={svc.href} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                      <Link 
+                        key={svc.href} 
+                        href={svc.href} 
+                        className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-[#003580] transition-all duration-200"
+                      >
                         {svc.name}
                       </Link>
                     ))}
@@ -80,10 +90,11 @@ export default function Header() {
                       ? 'text-[#003580]'
                       : 'text-gray-700 hover:text-[#003580]'
                   }`}
+                  style={{ paddingBottom: '0.25rem' }}
                 >
                   {item.name}
-                  {/* Moderni alakriiva animaatiolla */}
-                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-[#003580] to-[#0047ab] transition-all duration-300 ${
+                  {/* Moderni alakriiva animaatiolla - KORJATTU SIJAINTI */}
+                  <span className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#003580] to-[#0047ab] transition-all duration-300 ${
                     isActive(item.href) 
                       ? 'w-full' 
                       : 'w-0 group-hover:w-full'
@@ -95,19 +106,17 @@ export default function Header() {
 
           {/* Right side: CTA Button + Language Switcher */}
           <div className="hidden lg:flex items-center flex-shrink-0" style={{ gap: '1.5rem' }}>
-            {/* CTA Button - KORJATTU TYYLIT */}
+            {/* CTA Button */}
             <Link 
               href="/order" 
-              // Korvattu vanhat luokat uusilla, jotka antavat enemmän paddingia ja pyöreämmät kulmat
               className="bg-gradient-to-r from-[#003580] to-[#0047ab] hover:from-[#0047ab] hover:to-[#0056d6] text-white rounded-lg font-medium transition-all duration-300 hover:shadow-md whitespace-nowrap"
-              // Lisätty sama padding-tyyli kuin kielivalintanapeissa
               style={{ padding: '0.5rem 0.875rem', fontSize: '0.875rem' }} 
             >
               {t('nav.order')}
             </Link>
 
             {/* Language Switcher - Modernisoidtu */}
-            <div className="flex items-center border-l border-gray-200" style={{ gap: '0.5rem', paddingLeft: '1.5rem', marginLeft: '0.5rem' }}>
+            <div className="flex items-center" style={{ gap: '0.5rem', paddingLeft: '1.5rem', marginLeft: '0.5rem' }}>
               <button
                 onClick={() => setLanguage('fi')}
                 className={`flex items-center rounded-lg transition-all duration-300 ${
@@ -156,17 +165,18 @@ export default function Header() {
               <div>
                 <button
                   onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                  className={`w-full text-left relative text-base font-medium transition-all duration-300 overflow-hidden ${
+                  className={`w-full text-left relative text-base font-medium transition-all duration-300 overflow-hidden flex items-center justify-between ${
                     mobileServicesOpen ? 'text-[#003580] font-semibold bg-gradient-to-r from-blue-50 to-blue-100' : 'text-gray-700 hover:text-[#003580] hover:bg-gray-50'
                   }`}
                   style={{ padding: '0.875rem 1rem', borderRadius: '0.75rem' }}
                 >
-                  {t('services.title')}
+                  <span>{t('services.title')}</span>
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {mobileServicesOpen && (
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', paddingLeft: '0.5rem', marginTop: '0.5rem' }}>
                     {services.map((svc) => (
-                      <Link key={svc.href} href={svc.href} onClick={() => { setIsMenuOpen(false); setMobileServicesOpen(false); }} className="block text-gray-700 hover:text-[#003580] px-4 py-2 rounded-md">
+                      <Link key={svc.href} href={svc.href} onClick={() => { setIsMenuOpen(false); setMobileServicesOpen(false); }} className="block text-gray-700 hover:text-[#003580] px-4 py-2 rounded-md hover:bg-gray-50 transition-colors duration-200">
                         {svc.name}
                       </Link>
                     ))}
@@ -193,7 +203,7 @@ export default function Header() {
                 </Link>
               ))}
 
-              {/* Mobile CTA Button - Modernisoidtu (Tyyli säilytetty ennallaan mobiilissa) */}
+              {/* Mobile CTA Button - Modernisoidtu */}
               <Link
                 href="/order"
                 onClick={() => setIsMenuOpen(false)}

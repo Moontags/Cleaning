@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Check, Building2, Store, Factory, Star, Shield, Clock, Home } from 'lucide-react';
+import { Check, Building2, Store, Factory, Star, Shield, Clock, Home, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Hero from '@/components/Hero';
 import Card from '@/components/Card';
@@ -149,7 +149,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Benefits Section - Modernit kortit */}
+      {/* Benefits Section - PARANNETTU hover-efekti */}
       <section className="relative bg-gradient-to-b from-gray-50 to-white section-padding">
         <div className="section-container">
           <h2 className="heading-2 text-center text-[#003580]" style={{ marginBottom: '3rem' }}>{t('pricing.benefits.title')}</h2>
@@ -157,7 +157,7 @@ export default function PricingPage() {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="group bg-white/60 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 text-center transform hover:-translate-y-1"
+                className="group bg-white/60 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 text-center transform hover:-translate-y-1 hover:scale-105"
                 style={{ padding: '1.25rem' }}
               >
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-3 border border-white/20 bg-white/10" style={{ marginBottom: '0.75rem' }}>
@@ -173,7 +173,7 @@ export default function PricingPage() {
             ))}
           </div>
 
-          {/* Detailed inclusions - Modernisoidtu */}
+          {/* Detailed inclusions - YHTENÄISTETTY sininen värimaailma */}
           <div className="bg-white/60 backdrop-blur-sm rounded-2xl shadow-sm border border-white/20" style={{ maxWidth: '64rem', margin: '0 auto', padding: '1.5rem' }}>
             <h3 className="text-xl font-semibold text-[#003580] text-center" style={{ marginBottom: '1.25rem' }}>
               {t('pricing.inclusions.title')}
@@ -181,7 +181,7 @@ export default function PricingPage() {
             <div className="grid md:grid-cols-2" style={{ gap: '1rem' }}>
               {[1, 2, 3, 4, 5, 6].map((num) => (
                 <div key={num} className="flex items-start" style={{ gap: '0.75rem' }}>
-                  <div className="rounded-xl flex-shrink-0 p-2" style={{ background: 'linear-gradient(135deg,#38a169,#2f855a)', boxShadow: '0 6px 14px rgba(47,133,90,0.08)' }}>
+                  <div className="rounded-xl flex-shrink-0 p-2 bg-gradient-to-br from-[#003580] to-[#0047ab]" style={{ boxShadow: '0 6px 14px rgba(0,53,128,0.12)' }}>
                     <Check className="h-5 w-5 text-white" />
                   </div>
                   <div>
@@ -199,7 +199,7 @@ export default function PricingPage() {
 
       {/* Comparison table removed as requested */}
 
-      {/* FAQ Section - Modernisoidtu */}
+      {/* FAQ Section - PARANNETTU animaatio ChevronDown-ikonilla */}
       <section className="section-container section-padding">
         <h2 className="heading-2 text-center text-[#003580]" style={{ marginBottom: '3rem' }}>{t('pricing.faq.title')}</h2>
         <div style={{ maxWidth: '48rem', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -207,7 +207,9 @@ export default function PricingPage() {
             <details key={num} className="group bg-white/90 backdrop-blur-sm rounded-xl shadow-md hover:shadow-lg transition-all border border-gray-100" style={{ padding: '1.5rem' }}>
               <summary className="font-semibold text-[#003580] cursor-pointer list-none flex items-center justify-between group-hover:text-[#0047ab] transition-colors">
                 {t(`pricing.faq${num}.title`)}
-                <span className="text-2xl group-open:rotate-45 transition-transform bg-gradient-to-br from-[#003580] to-[#0047ab] w-8 h-8 rounded-lg flex items-center justify-center text-white" style={{ marginLeft: '1rem' }}>+</span>
+                <span className="bg-gradient-to-br from-[#003580] to-[#0047ab] w-8 h-8 rounded-lg flex items-center justify-center text-white transition-transform group-open:rotate-180" style={{ marginLeft: '1rem' }}>
+                  <ChevronDown className="h-5 w-5" />
+                </span>
               </summary>
               <p className="text-gray-600 leading-relaxed" style={{ marginTop: '1rem' }}>
                 {t(`pricing.faq${num}.desc`)}
@@ -217,7 +219,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Final CTA - image background */}
+      {/* Final CTA - PARANNETTU responsiivisuus ja siirtymä footeriin */}
       <section
         className="relative text-white section-padding overflow-hidden"
         style={{
@@ -234,16 +236,19 @@ export default function PricingPage() {
         </div>
 
         <div className="section-container text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold" style={{ marginBottom: '1.5rem' }}>
+          <h2 className="text-3xl md:text-4xl font-bold max-w-3xl mx-auto" style={{ marginBottom: '1.5rem' }}>
             {t('pricing.final_cta.title')}
           </h2>
-          <p className="text-xl text-blue-50 mx-auto" style={{ marginBottom: '2rem' }}>
+          <p className="text-lg md:text-xl text-blue-50 max-w-2xl mx-auto" style={{ marginBottom: '2rem' }}>
             {t('pricing.final_cta.desc')}
           </p>
-          <Link href="/order" className="inline-flex items-center justify-center bg-white text-[#003580] rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transition-all duration-300">
+          <Link href="/order" className="inline-flex items-center justify-center bg-white text-[#003580] rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
             {t('pricing.final_cta.button')}
           </Link>
         </div>
+
+        {/* UUSI: Pehmeä gradient-siirtymä footeriin - Luo saumattoman siirtymän */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-[#001f3f]/40 to-[#001f3f]/80 pointer-events-none"></div>
       </section>
 
       <style jsx>{`

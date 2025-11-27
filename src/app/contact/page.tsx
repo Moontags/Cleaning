@@ -377,7 +377,9 @@ export default function ContactPage() {
               {t('contact.cta.phone_number')}
             </a>
           </div>
+          
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-[#001f3f]/40 to-[#001f3f]/80 pointer-events-none"></div>
       </section>
 
       <style jsx>{`

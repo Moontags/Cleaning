@@ -149,7 +149,7 @@ export default function HomePage() {
 
       <WhyChoose />
 
-      {/* CTA Section - Moderni gradient */}
+      {/* CTA Section - PARANNETTU SIIRTYMÄ FOOTERIIN */}
       <section
         className="relative text-white section-padding overflow-hidden"
         style={{
@@ -190,6 +190,9 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
+
+        {/* UUSI: Pehmeä gradient-siirtymä footeriin - Luo saumattoman siirtymän */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-[#001f3f]/40 to-[#001f3f]/80 pointer-events-none"></div>
       </section>
     </div>
   );
