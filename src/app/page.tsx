@@ -14,6 +14,7 @@ import {
   Construction,
 } from "lucide-react";
 import Hero from "@/components/Hero";
+import WhyChoose from "@/components/WhyChoose";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function HomePage() {
@@ -146,87 +147,46 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Choose Us Section - Modernit kortit */}
-      <section className="relative bg-gradient-to-b from-gray-50 to-white section-padding">
-        <div className="section-container">
-          <div className="text-center" style={{ marginBottom: "4rem" }}>
-            <h2 className="heading-2 text-[#003580]">{t("why.title")}</h2>
-          </div>
-
-          <div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
-            style={{ gap: "2rem" }}
-          >
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="group text-center transform hover:-translate-y-2 transition-all duration-300"
-              >
-                <div
-                  className="relative bg-white w-20 h-20 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-shadow"
-                  style={{ marginBottom: "1.25rem" }}
-                >
-                  {/* Gradient border effect */}
-                  <div
-                    className="absolute inset-0 bg-gradient-to-br from-[#003580] to-[#0047ab] rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"
-                    style={{ padding: "2px" }}
-                  >
-                    <div className="bg-white w-full h-full rounded-2xl"></div>
-                  </div>
-                  <benefit.icon className="relative z-10 h-10 w-10 text-[#003580] group-hover:text-[#0047ab] transition-colors" />
-                </div>
-                <h3
-                  className="text-xl font-semibold text-[#003580]"
-                  style={{ marginBottom: "0.75rem" }}
-                >
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WhyChoose />
 
       {/* CTA Section - Moderni gradient */}
-      <section className="relative bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#0056d6] text-white section-padding overflow-hidden">
-        {/* Dekoratiiviset elementit */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 right-20 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-20 w-80 h-80 bg-blue-300 rounded-full blur-3xl"></div>
+      <section
+        className="relative text-white section-padding overflow-hidden"
+        style={{
+          backgroundImage: `url('/images/etusivu.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Background overlay for contrast and airy look */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#05263a]/60 via-[#003580]/55 to-[#003580]/65"></div>
+
+        {/* Soft decorative shapes (keeps previous feel) */}
+        <div className="absolute inset-0 opacity-25 pointer-events-none">
+          <div className="absolute top-12 right-12 w-72 h-72 bg-white/6 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-12 left-12 w-96 h-96 bg-blue-300/6 rounded-full blur-3xl"></div>
         </div>
 
         <div className="section-container text-center relative z-10">
-          <h2
-            className="text-3xl md:text-4xl font-bold"
-            style={{ marginBottom: "1.5rem" }}
-          >
-            {t("home.hero.cta")}
+          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight" style={{ marginBottom: '1.25rem' }}>
+            {t('home.hero.cta')}
           </h2>
-          {/* KORJATTU: Varmistettu text-center toiminta */}
-          <p
-            className="text-xl text-blue-50 mx-auto text-center"
-            style={{ marginBottom: "2rem" }}
-          >
-            {t("contact.subtitle")}
+          <p className="text-lg md:text-xl text-blue-50 max-w-2xl mx-auto" style={{ marginBottom: '1.75rem' }}>
+            {t('contact.subtitle')}
           </p>
-          <div
-            className="flex flex-col sm:flex-row justify-center"
-            style={{ gap: "1rem" }}
-          >
+
+          <div className="flex flex-col sm:flex-row justify-center items-center" style={{ gap: '1rem' }}>
             <Link
               href="/order"
-              className="btn-primary bg-white text-[#003580] hover:bg-blue-50 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center justify-center bg-white text-[#003580] rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
-              {t("nav.order")}
+              {t('nav.order')}
             </Link>
             <Link
               href="/contact"
-              className="btn-secondary border-2 border-white text-white hover:bg-white/10 backdrop-blur-sm transform hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center justify-center bg-white/20 text-white rounded-full px-6 py-3 font-medium border border-white/25 backdrop-blur-sm hover:backdrop-brightness-110 transition-all duration-300"
             >
-              {t("nav.contact")}
+              {t('nav.contact')}
             </Link>
           </div>
         </div>

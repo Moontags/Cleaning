@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { Check, Building2, Store, Factory, Star, Shield, Clock, Home } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Hero from '@/components/Hero';
+import Card from '@/components/Card';
+
 
 export default function PricingPage() {
   const { t } = useLanguage();
@@ -107,74 +109,27 @@ export default function PricingPage() {
         imageAlt={t('pricing.title')}
         imagePriority
       />
-
-      {/* Pricing Cards - Glassmorphism */}
+      {/* Pricing Cards - Card component */}
       <section className="section-container section-padding" style={{ marginTop: '-3rem' }}>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" style={{ gap: '1.5rem' }}> 
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4" style={{ gap: '1.25rem' }}>
           {pricingPlans.map((plan, index) => (
-            <div 
+            <Card
               key={index}
-              className="group relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col border border-gray-100 transform hover:-translate-y-2"
-            >
-              {/* Hover gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#003580]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
-              <div className="flex-grow flex flex-col relative z-10" style={{ padding: '2rem' }}>
-                <div className="bg-gradient-to-br from-[#003580] to-[#0047ab] w-16 h-16 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg" style={{ marginBottom: '1.25rem' }}>
-                  <plan.icon className="h-8 w-8 text-white" />
-                </div>
-                
-                <h3 className="text-2xl font-bold text-[#003580] group-hover:text-[#0047ab] transition-colors" style={{ marginBottom: '0.75rem' }}>
-                  {plan.name}
-                </h3>
-                
-                <p className="text-gray-600 leading-relaxed" style={{ marginBottom: '1.5rem', minHeight: '3rem' }}>
-                  {plan.description}
-                </p>
-                
-                <div style={{ marginBottom: '1.5rem' }}>
-                  <div className="flex items-baseline">
-                    <span className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#003580] to-[#0047ab] bg-clip-text text-transparent">
-                      {plan.priceFrom}
-                    </span>
-                    <span className="text-gray-600 font-medium" style={{ marginLeft: '0.5rem' }}>
-                      {plan.priceUnit}
-                    </span>
-                  </div>
-                  {plan.priceUnit && (
-                    <p className="text-sm text-gray-500" style={{ marginTop: '0.25rem' }}>{t('pricing.starting_from')}</p>
-                  )}
-                </div>
-                
-                <ul className="flex-grow" style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '1.5rem' }}>
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start">
-                      <div className="bg-green-50 rounded-full p-1 flex-shrink-0" style={{ marginRight: '0.75rem' }}>
-                        <Check className="h-4 w-4 text-green-600" />
-                      </div>
-                      <span className="text-gray-700 text-sm leading-tight">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <Link 
-                  href="/order"
-                  className="block text-center rounded-xl font-semibold transition-all bg-gradient-to-r from-[#003580] to-[#0047ab] text-white hover:shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-0.5"
-                  style={{ padding: '0.875rem 1.5rem' }}
-                >
-                  {t('home.hero.cta')}
-                </Link>
-              </div>
-
-              {/* Dekoratiivinen elementti */}
-              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-[#003580]/5 rounded-full blur-2xl group-hover:bg-[#003580]/10 transition-colors"></div>
-            </div>
+              icon={plan.icon}
+              title={plan.name}
+              description={plan.description}
+              priceFrom={plan.priceFrom}
+              priceUnit={plan.priceUnit}
+              features={plan.features}
+              ctaText={t('home.hero.cta')}
+              ctaHref="/order"
+            />
           ))}
         </div>
 
         {/* Info text */}
-        <div style={{ marginTop: '3rem', textAlign: 'center' }}>
-          <p className="text-gray-600 text-lg">
+        <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
+          <p className="text-gray-600 text-base">
             {t('pricing.info_text')}
           </p>
         </div>
@@ -184,20 +139,20 @@ export default function PricingPage() {
       <section className="relative bg-gradient-to-b from-gray-50 to-white section-padding">
         <div className="section-container">
           <h2 className="heading-2 text-center text-[#003580]" style={{ marginBottom: '3rem' }}>{t('pricing.benefits.title')}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: '2rem', marginBottom: '3rem' }}>
+          <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: '1.25rem', marginBottom: '2.5rem' }}>
             {benefits.map((benefit, index) => (
-              <div 
+              <div
                 key={index}
-                className="group bg-white/90 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 text-center border border-gray-100 transform hover:-translate-y-2"
-                style={{ padding: '2.5rem' }}
+                className="group bg-white/60 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 text-center transform hover:-translate-y-1"
+                style={{ padding: '1.25rem' }}
               >
-                <div className="bg-gradient-to-br from-[#003580] to-[#0047ab] w-20 h-20 rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300" style={{ marginBottom: '1.25rem' }}>
-                  <benefit.icon className="h-10 w-10 text-white" />
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-3 border border-white/20 bg-white/10" style={{ marginBottom: '0.75rem' }}>
+                  <benefit.icon className="h-6 w-6 text-[#003580]" />
                 </div>
-                <h3 className="text-xl font-bold text-[#003580] group-hover:text-[#0047ab] transition-colors" style={{ marginBottom: '0.75rem' }}>
+                <h3 className="text-lg font-semibold text-[#003580]" style={{ marginBottom: '0.5rem' }}>
                   {benefit.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-700 text-sm leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -205,14 +160,14 @@ export default function PricingPage() {
           </div>
 
           {/* Detailed inclusions - Modernisoidtu */}
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100" style={{ maxWidth: '64rem', margin: '0 auto', padding: '2.5rem' }}>
-            <h3 className="text-2xl font-bold text-[#003580] text-center" style={{ marginBottom: '2rem' }}>
+          <div className="bg-white/60 backdrop-blur-sm rounded-2xl shadow-sm border border-white/20" style={{ maxWidth: '64rem', margin: '0 auto', padding: '1.5rem' }}>
+            <h3 className="text-xl font-semibold text-[#003580] text-center" style={{ marginBottom: '1.25rem' }}>
               {t('pricing.inclusions.title')}
             </h3>
-            <div className="grid md:grid-cols-2" style={{ gap: '1.5rem' }}>
+            <div className="grid md:grid-cols-2" style={{ gap: '1rem' }}>
               {[1, 2, 3, 4, 5, 6].map((num) => (
-                <div key={num} className="flex items-start group" style={{ gap: '1rem' }}>
-                  <div className="bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex-shrink-0 p-2 shadow-md group-hover:scale-110 transition-transform duration-300">
+                <div key={num} className="flex items-start" style={{ gap: '0.75rem' }}>
+                  <div className="rounded-xl flex-shrink-0 p-2" style={{ background: 'linear-gradient(135deg,#38a169,#2f855a)', boxShadow: '0 6px 14px rgba(47,133,90,0.08)' }}>
                     <Check className="h-5 w-5 text-white" />
                   </div>
                   <div>
@@ -226,40 +181,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Custom Quote Section - Moderni gradient */}
-      <section className="section-container section-padding">
-        <div className="relative bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#0056d6] rounded-2xl text-white text-center overflow-hidden" style={{ padding: '3rem 2rem' }}>
-          {/* Dekoratiiviset elementit */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-10 right-10 w-48 h-48 bg-white rounded-full blur-3xl"></div>
-            <div className="absolute bottom-10 left-10 w-64 h-64 bg-blue-300 rounded-full blur-3xl"></div>
-          </div>
-
-          <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold" style={{ marginBottom: '1rem' }}>
-              {t('pricing.custom_cta.title')}
-            </h2>
-            <p className="text-xl text-blue-50 mx-auto" style={{ marginBottom: '2rem' }}>
-              {t('pricing.custom_cta.desc').split('. ')[0]}.<br />
-              {t('pricing.custom_cta.desc').split('. ')[1]}
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center" style={{ gap: '1rem' }}>
-              <Link 
-                href="/order" 
-                className="btn-primary bg-white text-[#003580] hover:bg-gray-100"
-              >
-                {t('pricing.contact.cta')}
-              </Link>
-              <a 
-                href="tel:+358402183270" 
-                className="btn-secondary border-white text-white hover:bg-white/10"
-              >
-                Soita: +358 40 218 3270
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Custom Quote section removed per request */}
 
       {/* Comparison Table - Modernisoidtu */}
       <section className="relative bg-gradient-to-b from-gray-50 to-white section-padding">
@@ -324,12 +246,20 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Final CTA - Moderni gradient */}
-      <section className="relative bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#0056d6] text-white section-padding overflow-hidden">
-        {/* Dekoratiiviset elementit */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 right-20 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-20 w-80 h-80 bg-blue-300 rounded-full blur-3xl"></div>
+      {/* Final CTA - image background */}
+      <section
+        className="relative text-white section-padding overflow-hidden"
+        style={{
+          backgroundImage: `url('/images/etusivu.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-[#05263a]/60 via-[#003580]/55 to-[#003580]/65"></div>
+
+        <div className="absolute inset-0 opacity-25 pointer-events-none">
+          <div className="absolute top-12 right-12 w-72 h-72 bg-white/6 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-12 left-12 w-96 h-96 bg-blue-300/6 rounded-full blur-3xl"></div>
         </div>
 
         <div className="section-container text-center relative z-10">
@@ -339,7 +269,7 @@ export default function PricingPage() {
           <p className="text-xl text-blue-50 mx-auto" style={{ marginBottom: '2rem' }}>
             {t('pricing.final_cta.desc')}
           </p>
-          <Link href="/order" className="btn-primary bg-white text-[#003580] hover:bg-gray-100 inline-block">
+          <Link href="/order" className="inline-flex items-center justify-center bg-white text-[#003580] rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transition-all duration-300">
             {t('pricing.final_cta.button')}
           </Link>
         </div>

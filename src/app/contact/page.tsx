@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Hero from "@/components/Hero";
+ 
 
 export default function ContactPage() {
   const { t } = useLanguage();
@@ -95,21 +96,17 @@ export default function ContactPage() {
           {contactInfo.map((info, index) => (
             <div
               key={index}
-              className="group relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 transform hover:-translate-y-2"
+              className="group relative bg-white/60 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden transform hover:-translate-y-1"
             >
-              {/* Hover gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#003580]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-              <div className="relative z-10" style={{ padding: "2rem" }}>
+              <div className="relative z-10 p-6">
                 <div
-                  className="bg-gradient-to-br from-[#003580] to-[#0047ab] w-14 h-14 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg"
-                  style={{ marginBottom: "1.25rem" }}
+                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 border border-white/20 bg-white/10 text-[#003580]"
                 >
-                  <info.icon className="h-7 w-7 text-white" />
+                  <info.icon className="h-7 w-7" />
                 </div>
                 <h3
                   className="font-semibold text-[#003580] text-lg"
-                  style={{ marginBottom: "0.75rem" }}
+                  style={{ marginBottom: "0.5rem" }}
                 >
                   {info.title}
                 </h3>
@@ -130,9 +127,6 @@ export default function ContactPage() {
                   <p className="text-gray-700 font-medium">{info.value}</p>
                 )}
               </div>
-
-              {/* Dekoratiivinen elementti */}
-              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-[#003580]/5 rounded-full blur-2xl group-hover:bg-[#003580]/10 transition-colors"></div>
             </div>
           ))}
         </div>
@@ -166,19 +160,16 @@ export default function ContactPage() {
                   style={{ padding: "1.5rem" }}
                 >
                   {/* Border accent */}
-                  <div
-                    className={`absolute left-0 top-0 bottom-0 w-1 ${card.borderColor}`}
-                  ></div>
-
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#003580]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  {/* Hover overlay subtle */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/4"></div>
 
                   <div
                     className="flex items-start relative z-10"
                     style={{ gap: "1rem", marginLeft: "0.5rem" }}
                   >
                     <div
-                      className={`${card.iconBg} w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300`}
+                      className={`${card.iconBg} w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm transition-transform duration-300`}
+                      style={{ background: 'linear-gradient(135deg,#003580,#0047ab)', boxShadow: '0 6px 14px rgba(0,53,128,0.08)' }}
                     >
                       <card.icon className="h-6 w-6 text-white" />
                     </div>
@@ -197,8 +188,8 @@ export default function ContactPage() {
                       </p>
                       <Link
                         href={card.link}
-                        className={`inline-block ${card.buttonBg} text-white rounded-lg transition-all duration-300 font-semibold shadow-md`}
-                        style={{ padding: "0.625rem 1.5rem" }}
+                        className={`inline-block text-[#003580] bg-white rounded-full border border-white/30 transition-all duration-300 font-semibold`}
+                        style={{ padding: "0.5rem 1rem" }}
                       >
                         {card.linkText}
                       </Link>
@@ -348,42 +339,42 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* CTA Section - Moderni gradient */}
-      <section className="relative bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#0056d6] text-white section-padding overflow-hidden">
-        {/* Dekoratiiviset elementit */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 right-20 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-20 w-80 h-80 bg-blue-300 rounded-full blur-3xl"></div>
+      {/* CTA Section - image background */}
+      <section
+        className="relative text-white section-padding overflow-hidden"
+        style={{
+          backgroundImage: `url('/images/etusivu.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-[#05263a]/60 via-[#003580]/55 to-[#003580]/65"></div>
+
+        <div className="absolute inset-0 opacity-25 pointer-events-none">
+          <div className="absolute top-12 right-12 w-72 h-72 bg-white/6 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-12 left-12 w-96 h-96 bg-blue-300/6 rounded-full blur-3xl"></div>
         </div>
 
         <div className="section-container text-center relative z-10">
-          <h2
-            className="text-3xl md:text-4xl font-bold"
-            style={{ marginBottom: "1.5rem" }}
-          >
-            {t("contact.cta.title")}
+          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight" style={{ marginBottom: '1.25rem' }}>
+            {t('contact.cta.title')}
           </h2>
-          <p
-            className="text-xl text-blue-50 mx-auto"
-            style={{ marginBottom: "2rem" }}
-          >
-            {t("contact.cta.desc")}
+          <p className="text-lg md:text-xl text-blue-50 max-w-2xl mx-auto" style={{ marginBottom: '1.75rem' }}>
+            {t('contact.cta.desc')}
           </p>
-          <div
-            className="flex flex-col sm:flex-row justify-center"
-            style={{ gap: "1rem" }}
-          >
+
+          <div className="flex flex-col sm:flex-row justify-center items-center" style={{ gap: '1rem' }}>
             <Link
               href="/order"
-              className="btn-primary bg-white text-[#003580] hover:bg-gray-100"
+              className="inline-flex items-center justify-center bg-white text-[#003580] rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
-              {t("nav.order")}
+              {t('nav.order')}
             </Link>
             <a
               href="tel:+358402183270"
-              className="btn-secondary border-white text-white hover:bg-white/10"
+              className="inline-flex items-center justify-center bg-white/20 text-white rounded-full px-6 py-3 font-medium border border-white/25 backdrop-blur-sm hover:backdrop-brightness-110 transition-all duration-300"
             >
-              {t("contact.cta.phone_number")}
+              {t('contact.cta.phone_number')}
             </a>
           </div>
         </div>

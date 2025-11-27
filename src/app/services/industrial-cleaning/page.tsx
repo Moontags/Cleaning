@@ -4,6 +4,7 @@ import Link from "next/link";
 import { CheckCircle2, ArrowRight, Factory, ShieldCheck, Settings } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Hero from "@/components/Hero";
+import Card from "@/components/Card";
 
 export default function IndustrialCleaningPage() {
   const { t } = useLanguage();
@@ -75,24 +76,15 @@ export default function IndustrialCleaningPage() {
           >
             {t("service.industrial.why.title")}
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300"
-                >
-                  <div className="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="w-7 h-7 text-[#003580]" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-[#003580] mb-3">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
-                </div>
-              );
-            })}
+          <div className="grid md:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <Card
+                key={index}
+                icon={benefit.icon}
+                title={benefit.title}
+                description={benefit.description}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -131,7 +123,7 @@ export default function IndustrialCleaningPage() {
               {industries.map((industry, index) => (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 border-l-4 border-[#003580] hover:translate-x-1"
+                  className="bg-white/60 backdrop-blur-sm p-4 rounded-lg shadow-sm transition-all duration-300"
                 >
                   <p className="text-gray-700 font-medium">{industry}</p>
                 </div>
@@ -141,26 +133,35 @@ export default function IndustrialCleaningPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="relative bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#003580] text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 right-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-10 left-10 w-64 h-64 bg-blue-300 rounded-full blur-3xl"></div>
+      {/* CTA Section - image background */}
+      <section
+        className="relative text-white overflow-hidden"
+        style={{
+          backgroundImage: `url('/images/etusivu.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-[#05263a]/60 via-[#003580]/55 to-[#003580]/65"></div>
+
+        <div className="absolute inset-0 opacity-25 pointer-events-none">
+          <div className="absolute top-12 right-12 w-72 h-72 bg-white/6 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-12 left-12 w-96 h-96 bg-blue-300/6 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="section-container relative z-10" style={{ paddingTop: "5rem", paddingBottom: "5rem" }}>
-          <div className="max-w-3xl mx-auto text-center">
+        <div className="section-container text-center relative z-10" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
+          <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              {t("service.industrial.cta.title")}
+              {t('service.industrial.cta.title')}
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              {t("service.industrial.cta.subtitle")}
+            <p className="text-xl text-blue-50 mb-8">
+              {t('service.industrial.cta.subtitle')}
             </p>
             <Link
               href="/order"
-              className="inline-flex items-center gap-2 bg-white text-[#003580] px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 hover:gap-3"
+              className="inline-flex items-center gap-2 bg-white text-[#003580] px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
-              {t("service.industrial.cta.button")}
+              {t('service.industrial.cta.button')}
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>

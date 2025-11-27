@@ -72,28 +72,22 @@ export default function AboutPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: '1.5rem' }}>
             {values.map((value, index) => (
-              <div 
+              <div
                 key={index}
-                className="group relative bg-white/90 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden transform hover:-translate-y-2"
-                style={{ padding: '2rem' }}
+                className="group relative bg-white/60 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden transform hover:-translate-y-1"
+                style={{ padding: '1.25rem' }}
               >
-                {/* Hover gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#003580]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
                 <div className="relative z-10">
-                  <div className="bg-gradient-to-br from-[#003580] to-[#0047ab] w-16 h-16 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg" style={{ marginBottom: '1.25rem' }}>
-                    <value.icon className="h-8 w-8 text-white" />
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-3 border border-white/20 bg-white/10 text-[#003580]" style={{ marginBottom: '0.75rem' }}>
+                    <value.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="text-xl font-semibold text-[#003580] group-hover:text-[#0047ab] transition-colors" style={{ marginBottom: '0.75rem' }}>
+                  <h3 className="text-lg font-semibold text-[#003580]" style={{ marginBottom: '0.5rem' }}>
                     {value.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-700 text-sm leading-relaxed">
                     {value.description}
                   </p>
                 </div>
-
-                {/* Dekoratiivinen elementti */}
-                <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-[#003580]/5 rounded-full blur-2xl group-hover:bg-[#003580]/10 transition-colors"></div>
               </div>
             ))}
           </div>
