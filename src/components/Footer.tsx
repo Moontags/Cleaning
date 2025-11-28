@@ -23,9 +23,17 @@ export default function Footer() {
             <h3 className="text-2xl font-bold text-white" style={{ marginBottom: '1rem' }}>
               Siivousote
             </h3>
-            <p className="text-blue-100 leading-relaxed" style={{ marginBottom: '1rem' }}>
-              {t('home.hero.subtitle')}
-            </p>
+            <div className="text-blue-100 leading-relaxed" style={{ marginBottom: '1rem' }}>
+              <p className="font-semibold mb-2">{t('footer.service_areas')}</p>
+              <ul className="space-y-1 text-sm">
+                <li>{t('footer.area.metropolitan')}</li>
+                <li>{t('footer.area.kanta_hame')}</li>
+                <li>{t('footer.area.hyvinkaa')}</li>
+                <li>{t('footer.area.nurmijärvi')}</li>
+                <li>{t('footer.area.jarvenpaa')}</li>
+                <li>{t('footer.area.tuusula')}</li>
+              </ul>
+            </div>
           </div>
 
           {/* Company Links */}

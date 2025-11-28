@@ -63,11 +63,17 @@ const translations = {
     "why.flexible.title": "Joustavuus",
     "why.flexible.desc": "Räätälöimme palvelumme asiakkaan tarpeiden mukaan.",
 
-    // Footer
     "footer.rights": "Kaikki oikeudet pidätetään.",
     "footer.company": "Yritys",
     "footer.services": "Palvelut",
     "footer.contact.title": "Yhteystiedot",
+    "footer.service_areas": "Palvelualueet:",
+    "footer.area.metropolitan": "Pääkaupunkiseutu",
+    "footer.area.kanta_hame": "Kanta-Häme",
+    "footer.area.hyvinkaa": "Hyvinkää",
+    "footer.area.nurmijärvi": "Nurmijärvi",
+    "footer.area.jarvenpaa": "Järvenpää",
+    "footer.area.tuusula": "Tuusula",
 
     // Yhteystiedot
     "contact.title": "Ota yhteyttä",
