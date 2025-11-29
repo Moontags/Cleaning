@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.png", 
+        url: "/logo.png", // Varmista, että tämä kuva on public-kansiossa
         width: 1200,
         height: 630,
         alt: "Siivousote - Ammattitaitoista siivousta",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Siivousote - Ammattitaitoista siivousta",
     description:
       "Luotettava kumppanisi puhtauden ylläpidossa. Yritys- ja toimistosiivouspalvelut.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.jpg"], // Varmista, että tämä kuva on public-kansiossa
   },
 
   // Robots-ohjeet hakukoneille
@@ -114,14 +114,14 @@ export default function RootLayout({
     telephone: "040 218 3270", 
     email: "info@siivousote.fi", 
     priceRange: "$",
-    image: "https://siivousote.fi/logo.png", 
+    image: "https://siivousote.fi/logo.png", // <--- HUOM: Käytä tähän polkua, joka on public-kansiossa (esim. /logo.png)
     serviceType: [
       "Yrityssiivous",
       "Toimistosiivoukset",
       "Teollisuussiivous",
       "Liiketilojen siivous",
     ],
-    // PÄIVITETTY: Osoitetiedot
+    // Osoitetiedot
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Petsamonkatu", 
@@ -130,7 +130,7 @@ export default function RootLayout({
       "postalCode": "11120", 
       "addressCountry": "FI"
     },
-    // PÄIVITETTY: Aukioloajat (Avoinna 24h joka päivä)
+    // Aukioloajat (Avoinna 24h joka päivä)
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
