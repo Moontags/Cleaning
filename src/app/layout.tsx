@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.jpg", // Luo 1200x630px kuva
+        url: "/logo.png", 
         width: 1200,
         height: 630,
         alt: "Siivousote - Ammattitaitoista siivousta",
@@ -109,23 +109,49 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Siivousote",
-    description: "Ammattitaitoista siivousta reippaalla otteella",
+    description: "Ammattitaitoista siivousta reippaalla otteella. Yrityssiivous, toimistosiivous ja teollisuussiivous Uudenmaan ja Kanta-Hämeen alueella.",
     url: "https://siivousote.fi", 
     telephone: "040 218 3270", 
     email: "info@siivousote.fi", 
     priceRange: "$",
-    image: "https://siivousote.fi/og-image.jpg", // Vaihda oikea domain
-    sameAs: [
-      // Lisää sosiaalisen median profiilit
-      // "https://www.facebook.com/siivousote",
-      // "https://www.linkedin.com/company/siivousote",
-      // "https://www.instagram.com/siivousote",
-    ],
+    image: "https://siivousote.fi/logo.png", 
     serviceType: [
       "Yrityssiivous",
       "Toimistosiivoukset",
       "Teollisuussiivous",
       "Liiketilojen siivous",
+    ],
+    // PÄIVITETTY: Osoitetiedot
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Petsamonkatu", 
+      "addressLocality": "Riihimäki", 
+      "addressRegion": "Kanta-Häme", 
+      "postalCode": "11120", 
+      "addressCountry": "FI"
+    },
+    // PÄIVITETTY: Aukioloajat (Avoinna 24h joka päivä)
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", 
+          "Tuesday", 
+          "Wednesday", 
+          "Thursday", 
+          "Friday", 
+          "Saturday", 
+          "Sunday"
+        ],
+        "opens": "00:00", 
+        "closes": "23:59" 
+      }
+    ],
+    sameAs: [
+      // Lisää sosiaalisen median profiilit
+      // "https://www.facebook.com/siivousote",
+      // "https://www.linkedin.com/company/siivousote",
+      // "https://www.instagram.com/siivousote",
     ],
   };
 
