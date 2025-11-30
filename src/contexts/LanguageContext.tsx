@@ -290,7 +290,7 @@ const translations = {
     "order.next.step1": "Käsittelemme tarjouspyyntösi 24 tunnin sisällä",
     "order.next.step2":
       "Otamme sinuun yhteyttä ja tarvittaessa sovimme tapaamisen",
-    "order.next.step3": "Lähetämme räätälöidyn tarjouksen yrityksellesi",
+    "order.next.step3": "Teemme kohteessa kartoituksen ja laadimme tarjouksen",
     "order.next.step4": "Aloitamme palvelun sopimuksen mukaisesti",
 
     // Tietoja MEISTÄ
@@ -816,7 +816,7 @@ const translations = {
     "order.next.step1": "We process your quote request within 24 hours",
     "order.next.step2":
       "We will contact you and arrange a meeting if necessary",
-    "order.next.step3": "We send a customized quote for your company",
+    "order.next.step3": "We are conducting a survey at the site and preparing a quote",
     "order.next.step4": "We start the service according to the agreement",
 
     // About US
