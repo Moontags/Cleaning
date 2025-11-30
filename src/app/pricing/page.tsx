@@ -147,6 +147,13 @@ export default function PricingPage() {
             {t('pricing.info_text')}
           </p>
         </div>
+
+        {/* Window cleaning info */}
+        <div style={{ marginTop: '1rem', textAlign: 'center' }}>
+          <p className="text-gray-600 text-base">
+            {t('pricing.window_cleaning_info')}
+          </p>
+        </div>
       </section>
 
       {/* Benefits Section - PARANNETTU hover-efekti */}
