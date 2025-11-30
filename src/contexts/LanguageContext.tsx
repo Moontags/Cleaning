@@ -447,9 +447,9 @@ const translations = {
     // HOME CLEANING PAGE
     "service.home.hero.title": "Kotisiivous",
     "service.home.hero.subtitle":
-      "Ammattitaitoista kotisiivousta, jotta sinulla on enemmän aikaa tärkeille asioille",
+      "Jotta sinulla on enemmän omaa aikaa",
     "service.home.intro":
-      "Kotisi ansaitsee parhaan hoidon. Tarjoamme luotettavaa ja laadukasta kotisiivousta säännöllisesti tai kertaluontoisesti. Voit luottaa kokeneisiin ammattilaisiin, jotka kohtelevat kotiasi kunnioittavasti.",
+      "Kotisi ansaitsee parhaan hoidon säännöllisesti tai kertaluontoisesti. ",
     "service.home.why.title": "Miksi valita ammattilaiset kotisiivoukseen?",
     "service.home.why.benefit1.title": "Aikaa itsellesi",
     "service.home.why.benefit1.desc":
@@ -973,9 +973,9 @@ const translations = {
     // HOME CLEANING PAGE
     "service.home.hero.title": "Home Cleaning",
     "service.home.hero.subtitle":
-      "Professional home cleaning so you have more time for important things",
+      "So you have more time for your own",
     "service.home.intro":
-      "Your home deserves the best care. We offer reliable and high-quality home cleaning on a regular or one-time basis. You can trust our experienced professionals who treat your home with respect.",
+      "Your home deserves the best care on a regular or one-time basis.",
     "service.home.why.title": "Why choose professionals for home cleaning?",
     "service.home.why.benefit1.title": "Time for Yourself",
     "service.home.why.benefit1.desc":
