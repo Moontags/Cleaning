@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.png", // Varmista, että tämä kuva on public-kansiossa
+        url: "/logo.svg", // PÄIVITETTY: Käyttää SVG-logoa
         width: 1200,
         height: 630,
         alt: "Siivousote - Ammattitaitoista siivousta",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Siivousote - Ammattitaitoista siivousta",
     description:
       "Luotettava kumppanisi puhtauden ylläpidossa. Yritys- ja toimistosiivouspalvelut.",
-    images: ["/og-image.jpg"], // Varmista, että tämä kuva on public-kansiossa
+    images: ["/logo.svg"], // PÄIVITETTY: Käyttää SVG-logoa
   },
 
   // Robots-ohjeet hakukoneille
@@ -114,7 +114,7 @@ export default function RootLayout({
     telephone: "040 218 3270", 
     email: "info@siivousote.fi", 
     priceRange: "$",
-    image: "https://siivousote.fi/logo.png", // <--- HUOM: Käytä tähän polkua, joka on public-kansiossa (esim. /logo.png)
+    image: "https://siivousote.fi/logo.svg", // PÄIVITETTY: Käyttää SVG-logoa
     serviceType: [
       "Yrityssiivous",
       "Toimistosiivoukset",
