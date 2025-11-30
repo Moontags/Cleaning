@@ -258,7 +258,7 @@ const translations = {
     "order.title": "Tilaa siivouspalvelu",
     "order.subtitle":
       "Täytä lomake, niin otamme sinuun yhteyttä mahdollisimman pian.",
-    "order.form.company": "Yrityksen nimi",
+    "order.form.company": "Yrityksen nimi tai organisaatio",
     "order.form.contact": "Yhteyshenkilö",
     "order.form.email": "Sähköposti",
     "order.form.phone": "Puhelinnumero",
@@ -270,7 +270,7 @@ const translations = {
     "order.form.service.construction_end": "Rakennusten loppusiivous",
     "order.form.service.other": "Muu palvelu",
     "order.form.message": "Lisätietoja",
-    "order.form.submit": "Lähetä tarjouspyyntö",
+    "order.form.submit": "Lähetä ",
     "order.form.sending": "Lähetetään...",
     "order.form.required_fields": "* Pakolliset kentät",
     "order.success.title": "Kiitos yhteydenotostasi!",
@@ -278,7 +278,7 @@ const translations = {
       "Käsittelemme tarjouspyyntösi 24 tunnin sisällä ja otamme sinuun yhteyttä.",
 
     // UUSI: Paikkamerkkien käännökset
-    "order.form.placeholder.company": "Yrityksen nimi",
+    "order.form.placeholder.company": "Yrityksen nimi tai organisaatio",
     "order.form.placeholder.contact": "Nimi",
     "order.form.placeholder.email": "sähköposti@esimerkki.fi",
     "order.form.placeholder.phone": "+358 40 123 4567",
@@ -357,7 +357,7 @@ const translations = {
       "Suunnitellaan yhdessä juuri teidän tarpeisiinne sopiva ratkaisu",
     "service.office.cta.title": "Aloita puhtaampi työympäristö tänään",
     "service.office.cta.subtitle": "Pyydä ilmainen tarjous toimistosiivoukseen",
-    "service.office.cta.button": "Pyydä tarjous",
+    "service.office.cta.button": "Tilaa siivous",
 
     // COMMERCIAL CLEANING PAGE
     "service.business.hero.title": "Liiketilojen siivous",
@@ -399,7 +399,7 @@ const translations = {
     "service.business.cta.title": "Tee liiketiloistasi kilpailuvaltti",
     "service.business.cta.subtitle":
       "Pyydä räätälöity tarjous liiketilojen siivoukseen",
-    "service.business.cta.button": "Pyydä tarjous",
+    "service.business.cta.button": "Tilaa siivous",
 
     // INDUSTRIAL CLEANING PAGE
     "service.industrial.hero.title": "Teollisuussiivoukset",
@@ -442,7 +442,7 @@ const translations = {
     "service.industrial.cta.title": "Pidä teollisuusympäristösi puhtaana",
     "service.industrial.cta.subtitle":
       "Pyydä räätälöity tarjous teollisuussiivoukseen",
-    "service.industrial.cta.button": "Pyydä tarjous",
+    "service.industrial.cta.button": "Tilaa siivous",
 
     // HOME CLEANING PAGE
     "service.home.hero.title": "Kotisiivous",
@@ -486,7 +486,7 @@ const translations = {
       "Valitse juuri ne palvelut, joita tarvitset",
     "service.home.cta.title": "Nauti puhtaasta kodista vaivattomasti",
     "service.home.cta.subtitle": "Pyydä ilmainen tarjous kotisiivoukseen",
-    "service.home.cta.button": "Pyydä tarjous",
+    "service.home.cta.button": "Tilaa siivous",
 
     // POST-CONSTRUCTION CLEANING PAGE
     "service.construction.hero.title": "Loppusiivoukset",
@@ -536,7 +536,7 @@ const translations = {
       "Viimeistely: Kiillotus ja yksityiskohtien tarkastus",
     "service.construction.cta.title": "Saa kohteesi luovutuskuntoon",
     "service.construction.cta.subtitle": "Pyydä tarjous loppusiivoukseen",
-    "service.construction.cta.button": "Pyydä tarjous",
+    "service.construction.cta.button": "Tilaa siivous",
   },
   en: {
     // Navigation
@@ -784,7 +784,7 @@ const translations = {
     "order.title": "Order Cleaning Service",
     "order.subtitle":
       "Fill out the form, and we will contact you as soon as possible.",
-    "order.form.company": "Company Name",
+    "order.form.company": "Company Name or Organization",
     "order.form.contact": "Contact Person",
     "order.form.email": "Email",
     "order.form.phone": "Phone Number",
@@ -804,7 +804,7 @@ const translations = {
       "We will process your quote request within 24 hours and contact you.",
 
     // NEW: Placeholder translations
-    "order.form.placeholder.company": "Company Name",
+    "order.form.placeholder.company": "Company Name or Organization",
     "order.form.placeholder.contact": "Name",
     "order.form.placeholder.email": "email@example.com",
     "order.form.placeholder.phone": "+358 40 123 4567",
