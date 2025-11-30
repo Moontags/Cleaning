@@ -883,7 +883,7 @@ const translations = {
       "We'll design a solution that fits your needs together",
     "service.office.cta.title": "Start a cleaner working environment today",
     "service.office.cta.subtitle": "Request a free quote for office cleaning",
-    "service.office.cta.button": "Request Quote",
+    "service.office.cta.button": "Order Cleaning",
 
     // COMMERCIAL CLEANING PAGE
     "service.business.hero.title": "Commercial Cleaning",
@@ -925,7 +925,7 @@ const translations = {
     "service.business.cta.title": "Make your commercial spaces a competitive advantage",
     "service.business.cta.subtitle":
       "Request a customized quote for commercial cleaning",
-    "service.business.cta.button": "Request Quote",
+    "service.business.cta.button": "Order Cleaning",
 
     // INDUSTRIAL CLEANING PAGE
     "service.industrial.hero.title": "Industrial Cleaning",
@@ -968,7 +968,7 @@ const translations = {
     "service.industrial.cta.title": "Keep your industrial environment clean",
     "service.industrial.cta.subtitle":
       "Request a customized quote for industrial cleaning",
-    "service.industrial.cta.button": "Request Quote",
+    "service.industrial.cta.button": "Order Cleaning",
 
     // HOME CLEANING PAGE
     "service.home.hero.title": "Home Cleaning",
@@ -1012,7 +1012,7 @@ const translations = {
       "Choose exactly the services you need",
     "service.home.cta.title": "Enjoy a clean home effortlessly",
     "service.home.cta.subtitle": "Request a free quote for home cleaning",
-    "service.home.cta.button": "Request Quote",
+    "service.home.cta.button": "Order Cleaning",
 
     // POST-CONSTRUCTION CLEANING PAGE
     "service.construction.hero.title": "Post-Construction Cleaning",
@@ -1062,7 +1062,7 @@ const translations = {
       "Finishing: Polishing and inspection of details",
     "service.construction.cta.title": "Get your site ready for handover",
     "service.construction.cta.subtitle": "Request a quote for post-construction cleaning",
-    "service.construction.cta.button": "Request Quote",
+    "service.construction.cta.button": "Order Cleaning",
   },
 };
 
