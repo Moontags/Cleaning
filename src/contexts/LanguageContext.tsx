@@ -28,7 +28,7 @@ const translations = {
     "home.hero.title": "Siivouspalvelua reippaalla otteella",
     "home.hero.subtitle":
       "Pääkaupunkiseudun ja Kanta-Hämeen alueella",
-    "home.hero.cta": "Pyydä tarjous",
+    "home.hero.cta": "Tilaa siivous",
     "home.hero.contact": "Ota yhteyttä",
 
     // Palvelut
@@ -550,7 +550,7 @@ const translations = {
     "home.hero.title": "Cleaning Service with a Vigor",
     "home.hero.subtitle":
       "Helsinki metropolitan area and the Kanta-Häme region",
-    "home.hero.cta": "Request Quote",
+    "home.hero.cta": "Order Cleaning",
     "home.hero.contact": "Contact Us",
 
     // Services
