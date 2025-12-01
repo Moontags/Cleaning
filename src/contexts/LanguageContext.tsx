@@ -77,7 +77,7 @@ const translations = {
 
     // Yhteystiedot
     "contact.title": "Ota yhteyttä",
-    "contact.subtitle": "Olemme valmiina palvelemaan sinua.",
+    "contact.subtitle": "Olemme valmiina palvelemaan sinua",
     "contact.info.title": "Yhteystiedot",
     "contact.email": "Sähköposti",
     "contact.phone": "Puhelin",
@@ -108,7 +108,7 @@ const translations = {
     "contact.faq.title": "Usein kysytyt kysymykset",
     "contact.faq1.title": "Kuinka nopeasti voitte aloittaa?",
     "contact.faq1.desc":
-      "Voimme yleensä aloittaa palvelun 1-2 viikon sisällä yhteydenotosta. Kiireellisissä tapauksissa pystymme usein järjestämään nopeammankin aloituksen.",
+      "Voimme yleensä aloittaa palvelun viikon sisällä yhteydenotosta. Kiireellisissä tapauksissa pystymme usein järjestämään nopeammankin aloituksen.",
     "contact.faq2.title": "Onko henkilökuntanne vakuutettu?",
     "contact.faq2.desc":
       "Kyllä, kaikki työntekijämme ovat täysin vakuutettuja ja taustaltaan tarkastettuja. Voit luottaa siihen, että tilasi ovat turvallisissa käsissä.",
@@ -290,7 +290,7 @@ const translations = {
     "order.next.step1": "Käsittelemme tarjouspyyntösi 24 tunnin sisällä",
     "order.next.step2":
       "Otamme sinuun yhteyttä ja tarvittaessa sovimme tapaamisen",
-    "order.next.step3": "Teemme kohteessa kartoituksen ja laadimme tarjouksen",
+    "order.next.step3": "Teemme kohteesta kartoituksen ja laadimme tarjouksen",
     "order.next.step4": "Aloitamme palvelun sopimuksen mukaisesti",
 
     // Tietoja MEISTÄ
@@ -364,7 +364,7 @@ const translations = {
     "service.business.hero.subtitle":
       "Puhtaat ja houkuttelevat liiketilat luovat positiivisen ensivaikutelman asiakkaillesi",
     "service.business.intro":
-      "Erikoistumme kauppojen, ravintoloiden, myymälöiden ja muiden asiakastilojen siivoukseen. Ymmärrämme, että puhtaus on osa brändiänne ja asiakaskokemusta.",
+      "Hoidamme kauppojen, ravintoloiden, myymälöiden ja muiden asiakastilojen siivoukseen. Ymmärrämme, että puhtaus on osa brändiänne ja asiakaskokemusta.",
     "service.business.why.title":
       "Miksi valita ammattilaiset liiketilojen siivoukseen?",
     "service.business.why.benefit1.title": "Ensivaikutelma ratkaisee",
@@ -601,7 +601,7 @@ const translations = {
     // Contact (OLD + NEW KEYS)
     "contact.title": "Contact Us",
     "contact.subtitle":
-      "We are ready to serve you. Get in touch and let's discuss your needs.",
+      "We are ready to serve you. Get in touch and let's discuss your needs",
     "contact.info.title": "Contact Information",
     "contact.email": "Email",
     "contact.phone": "Phone",
@@ -635,7 +635,7 @@ const translations = {
     "contact.faq.title": "Frequently Asked Questions",
     "contact.faq1.title": "How quickly can you start?",
     "contact.faq1.desc":
-      "We can usually start the service within 1-2 weeks of contact. In urgent cases, we can often arrange a faster start.",
+      "We can usually start the service within a week of contact. In urgent cases, we can often arrange a faster start.",
     "contact.faq2.title": "Is your staff insured?",
     "contact.faq2.desc":
       "Yes, all our employees are fully insured and background-checked. You can trust that your premises are in safe hands.",
