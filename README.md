@@ -1,20 +1,24 @@
 # 🧹 Siivousote - Professional Cleaning Services Website
 
-Responsive website for a Finnish B2B cleaning service company built with Next.js 14, TypeScript, and Tailwind CSS.
+Responsive bilingual (Finnish/English) B2B cleaning services website built with Next.js 15, React 19, TypeScript, and Tailwind CSS 4.
 
-![Next.js](https://img.shields.io/badge/Next.js-14-black)
+![Next.js](https://img.shields.io/badge/Next.js-15.5.4-black)
+![React](https://img.shields.io/badge/React-19.1.0-61dafb)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38bdf8)
-![License](https://img.shields.io/badge/license-MIT-green)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1.14-38bdf8)
+![pnpm](https://img.shields.io/badge/pnpm-10.20.0-orange)
 
 ## 🌟 Features
 
-- **Modern Design**: Clean, professional UI with Finnish blue color scheme
+- **Modern Design**: Clean, professional UI with Finnish blue color scheme (#003580)
 - **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
-- **Bilingual Support**: Complete Finnish (FI) and English (EN) translations
+- **Bilingual Support**: Complete Finnish (FI) and English (EN) translations via React Context
 - **TypeScript**: Full type safety throughout the application
-- **SEO Optimized**: Proper meta tags and semantic HTML
-- **Fast Performance**: Built with Next.js App Router for optimal speed
+- **SEO Optimized**: Comprehensive meta tags, Open Graph, Twitter Cards, and JSON-LD structured data
+- **Fast Performance**: Built with Next.js 15 App Router and Turbopack
+- **GDPR Compliant**: Cookie consent system with vanilla-cookieconsent
+- **Analytics**: Conditional Google Analytics loading based on user consent
+- **Email Integration**: Contact form with Nodemailer for quote requests
 - **Accessible**: WCAG compliant with proper ARIA labels
 
 ## 📋 Pages
@@ -27,13 +31,25 @@ Responsive website for a Finnish B2B cleaning service company built with Next.js
 
 ## 🚀 Tech Stack
 
-- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) with inline styles for consistency
+- **Framework**: [Next.js 15.5.4](https://nextjs.org/) (App Router with Turbopack)
+- **React**: 19.1.0 with new React Compiler
+- **Language**: [TypeScript](https://www.typescriptlang.org/) 5.x (strict mode)
+- **Styling**: [Tailwind CSS 4.1.14](https://tailwindcss.com/) with PostCSS
 - **Icons**: [Lucide React](https://lucide.dev/)
+- **Analytics**: Google Analytics via [@next/third-parties](https://nextjs.org/docs/app/building-your-application/optimizing/third-party-libraries)
+- **Cookie Consent**: [vanilla-cookieconsent](https://github.com/orestbida/cookieconsent) 3.1.0
+- **Email**: [Nodemailer](https://nodemailer.com/) 7.x
+- **Package Manager**: [pnpm](https://pnpm.io/) 10.20.0
 - **Deployment**: [Vercel](https://vercel.com/)
 
-## 🛠️ Installation
+## 🛠️ Getting Started
+
+### Prerequisites
+
+- **Node.js**: 20.x or higher
+- **pnpm**: 10.20.0 (install with `npm install -g pnpm@10.20.0`)
+
+### Installation
 
 1. **Clone the repository**
 ```bash
@@ -43,18 +59,42 @@ cd siivousote
 
 2. **Install dependencies**
 ```bash
-npm install
+pnpm install
 ```
 
-3. **Run development server**
+3. **Configure environment (optional)**
+
+If you want to use your own email service, create a `.env.local` file:
 ```bash
-npm run dev
+# Not required - email credentials are currently hardcoded in src/app/lib/email.ts
+# SMTP_USER=your-email@example.com
+# SMTP_PASS=your-password
 ```
 
-4. **Open in browser**
+4. **Run development server**
+```bash
+pnpm dev
 ```
-http://localhost:3000
+
+The application will start at [http://localhost:3000](http://localhost:3000)
+
+### Available Commands
+
+```bash
+# Development server with Turbopack (hot reload)
+pnpm dev
+
+# Production build
+pnpm build
+
+# Start production server
+pnpm start
+
+# Run ESLint
+pnpm lint
 ```
+
+> **Note**: This project uses `pnpm` exclusively. The `package-lock.json` has been removed in favor of `pnpm-lock.yaml`. Do not use `npm` or `yarn`.
 
 ## 📁 Project Structure
 
@@ -62,26 +102,45 @@ http://localhost:3000
 siivousote/
 ├── src/
 │   ├── app/
-│   │   ├── about/
-│   │   │   └── page.tsx
-│   │   ├── pricing/
-│   │   │   └── page.tsx
-│   │   ├── contact/
-│   │   │   └── page.tsx
-│   │   ├── order/
-│   │   │   └── page.tsx
-│   │   ├── layout.tsx
-│   │   ├── page.tsx
-│   │   └── globals.css
+│   │   ├── about/page.tsx           # About page
+│   │   ├── pricing/page.tsx         # Pricing page
+│   │   ├── contact/page.tsx         # Contact page
+│   │   ├── order/page.tsx           # Quote request form
+│   │   ├── api/
+│   │   │   └── contact/route.ts     # Contact form API endpoint
+│   │   ├── lib/
+│   │   │   └── email.ts             # Nodemailer email service
+│   │   ├── layout.tsx               # Root layout with SEO
+│   │   ├── page.tsx                 # Home page
+│   │   └── globals.css              # Global styles
 │   ├── components/
-│   │   ├── Header.tsx
-│   │   └── Footer.tsx
-│   └── contexts/
-│       └── LanguageContext.tsx
+│   │   ├── analytics/
+│   │   │   ├── Analytics.tsx        # GA component with consent
+│   │   │   └── index.ts
+│   │   ├── consent-dialog/
+│   │   │   ├── ConsentDialog.tsx    # Cookie consent UI
+│   │   │   ├── translations/
+│   │   │   │   ├── en.json          # English translations
+│   │   │   │   └── fi.json          # Finnish translations
+│   │   │   └── index.ts
+│   │   ├── Header.tsx               # Navigation header
+│   │   ├── Footer.tsx               # Site footer
+│   │   ├── Hero.tsx                 # Hero section
+│   │   ├── Card.tsx                 # Reusable card
+│   │   ├── WhyChoose.tsx            # Benefits section
+│   │   ├── CustomQuote.tsx          # Quote CTA
+│   │   └── WaveBottom.tsx           # Wave decoration
+│   ├── contexts/
+│   │   └── LanguageContext.tsx      # i18n context
+│   └── config/
+│       └── google.ts                # GA tracking ID
 ├── public/
-├── tailwind.config.ts
-├── postcss.config.js
-└── package.json
+│   ├── logo.svg                     # Company logo
+│   └── logo.png                     # Company logo (PNG)
+├── tailwind.config.ts               # Tailwind configuration
+├── postcss.config.mjs               # PostCSS configuration
+├── tsconfig.json                    # TypeScript configuration
+└── pnpm-lock.yaml                   # pnpm lockfile
 ```
 
 ## 🎨 Design Choices
@@ -106,52 +165,116 @@ siivousote/
 
 ## 🌍 Internationalization
 
-The site supports Finnish and English with a React Context-based translation system:
+The site supports Finnish (fi) and English (en) with a custom React Context-based translation system:
 
 ```typescript
 // Usage example
+import { useLanguage } from '@/contexts/LanguageContext';
+
 const { t, language, setLanguage } = useLanguage();
 
+// Render translations
 <h1>{t('home.hero.title')}</h1>
+
+// Switch language
+<button onClick={() => setLanguage('en')}>English</button>
 ```
 
-All translations are stored in `src/contexts/LanguageContext.tsx`
+**Key Points:**
+
+- All translations stored in `src/contexts/LanguageContext.tsx`
+- Uses dot notation for keys (e.g., `'home.hero.title'`)
+- Client-side only (requires `'use client'` directive)
+- Language state managed via React Context
+
+**Adding new translations:**
+
+1. Add key to both `fi` and `en` objects in `LanguageContext.tsx`
+2. Use `t('your.key.here')` to render the translation
 
 ## 📱 Responsive Design
 
 Breakpoints:
+
 - **Mobile**: < 640px
 - **Tablet**: 640px - 1024px
 - **Desktop**: > 1024px
 
 ## 🔧 Configuration
 
+### Path Aliases
+
+The project uses `@/*` for `./src/*` imports (configured in `tsconfig.json`):
+
+```typescript
+import Header from '@/components/Header';
+import { useLanguage } from '@/contexts/LanguageContext';
+```
+
 ### Tailwind Configuration
-Custom colors and spacing defined in `tailwind.config.ts`
 
-### PostCSS Configuration
-Using Tailwind and Autoprefixer in `postcss.config.js`
+Custom colors and spacing defined in `tailwind.config.ts`:
 
-### Next.js Configuration
-Optimized for production with proper metadata in `layout.tsx`
+- Primary colors: `#003580` (default), `#002b66` (dark), `#0047ab` (light)
+- Custom spacing: `18` (4.5rem), `22` (5.5rem)
+
+### Google Analytics
+
+Analytics ID stored in `src/config/google.ts`. To change:
+
+```typescript
+export const GA_ID = "YOUR-GA-ID";
+```
+
+### Email Configuration
+
+Email settings are in `src/app/lib/email.ts`. Currently hardcoded (should be moved to environment variables):
+
+```typescript
+host: "posti.zoner.fi",
+port: 465,
+secure: true,
+auth: {
+  user: "noreply@siivousote.fi",
+  pass: "***" // Should be in .env.local
+}
+```
 
 ## 📊 Performance
 
 - **First Contentful Paint**: < 1.5s
 - **Time to Interactive**: < 3.0s
 - **Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices, SEO)
-```
+- **Turbopack**: Fast refresh and optimized builds
+
+## 🔒 Privacy & Analytics
+
+### Cookie Consent System
+
+The site implements GDPR-compliant cookie consent:
+
+- Uses `vanilla-cookieconsent` library
+- Two categories: Necessary (always on) and Analytics (optional)
+- Bilingual consent dialog (FI/EN)
+- User preferences stored in browser
+
+### Analytics Integration
+
+- Conditional loading based on consent
+- Only loads when user accepts analytics cookies
+- Event-driven architecture using custom events
+- Tracking ID: `G-SHMNVJ096J` (configurable in `src/config/google.ts`)
 
 ## 🔮 Future Enhancements
 
+- [ ] Move email credentials to environment variables
 - [ ] Add CMS integration (Sanity/Contentful)
-- [ ] Implement backend for form submissions
 - [ ] Add blog section for SEO
-- [ ] Integrate Google Maps API
-- [ ] Add customer testimonials
-- [ ] Implement analytics (Google Analytics/Plausible)
+- [ ] Integrate Google Maps API on contact page
+- [ ] Add customer testimonials section
 - [ ] Add image optimization with next/image
-- [ ] Create admin dashboard for quotes
+- [ ] Create admin dashboard for quote management
+- [ ] Implement rate limiting for API endpoints
 
 ## 🤝 Contributing
 
@@ -163,19 +286,39 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+**Development Guidelines:**
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- Use `pnpm` for package management
+- Follow TypeScript strict mode conventions
+- Add translations to both `fi` and `en` in LanguageContext
+- Use `@/*` path aliases for imports
+- Test on mobile, tablet, and desktop breakpoints
+
+## 🐛 Known Issues
+
+- Email credentials are hardcoded in `src/app/lib/email.ts` (should use environment variables)
+- No rate limiting on contact form API endpoint
+
+## 📚 Documentation
+
+For detailed architecture and development guidelines, see [CLAUDE.md](CLAUDE.md).
 
 ## 👨‍💻 Developer
 
-Built with ❤️ by [Mediasata]
+Built by [Mediasata](https://mediasata.com)
 
 ## 🙏 Acknowledgments
 
 - Design inspiration from modern SaaS landing pages
 - Icons by [Lucide](https://lucide.dev/)
 - Color palette inspired by Finnish flag
+- Cookie consent by [vanilla-cookieconsent](https://github.com/orestbida/cookieconsent)
+
+## 📧 Contact
+
+- **Email**: [info@siivousote.fi](mailto:info@siivousote.fi)
+- **Phone**: 040 218 3270
+- **Location**: Riihimäki, Finland
 
 ---
 
