@@ -3,6 +3,7 @@ import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ConsentDialog } from "@/components/consent-dialog";
 
 export const metadata: Metadata = {
   title: "Siivousote - Ammattitaitoista siivousta reippaalla otteella",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     title: "Siivousote - Ammattitaitoista siivousta reippaalla otteella",
     description:
       "Luotettava kumppanisi puhtauden ylläpidossa. Yritys-, toimisto- ja teollisuussiivouspalvelut.",
-    url: "https://siivousote.fi", 
+    url: "https://siivousote.fi",
     siteName: "Siivousote",
     locale: "fi_FI",
     type: "website",
@@ -59,10 +60,9 @@ export const metadata: Metadata = {
 
   // Canonical URL ja kieliversiot
   alternates: {
-    canonical: "https://siivousote.fi", 
+    canonical: "https://siivousote.fi",
     languages: {
       "fi-FI": "https://siivousote.fi",
-      
     },
   },
 
@@ -109,10 +109,11 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Siivousote",
-    description: "Ammattitaitoista siivousta reippaalla otteella. Yrityssiivous, toimistosiivous ja teollisuussiivous Uudenmaan ja Kanta-Hämeen alueella.",
-    url: "https://siivousote.fi", 
-    telephone: "040 218 3270", 
-    email: "info@siivousote.fi", 
+    description:
+      "Ammattitaitoista siivousta reippaalla otteella. Yrityssiivous, toimistosiivous ja teollisuussiivous Uudenmaan ja Kanta-Hämeen alueella.",
+    url: "https://siivousote.fi",
+    telephone: "040 218 3270",
+    email: "info@siivousote.fi",
     priceRange: "$",
     image: "https://siivousote.fi/logo.svg", // PÄIVITETTY: Käyttää SVG-logoa
     serviceType: [
@@ -122,30 +123,30 @@ export default function RootLayout({
       "Liiketilojen siivous",
     ],
     // Osoitetiedot
-    "address": {
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": "Petsamonkatu", 
-      "addressLocality": "Riihimäki", 
-      "addressRegion": "Kanta-Häme", 
-      "postalCode": "11120", 
-      "addressCountry": "FI"
+      streetAddress: "Petsamonkatu",
+      addressLocality: "Riihimäki",
+      addressRegion: "Kanta-Häme",
+      postalCode: "11120",
+      addressCountry: "FI",
     },
     // Aukioloajat (Avoinna 24h joka päivä)
-    "openingHoursSpecification": [
+    openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday", 
-          "Tuesday", 
-          "Wednesday", 
-          "Thursday", 
-          "Friday", 
-          "Saturday", 
-          "Sunday"
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
         ],
-        "opens": "00:00", 
-        "closes": "23:59" 
-      }
+        opens: "00:00",
+        closes: "23:59",
+      },
     ],
     sameAs: [
       // Lisää sosiaalisen median profiilit
@@ -166,6 +167,7 @@ export default function RootLayout({
       </head>
       <body>
         <LanguageProvider>
+          <ConsentDialog />
           <Header />
           <main className="min-h-screen">{children}</main>
           <Footer />

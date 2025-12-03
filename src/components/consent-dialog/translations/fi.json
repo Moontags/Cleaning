@@ -1,0 +1,58 @@
+{
+  "consentModal": {
+    "title": "Evästeasetukset",
+    "description": "Käytämme evästeitä parantaaksemme käyttökokemusta ja kerätäksemme peruslaatuista tilastotietoa sivustomme kävijöistä.",
+    "acceptAllBtn": "Hyväksy kaikki",
+    "acceptNecessaryBtn": "Hylkää kaikki",
+    "showPreferencesBtn": "Hallitse asetuksia"
+  },
+  "preferencesModal": {
+    "title": "Evästeasetukset",
+    "acceptAllBtn": "Hyväksy kaikki",
+    "acceptNecessaryBtn": "Hylkää kaikki",
+    "savePreferencesBtn": "Tallenna asetukset",
+    "closeIconLabel": "Sulje",
+    "sections": [
+      {
+        "title": "Evästeiden käyttö",
+        "description": "Käytämme evästeitä verkkosivuston perustoimintojen varmistamiseksi ja käyttökokemuksen parantamiseksi."
+      },
+      {
+        "title": "Välttämättömät evästeet",
+        "description": "Nämä evästeet ovat välttämättömiä verkkosivustoni oikein toimimiseksi. Ilman näitä evästeitä verkkosivusto ei toimi kunnolla.",
+        "linkedCategory": "necessary"
+      },
+      {
+        "title": "Suorituskyky- ja analytiikkaevästeet",
+        "description": "Nämä evästeet antavat verkkosivuston muistaa tekemäsi valinnat.",
+        "linkedCategory": "analytics",
+        "cookieTable": {
+          "headers": {
+            "name": "Nimi",
+            "domain": "Palvelu",
+            "description": "Kuvaus",
+            "expiration": "Vanhenemisaika"
+          },
+          "body": [
+            {
+              "name": "_ga",
+              "domain": "Google Analytics",
+              "description": "Google Analyticsin asettama eväste.",
+              "expiration": "Vanhenee 12 päivän kuluttua"
+            },
+            {
+              "name": "_gid",
+              "domain": "Google Analytics",
+              "description": "Google Analyticsin asettama eväste.",
+              "expiration": "Istunto"
+            }
+          ]
+        }
+      },
+      {
+        "title": "Lisätietoja",
+        "description": "Jos sinulla on kysyttävää evästekäytännöstämme tai valinnoistasi, <a class=\"cc-link\" href=\"https://mediakuu.com/fi/yhteystiedot\">ota yhteyttä</a>."
+      }
+    ]
+  }
+}
