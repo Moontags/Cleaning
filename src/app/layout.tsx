@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.svg", // PÄIVITETTY: Käyttää SVG-logoa
+        url: "/logo.svg", 
         width: 1200,
         height: 630,
         alt: "Siivousote - Ammattitaitoista siivousta",

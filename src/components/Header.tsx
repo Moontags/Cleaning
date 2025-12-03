@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -35,8 +36,15 @@ export default function Header() {
       <nav className="section-container">
         <div className="flex justify-between items-center h-20">
           {/* Logo - Modernisoidtu */}
-          <Link href="/" aria-label="Siivousote" onClick={() => setIsMenuOpen(false)} className="flex items-center space-x-2 flex-shrink-0 group">
-            <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#003580] to-[#0047ab] bg-clip-text text-transparent group-hover:from-[#0047ab] group-hover:to-[#0056d6] transition-all duration-300">
+          <Link href="/" aria-label="Siivousote" onClick={() => setIsMenuOpen(false)} className="flex items-center space-x-3 flex-shrink-0 group">
+            <Image 
+              src="/logo.svg" 
+              alt="Siivousote Logo" 
+              width={40} 
+              height={40}
+              className="transition-transform duration-300 group-hover:scale-110"
+            />
+            <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#003580] to-[#0047ab] bg-clip-text text-transparent group-hover:from-[#0047ab] group-hover:to-[#0056d6] transition-all duration-300">
               Siivousote
             </div>
           </Link>
