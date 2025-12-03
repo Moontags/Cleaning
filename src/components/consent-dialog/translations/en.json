@@ -37,21 +37,21 @@
             {
               "name": "_ga",
               "domain": "Google Analytics",
-              "description": "Cookie set by <a href=\"#das\">Google Analytics</a>.",
-              "expiration": "Expires after 12 days"
+              "description": "Cookie set by Google Analytics.",
+              "expiration": "2 years"
             },
             {
               "name": "_gid",
               "domain": "Google Analytics",
-              "description": "Cookie set by <a href=\"#das\">Google Analytics</a>",
-              "expiration": "Session"
+              "description": "Cookie set by Google Analytics.",
+              "expiration": "24 hours"
             }
           ]
         }
       },
       {
         "title": "More information",
-        "description": "For any queries in relation to our policy on cookies and your choices, please <a class=\"cc-link\" href=\"https://mediakuu.com/en/contact\">contact us</a>."
+        "description": "For any queries in relation to our policy on cookies and your choices, please <a class=\"cc-link\" href=\"/contact\">contact us</a>."
       }
     ]
   }

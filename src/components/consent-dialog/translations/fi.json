@@ -38,20 +38,20 @@
               "name": "_ga",
               "domain": "Google Analytics",
               "description": "Google Analyticsin asettama eväste.",
-              "expiration": "Vanhenee 12 päivän kuluttua"
+              "expiration": "2 vuotta"
             },
             {
               "name": "_gid",
               "domain": "Google Analytics",
               "description": "Google Analyticsin asettama eväste.",
-              "expiration": "Istunto"
+              "expiration": "24 tuntia"
             }
           ]
         }
       },
       {
         "title": "Lisätietoja",
-        "description": "Jos sinulla on kysyttävää evästekäytännöstämme tai valinnoistasi, <a class=\"cc-link\" href=\"https://mediakuu.com/fi/yhteystiedot\">ota yhteyttä</a>."
+        "description": "Jos sinulla on kysyttävää evästekäytännöstämme tai valinnoistasi, <a class=\"cc-link\" href=\"/contact\">ota yhteyttä</a>."
       }
     ]
   }
