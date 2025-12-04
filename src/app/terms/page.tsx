@@ -128,9 +128,7 @@ export default function TermsPage() {
           <p className="mb-2">
             Viimeksi päivitetty: 1.12.2025 • Siivousote / Y-tunnus 2166541–5 • <a href="https://www.siivousote.fi" className="text-[#0ea5a4] hover:underline">www.siivousote.fi</a>
           </p>
-          <p>
-            Suosittelemme juridista tarkastusta ennen virallista käyttöönottoa.
-          </p>
+         
         </footer>
           </>
         ) : (
@@ -241,9 +239,7 @@ export default function TermsPage() {
               <p className="mb-2">
                 Last updated: 1.12.2025 • Siivousote / Business ID 2166541–5 • <a href="https://www.siivousote.fi" className="text-[#0ea5a4] hover:underline">www.siivousote.fi</a>
               </p>
-              <p>
-                We recommend legal review before official implementation.
-              </p>
+          
             </footer>
           </>
         )}
