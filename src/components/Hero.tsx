@@ -53,7 +53,7 @@ export default function Hero({
         bottom: "bottom-20 right-10 w-96 h-96",
       },
       // MUOKKAUS 1: Matalampi korkeus mobiilissa (24rem)
-      minHeightClass: "min-h-[24rem] md:min-h-[var(--hero-height)]",
+      minHeightClass: "min-h-[20rem] md:min-h-[var(--hero-height)]",
       // MUOKKAUS 2: Lisätty luokka sisällön kohdistamiseen alas vain mobiilissa
       contentPositionClass: "flex flex-col justify-end md:justify-center",
     },
@@ -113,7 +113,7 @@ export default function Hero({
               priority={imagePriority}
             />
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-black/40 to-primary/80" />
+            <div className="absolute inset-0 bg-linear-to-b from-primary/80 via-black/40 to-primary/80" />
           </>
         )}
         {config.decorativeCircles && (

@@ -1,6 +1,6 @@
 export default function WaveBottom() {
   return (
-    <div className="absolute bottom-[-2px] left-0 right-0">
+    <div className="absolute -bottom-0.5 left-0 right-0">
       <svg
         viewBox="0 0 1440 120"
         fill="none"

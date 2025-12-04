@@ -15,7 +15,7 @@
   --text-shadow-hero: 0 0 50px rgba(0, 0, 0, 0.55),
     0 0 10px var(--color-primary), 0 0 5px var(--color-primary);
 
-  --hero-height: 640px;
+  --hero-height: 500px;
   --site-width: 1280px;
 }
 

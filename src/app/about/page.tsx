@@ -48,7 +48,7 @@ export default function AboutPage() {
           <h2 className="heading-2 text-center text-[#003580]" style={{ marginBottom: '3rem' }}>
             {t('about.story.title')}
           </h2>
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100" style={{ padding: '2.5rem' }}>
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border border-gray-100" style={{ padding: '2.5rem' }}>
             <div className="text-body" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <p className="text-gray-700 leading-relaxed text-lg">
                 {t('about.story.p1')}
