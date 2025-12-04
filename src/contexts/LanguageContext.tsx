@@ -23,6 +23,7 @@ const translations = {
     "nav.pricing": "Hinnasto",
     "nav.contact": "Yhteystiedot",
     "nav.order": "Tilaa siivous",
+    "nav.terms": "Sopimusehdot",
 
     // Etusivu
     "home.hero.title": "Siivouspalvelua reippaalla otteella",
@@ -547,6 +548,7 @@ const translations = {
     "nav.pricing": "Pricing",
     "nav.contact": "Contact",
     "nav.order": "Order Cleaning",
+    "nav.terms": "Terms of Service",
 
     // Homepage
     "home.hero.title": "Cleaning Service with a Vigor",

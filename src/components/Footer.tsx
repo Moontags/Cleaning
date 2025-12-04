@@ -57,6 +57,11 @@ export default function Footer() {
                   {t('nav.contact')}
                 </Link>
               </li>
+              <li>
+                <Link href="/terms" className="text-blue-200 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">
+                  {t('nav.terms')}
+                </Link>
+              </li>
             </ul>
           </div>
 
