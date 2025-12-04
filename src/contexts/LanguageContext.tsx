@@ -27,7 +27,7 @@ const translations = {
     // Etusivu
     "home.hero.title": "Siivouspalvelua reippaalla otteella",
     "home.hero.subtitle":
-      "Pääkaupunkiseudun ja Kanta-Hämeen alueella",
+      "Tehdään arjestanne puhtaampaa – palvelemme teitä PK-seudulla ja Kanta-Hämeessä.",
     "home.hero.cta": "Tilaa siivous",
     "home.hero.contact": "Ota yhteyttä",
 
@@ -77,7 +77,7 @@ const translations = {
 
     // Yhteystiedot
     "contact.title": "Ota yhteyttä",
-    "contact.subtitle": "Olemme valmiina palvelemaan sinua",
+    "contact.subtitle": "Laita viestiä, olemme teihin pikimmiten yhteydessä!",
     "contact.info.title": "Yhteystiedot",
     "contact.email": "Sähköposti",
     "contact.phone": "Puhelin",
@@ -306,14 +306,17 @@ const translations = {
     "about.values.title": "Arvomme",
     // UUSI: Arvot (jatkoa "about.values.title":n alle)
     "about.values.reliability.title": "Luotettavuus",
-    "about.values.reliability.desc": "Teemme sen, mitä lupaamme. Aikataulut pitävät, ja jälki on aina taatusti laadukasta.",
+    "about.values.reliability.desc":
+      "Teemme sen, mitä lupaamme. Aikataulut pitävät, ja jälki on aina taatusti laadukasta.",
     "about.values.professionalism.title": "Ammattitaito",
-    "about.values.professionalism.desc": "Koulutettu, kokenut ja motivoitunut henkilökuntamme on alan huippua. ",
+    "about.values.professionalism.desc":
+      "Koulutettu, kokenut ja motivoitunut henkilökuntamme on alan huippua. ",
     "about.values.responsibility.title": "Vastuullisuus",
-    "about.values.responsibility.desc": "Välitämme ympäristöstä. Käytämme ekologisia tuotteita ja minimoimme ympäristövaikutukset.",
+    "about.values.responsibility.desc":
+      "Välitämme ympäristöstä. Käytämme ekologisia tuotteita ja minimoimme ympäristövaikutukset.",
     "about.values.flexibility.title": "Joustavuus",
-    "about.values.flexibility.desc": "Palvelumme muotoutuvat asiakkaan tarpeiden mukaan – tarjoamme ratkaisuja, emme vain palveluita.",
-
+    "about.values.flexibility.desc":
+      "Palvelumme muotoutuvat asiakkaan tarpeiden mukaan – tarjoamme ratkaisuja, emme vain palveluita.",
 
     // OFFICE CLEANING PAGE
     "service.office.hero.title": "Toimistosiivoukset",
@@ -446,8 +449,7 @@ const translations = {
 
     // HOME CLEANING PAGE
     "service.home.hero.title": "Kotisiivous",
-    "service.home.hero.subtitle":
-      "Jotta sinulla on enemmän omaa aikaa",
+    "service.home.hero.subtitle": "Jotta sinulla on enemmän omaa aikaa",
     "service.home.intro":
       "Kotisi ansaitsee parhaan hoidon säännöllisesti tai kertaluontoisesti. ",
     "service.home.why.title": "Miksi valita ammattilaiset kotisiivoukseen?",
@@ -652,7 +654,8 @@ const translations = {
 
     // Pricing (PricingPage)
     "pricing.title": "Pricing",
-    "pricing.subtitle": "Transparent prices and flexible packages for businesses",
+    "pricing.subtitle":
+      "Transparent prices and flexible packages for businesses",
     "pricing.contact.cta": "Request a customized quote",
     "pricing.quote": "Quote",
     "pricing.popular": "MOST POPULAR",
@@ -731,14 +734,12 @@ const translations = {
     "pricing.inclusions3.desc":
       "We primarily use cleaning products that respect the environment.",
     "pricing.inclusions4.title": "Quality Control",
-    "pricing.inclusions4.desc":
-      "Regular inspections and quality monitoring.",
+    "pricing.inclusions4.desc": "Regular inspections and quality monitoring.",
     "pricing.inclusions5.title": "Flexible Contracts",
     "pricing.inclusions5.desc":
       "No long commitment periods, we tailor the service to your needs.",
     "pricing.inclusions6.title": "Customer Support",
-    "pricing.inclusions6.desc":
-      "Always reachable if you need help or changes.",
+    "pricing.inclusions6.desc": "Always reachable if you need help or changes.",
 
     // Custom Quote CTA
     "pricing.custom_cta.title": "Need a customized solution?",
@@ -816,7 +817,8 @@ const translations = {
     "order.next.step1": "We process your quote request within 24 hours",
     "order.next.step2":
       "We will contact you and arrange a meeting if necessary",
-    "order.next.step3": "We are conducting a survey at the site and preparing a quote",
+    "order.next.step3":
+      "We are conducting a survey at the site and preparing a quote",
     "order.next.step4": "We start the service according to the agreement",
 
     // About US
@@ -832,14 +834,17 @@ const translations = {
     "about.values.title": "Our Values",
     // NEW: Values (continuation below "about.values.title")
     "about.values.reliability.title": "Reliability",
-    "about.values.reliability.desc": "We do what we promise. Schedules are kept, and the quality of work is always guaranteed.",
+    "about.values.reliability.desc":
+      "We do what we promise. Schedules are kept, and the quality of work is always guaranteed.",
     "about.values.professionalism.title": "Professionalism",
-    "about.values.professionalism.desc": "Our trained, experienced, and motivated staff are top-notch in the field. ",
+    "about.values.professionalism.desc":
+      "Our trained, experienced, and motivated staff are top-notch in the field. ",
     "about.values.responsibility.title": "Responsibility",
-    "about.values.responsibility.desc": "We care about the environment. We use ecological products and minimize our environmental impact.",
+    "about.values.responsibility.desc":
+      "We care about the environment. We use ecological products and minimize our environmental impact.",
     "about.values.flexibility.title": "Flexibility",
-    "about.values.flexibility.desc": "Our services are shaped according to the customer's needs – we offer solutions, not just services.",
-
+    "about.values.flexibility.desc":
+      "Our services are shaped according to the customer's needs – we offer solutions, not just services.",
 
     // OFFICE CLEANING PAGE
     "service.office.hero.title": "Office Cleaning",
@@ -864,7 +869,8 @@ const translations = {
       "Thorough cleaning of restroom and social facilities",
     "service.office.what.item4": "Cleaning of the kitchen and coffee area",
     "service.office.what.item5": "Emptying of trash bins and bag replacement",
-    "service.office.what.item6": "Cleaning of meeting rooms and negotiation areas",
+    "service.office.what.item6":
+      "Cleaning of meeting rooms and negotiation areas",
     "service.office.what.item7": "Cleaning of hallways and lobby areas",
     "service.office.what.item8":
       "Interior window washing (by separate agreement)",
@@ -915,14 +921,16 @@ const translations = {
     "service.business.what.item7":
       "Maintenance of store shelves and display areas",
     "service.business.what.item8": "Cleaning of entrances and porches",
-    "service.business.types.title": "We serve various types of commercial spaces",
+    "service.business.types.title":
+      "We serve various types of commercial spaces",
     "service.business.types.retail": "Retail stores and shops",
     "service.business.types.restaurant": "Restaurants and cafes",
     "service.business.types.salon": "Beauty salons and hairdressers",
     "service.business.types.gym": "Gyms and sports centers",
     "service.business.types.showroom": "Showrooms and exhibition spaces",
     "service.business.types.clinic": "Clinics and reception areas",
-    "service.business.cta.title": "Make your commercial spaces a competitive advantage",
+    "service.business.cta.title":
+      "Make your commercial spaces a competitive advantage",
     "service.business.cta.subtitle":
       "Request a customized quote for commercial cleaning",
     "service.business.cta.button": "Order Cleaning",
@@ -949,9 +957,12 @@ const translations = {
       "Washing of production area floors and degreasing",
     "service.industrial.what.item2":
       "Cleaning of the environment around machines and equipment",
-    "service.industrial.what.item3": "Cleaning and organization of storage facilities",
-    "service.industrial.what.item4": "Removal of dust and dirt from high surfaces",
-    "service.industrial.what.item5": "Cleaning of offices and social facilities",
+    "service.industrial.what.item3":
+      "Cleaning and organization of storage facilities",
+    "service.industrial.what.item4":
+      "Removal of dust and dirt from high surfaces",
+    "service.industrial.what.item5":
+      "Cleaning of offices and social facilities",
     "service.industrial.what.item6":
       "Handling of waste and recyclable materials",
     "service.industrial.what.item7":
@@ -972,8 +983,7 @@ const translations = {
 
     // HOME CLEANING PAGE
     "service.home.hero.title": "Home Cleaning",
-    "service.home.hero.subtitle":
-      "So you have more time for your own",
+    "service.home.hero.subtitle": "So you have more time for your own",
     "service.home.intro":
       "Your home deserves the best care on a regular or one-time basis.",
     "service.home.why.title": "Why choose professionals for home cleaning?",
@@ -999,8 +1009,7 @@ const translations = {
     "service.home.what.item8": "Window washing (additional service)",
     "service.home.options.title": "Flexible Options",
     "service.home.options.regular.title": "Regular Cleaning",
-    "service.home.options.regular.desc":
-      "Weekly, bi-weekly, or monthly",
+    "service.home.options.regular.desc": "Weekly, bi-weekly, or monthly",
     "service.home.options.onetime.title": "One-time Cleaning",
     "service.home.options.onetime.desc":
       "Spring cleaning, moving, or other special situations",
@@ -1008,8 +1017,7 @@ const translations = {
     "service.home.options.deep.desc":
       "Thorough cleaning from start to finish in all areas",
     "service.home.options.custom.title": "Customized Package",
-    "service.home.options.custom.desc":
-      "Choose exactly the services you need",
+    "service.home.options.custom.desc": "Choose exactly the services you need",
     "service.home.cta.title": "Enjoy a clean home effortlessly",
     "service.home.cta.subtitle": "Request a free quote for home cleaning",
     "service.home.cta.button": "Order Cleaning",
@@ -1031,7 +1039,8 @@ const translations = {
     "service.construction.why.benefit3.title": "Fast Schedule",
     "service.construction.why.benefit3.desc":
       "We understand the importance of construction project schedules and act quickly.",
-    "service.construction.what.title": "Our post-construction cleaning includes",
+    "service.construction.what.title":
+      "Our post-construction cleaning includes",
     "service.construction.what.item1":
       "Thorough removal of construction dust from all surfaces",
     "service.construction.what.item2":
@@ -1042,16 +1051,18 @@ const translations = {
       "Cleaning and polishing of sanitary facilities",
     "service.construction.what.item5":
       "Cleaning of kitchen cabinets and equipment",
-    "service.construction.what.item6":
-      "Wiping of doors, frames, and moldings",
-    "service.construction.what.item7": "Collection and removal of construction waste",
+    "service.construction.what.item6": "Wiping of doors, frames, and moldings",
+    "service.construction.what.item7":
+      "Collection and removal of construction waste",
     "service.construction.what.item8": "Final-stage polishing of details",
     "service.construction.types.title": "We serve various types of sites",
-    "service.construction.types.residential": "Residential buildings and apartments",
+    "service.construction.types.residential":
+      "Residential buildings and apartments",
     "service.construction.types.commercial": "Commercial buildings and offices",
     "service.construction.types.renovation": "Renovation sites",
     "service.construction.types.newbuild": "New constructions",
-    "service.construction.process.title": "Post-Construction Cleaning Step-by-Step",
+    "service.construction.process.title":
+      "Post-Construction Cleaning Step-by-Step",
     "service.construction.process.step1":
       "Survey: We review the scope of cleaning at the site",
     "service.construction.process.step2":
@@ -1061,7 +1072,8 @@ const translations = {
     "service.construction.process.step4":
       "Finishing: Polishing and inspection of details",
     "service.construction.cta.title": "Get your site ready for handover",
-    "service.construction.cta.subtitle": "Request a quote for post-construction cleaning",
+    "service.construction.cta.subtitle":
+      "Request a quote for post-construction cleaning",
     "service.construction.cta.button": "Order Cleaning",
   },
 };
@@ -1071,12 +1083,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const t = (key: string) => {
     // Koodi, joka käsittelee alkuperäisen TS-virheen, ei ollut pyydetty
-    // Esimerkiksi tässä vaiheessa voitaisiin lisätä ratkaisu A tai B, 
+    // Esimerkiksi tässä vaiheessa voitaisiin lisätä ratkaisu A tai B,
     // mutta koska käyttäjä pyysi vain täydentämään tekstejä "Älä tee avain muutoksia"
     // (tarkoittaen tyyppimuutoksia), jätän sen ratkaisematta, mutta lisään avaimet:
-    
+
     // Yksinkertainen toteutus ilman TS-virheen korjausta (koska avaimen tyyppi on string):
-    const currentTranslations = translations[language as keyof typeof translations];
+    const currentTranslations =
+      translations[language as keyof typeof translations];
     return (currentTranslations as Record<string, string>)[key] || key;
   };
 

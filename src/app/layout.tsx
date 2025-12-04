@@ -4,6 +4,8 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ConsentDialog } from "@/components/consent-dialog";
+import { Open_Sans, Lato } from "next/font/google";
+import clsx from "clsx";
 
 export const metadata: Metadata = {
   title: "Siivousote - Ammattitaitoista siivousta reippaalla otteella",
@@ -23,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.svg", 
+        url: "/logo.svg",
         width: 1200,
         height: 630,
         alt: "Siivousote - Ammattitaitoista siivousta",
@@ -80,24 +82,21 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
   },
 
-  // Viewport-asetukset
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
-
-  // Teemaväri
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#1a1a1a" },
-  ],
-
   // Muut meta-tagit
   other: {
     "format-detection": "telephone=yes",
   },
 };
+
+const latoFont = Lato({
+  weight: ["300", "400", "900"],
+  subsets: ["latin"],
+});
+
+const openSans = Open_Sans({
+  weight: ["400", "600", "300", "700", "500"],
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -157,7 +156,11 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="fi">
+    <html
+      lang="fi"
+      className={clsx(latoFont.className, openSans.className, "cc--darkmode")}
+      suppressHydrationWarning
+    >
       <head>
         {/* JSON-LD strukturoitu data */}
         <script

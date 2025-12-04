@@ -71,7 +71,7 @@ export default function OfficeCleaningPage() {
         subtitle={t("service.office.hero.subtitle")}
         ctaButton={{ text: t("service.office.cta.button") }}
         imageSrc="/images/sky.jpg"
-        imageAlt={t('service.office.hero.title')}
+        imageAlt={t("service.office.hero.title")}
       />
 
       {/* Introduction */}
@@ -156,7 +156,9 @@ export default function OfficeCleaningPage() {
                   <h3 className="text-lg font-semibold text-[#003580] mb-2">
                     {frequency.title}
                   </h3>
-                  <p className="text-gray-700 text-sm">{frequency.description}</p>
+                  <p className="text-gray-700 text-sm">
+                    {frequency.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -168,9 +170,9 @@ export default function OfficeCleaningPage() {
       <section
         className="relative text-white overflow-hidden"
         style={{
-          backgroundImage: `url('/images/etusivu.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundImage: `url('/images/hero_banner_cta.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-[#05263a]/60 via-[#003580]/55 to-[#003580]/65"></div>
@@ -180,19 +182,22 @@ export default function OfficeCleaningPage() {
           <div className="absolute bottom-12 left-12 w-96 h-96 bg-blue-300/6 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="section-container text-center relative z-10" style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
+        <div
+          className="section-container text-center relative z-10"
+          style={{ paddingTop: "5rem", paddingBottom: "5rem" }}
+        >
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              {t('service.office.cta.title')}
+              {t("service.office.cta.title")}
             </h2>
             <p className="text-xl text-blue-50 mb-8">
-              {t('service.office.cta.subtitle')}
+              {t("service.office.cta.subtitle")}
             </p>
             <Link
               href="/order"
               className="inline-flex items-center gap-2 bg-white text-[#003580] px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
-              {t('service.office.cta.button')}
+              {t("service.office.cta.button")}
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>

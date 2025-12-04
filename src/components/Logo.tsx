@@ -16,7 +16,7 @@ export function Logo({ color, className }: LogoProps) {
       aria-description="Siivosote logo"
       width="100%"
       viewBox="0 0 688 464"
-      enable-background="new 0 0 688 464"
+      enableBackground="new 0 0 688 464"
       className={className}
     >
       <path

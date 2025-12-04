@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from 'next/image';
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import WaveBottom from "@/components/WaveBottom";
 
@@ -41,7 +41,7 @@ export default function Hero({
       padding: "section-padding",
       alignment: "text-center",
       containerMaxWidth: maxWidth || "64rem",
-      titleClass: `text-4xl md:text-5xl lg:text-6xl font-bold animate-fade-in ${
+      titleClass: `text-4xl md:text-5xl lg:text-7xl font-bold animate-fade-in ${
         titleClassName || ""
       }`,
       subtitleClass: `text-xl md:text-2xl text-blue-50 leading-relaxed ${
@@ -53,7 +53,7 @@ export default function Hero({
         bottom: "bottom-20 right-10 w-96 h-96",
       },
       // MUOKKAUS 1: Matalampi korkeus mobiilissa (24rem)
-      minHeightClass: "min-h-[24rem] md:min-h-[var(--hero-height)]", 
+      minHeightClass: "min-h-[24rem] md:min-h-[var(--hero-height)]",
       // MUOKKAUS 2: Lisätty luokka sisällön kohdistamiseen alas vain mobiilissa
       contentPositionClass: "flex flex-col justify-end md:justify-center",
     },
@@ -112,7 +112,8 @@ export default function Hero({
               blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI3Ij48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjY2ZlM2ZmIi8+PC9zdmc+"
               priority={imagePriority}
             />
-            <div className="absolute inset-0 bg-black/30" />
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-black/40 to-primary/80" />
           </>
         )}
         {config.decorativeCircles && (
@@ -126,9 +127,13 @@ export default function Hero({
           </div>
         )}
 
-        <div 
-            // KORJAUS TÄHÄN: Lisätty flex-säiliö ja pystysuunnan kohdistus
-            className={`section-container ${config.padding} ${variant === 'service' ? config.paddingClass : ''} relative z-10 h-full ${variant === 'main' ? config.contentPositionClass : ''}`}
+        <div
+          // KORJAUS TÄHÄN: Lisätty flex-säiliö ja pystysuunnan kohdistus
+          className={`section-container ${config.padding} ${
+            variant === "service" ? config.paddingClass : ""
+          } relative z-10 h-full ${
+            variant === "main" ? config.contentPositionClass : ""
+          }`}
         >
           <div
             className={config.alignment}

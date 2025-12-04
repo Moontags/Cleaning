@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Hero from "@/components/Hero";
- 
 
 export default function ContactPage() {
   const { t } = useLanguage();
@@ -80,7 +79,7 @@ export default function ContactPage() {
         titleClassName="text-4xl md:text-5xl lg:text-6xl font-bold animate-fade-in"
         subtitleClassName="text-xl md:text-2xl text-blue-50 leading-relaxed"
         imageSrc="/images/sky.jpg"
-        imageAlt={t('contact.title')}
+        imageAlt={t("contact.title")}
         imagePriority
       />
 
@@ -99,9 +98,7 @@ export default function ContactPage() {
               className="group relative bg-white/60 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden transform hover:-translate-y-1"
             >
               <div className="relative z-10 p-6">
-                <div
-                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 border border-white/20 bg-white/10 text-[#003580]"
-                >
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 border border-white/20 bg-white/10 text-[#003580]">
                   <info.icon className="h-7 w-7" />
                 </div>
                 <h3
@@ -169,7 +166,10 @@ export default function ContactPage() {
                   >
                     <div
                       className={`${card.iconBg} w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm transition-transform duration-300`}
-                      style={{ background: 'linear-gradient(135deg,#003580,#0047ab)', boxShadow: '0 6px 14px rgba(0,53,128,0.08)' }}
+                      style={{
+                        background: "linear-gradient(135deg,#003580,#0047ab)",
+                        boxShadow: "0 6px 14px rgba(0,53,128,0.08)",
+                      }}
                     >
                       <card.icon className="h-6 w-6 text-white" />
                     </div>
@@ -343,9 +343,9 @@ export default function ContactPage() {
       <section
         className="relative text-white section-padding overflow-hidden"
         style={{
-          backgroundImage: `url('/images/etusivu.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundImage: `url('/images/hero_banner_cta.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-[#05263a]/60 via-[#003580]/55 to-[#003580]/65"></div>
@@ -356,28 +356,36 @@ export default function ContactPage() {
         </div>
 
         <div className="section-container text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight" style={{ marginBottom: '1.25rem' }}>
-            {t('contact.cta.title')}
+          <h2
+            className="text-4xl md:text-5xl font-extrabold leading-tight"
+            style={{ marginBottom: "1.25rem" }}
+          >
+            {t("contact.cta.title")}
           </h2>
-          <p className="text-lg md:text-xl text-blue-50 max-w-2xl mx-auto" style={{ marginBottom: '1.75rem' }}>
-            {t('contact.cta.desc')}
+          <p
+            className="text-lg md:text-xl text-blue-50 max-w-2xl mx-auto"
+            style={{ marginBottom: "1.75rem" }}
+          >
+            {t("contact.cta.desc")}
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center" style={{ gap: '1rem' }}>
+          <div
+            className="flex flex-col sm:flex-row justify-center items-center"
+            style={{ gap: "1rem" }}
+          >
             <Link
               href="/order"
               className="inline-flex items-center justify-center bg-white text-[#003580] rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
-              {t('nav.order')}
+              {t("nav.order")}
             </Link>
             <a
               href="tel:+358402183270"
               className="inline-flex items-center justify-center bg-white/20 text-white rounded-full px-6 py-3 font-medium border border-white/25 backdrop-blur-sm hover:backdrop-brightness-110 transition-all duration-300"
             >
-              {t('contact.cta.phone_number')}
+              {t("contact.cta.phone_number")}
             </a>
           </div>
-          
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-[#001f3f]/40 to-[#001f3f]/80 pointer-events-none"></div>
       </section>
