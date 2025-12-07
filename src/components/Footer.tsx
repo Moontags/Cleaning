@@ -62,6 +62,11 @@ export default function Footer() {
                   {t('nav.terms')}
                 </Link>
               </li>
+              <li>
+                <span className="text-blue-200">
+                  Y-tunnus: 2166541-5
+                </span>
+              </li>
             </ul>
           </div>
 
