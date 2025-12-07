@@ -170,7 +170,7 @@ export default function OfficeCleaningPage() {
       <section
         className="relative text-white overflow-hidden"
         style={{
-          backgroundImage: `url('/images/hero_banner_cta.png')`,
+          backgroundImage: `url('/images/hero_banner_cta.webp')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
