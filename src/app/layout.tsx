@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Luotettava kumppanisi puhtauden ylläpidossa. Keskitymme yritysten, toimistojen ja yhteisöjen siivouspalveluihin ammattitaidolla ja luotettavuudella.",
   keywords:
-    "siivous, yrityssiivous, toimistosiivoukset, liiketilat, teollisuussiivous, siivouspalvelu, ammattisiivous, siivousyritys",
+    "siivousote, siivous, yrityssiivous, toimistosiivoukset, liiketilat, teollisuussiivous, siivouspalvelu, ammattisiivous, siivousyritys", 
 
   // Open Graph -tiedot (Facebook, LinkedIn jne.)
   openGraph: {
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Siivousote - Ammattitaitoista siivousta",
     description:
       "Luotettava kumppanisi puhtauden ylläpidossa. Yritys- ja toimistosiivouspalvelut.",
-    images: ["/logo.svg"], // PÄIVITETTY: Käyttää SVG-logoa
+    images: ["/logo.svg"],
   },
 
   // Robots-ohjeet hakukoneille
@@ -114,7 +114,7 @@ export default function RootLayout({
     telephone: "040 218 3270",
     email: "info@siivousote.fi",
     priceRange: "$",
-    image: "https://siivousote.fi/logo.svg", // PÄIVITETTY: Käyttää SVG-logoa
+    image: "https://siivousote.fi/logo.svg",
     serviceType: [
       "Yrityssiivous",
       "Toimistosiivoukset",
@@ -148,10 +148,10 @@ export default function RootLayout({
       },
     ],
     sameAs: [
-      // Lisää sosiaalisen median profiilit
-      // "https://www.facebook.com/siivousote",
-      // "https://www.linkedin.com/company/siivousote",
-      // "https://www.instagram.com/siivousote",
+      // LISÄTTY sosiaalisen median profiilit
+      "https://www.facebook.com/siivousote",
+      "https://www.linkedin.com/company/siivousote",
+      "https://www.instagram.com/siivousote",
     ],
   };
 
