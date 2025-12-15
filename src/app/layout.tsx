@@ -150,7 +150,7 @@ export default function RootLayout({
     sameAs: [
       // LISÄTTY sosiaalisen median profiilit
       "https://www.facebook.com/siivousote",
-      "https://www.linkedin.com/company/siivousote",
+      "https://www.linkedin.com/in/marika-kauppila-2196963a0/",
       "https://www.instagram.com/siivousote",
     ],
   };
