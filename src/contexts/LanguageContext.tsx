@@ -24,6 +24,11 @@ const translations = {
     "nav.contact": "Yhteystiedot",
     "nav.order": "Tilaa siivous",
     "nav.terms": "Sopimusehdot",
+    "nav.responsibility": "Vastuullisuus",
+
+    // Vastuullisuus
+    "responsibility.title": "Vastuullisuus ja ympäristö",
+    "responsibility.subtitle": "Siivousote – vastuullinen siivousyritys",
 
     // Etusivu
     "home.hero.title": "Siivouspalvelua reippaalla otteella",
@@ -549,6 +554,11 @@ const translations = {
     "nav.contact": "Contact",
     "nav.order": "Order Cleaning",
     "nav.terms": "Terms of Service",
+    "nav.responsibility": "Responsibility",
+
+    // Responsibility
+    "responsibility.title": "Responsibility and Environment",
+    "responsibility.subtitle": "Siivousote – a responsible cleaning company",
 
     // Homepage
     "home.hero.title": "Cleaning Service with a Vigor",

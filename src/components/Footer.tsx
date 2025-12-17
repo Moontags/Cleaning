@@ -18,22 +18,43 @@ export default function Footer() {
 
       <div className="section-container relative z-10" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
         <div className="grid grid-cols-1 md:grid-cols-4" style={{ gap: '2.5rem' }}>
-          {/* Company Info */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-white" style={{ marginBottom: '1rem' }}>
-              Siivousote
-            </h3>
-            <div className="text-blue-100 leading-relaxed" style={{ marginBottom: '1rem' }}>
-              <p className="font-semibold mb-2">{t('footer.service_areas')}</p>
-              <ul className="space-y-1 text-sm">
-                <li>{t('footer.area.metropolitan')}</li>
-                <li>{t('footer.area.kanta_hame')}</li>
-                <li>{t('footer.area.hyvinkaa')}</li>
-                <li>{t('footer.area.nurmijärvi')}</li>
-                <li>{t('footer.area.jarvenpaa')}</li>
-                <li>{t('footer.area.tuusula')}</li>
-              </ul>
-            </div>
+          {/* Service Areas */}
+          <div>
+            <h4 className="text-lg font-semibold text-blue-100" style={{ marginBottom: '1.25rem' }}>
+              {t('footer.service_areas')}
+            </h4>
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+              <li>
+                <span className="text-blue-200">
+                  {t('footer.area.metropolitan')}
+                </span>
+              </li>
+              <li>
+                <span className="text-blue-200">
+                  {t('footer.area.kanta_hame')}
+                </span>
+              </li>
+              <li>
+                <span className="text-blue-200">
+                  {t('footer.area.hyvinkaa')}
+                </span>
+              </li>
+              <li>
+                <span className="text-blue-200">
+                  {t('footer.area.nurmijärvi')}
+                </span>
+              </li>
+              <li>
+                <span className="text-blue-200">
+                  {t('footer.area.jarvenpaa')}
+                </span>
+              </li>
+              <li>
+                <span className="text-blue-200">
+                  {t('footer.area.tuusula')}
+                </span>
+              </li>
+            </ul>
           </div>
 
           {/* Company Links */}
@@ -60,6 +81,11 @@ export default function Footer() {
               <li>
                 <Link href="/terms" className="text-blue-200 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">
                   {t('nav.terms')}
+                </Link>
+              </li>
+              <li>
+                <Link href="/vastuu" className="text-blue-200 hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">
+                  {t('nav.responsibility')}
                 </Link>
               </li>
               <li>
