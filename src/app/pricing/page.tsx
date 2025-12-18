@@ -98,7 +98,7 @@ export default function PricingPage() {
         t("pricing.home.feature3"),
         t("pricing.home.min_charge"),
       ],
-      priceFrom: "45",
+      priceFrom: "46",
       priceUnit: t("pricing.unit_hourly"),
       popular: false,
     },
