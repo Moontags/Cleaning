@@ -16,7 +16,7 @@ export default function HomePage() {
       title: t("services.office.title"),
       description: t("services.office.desc"),
       href: "/services/office-cleaning",
-      imageSrc: "/images/toimisto.jpeg",
+      imageSrc: "/images/toimisto.webp",
       blurDataURL:
         "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7'><rect width='100%' height='100%' fill='%23eaf6fb'/></svg>",
     },
@@ -25,7 +25,7 @@ export default function HomePage() {
       title: t("services.business.title"),
       description: t("services.business.desc"),
       href: "/services/commercial-cleaning",
-      imageSrc: "/images/liiketila.jpeg",
+      imageSrc: "/images/liiketila.webp",
       blurDataURL:
         "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7'><rect width='100%' height='100%' fill='%23f6f4ef'/></svg>",
     },
@@ -34,7 +34,7 @@ export default function HomePage() {
       title: t("services.industrial.title"),
       description: t("services.industrial.desc"),
       href: "/services/industrial-cleaning",
-      imageSrc: "/images/teollisuus.jpeg",
+      imageSrc: "/images/teollisuus.webp",
       blurDataURL:
         "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7'><rect width='100%' height='100%' fill='%23eef1f6'/></svg>",
     },
@@ -43,7 +43,7 @@ export default function HomePage() {
       title: t("services.construction_end.title"),
       description: t("services.construction_end.desc"),
       href: "/services/post-construction-cleaning",
-      imageSrc: "/images/loppusiivous.jpeg",
+      imageSrc: "/images/loppusiivous.webp",
       blurDataURL:
         "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7'><rect width='100%' height='100%' fill='%23f7f7f7'/></svg>",
     },
@@ -52,7 +52,7 @@ export default function HomePage() {
       title: t("services.home_cleaning.title"),
       description: t("services.home_cleaning.desc"),
       href: "/services/home-cleaning",
-      imageSrc: "/images/kotisiivous.jpeg",
+      imageSrc: "/images/kotisiivous.webp",
       blurDataURL:
         "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7'><rect width='100%' height='100%' fill='%23fff6f0'/></svg>",
     },
@@ -88,7 +88,7 @@ export default function HomePage() {
               style={{ padding: "1.75rem" }}
             >
               {/* Hover gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#003580]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-linear-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               <div className="relative z-10">
                 <div
@@ -105,7 +105,7 @@ export default function HomePage() {
                   />
                 </div>
                 <h3
-                  className="text-lg font-semibold text-[#003580] group-hover:text-[#0047ab] transition-colors"
+                  className="text-lg font-semibold text-primary group-hover:text-primary-light transition-colors"
                   style={{ marginBottom: "0.75rem" }}
                 >
                   {service.title}
@@ -116,7 +116,7 @@ export default function HomePage() {
               </div>
 
               {/* Dekoratiivinen elementti */}
-              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-[#003580]/5 rounded-full blur-2xl group-hover:bg-[#003580]/10 transition-colors"></div>
+              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors"></div>
             </Link>
           ))}
         </div>
@@ -134,7 +134,7 @@ export default function HomePage() {
         }}
       >
         {/* Background overlay for contrast and airy look */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#05263a]/60 via-[#003580]/55 to-[#003580]/65"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-[#05263a]/60 via-primary/55 to-primary/65"></div>
 
         {/* Soft decorative shapes (keeps previous feel) */}
         <div className="absolute inset-0 opacity-25 pointer-events-none">
@@ -162,7 +162,7 @@ export default function HomePage() {
           >
             <Link
               href="/order"
-              className="inline-flex items-center justify-center bg-white text-[#003580] rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center justify-center bg-white text-primary rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
               {t("nav.order")}
             </Link>
@@ -176,7 +176,7 @@ export default function HomePage() {
         </div>
 
         {/* UUSI: Pehmeä gradient-siirtymä footeriin - Luo saumattoman siirtymän */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-[#001f3f]/40 to-[#001f3f]/80 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-b from-transparent via-[#001f3f]/40 to-[#001f3f]/80 pointer-events-none"></div>
       </section>
     </div>
   );
