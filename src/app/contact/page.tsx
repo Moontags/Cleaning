@@ -343,7 +343,7 @@ export default function ContactPage() {
       <section
         className="relative text-white section-padding overflow-hidden"
         style={{
-          backgroundImage: `url('/images/hero_banner_cta.webp')`,
+          backgroundImage: `url('/images/cta.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

@@ -16,7 +16,7 @@ export default function HomePage() {
       title: t("services.office.title"),
       description: t("services.office.desc"),
       href: "/services/office-cleaning",
-      imageSrc: "/images/toimistosiivous.jpg",
+      imageSrc: "/images/toimisto.jpeg",
       blurDataURL:
         "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7'><rect width='100%' height='100%' fill='%23eaf6fb'/></svg>",
     },
@@ -25,7 +25,7 @@ export default function HomePage() {
       title: t("services.business.title"),
       description: t("services.business.desc"),
       href: "/services/commercial-cleaning",
-      imageSrc: "/images/liiketila.jpg",
+      imageSrc: "/images/liiketila.jpeg",
       blurDataURL:
         "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7'><rect width='100%' height='100%' fill='%23f6f4ef'/></svg>",
     },
@@ -34,7 +34,7 @@ export default function HomePage() {
       title: t("services.industrial.title"),
       description: t("services.industrial.desc"),
       href: "/services/industrial-cleaning",
-      imageSrc: "/images/teollisuus.jpg",
+      imageSrc: "/images/teollisuus.jpeg",
       blurDataURL:
         "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7'><rect width='100%' height='100%' fill='%23eef1f6'/></svg>",
     },
@@ -43,7 +43,7 @@ export default function HomePage() {
       title: t("services.construction_end.title"),
       description: t("services.construction_end.desc"),
       href: "/services/post-construction-cleaning",
-      imageSrc: "/images/loppusiivous.jpg",
+      imageSrc: "/images/loppusiivous.jpeg",
       blurDataURL:
         "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7'><rect width='100%' height='100%' fill='%23f7f7f7'/></svg>",
     },
@@ -52,7 +52,7 @@ export default function HomePage() {
       title: t("services.home_cleaning.title"),
       description: t("services.home_cleaning.desc"),
       href: "/services/home-cleaning",
-      imageSrc: "/images/kotisiivous.jpg",
+      imageSrc: "/images/kotisiivous.jpeg",
       blurDataURL:
         "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7'><rect width='100%' height='100%' fill='%23fff6f0'/></svg>",
     },
@@ -66,7 +66,7 @@ export default function HomePage() {
         titleClassName="text-shadow-hero"
         subtitleClassName="text-shadow-hero font-bold"
         subtitle={t("home.hero.subtitle")}
-        imageSrc="/images/hero_banner2.png"
+        imageSrc="/images/hero_banner2.jpg"
         imageAlt={t("home.hero.title")}
         imagePriority
       />
@@ -128,7 +128,7 @@ export default function HomePage() {
       <section
         className="relative text-white section-padding overflow-hidden"
         style={{
-          backgroundImage: `url('/images/hero_banner_cta.webp')`,
+          backgroundImage: `url('/images/cta.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

@@ -149,7 +149,7 @@ export default function CommercialCleaningPage() {
       <section
         className="relative text-white overflow-hidden"
         style={{
-          backgroundImage: `url('/images/hero_banner_cta.webp')`,
+          backgroundImage: `url('/images/cta.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
