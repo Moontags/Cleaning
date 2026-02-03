@@ -304,9 +304,11 @@ const translations = {
     "about.subtitle": "Luotettava kumppanisi puhtauden ylläpidossa",
     "about.story.title": "Tarinamme",
     "about.story.p1":
-      "Olemme kotimainen siivousyritys, jonka tiimillä on jo pitkä ja monipuolinen kokemus siivousalalta. Yhdistämällä vuosien asiantuntemuksen ja modernin, reippaan otteen luomme palvelun, joka ylittää perinteisen siivouksen raamit.",
-    "about.story.p2":
-      "Tiimimme koostuu koulutetuista ammattilaisista, jotka ovat vuosien varrella hankkineet laajan osaamisen ja ovat sitoutuneet tarjoamaan korkeinta laatua jokaisessa työkohteessa. Käytämme ensisijaisesti ympäristöystävällisiä puhdistusaineita ja moderneja menetelmiä varmistaaksemme sekä tehokkuuden että turvallisuuden tiloissasi. Me uskomme, että puhdas ympäristö on tuottavan työn ja hyvän elämän perusta.",
+      "Olemme kotimainen siivousyritys, jonka tiimillä on jo pitkä ja monipuolinen kokemus siivousalalta.",
+    "about.story.p2a":
+      "Tiimimme koostuu koulutetuista ammattilaisista, jotka ovat vuosien varrella hankkineet laajan osaamisen ja ovat sitoutuneet tarjoamaan korkeinta laatua jokaisessa työkohteessa.",
+    "about.story.p2b":
+      "Käytämme ensisijaisesti ympäristöystävällisiä puhdistusaineita ja moderneja menetelmiä varmistaaksemme sekä tehokkuuden että turvallisuuden tiloissasi. Puhdas ympäristö on tuottavan työn perusta.",
     "about.story.p3":
       "Uskomme pitkäaikaisiin asiakassuhteisiin ja räätälöimme palvelumme jokaisen asiakkaan yksilöllisten tarpeiden mukaan. Asiakastyytyväisyys on toimintamme ydin. Tavoitteemme on olla se luotettava kumppanisi, joka takaa puhtauden ylläpidon ilman, että sinun tarvitsee murehtia siitä.",
     "about.values.title": "Arvomme",
@@ -838,9 +840,11 @@ const translations = {
     "about.subtitle": "Your reliable partner in maintaining cleanliness",
     "about.story.title": "Our Story",
     "about.story.p1":
-      "We are a Finnish cleaning company, and our team already has long and versatile experience in the cleaning industry. By combining years of expertise with a modern, vigorous approach, we create a service that goes beyond the boundaries of traditional cleaning.",
-    "about.story.p2":
-      "Our team consists of trained professionals who have acquired extensive expertise over the years and are committed to providing the highest quality in every work assignment. We primarily use eco-friendly cleaning products and modern methods to ensure both efficiency and safety in your premises. We believe that a clean environment is the foundation for productive work and a good life.",
+      "We are a Finnish cleaning company, and our team already has long and versatile experience in the cleaning industry.",
+    "about.story.p2a":
+      "Our team consists of trained professionals who have acquired extensive expertise over the years and are committed to providing the highest quality in every work assignment.",
+    "about.story.p2b":
+      "We primarily use eco-friendly cleaning products and modern methods to ensure both efficiency and safety in your premises. Clean environment is the foundation for productive work and a good life.",
     "about.story.p3":
       "We believe in long-term customer relationships and tailor our services to meet the individual needs of each client. Customer satisfaction is the core of our operations. Our goal is to be the reliable partner that guarantees cleanliness maintenance without you having to worry about it.",
     "about.values.title": "Our Values",

@@ -54,7 +54,10 @@ export default function AboutPage() {
                 {t('about.story.p1')}
               </p>
               <p className="text-gray-700 leading-relaxed text-lg">
-                {t('about.story.p2')}
+                {t('about.story.p2a')}
+              </p>
+              <p className="text-gray-700 leading-relaxed text-lg">
+                {t('about.story.p2b')}
               </p>
               <p className="text-gray-700 leading-relaxed text-lg">
                 {t('about.story.p3')}
