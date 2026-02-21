@@ -33,7 +33,7 @@ const translations = {
     // Etusivu
     "home.hero.title": "Siivouspalvelua reippaalla otteella",
     "home.hero.subtitle":
-      "Tehdään arjestanne puhtaampaa – palvelemme teitä PK-seudulla ja Kanta-Hämeessä.",
+      "Tehdään arjestanne puhtaampaa",
     "home.hero.cta": "Tilaa siivous",
     "home.hero.contact": "Ota yhteyttä",
 
@@ -565,7 +565,7 @@ const translations = {
     // Homepage
     "home.hero.title": "Cleaning Service with a Vigor",
     "home.hero.subtitle":
-      "Helsinki metropolitan area and the Kanta-Häme region",
+      "Making your everyday life cleaner",
     "home.hero.cta": "Order Cleaning",
     "home.hero.contact": "Contact Us",
 
@@ -1001,7 +1001,7 @@ const translations = {
     "service.home.hero.title": "Home Cleaning",
     "service.home.hero.subtitle": "So you have more time for your own",
     "service.home.intro":
-      "Your home deserves the best care on a regular or one-time basis.",
+      "Your home deserves the best care regularly or one-time. Quality home cleaning services that give you back your free time and peace of mind.",
     "service.home.why.title": "Why choose professionals for home cleaning?",
     "service.home.why.benefit1.title": "Time for Yourself",
     "service.home.why.benefit1.desc":
