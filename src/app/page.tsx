@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Building2, Store, Factory, Home, Construction } from "lucide-react";
 import Hero from "@/components/Hero";
+import SpringBanner from "@/components/SpringBanner";
 import WhyChoose from "@/components/WhyChoose";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -60,6 +61,8 @@ export default function HomePage() {
 
   return (
     <div>
+      <SpringBanner />
+
       <Hero
         variant="main"
         title={t("home.hero.title")}

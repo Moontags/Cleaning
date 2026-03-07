@@ -36,6 +36,11 @@ const translations = {
       "Tehdään arjestanne puhtaampaa",
     "home.hero.cta": "Tilaa siivous",
     "home.hero.contact": "Ota yhteyttä",
+    "home.spring_banner.title": "☀️ Kevat koittaa - ikkunat kuntoon!",
+    "home.spring_banner.description":
+      "Ammattitaitoinen ikkunanpesu kirkastaa kotisi ja toimistosi - varaa aika nyt!",
+    "home.spring_banner.cta": "Tilaa ikkunanpesu ->",
+    "home.spring_banner.close": "Sulje mainos",
 
     // Palvelut
     "services.title": "Palvelumme",
@@ -568,6 +573,11 @@ const translations = {
       "Making your everyday life cleaner",
     "home.hero.cta": "Order Cleaning",
     "home.hero.contact": "Contact Us",
+    "home.spring_banner.title": "☀️ Spring is here - get your windows sparkling!",
+    "home.spring_banner.description":
+      "Professional window cleaning brightens your home and office - book your time now!",
+    "home.spring_banner.cta": "Order window cleaning ->",
+    "home.spring_banner.close": "Close banner",
 
     // Services
     "services.title": "Our Services",
