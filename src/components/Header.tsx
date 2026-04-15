@@ -113,20 +113,14 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`relative text-base font-medium transition-all duration-300 whitespace-nowrap group ${
+                  className={`text-base font-medium transition-colors duration-150 text-gray-700 hover:text-emerald-700 px-2 py-1 ${
                     isActive(item.href)
-                      ? "text-[#003580]"
-                      : "text-gray-700 hover:text-[#003580]"
+                      ? "text-emerald-700 border-b-2 border-emerald-600 pb-0.5"
+                      : ""
                   }`}
-                  style={{ paddingBottom: "0.25rem" }}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                  {/* Moderni alakriiva animaatiolla - KORJATTU SIJAINTI */}
-                  <span
-                    className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#003580] to-[#0047ab] transition-all duration-300 ${
-                      isActive(item.href) ? "w-full" : "w-0 group-hover:w-full"
-                    }`}
-                  ></span>
                 </Link>
               ))}
             </div>
@@ -140,7 +134,7 @@ export default function Header() {
             {/* CTA Button */}
             <Link
               href="/order"
-              className="bg-gradient-to-r from-[#003580] to-[#0047ab] hover:from-[#0047ab] hover:to-[#0056d6] text-white rounded-lg font-medium transition-all duration-300 hover:shadow-md whitespace-nowrap"
+              className="bg-[#003580] hover:bg-[#0047ab] text-white text-center rounded-lg font-medium transition-all duration-300 hover:shadow-lg"
               style={{ padding: "0.5rem 0.875rem", fontSize: "0.875rem" }}
             >
               {t("nav.order")}

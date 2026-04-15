@@ -18,7 +18,7 @@ interface CardProps {
 
 export default function Card({ icon: Icon, title, description, priceFrom, priceUnit, features = [], ctaText, ctaHref = "/order" }: CardProps) {
   return (
-    <article className="group relative bg-white/60 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col transform hover:-translate-y-1">
+    <article className="group relative bg-white/60 backdrop-blur-sm rounded-2xl shadow-sm overflow-hidden flex flex-col transform hover:-translate-y-1 border border-transparent hover:border-emerald-300 hover:shadow-md transition-all duration-200">
       <div className="relative z-10 flex flex-col flex-grow p-6">
         {Icon && (
           <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-3 border border-white/20 bg-white/10 text-[#003580]" style={{ marginBottom: '0.75rem' }}>
@@ -56,7 +56,7 @@ export default function Card({ icon: Icon, title, description, priceFrom, priceU
 
         {ctaText && (
           <div className="mt-auto">
-            <Link href={ctaHref} className="inline-block text-[#003580] bg-white rounded-full border border-white/30 transition-all duration-300 font-semibold text-center" style={{ padding: '0.5rem 1rem' }}>
+            <Link href={ctaHref} className="inline-block bg-emerald-700 text-white rounded-full border border-emerald-700 hover:bg-emerald-800 hover:border-emerald-800 transition-colors duration-200 font-semibold text-center" style={{ padding: '0.5rem 1rem' }}>
               {ctaText}
             </Link>
           </div>

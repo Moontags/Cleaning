@@ -38,7 +38,7 @@ export default function WhyChoose({ imageSrc = "/images/sky.jpg" }: { imageSrc?:
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#01263a]/60 via-[#003580]/50 to-[#003580]/65"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-[#01263a]/60 via-primary/50 to-primary/65"></div>
       </div>
 
       <div className="section-container py-16">
@@ -53,7 +53,7 @@ export default function WhyChoose({ imageSrc = "/images/sky.jpg" }: { imageSrc?:
               className="bg-white/6 backdrop-blur-sm p-5 rounded-xl min-h-[120px] flex flex-col"
             >
               <h3 className="text-white font-semibold text-lg mb-2">{it.title}</h3>
-              <p className="text-blue-50 text-sm flex-1">{it.desc}</p>
+              <p className="text-blue-50 text-sm flex-1 leading-relaxed">{it.desc}</p>
             </div>
           ))}
         </div>

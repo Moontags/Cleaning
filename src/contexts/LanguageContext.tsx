@@ -79,12 +79,12 @@ const translations = {
     "footer.services": "Palvelut",
     "footer.contact.title": "Yhteystiedot",
     "footer.service_areas": "Palvelualueet:",
-    "footer.area.metropolitan": "Pääkaupunkiseutu",
     "footer.area.kanta_hame": "Kanta-Häme",
     "footer.area.hyvinkaa": "Hyvinkää",
     "footer.area.nurmijärvi": "Nurmijärvi",
     "footer.area.jarvenpaa": "Järvenpää",
     "footer.area.tuusula": "Tuusula",
+    "footer.area.riihimaki": "Riihimäki",
 
     // Yhteystiedot
     "contact.title": "Ota yhteyttä",
@@ -136,7 +136,7 @@ const translations = {
 
     // Hinnasto (PricingPage) - LISÄTTY (VANHAT + UUDET AVAIMET)
     "pricing.title": "Hinnasto",
-    "pricing.subtitle": "Läpinäkyvät hinnat ja joustavat paketit yrityksille",
+    "pricing.subtitle": "Tiedät mitä maksat – saat mitä tarvitset",
     "pricing.contact.cta": "Pyydä räätälöity tarjous",
     "pricing.quote": "Tarjous",
     "pricing.popular": "SUOSITUIN",
@@ -617,12 +617,12 @@ const translations = {
     "footer.services": "Services",
     "footer.contact.title": "Contact",
     "footer.service_areas": "Service Areas:",
-    "footer.area.metropolitan": "Metropolitan Area",
     "footer.area.kanta_hame": "Kanta-Häme",
     "footer.area.hyvinkaa": "Hyvinkää",
     "footer.area.nurmijärvi": "Nurmijärvi",
     "footer.area.jarvenpaa": "Järvenpää",
     "footer.area.tuusula": "Tuusula",
+    "footer.area.riihimaki": "Riihimäki",
 
     // Contact (OLD + NEW KEYS)
     "contact.title": "Contact Us",
@@ -679,7 +679,7 @@ const translations = {
     // Pricing (PricingPage)
     "pricing.title": "Pricing",
     "pricing.subtitle":
-      "Transparent prices and flexible packages for businesses",
+      "You know what you pay – you get what you need",
     "pricing.contact.cta": "Request a customized quote",
     "pricing.quote": "Quote",
     "pricing.popular": "MOST POPULAR",

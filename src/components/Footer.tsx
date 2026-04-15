@@ -9,7 +9,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-gradient-to-br from-[#01263a] via-[#003580] to-[#0047ab] text-white overflow-hidden">
+    <footer className="relative bg-linear-to-br from-[#01263a] via-primary to-primary-light text-white overflow-hidden">
       {/* Dekoratiiviset tausta-elementit */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute top-16 left-8 w-80 h-80 bg-white/6 rounded-full blur-3xl transform -translate-x-4 -translate-y-4"></div>
@@ -24,16 +24,12 @@ export default function Footer() {
               {t('footer.service_areas')}
             </h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <li>
+                   <li>
                 <span className="text-blue-200">
-                  {t('footer.area.metropolitan')}
+                  {t('footer.area.riihimaki')}
                 </span>
               </li>
-              <li>
-                <span className="text-blue-200">
-                  {t('footer.area.kanta_hame')}
-                </span>
-              </li>
+             
               <li>
                 <span className="text-blue-200">
                   {t('footer.area.hyvinkaa')}
@@ -54,6 +50,12 @@ export default function Footer() {
                   {t('footer.area.tuusula')}
                 </span>
               </li>
+               <li>
+                <span className="text-blue-200">
+                  {t('footer.area.kanta_hame')}
+                </span>
+              </li>
+         
             </ul>
           </div>
 
@@ -147,7 +149,7 @@ export default function Footer() {
             </h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <li className="flex items-start group" style={{ gap: '0.75rem' }}>
-                <div className="w-10 h-10 bg-white/12 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                <div className="w-10 h-10 bg-white/12 backdrop-blur-sm rounded-lg flex items-center justify-center shrink-0 transition-all duration-300">
                   <Mail className="h-5 w-5 text-blue-100" />
                 </div>
                 <div className="flex-1">
@@ -157,7 +159,7 @@ export default function Footer() {
                 </div>
               </li>
               <li className="flex items-start group" style={{ gap: '0.75rem' }}>
-                <div className="w-10 h-10 bg-white/12 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                <div className="w-10 h-10 bg-white/12 backdrop-blur-sm rounded-lg flex items-center justify-center shrink-0 transition-all duration-300">
                   <Phone className="h-5 w-5 text-blue-100" />
                 </div>
                 <div className="flex-1">
@@ -167,7 +169,7 @@ export default function Footer() {
                 </div>
               </li>
               <li className="flex items-start group" style={{ gap: '0.75rem' }}>
-                <div className="w-10 h-10 bg-white/12 backdrop-blur-sm rounded-lg flex items-center justify-center flex-shrink-0 transition-all duration-300">
+                <div className="w-10 h-10 bg-white/12 backdrop-blur-sm rounded-lg flex items-center justify-center shrink-0 transition-all duration-300">
                   <MapPin className="h-5 w-5 text-blue-100" />
                 </div>
                 <div className="flex-1">
