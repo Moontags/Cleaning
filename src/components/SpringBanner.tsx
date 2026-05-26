@@ -12,7 +12,7 @@ export default function SpringBanner() {
 
   return (
     <div
-      className="relative flex flex-col items-center justify-center gap-2 border-b border-emerald-200 bg-emerald-100 px-4 py-4 text-center sm:flex-row sm:gap-4 sm:px-16"
+      className="relative flex flex-col items-center justify-center gap-2 border-b border-emerald-200 bg-transparent px-4 py-4 text-center sm:flex-row sm:gap-4 sm:px-16"
     >
       {/* <span className="text-xl sm:text-2xl" aria-hidden="true">🌿</span> */}
 
