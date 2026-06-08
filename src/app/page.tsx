@@ -69,7 +69,7 @@ export default function HomePage() {
         titleClassName="text-shadow-hero"
         subtitleClassName="text-shadow-hero font-bold"
         subtitle={t("home.hero.subtitle")}
-        imageSrc="/images/hero_banner2.jpg"
+        imageSrc="/images/bloom.jpg"
         imageAlt={t("home.hero.title")}
         imagePriority
       />
