@@ -1,4 +1,4 @@
-export default function WaveBottom() {
+export default function WaveBottom({ color = "#faf8f3" }: { color?: string }) {
   return (
     <div className="absolute -bottom-0.5 left-0 right-0">
       <svg
@@ -9,7 +9,7 @@ export default function WaveBottom() {
       >
         <path
           d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 80C1200 80 1320 70 1380 65L1440 60V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-          fill="white"
+          fill={color}
         />
       </svg>
     </div>
