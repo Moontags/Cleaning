@@ -36,6 +36,7 @@ export default function AboutPage() {
         variant="main"
         title={t('about.title')}
         subtitle={t('about.subtitle')}
+        imageSrc="/images/olohuone.png"
         maxWidth="48rem"
         imageAlt={t('about.title')}
         imagePriority
@@ -44,7 +45,7 @@ export default function AboutPage() {
       {/* Story Section - Moderni korttiasettelu */}
       <section className="section-container section-padding" style={{ marginTop: '-3rem' }}>
         <div style={{ maxWidth: '56rem', margin: '0 auto' }}>
-          <h2 className="heading-2 text-center text-[#1f2937]" style={{ marginBottom: '3rem' }}>
+          <h2 className="heading-2 text-center text-[#36302a]" style={{ marginBottom: '3rem' }}>
             {t('about.story.title')}
           </h2>
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl" style={{ padding: '2.5rem' }}>
@@ -69,7 +70,7 @@ export default function AboutPage() {
       {/* Values Section - Modernit kortit */}
       <section className="relative bg-gradient-to-b from-gray-50 to-white section-padding">
         <div className="section-container">
-          <h2 className="heading-2 text-center text-[#1f2937]" style={{ marginBottom: '3rem' }}>
+          <h2 className="heading-2 text-center text-[#36302a]" style={{ marginBottom: '3rem' }}>
             {t('about.values.title')}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: '1.5rem' }}>
@@ -80,10 +81,10 @@ export default function AboutPage() {
                 style={{ padding: '1.25rem' }}
               >
                 <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-3 border border-white/20 bg-white/10 text-[#1f2937]" style={{ marginBottom: '0.75rem' }}>
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-3 border border-white/20 bg-white/10 text-[#36302a]" style={{ marginBottom: '0.75rem' }}>
                     <value.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="text-lg font-semibold text-[#1f2937]" style={{ marginBottom: '0.5rem' }}>
+                  <h3 className="text-lg font-semibold text-[#36302a]" style={{ marginBottom: '0.5rem' }}>
                     {value.title}
                   </h3>
                   <p className="text-gray-700 text-sm leading-relaxed">

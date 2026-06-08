@@ -128,6 +128,7 @@ export default function PricingPage() {
         variant="main"
         title={t("pricing.title")}
         subtitle={t("pricing.subtitle")}
+        imageSrc="/images/olohuone.png"
         imageAlt={t("pricing.title")}
         imagePriority
       />
@@ -172,7 +173,7 @@ export default function PricingPage() {
       <section className="relative bg-gradient-to-b from-gray-50 to-white section-padding">
         <div className="section-container">
           <h2
-            className="heading-2 text-center text-[#1f2937]"
+            className="heading-2 text-center text-[#36302a]"
             style={{ marginBottom: "3rem" }}
           >
             {t("pricing.benefits.title")}
@@ -191,10 +192,10 @@ export default function PricingPage() {
                   className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-3 border border-white/20 bg-white/10"
                   style={{ marginBottom: "0.75rem" }}
                 >
-                  <benefit.icon className="h-6 w-6 text-[#1f2937]" />
+                  <benefit.icon className="h-6 w-6 text-[#36302a]" />
                 </div>
                 <h3
-                  className="text-lg font-semibold text-[#1f2937]"
+                  className="text-lg font-semibold text-[#36302a]"
                   style={{ marginBottom: "0.5rem" }}
                 >
                   {benefit.title}
@@ -212,7 +213,7 @@ export default function PricingPage() {
             style={{ maxWidth: "64rem", margin: "0 auto", padding: "1.5rem" }}
           >
             <h3
-              className="text-xl font-semibold text-[#1f2937] text-center"
+              className="text-xl font-semibold text-[#36302a] text-center"
               style={{ marginBottom: "1.25rem" }}
             >
               {t("pricing.inclusions.title")}
@@ -225,7 +226,7 @@ export default function PricingPage() {
                   style={{ gap: "0.75rem" }}
                 >
                   <div
-                    className="rounded-xl flex-shrink-0 p-2 bg-gradient-to-br from-[#4b5563] to-[#6b7280]"
+                    className="rounded-xl flex-shrink-0 p-2 bg-gradient-to-br from-[#655c4e] to-[#847866]"
                     style={{ boxShadow: "0 6px 14px rgba(0,53,128,0.12)" }}
                   >
                     <Check className="h-5 w-5 text-white" />
@@ -255,7 +256,7 @@ export default function PricingPage() {
       {/* FAQ Section - PARANNETTU animaatio ChevronDown-ikonilla */}
       <section className="section-container section-padding">
         <h2
-          className="heading-2 text-center text-[#1f2937]"
+          className="heading-2 text-center text-[#36302a]"
           style={{ marginBottom: "3rem" }}
         >
           {t("pricing.faq.title")}
@@ -275,10 +276,10 @@ export default function PricingPage() {
               className="group bg-white/90 backdrop-blur-sm rounded-xl transition-all border border-gray-100"
               style={{ padding: "1.5rem" }}
             >
-              <summary className="font-semibold text-[#1f2937] cursor-pointer list-none flex items-center justify-between group-hover:text-[#6b7280] transition-colors">
+              <summary className="font-semibold text-[#36302a] cursor-pointer list-none flex items-center justify-between group-hover:text-[#847866] transition-colors">
                 {t(`pricing.faq${num}.title`)}
                 <span
-                  className="bg-gradient-to-br from-[#4b5563] to-[#6b7280] w-8 h-8 rounded-lg flex items-center justify-center text-white transition-transform group-open:rotate-180"
+                  className="bg-gradient-to-br from-[#655c4e] to-[#847866] w-8 h-8 rounded-lg flex items-center justify-center text-white transition-transform group-open:rotate-180"
                   style={{ marginLeft: "1rem" }}
                 >
                   <ChevronDown className="h-5 w-5" />
@@ -299,7 +300,7 @@ export default function PricingPage() {
       <section
         className="relative text-white section-padding overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#374151] via-[#4b5563] to-[#6b7280]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#4e463b] via-[#655c4e] to-[#847866]"></div>
 
         <div className="absolute inset-0 opacity-25 pointer-events-none">
           <div className="absolute top-12 right-12 w-72 h-72 bg-white/6 rounded-full blur-3xl"></div>
@@ -321,14 +322,14 @@ export default function PricingPage() {
           </p>
           <Link
             href="/order"
-            className="inline-flex items-center justify-center bg-white text-[#1f2937] rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+            className="inline-flex items-center justify-center bg-white text-[#36302a] rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
           >
             {t("pricing.final_cta.button")}
           </Link>
         </div>
 
         {/* UUSI: Pehmeä gradient-siirtymä footeriin - Luo saumattoman siirtymän */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-[#111827]/40 to-[#111827]/80 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-[#221e19]/40 to-[#221e19]/80 pointer-events-none"></div>
       </section>
 
       <style jsx>{`

@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { Building2, Store, Factory, Home, Construction } from "lucide-react";
 import Hero from "@/components/Hero";
 import SpringBanner from "@/components/SpringBanner";
@@ -17,45 +16,30 @@ export default function HomePage() {
       title: t("services.office.title"),
       description: t("services.office.desc"),
       href: "/services/office-cleaning",
-      imageSrc: "/images/toimisto.webp",
-      blurDataURL:
-        "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7'><rect width='100%' height='100%' fill='%23eaf6fb'/></svg>",
     },
     {
       icon: Store,
       title: t("services.business.title"),
       description: t("services.business.desc"),
       href: "/services/commercial-cleaning",
-      imageSrc: "/images/liiketila.webp",
-      blurDataURL:
-        "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7'><rect width='100%' height='100%' fill='%23f6f4ef'/></svg>",
     },
     {
       icon: Factory,
       title: t("services.industrial.title"),
       description: t("services.industrial.desc"),
       href: "/services/industrial-cleaning",
-      imageSrc: "/images/teollisuus.webp",
-      blurDataURL:
-        "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7'><rect width='100%' height='100%' fill='%23eef1f6'/></svg>",
     },
     {
       icon: Construction,
       title: t("services.construction_end.title"),
       description: t("services.construction_end.desc"),
       href: "/services/post-construction-cleaning",
-      imageSrc: "/images/loppusiivous.webp",
-      blurDataURL:
-        "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7'><rect width='100%' height='100%' fill='%23f7f7f7'/></svg>",
     },
     {
       icon: Home,
       title: t("services.home_cleaning.title"),
       description: t("services.home_cleaning.desc"),
       href: "/services/home-cleaning",
-      imageSrc: "/images/kotisiivous.webp",
-      blurDataURL:
-        "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='7'><rect width='100%' height='100%' fill='%23fff6f0'/></svg>",
     },
   ];
 
@@ -67,7 +51,7 @@ export default function HomePage() {
         variant="main"
         title={t("home.hero.title")}
         subtitle={t("home.hero.subtitle")}
-        imageSrc="/images/bloom.jpg"
+        imageSrc="/images/kitchen.png"
         imageAlt={t("home.hero.title")}
         imagePriority
       />
@@ -93,20 +77,12 @@ export default function HomePage() {
 
               <div className="relative z-10">
                 <div
-                  className="relative w-full rounded-lg overflow-hidden mb-4"
-                  style={{ aspectRatio: "4 / 3" }}
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-gray-100 text-[#655c4e] group-hover:bg-gray-200 transition-colors"
                 >
-                  <Image
-                    src={service.imageSrc}
-                    alt={service.title}
-                    fill
-                    className="object-cover object-center"
-                    placeholder="blur"
-                    blurDataURL={service.blurDataURL}
-                  />
+                  <service.icon className="h-6 w-6" />
                 </div>
                 <h3
-                  className="text-lg font-semibold text-[#1f2937] group-hover:text-[#1f2937] transition-colors"
+                  className="text-lg font-semibold text-[#36302a] group-hover:text-[#36302a] transition-colors"
                   style={{ marginBottom: "0.75rem" }}
                 >
                   {service.title}
@@ -130,7 +106,7 @@ export default function HomePage() {
         className="relative text-white section-padding overflow-hidden"
       >
         {/* Background overlay for contrast and airy look */}
-        <div className="absolute inset-0 bg-linear-to-b from-[#374151] via-[#4b5563] to-[#6b7280]"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-[#4e463b] via-[#655c4e] to-[#847866]"></div>
 
         {/* Soft decorative shapes (keeps previous feel) */}
         <div className="absolute inset-0 opacity-25 pointer-events-none">
@@ -158,7 +134,7 @@ export default function HomePage() {
           >
             <Link
               href="/order"
-              className="inline-flex items-center justify-center bg-white text-[#1f2937] rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center justify-center bg-white text-[#36302a] rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
               {t("nav.order")}
             </Link>
@@ -172,7 +148,7 @@ export default function HomePage() {
         </div>
 
         {/* UUSI: Pehmeä gradient-siirtymä footeriin - Luo saumattoman siirtymän */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-b from-transparent via-[#111827]/40 to-[#111827]/80 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-b from-transparent via-[#221e19]/40 to-[#221e19]/80 pointer-events-none"></div>
       </section>
     </div>
   );

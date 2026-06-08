@@ -80,7 +80,7 @@ export default function OrderPage() {
           <div className="bg-gray-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="h-10 w-10 text-gray-600" />
           </div>
-          <h2 className="text-3xl font-bold text-[#1f2937] mb-4">
+          <h2 className="text-3xl font-bold text-[#36302a] mb-4">
             {t("order.success.title")}
           </h2>
           <p className="text-gray-600 text-lg">{t("order.success.message")}</p>
@@ -95,6 +95,7 @@ export default function OrderPage() {
         variant="simple"
         title={t("order.title")}
         subtitle={t("order.subtitle")}
+        imageSrc="/images/olohuone.png"
         imageAlt={t('order.title')}
         imagePriority
       />
@@ -128,7 +129,7 @@ export default function OrderPage() {
                 value={formData.company}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4b5563] focus:border-transparent outline-none transition"
+                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#655c4e] focus:border-transparent outline-none transition"
                 style={{ padding: "0.75rem 1rem" }}
                 // KORJAUS: Paikkamerkki käännettäväksi
                 placeholder={t("order.form.placeholder.company")}
@@ -151,7 +152,7 @@ export default function OrderPage() {
                 value={formData.contact}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4b5563] focus:border-transparent outline-none transition"
+                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#655c4e] focus:border-transparent outline-none transition"
                 style={{ padding: "0.75rem 1rem" }}
                 // KORJAUS: Paikkamerkki käännettäväksi
                 placeholder={t("order.form.placeholder.contact")}
@@ -178,7 +179,7 @@ export default function OrderPage() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4b5563] focus:border-transparent outline-none transition"
+                  className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#655c4e] focus:border-transparent outline-none transition"
                   style={{ padding: "0.75rem 1rem" }}
                   // KORJAUS: Paikkamerkki käännettäväksi
                   placeholder={t("order.form.placeholder.email")}
@@ -200,7 +201,7 @@ export default function OrderPage() {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4b5563] focus:border-transparent outline-none transition"
+                  className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#655c4e] focus:border-transparent outline-none transition"
                   style={{ padding: "0.75rem 1rem" }}
                   // KORJAUS: Paikkamerkki käännettäväksi
                   placeholder={t("order.form.placeholder.phone")}
@@ -223,7 +224,7 @@ export default function OrderPage() {
                 value={formData.service}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4b5563] focus:border-transparent outline-none transition bg-white"
+                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#655c4e] focus:border-transparent outline-none transition bg-white"
                 style={{ padding: "0.75rem 1rem" }}
               >
                 {/* KORJAUS: Oletusvalinnan teksti käännettäväksi */}
@@ -253,7 +254,7 @@ export default function OrderPage() {
                 value={formData.message}
                 onChange={handleChange}
                 rows={6}
-                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#4b5563] focus:border-transparent outline-none transition resize-none"
+                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#655c4e] focus:border-transparent outline-none transition resize-none"
                 style={{ padding: "0.75rem 1rem" }}
                 // KORJAUS: Paikkamerkki käännettäväksi
                 placeholder={t("order.form.placeholder.message")}
@@ -285,12 +286,12 @@ export default function OrderPage() {
 
           {/* Additional Info - KORJATTU KÄYTTÄMÄÄN KÄÄNNÖSAVAIMIA */}
           <div className="bg-white/6 backdrop-blur-sm p-5 rounded-xl" style={{ marginTop: '2rem' }}>
-            <h3 className="font-semibold text-[#1f2937] mb-3">{t('order.next.title')}</h3>
+            <h3 className="font-semibold text-[#36302a] mb-3">{t('order.next.title')}</h3>
 
             <ol className="flex flex-col gap-4 text-gray-700">
               {[t('order.next.step1'), t('order.next.step2'), t('order.next.step3'), t('order.next.step4')].map((step, i) => (
                 <li key={i} className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#4b5563] text-white flex items-center justify-center font-semibold flex-shrink-0">{i + 1}</div>
+                  <div className="w-8 h-8 rounded-full bg-[#655c4e] text-white flex items-center justify-center font-semibold flex-shrink-0">{i + 1}</div>
                   <div className="flex-1">{step}</div>
                 </li>
               ))}

@@ -36,7 +36,7 @@ export default function Hero({
 }: HeroProps) {
   const config = {
     main: {
-      background: "bg-gradient-to-br from-[#4b5563] via-[#6b7280] to-[#9ca3af]",
+      background: "bg-gradient-to-br from-[#655c4e] via-[#847866] to-[#ab9e88]",
       showWave: true,
       padding: "section-padding",
       alignment: "text-center",
@@ -58,7 +58,7 @@ export default function Hero({
       contentPositionClass: "flex flex-col justify-end md:justify-center",
     },
     service: {
-      background: "bg-gradient-to-br from-[#4b5563] via-[#6b7280] to-[#4b5563]",
+      background: "bg-gradient-to-br from-[#655c4e] via-[#847866] to-[#655c4e]",
       showWave: false,
       padding: "",
       alignment: "",
@@ -77,7 +77,7 @@ export default function Hero({
       paddingClass: "pt-12 pb-12 md:pt-24 md:pb-24",
     },
     simple: {
-      background: "bg-gradient-to-br from-[#4b5563] to-[#6b7280]",
+      background: "bg-gradient-to-br from-[#655c4e] to-[#847866]",
       showWave: false,
       padding: "section-padding",
       alignment: "text-center",
@@ -102,7 +102,7 @@ export default function Hero({
         } ${
           imageSrc
             ? "bg-neutral-900 text-white"
-            : "bg-gradient-to-b from-[#f7f9f7] to-white text-[#1f2937]"
+            : "bg-gradient-to-b from-[#faf8f3] to-white text-[#36302a]"
         } overflow-hidden`}
       >
         {/** Render background image if provided */}
@@ -169,8 +169,8 @@ export default function Hero({
                     href={ctaButton.href || "/order"}
                     className={`inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold transition-all duration-300 hover:gap-3 ${
                       isLight
-                        ? "bg-[#1f2937] text-white hover:bg-[#374151]"
-                        : "bg-white text-[#1f2937] hover:bg-gray-50"
+                        ? "bg-[#36302a] text-white hover:bg-[#4e463b]"
+                        : "bg-white text-[#36302a] hover:bg-gray-50"
                     }`}
                   >
                     {ctaButton.text}

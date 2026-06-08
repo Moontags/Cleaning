@@ -9,12 +9,12 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const headingClass =
-    "text-[11px] font-medium text-[#aaa] uppercase tracking-[0.8px]";
+    "text-[11px] font-medium text-[#9c9182] uppercase tracking-[0.8px]";
   const linkClass =
-    "text-xs text-[#666] hover:text-[#1f2937] transition-colors duration-200 inline-block";
+    "text-xs text-[#6e6557] hover:text-[#36302a] transition-colors duration-200 inline-block";
 
   return (
-    <footer className="bg-[#f9f9f7] border-t border-[#e8e8e4] text-[#666]">
+    <footer className="bg-[#faf8f3] border-t border-[#e7ded0] text-[#6e6557]">
       <div className="section-container" style={{ paddingTop: '2rem', paddingBottom: '1.5rem' }}>
         <div className="grid grid-cols-1 md:grid-cols-4" style={{ gap: '2.5rem' }}>
           {/* Service Areas */}
@@ -24,32 +24,32 @@ export default function Footer() {
             </h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.375rem' }}>
               <li>
-                <span className="text-xs text-[#666]">
+                <span className="text-xs text-[#6e6557]">
                   {t('footer.area.riihimaki')}
                 </span>
               </li>
               <li>
-                <span className="text-xs text-[#666]">
+                <span className="text-xs text-[#6e6557]">
                   {t('footer.area.hyvinkaa')}
                 </span>
               </li>
               <li>
-                <span className="text-xs text-[#666]">
+                <span className="text-xs text-[#6e6557]">
                   {t('footer.area.nurmijärvi')}
                 </span>
               </li>
               <li>
-                <span className="text-xs text-[#666]">
+                <span className="text-xs text-[#6e6557]">
                   {t('footer.area.jarvenpaa')}
                 </span>
               </li>
               <li>
-                <span className="text-xs text-[#666]">
+                <span className="text-xs text-[#6e6557]">
                   {t('footer.area.tuusula')}
                 </span>
               </li>
               <li>
-                <span className="text-xs text-[#666]">
+                <span className="text-xs text-[#6e6557]">
                   {t('footer.area.kanta_hame')}
                 </span>
               </li>
@@ -88,7 +88,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <span className="text-xs text-[#666]">
+                <span className="text-xs text-[#6e6557]">
                   Y-tunnus: 2166541-5
                 </span>
               </li>
@@ -136,20 +136,20 @@ export default function Footer() {
             </h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
               <li className="flex items-center" style={{ gap: '0.5rem' }}>
-                <Mail className="h-4 w-4 text-[#1f2937] shrink-0" />
+                <Mail className="h-4 w-4 text-[#36302a] shrink-0" />
                 <a href="mailto:info@siivousote.fi" className={linkClass}>
                   info@siivousote.fi
                 </a>
               </li>
               <li className="flex items-center" style={{ gap: '0.5rem' }}>
-                <Phone className="h-4 w-4 text-[#1f2937] shrink-0" />
+                <Phone className="h-4 w-4 text-[#36302a] shrink-0" />
                 <a href="tel:+358402183270" className={linkClass}>
                   +358 40 218 3270
                 </a>
               </li>
               <li className="flex items-start" style={{ gap: '0.5rem' }}>
-                <MapPin className="h-4 w-4 text-[#1f2937] shrink-0" style={{ marginTop: '2px' }} />
-                <span className="text-xs text-[#666]">
+                <MapPin className="h-4 w-4 text-[#36302a] shrink-0" style={{ marginTop: '2px' }} />
+                <span className="text-xs text-[#6e6557]">
                   Petsamonkatu
                   <br />
                   11120 Riihimäki
@@ -161,7 +161,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div
-          className="border-t border-[#e8e8e4] flex justify-between text-[11px] text-[#bbb]"
+          className="border-t border-[#e7ded0] flex justify-between text-[11px] text-[#a89e8f]"
           style={{ marginTop: '2rem', paddingTop: '0.875rem' }}
         >
           <span>© {currentYear} Siivousote</span>

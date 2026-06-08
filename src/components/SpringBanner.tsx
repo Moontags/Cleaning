@@ -44,7 +44,7 @@ export default function SpringBanner() {
         onClick={() => setVisible(false)}
         aria-label={t("home.spring_banner.close")}
         className="absolute right-2 top-2 cursor-pointer border-0 bg-transparent p-1 text-lg leading-none sm:right-3 sm:top-1/2 sm:-translate-y-1/2"
-        style={{ color: "#374151" }}
+        style={{ color: "#4e463b" }}
       >
         ✕
       </button>

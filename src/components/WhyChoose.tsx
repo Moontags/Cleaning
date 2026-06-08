@@ -29,9 +29,9 @@ export default function WhyChoose() {
   ];
 
   return (
-    <section className="bg-[#f7f9f7] border-t border-[#e5e7eb]">
+    <section className="bg-[#faf8f3] border-t border-[#e7ded0]">
       <div className="section-container py-16">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-[#1f2937] mb-6">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-[#36302a] mb-6">
           {t("why.title")}
         </h2>
 
@@ -39,10 +39,10 @@ export default function WhyChoose() {
           {items.map((it) => (
             <div
               key={it.key}
-              className="bg-white border border-[#e5e7eb] p-4 rounded-[10px] min-h-[120px] flex flex-col"
+              className="bg-white border border-[#e7ded0] p-4 rounded-[10px] min-h-[120px] flex flex-col"
             >
-              <h3 className="text-[#1f2937] font-medium text-base mb-1.5">{it.title}</h3>
-              <p className="text-[#777] text-sm flex-1 leading-relaxed">{it.desc}</p>
+              <h3 className="text-[#36302a] font-medium text-base mb-1.5">{it.title}</h3>
+              <p className="text-[#6e6557] text-sm flex-1 leading-relaxed">{it.desc}</p>
             </div>
           ))}
         </div>

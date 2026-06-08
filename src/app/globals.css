@@ -1,15 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  /* Suomen lipun sininen */
-  --color-primary: #4b5563;
-  --color-primary-dark: #374151;
-  --color-primary-light: #6b7280;
+  /* Lämmin, neutraali greige-paletti (yhtenäinen koko sovelluksessa) */
+  --color-primary: #655c4e;
+  --color-primary-dark: #4e463b;
+  --color-primary-light: #847866;
 
   /* Tekstivärit */
-  --color-text-dark: #1a1a1a;
-  --color-text-gray: #6b7280;
-  --color-text-light: #9ca3af;
+  --color-text-dark: #221e19;
+  --color-text-gray: #847866;
+  --color-text-light: #ab9e88;
+
+  /* Lämmin "gray"-asteikko korvaa Tailwindin viileän harmaan, jolloin
+     kaikki text-gray-*, bg-gray-*, border-gray-* -luokat ovat sointuisia */
+  --color-gray-50: #faf8f3;
+  --color-gray-100: #f3eee5;
+  --color-gray-200: #e7ded0;
+  --color-gray-300: #d5c9b6;
+  --color-gray-400: #ab9e88;
+  --color-gray-500: #847866;
+  --color-gray-600: #655c4e;
+  --color-gray-700: #4e463b;
+  --color-gray-800: #36302a;
+  --color-gray-900: #221e19;
+  --color-gray-950: #14110e;
 
   --text-shadow-xl: 0 0 20px black, 0 0 5px black;
   --text-shadow-hero: 0 0 50px rgba(0, 0, 0, 0.55),
@@ -29,7 +43,7 @@ html {
 
 body {
   color: var(--color-text-dark);
-  background: white;
+  background: #faf8f3;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -39,7 +53,7 @@ body {
 
 /* Custom utility classes */
 .btn-primary {
-  background-color: #4b5563;
+  background-color: #655c4e;
   color: white;
   font-weight: 600;
   padding: 0.75rem 2rem;
@@ -49,22 +63,22 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #374151;
+  background-color: #4e463b;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 }
 
 .btn-secondary {
   background-color: white;
-  color: #4b5563;
+  color: #655c4e;
   font-weight: 600;
   padding: 0.75rem 2rem;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
-  border: 2px solid #4b5563;
+  border: 2px solid #655c4e;
 }
 
 .btn-secondary:hover {
-  background-color: rgb(249 250 251);
+  background-color: #faf8f3;
 }
 
 .section-container {
@@ -104,7 +118,7 @@ body {
 .heading-1 {
   font-size: 2.25rem;
   font-weight: 700;
-  color: #4b5563;
+  color: #36302a;
   margin-bottom: 1.5rem;
 }
 
@@ -123,7 +137,7 @@ body {
 .heading-2 {
   font-size: 1.875rem;
   font-weight: 700;
-  color: #4b5563;
+  color: #36302a;
   margin-bottom: 1rem;
 }
 
@@ -136,7 +150,7 @@ body {
 .heading-3 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #4b5563;
+  color: #36302a;
   margin-bottom: 0.75rem;
 }
 
@@ -148,7 +162,7 @@ body {
 
 .text-body {
   font-size: 1rem;
-  color: rgb(55 65 81);
+  color: #4e463b;
   line-height: 1.75;
 }
 
@@ -177,7 +191,7 @@ button {
 /* Focus states for accessibility */
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid #4b5563;
+  outline: 2px solid #655c4e;
   outline-offset: 2px;
 }
 
@@ -187,14 +201,14 @@ a:focus-visible {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(248 250 252);
+  background: #f3eee5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #6b7280;
+  background: #847866;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #4b5563;
+  background: #655c4e;
 }
