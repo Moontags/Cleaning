@@ -44,7 +44,7 @@ export default function Header() {
   const isActive = (href: string) => pathname === href;
 
   return (
-    <header className="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100">
+    <header className="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
       <nav className="section-container">
         <div className="flex justify-between items-center h-20">
           {/* Logo - Modernisoidtu */}
@@ -55,7 +55,7 @@ export default function Header() {
             className="flex items-center space-x-3 flex-shrink-0 group"
           >
             <Logo
-              color="#003580"
+              color="#1f2937"
               className="transition-transform duration-300 max-h-[80px] group-hover:scale-110"
             />
           </Link>
@@ -75,7 +75,7 @@ export default function Header() {
                 <button
                   aria-haspopup="true"
                   aria-expanded={desktopServicesOpen}
-                  className="relative text-base font-medium transition-all duration-300 whitespace-nowrap text-gray-700 hover:text-[#003580] flex items-center gap-1"
+                  className="relative text-base font-medium transition-all duration-300 whitespace-nowrap text-gray-700 hover:text-[#1f2937] flex items-center gap-1"
                   style={{ paddingBottom: "0.25rem" }}
                 >
                   {t("services.title")}
@@ -88,7 +88,7 @@ export default function Header() {
 
                 {/* Dropdown menu - PARANNETTU */}
                 <div
-                  className={`absolute left-0 top-full mt-2 w-64 bg-white rounded-lg shadow-xl ring-1 ring-black/5 transition-all duration-200 ${
+                  className={`absolute left-0 top-full mt-2 w-64 bg-white rounded-lg ring-1 ring-black/5 transition-all duration-200 ${
                     desktopServicesOpen
                       ? "opacity-100 visible translate-y-0"
                       : "opacity-0 invisible -translate-y-2"
@@ -100,7 +100,7 @@ export default function Header() {
                       <Link
                         key={svc.href}
                         href={svc.href}
-                        className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-[#003580] transition-all duration-200"
+                        className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 hover:text-[#1f2937] transition-all duration-200"
                       >
                         {svc.name}
                       </Link>
@@ -113,9 +113,9 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`text-base font-medium transition-colors duration-150 text-gray-700 hover:text-emerald-700 px-2 py-1 ${
+                  className={`text-base font-medium transition-colors duration-150 text-gray-700 hover:text-gray-900 px-2 py-1 ${
                     isActive(item.href)
-                      ? "text-emerald-700 border-b-2 border-emerald-600 pb-0.5"
+                      ? "text-gray-900 border-b-2 border-gray-700 pb-0.5"
                       : ""
                   }`}
                   onClick={() => setIsMenuOpen(false)}
@@ -134,7 +134,7 @@ export default function Header() {
             {/* CTA Button */}
             <Link
               href="/order"
-              className="bg-[#003580] hover:bg-[#0047ab] text-white text-center rounded-lg font-medium transition-all duration-300 hover:shadow-lg"
+              className="bg-[#1f2937] hover:bg-[#374151] text-white text-center rounded-lg font-medium transition-all duration-300"
               style={{ padding: "0.5rem 0.875rem", fontSize: "0.875rem" }}
             >
               {t("nav.order")}
@@ -153,7 +153,7 @@ export default function Header() {
                 onClick={() => setLanguage("fi")}
                 className={`flex items-center rounded-lg transition-all duration-300 ${
                   language === "fi"
-                    ? "bg-gradient-to-r from-[#003580] to-[#0047ab] text-white shadow-md"
+                    ? "bg-[#1f2937] text-white"
                     : "text-gray-700 hover:bg-gray-100 border border-gray-200"
                 }`}
                 style={{ gap: "0.25rem", padding: "0.5rem 0.875rem" }}
@@ -165,7 +165,7 @@ export default function Header() {
                 onClick={() => setLanguage("en")}
                 className={`flex items-center rounded-lg transition-all duration-300 ${
                   language === "en"
-                    ? "bg-gradient-to-r from-[#003580] to-[#0047ab] text-white shadow-md"
+                    ? "bg-[#1f2937] text-white"
                     : "text-gray-700 hover:bg-gray-100 border border-gray-200"
                 }`}
                 style={{ gap: "0.25rem", padding: "0.5rem 0.875rem" }}
@@ -179,13 +179,13 @@ export default function Header() {
           {/* Mobile menu button - Modernisoidtu */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2.5 rounded-xl hover:bg-gradient-to-br hover:from-blue-50 hover:to-blue-100 transition-all duration-300 hover:shadow-md"
+            className="lg:hidden p-2.5 rounded-xl hover:bg-gradient-to-br hover:from-gray-50 hover:to-gray-100 transition-all duration-300"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6 text-[#003580]" />
+              <X className="h-6 w-6 text-[#1f2937]" />
             ) : (
-              <Menu className="h-6 w-6 text-[#003580]" />
+              <Menu className="h-6 w-6 text-[#1f2937]" />
             )}
           </button>
         </div>
@@ -193,7 +193,7 @@ export default function Header() {
         {/* Mobile Navigation - Modernisoidtu */}
         {isMenuOpen && (
           <div
-            className="lg:hidden border-t border-gray-100 bg-white/95 backdrop-blur-sm rounded-b-2xl shadow-lg"
+            className="lg:hidden border-t border-gray-100 bg-white/95 backdrop-blur-sm rounded-b-2xl"
             style={{
               paddingTop: "1rem",
               paddingBottom: "1rem",
@@ -212,8 +212,8 @@ export default function Header() {
                   onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                   className={`w-full text-left relative text-base font-medium transition-all duration-300 overflow-hidden flex items-center justify-between ${
                     mobileServicesOpen
-                      ? "text-[#003580] font-semibold bg-gradient-to-r from-blue-50 to-blue-100"
-                      : "text-gray-700 hover:text-[#003580] hover:bg-gray-50"
+                      ? "text-[#1f2937] font-semibold bg-gradient-to-r from-gray-50 to-gray-100"
+                      : "text-gray-700 hover:text-[#1f2937] hover:bg-gray-50"
                   }`}
                   style={{ padding: "0.875rem 1rem", borderRadius: "0.75rem" }}
                 >
@@ -242,7 +242,7 @@ export default function Header() {
                           setIsMenuOpen(false);
                           setMobileServicesOpen(false);
                         }}
-                        className="block text-gray-700 hover:text-[#003580] px-4 py-2 rounded-md hover:bg-gray-50 transition-colors duration-200"
+                        className="block text-gray-700 hover:text-[#1f2937] px-4 py-2 rounded-md hover:bg-gray-50 transition-colors duration-200"
                       >
                         {svc.name}
                       </Link>
@@ -258,14 +258,14 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                   className={`relative text-base font-medium transition-all duration-300 overflow-hidden ${
                     isActive(item.href)
-                      ? "text-[#003580] font-semibold bg-gradient-to-r from-blue-50 to-blue-100"
-                      : "text-gray-700 hover:text-[#003580] hover:bg-gray-50"
+                      ? "text-[#1f2937] font-semibold bg-gradient-to-r from-gray-50 to-gray-100"
+                      : "text-gray-700 hover:text-[#1f2937] hover:bg-gray-50"
                   }`}
                   style={{ padding: "0.875rem 1rem", borderRadius: "0.75rem" }}
                 >
                   {item.name}
                   {isActive(item.href) && (
-                    <span className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#003580] to-[#0047ab] rounded-r"></span>
+                    <span className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#1f2937] to-[#374151] rounded-r"></span>
                   )}
                 </Link>
               ))}
@@ -274,7 +274,7 @@ export default function Header() {
               <Link
                 href="/order"
                 onClick={() => setIsMenuOpen(false)}
-                className="bg-[#003580] hover:bg-[#0047ab] text-white text-center rounded-xl font-medium transition-all duration-300 hover:shadow-lg block"
+                className="bg-[#1f2937] hover:bg-[#374151] text-white text-center rounded-xl font-medium transition-all duration-300 block"
                 style={{ marginTop: "1rem", padding: "1.125rem 2rem" }}
               >
                 {t("nav.order")}
@@ -289,7 +289,7 @@ export default function Header() {
                   onClick={() => setLanguage("fi")}
                   className={`flex items-center rounded-xl transition-all duration-300 flex-1 justify-center ${
                     language === "fi"
-                      ? "bg-gradient-to-r from-[#003580] to-[#0047ab] text-white shadow-md"
+                      ? "bg-[#1f2937] text-white"
                       : "text-gray-700 hover:bg-gray-50 border border-gray-200"
                   }`}
                   style={{ gap: "0.25rem", padding: "0.875rem 1rem" }}
@@ -301,7 +301,7 @@ export default function Header() {
                   onClick={() => setLanguage("en")}
                   className={`flex items-center rounded-xl transition-all duration-300 flex-1 justify-center ${
                     language === "en"
-                      ? "bg-gradient-to-r from-[#003580] to-[#0047ab] text-white shadow-md"
+                      ? "bg-[#1f2937] text-white"
                       : "text-gray-700 hover:bg-gray-50 border border-gray-200"
                   }`}
                   style={{ gap: "0.25rem", padding: "0.875rem 1rem" }}

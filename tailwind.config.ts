@@ -10,16 +10,16 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#003580',
-          dark: '#002b66',
-          light: '#0047ab',
+          DEFAULT: '#4b5563',
+          dark: '#374151',
+          light: '#6b7280',
         },
         emerald: {
-          100: '#d1fae5',
-          200: '#a7f3d0',
-          300: '#6ee7b7',
-          700: '#0F6E56',
-          800: '#085041',
+          100: '#f3f4f6',
+          200: '#e5e7eb',
+          300: '#d1d5db',
+          700: '#374151',
+          800: '#1f2937',
         },
       },
       spacing: {

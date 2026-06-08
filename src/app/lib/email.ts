@@ -43,12 +43,12 @@ export async function sendContactEmail(data: ContactEmailData) {
   // Email content
   const htmlContent = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-      <h2 style="color: #003580; border-bottom: 2px solid #003580; padding-bottom: 10px;">
+      <h2 style="color: #4b5563; border-bottom: 2px solid #4b5563; padding-bottom: 10px;">
         Uusi tarjouspyyntö / New Quote Request
       </h2>
 
       <div style="background-color: #f8f9fa; padding: 20px; border-radius: 5px; margin: 20px 0;">
-        <h3 style="color: #003580; margin-top: 0;">Yhteystiedot / Contact Information</h3>
+        <h3 style="color: #4b5563; margin-top: 0;">Yhteystiedot / Contact Information</h3>
         <p><strong>Nimi / Name:</strong> ${contactName}</p>
         <p><strong>Sähköposti / Email:</strong> <a href="mailto:${email}">${email}</a></p>
         <p><strong>Puhelin / Phone:</strong> ${phone}</p>
@@ -57,7 +57,7 @@ export async function sendContactEmail(data: ContactEmailData) {
       </div>
 
       <div style="background-color: #fff; padding: 20px; border: 1px solid #dee2e6; border-radius: 5px;">
-        <h3 style="color: #003580; margin-top: 0;">Viesti / Message</h3>
+        <h3 style="color: #4b5563; margin-top: 0;">Viesti / Message</h3>
         <p style="line-height: 1.6; white-space: pre-wrap;">${message}</p>
       </div>
 

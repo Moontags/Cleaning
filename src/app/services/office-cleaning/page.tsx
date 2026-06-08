@@ -70,7 +70,6 @@ export default function OfficeCleaningPage() {
         title={t("service.office.hero.title")}
         subtitle={t("service.office.hero.subtitle")}
         ctaButton={{ text: t("service.office.cta.button") }}
-        imageSrc="/images/sky.jpg"
         imageAlt={t("service.office.hero.title")}
       />
 
@@ -93,7 +92,7 @@ export default function OfficeCleaningPage() {
       >
         <div className="section-container">
           <h2
-            className="text-3xl md:text-4xl font-bold text-center text-[#003580]"
+            className="text-3xl md:text-4xl font-bold text-center text-[#1f2937]"
             style={{ marginBottom: "3rem" }}
           >
             {t("service.office.why.title")}
@@ -118,7 +117,7 @@ export default function OfficeCleaningPage() {
       >
         <div className="max-w-4xl mx-auto">
           <h2
-            className="text-3xl md:text-4xl font-bold text-center text-[#003580]"
+            className="text-3xl md:text-4xl font-bold text-center text-[#1f2937]"
             style={{ marginBottom: "3rem" }}
           >
             {t("service.office.what.title")}
@@ -126,7 +125,7 @@ export default function OfficeCleaningPage() {
           <div className="grid md:grid-cols-2 gap-4">
             {servicesIncluded.map((service, index) => (
               <div key={index} className="flex items-start gap-3">
-                <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                <CheckCircle2 className="w-6 h-6 text-gray-600 flex-shrink-0 mt-1" />
                 <p className="text-gray-700 leading-relaxed">{service}</p>
               </div>
             ))}
@@ -136,12 +135,12 @@ export default function OfficeCleaningPage() {
 
       {/* Frequency Options */}
       <section
-        className="bg-gradient-to-br from-blue-50 to-white"
+        className="bg-gradient-to-br from-gray-50 to-white"
         style={{ paddingTop: "4rem", paddingBottom: "4rem" }}
       >
         <div className="section-container">
           <h2
-            className="text-3xl md:text-4xl font-bold text-center text-[#003580]"
+            className="text-3xl md:text-4xl font-bold text-center text-[#1f2937]"
             style={{ marginBottom: "3rem" }}
           >
             {t("service.office.frequency.title")}
@@ -151,9 +150,9 @@ export default function OfficeCleaningPage() {
               {frequencies.map((frequency, index) => (
                 <div
                   key={index}
-                  className="bg-white/60 backdrop-blur-sm p-4 rounded-lg shadow-sm transition-all duration-300"
+                  className="bg-white/60 backdrop-blur-sm p-4 rounded-lg transition-all duration-300"
                 >
-                  <h3 className="text-lg font-semibold text-[#003580] mb-2">
+                  <h3 className="text-lg font-semibold text-[#1f2937] mb-2">
                     {frequency.title}
                   </h3>
                   <p className="text-gray-700 text-sm">
@@ -169,17 +168,12 @@ export default function OfficeCleaningPage() {
       {/* CTA Section - image background */}
       <section
         className="relative text-white overflow-hidden"
-        style={{
-          backgroundImage: `url('/images/cta.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#05263a]/60 via-[#003580]/55 to-[#003580]/65"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#374151] via-[#4b5563] to-[#6b7280]"></div>
 
         <div className="absolute inset-0 opacity-25 pointer-events-none">
           <div className="absolute top-12 right-12 w-72 h-72 bg-white/6 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-12 left-12 w-96 h-96 bg-blue-300/6 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-12 left-12 w-96 h-96 bg-gray-300/6 rounded-full blur-3xl"></div>
         </div>
 
         <div
@@ -190,12 +184,12 @@ export default function OfficeCleaningPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               {t("service.office.cta.title")}
             </h2>
-            <p className="text-xl text-blue-50 mb-8">
+            <p className="text-xl text-gray-50 mb-8">
               {t("service.office.cta.subtitle")}
             </p>
             <Link
               href="/order"
-              className="inline-flex items-center gap-2 bg-white text-[#003580] px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-white text-[#1f2937] px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
               {t("service.office.cta.button")}
               <ArrowRight className="w-5 h-5" />

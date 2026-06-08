@@ -2,9 +2,9 @@
 
 @theme {
   /* Suomen lipun sininen */
-  --color-primary: #003580;
-  --color-primary-dark: #002b66;
-  --color-primary-light: #0047ab;
+  --color-primary: #4b5563;
+  --color-primary-dark: #374151;
+  --color-primary-light: #6b7280;
 
   /* Tekstivärit */
   --color-text-dark: #1a1a1a;
@@ -39,7 +39,7 @@ body {
 
 /* Custom utility classes */
 .btn-primary {
-  background-color: #003580;
+  background-color: #4b5563;
   color: white;
   font-weight: 600;
   padding: 0.75rem 2rem;
@@ -49,18 +49,18 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #002b66;
+  background-color: #374151;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 }
 
 .btn-secondary {
   background-color: white;
-  color: #003580;
+  color: #4b5563;
   font-weight: 600;
   padding: 0.75rem 2rem;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
-  border: 2px solid #003580;
+  border: 2px solid #4b5563;
 }
 
 .btn-secondary:hover {
@@ -104,7 +104,7 @@ body {
 .heading-1 {
   font-size: 2.25rem;
   font-weight: 700;
-  color: #003580;
+  color: #4b5563;
   margin-bottom: 1.5rem;
 }
 
@@ -123,7 +123,7 @@ body {
 .heading-2 {
   font-size: 1.875rem;
   font-weight: 700;
-  color: #003580;
+  color: #4b5563;
   margin-bottom: 1rem;
 }
 
@@ -136,7 +136,7 @@ body {
 .heading-3 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #003580;
+  color: #4b5563;
   margin-bottom: 0.75rem;
 }
 
@@ -177,7 +177,7 @@ button {
 /* Focus states for accessibility */
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid #003580;
+  outline: 2px solid #4b5563;
   outline-offset: 2px;
 }
 
@@ -191,10 +191,10 @@ a:focus-visible {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0047ab;
+  background: #6b7280;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #003580;
+  background: #4b5563;
 }

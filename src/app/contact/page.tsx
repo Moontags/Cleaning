@@ -42,9 +42,9 @@ export default function ContactPage() {
       desc: t("contact.phone_card.desc"),
       link: "tel:+358402183270",
       linkText: "+358 40 2183270",
-      borderColor: "border-[#003580]",
-      iconBg: "bg-gradient-to-br from-[#003580] to-[#0047ab]",
-      buttonBg: "bg-gradient-to-r from-[#003580] to-[#0047ab] hover:shadow-lg",
+      borderColor: "border-[#4b5563]",
+      iconBg: "bg-gradient-to-br from-[#4b5563] to-[#6b7280]",
+      buttonBg: "bg-gradient-to-r from-[#4b5563] to-[#6b7280]",
     },
     {
       icon: Mail,
@@ -52,9 +52,9 @@ export default function ContactPage() {
       desc: t("contact.email_card.desc"),
       link: "mailto:info@siivousote.fi",
       linkText: "info@siivousote.fi",
-      borderColor: "border-[#003580]",
-      iconBg: "bg-gradient-to-br from-[#003580] to-[#0047ab]",
-      buttonBg: "bg-gradient-to-r from-[#003580] to-[#0047ab] hover:shadow-lg",
+      borderColor: "border-[#4b5563]",
+      iconBg: "bg-gradient-to-br from-[#4b5563] to-[#6b7280]",
+      buttonBg: "bg-gradient-to-r from-[#4b5563] to-[#6b7280]",
     },
     {
       icon: MessageCircle,
@@ -62,9 +62,9 @@ export default function ContactPage() {
       desc: t("contact.form_card.desc"),
       link: "/order",
       linkText: t("contact.form_card.button"),
-      borderColor: "border-[#003580]",
-      iconBg: "bg-gradient-to-br from-[#003580] to-[#0047ab]",
-      buttonBg: "bg-gradient-to-r from-[#003580] to-[#0047ab] hover:shadow-lg",
+      borderColor: "border-[#4b5563]",
+      iconBg: "bg-gradient-to-br from-[#4b5563] to-[#6b7280]",
+      buttonBg: "bg-gradient-to-r from-[#4b5563] to-[#6b7280]",
       isInternal: true,
     },
   ];
@@ -77,8 +77,7 @@ export default function ContactPage() {
         subtitle={t("contact.subtitle")}
         maxWidth="48rem"
         titleClassName="text-4xl md:text-5xl lg:text-6xl font-bold animate-fade-in"
-        subtitleClassName="text-xl md:text-2xl text-blue-50 leading-relaxed"
-        imageSrc="/images/sky.jpg"
+        subtitleClassName="text-xl md:text-2xl text-gray-50 leading-relaxed"
         imageAlt={t("contact.title")}
         imagePriority
       />
@@ -95,14 +94,14 @@ export default function ContactPage() {
           {contactInfo.map((info, index) => (
             <div
               key={index}
-              className="group relative bg-white/60 backdrop-blur-sm rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden transform hover:-translate-y-1"
+              className="group relative bg-white/60 backdrop-blur-sm rounded-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1"
             >
               <div className="relative z-10 p-6">
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 border border-white/20 bg-white/10 text-[#003580]">
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 border border-white/20 bg-white/10 text-[#1f2937]">
                   <info.icon className="h-7 w-7" />
                 </div>
                 <h3
-                  className="font-semibold text-[#003580] text-lg"
+                  className="font-semibold text-[#1f2937] text-lg"
                   style={{ marginBottom: "0.5rem" }}
                 >
                   {info.title}
@@ -110,7 +109,7 @@ export default function ContactPage() {
                 {info.link ? (
                   <a
                     href={info.link}
-                    className="text-gray-700 hover:text-[#0047ab] transition-colors font-medium"
+                    className="text-gray-700 hover:text-[#6b7280] transition-colors font-medium"
                     target={info.link.startsWith("http") ? "_blank" : undefined}
                     rel={
                       info.link.startsWith("http")
@@ -136,7 +135,7 @@ export default function ContactPage() {
           {/* Left Column - Contact Methods */}
           <div>
             <h2
-              className="heading-2 text-[#003580]"
+              className="heading-2 text-[#1f2937]"
               style={{ marginBottom: "2rem" }}
             >
               {t("contact.methods.title")}
@@ -153,7 +152,7 @@ export default function ContactPage() {
               {quickContact.map((card, index) => (
                 <div
                   key={index}
-                  className={`group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-100 shadow-md hover:shadow-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-1`}
+                  className={`group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-100 overflow-hidden transition-all duration-300 transform hover:-translate-y-1`}
                   style={{ padding: "1.5rem" }}
                 >
                   {/* Border accent */}
@@ -165,9 +164,9 @@ export default function ContactPage() {
                     style={{ gap: "1rem", marginLeft: "0.5rem" }}
                   >
                     <div
-                      className={`${card.iconBg} w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm transition-transform duration-300`}
+                      className={`${card.iconBg} w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300`}
                       style={{
-                        background: "linear-gradient(135deg,#003580,#0047ab)",
+                        background: "linear-gradient(135deg,#4b5563,#6b7280)",
                         boxShadow: "0 6px 14px rgba(0,53,128,0.08)",
                       }}
                     >
@@ -175,7 +174,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3
-                        className="font-semibold text-[#003580]"
+                        className="font-semibold text-[#1f2937]"
                         style={{ marginBottom: "0.5rem" }}
                       >
                         {card.title}
@@ -188,7 +187,7 @@ export default function ContactPage() {
                       </p>
                       <Link
                         href={card.link}
-                        className={`inline-block text-[#003580] bg-white rounded-full border border-white/30 transition-all duration-300 font-semibold`}
+                        className={`inline-block text-[#1f2937] bg-white rounded-full border border-white/30 transition-all duration-300 font-semibold`}
                         style={{ padding: "0.5rem 1rem" }}
                       >
                         {card.linkText}
@@ -203,23 +202,23 @@ export default function ContactPage() {
           {/* Right Column - Map */}
           <div>
             <h2
-              className="heading-2 text-[#003580]"
+              className="heading-2 text-[#1f2937]"
               style={{ marginBottom: "2rem" }}
             >
               {t("contact.map.title")}
             </h2>
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-100">
               {/* Map Placeholder */}
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 h-[500px] flex items-center justify-center relative overflow-hidden">
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 h-[500px] flex items-center justify-center relative overflow-hidden">
                 <div className="text-center z-10" style={{ padding: "2rem" }}>
                   <div
-                    className="bg-gradient-to-br from-[#003580] to-[#0047ab] w-20 h-20 rounded-2xl flex items-center justify-center mx-auto shadow-xl"
+                    className="bg-gradient-to-br from-[#4b5563] to-[#6b7280] w-20 h-20 rounded-2xl flex items-center justify-center mx-auto"
                     style={{ marginBottom: "1.5rem" }}
                   >
                     <MapPin className="h-10 w-10 text-white" />
                   </div>
                   <h3
-                    className="text-xl font-bold text-[#003580]"
+                    className="text-xl font-bold text-[#1f2937]"
                     style={{ marginBottom: "0.75rem" }}
                   >
                     {t("contact.map.location")}
@@ -236,7 +235,7 @@ export default function ContactPage() {
                     href="https://maps.google.com/?q=Riihimäki"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-[#003580] to-[#0047ab] hover:shadow-lg text-white rounded-lg transition-all duration-300 font-semibold shadow-md"
+                    className="inline-block bg-gradient-to-r from-[#4b5563] to-[#6b7280] text-white rounded-lg transition-all duration-300 font-semibold"
                     style={{ padding: "0.875rem 1.5rem" }}
                   >
                     {t("contact.map.button")}
@@ -244,7 +243,7 @@ export default function ContactPage() {
                 </div>
                 {/* Decorative elements */}
                 <div
-                  className="absolute bg-[#003580] rounded-full"
+                  className="absolute bg-[#4b5563] rounded-full"
                   style={{
                     top: "2.5rem",
                     left: "2.5rem",
@@ -254,7 +253,7 @@ export default function ContactPage() {
                   }}
                 ></div>
                 <div
-                  className="absolute bg-[#0047ab] rounded-full"
+                  className="absolute bg-[#6b7280] rounded-full"
                   style={{
                     bottom: "2.5rem",
                     right: "2.5rem",
@@ -267,7 +266,7 @@ export default function ContactPage() {
 
               {/* Business Hours Info */}
               <div
-                className="bg-gradient-to-r from-[#003580] to-[#0047ab] text-white"
+                className="bg-gradient-to-r from-[#4b5563] to-[#6b7280] text-white"
                 style={{ padding: "1.5rem" }}
               >
                 <div className="flex items-center justify-between">
@@ -278,7 +277,7 @@ export default function ContactPage() {
                     >
                       {t("contact.map.hours_title")}
                     </h4>
-                    <p className="text-blue-100">
+                    <p className="text-gray-100">
                       {t("contact.map.hours_period")}
                     </p>
                   </div>
@@ -298,7 +297,7 @@ export default function ContactPage() {
       <section className="relative bg-gradient-to-b from-gray-50 to-white section-padding">
         <div className="section-container">
           <h2
-            className="heading-2 text-center text-[#003580]"
+            className="heading-2 text-center text-[#1f2937]"
             style={{ marginBottom: "3rem" }}
           >
             {t("contact.faq.title")}
@@ -315,13 +314,13 @@ export default function ContactPage() {
             {[1, 2, 3, 4].map((num) => (
               <details
                 key={num}
-                className="group bg-white/90 backdrop-blur-sm rounded-xl shadow-md hover:shadow-lg transition-all border border-gray-100"
+                className="group bg-white/90 backdrop-blur-sm rounded-xl transition-all border border-gray-100"
                 style={{ padding: "1.5rem" }}
               >
-                <summary className="font-semibold text-[#003580] cursor-pointer list-none flex items-center justify-between group-hover:text-[#0047ab] transition-colors">
+                <summary className="font-semibold text-[#1f2937] cursor-pointer list-none flex items-center justify-between group-hover:text-[#6b7280] transition-colors">
                   {t(`contact.faq${num}.title`)}
                   <span
-                    className="text-2xl group-open:rotate-45 transition-transform bg-gradient-to-br from-[#003580] to-[#0047ab] w-8 h-8 rounded-lg flex items-center justify-center text-white"
+                    className="text-2xl group-open:rotate-45 transition-transform bg-gradient-to-br from-[#4b5563] to-[#6b7280] w-8 h-8 rounded-lg flex items-center justify-center text-white"
                     style={{ marginLeft: "1rem" }}
                   >
                     +
@@ -342,17 +341,12 @@ export default function ContactPage() {
       {/* CTA Section - image background */}
       <section
         className="relative text-white section-padding overflow-hidden"
-        style={{
-          backgroundImage: `url('/images/cta.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#05263a]/60 via-[#003580]/55 to-[#003580]/65"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#374151] via-[#4b5563] to-[#6b7280]"></div>
 
         <div className="absolute inset-0 opacity-25 pointer-events-none">
           <div className="absolute top-12 right-12 w-72 h-72 bg-white/6 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-12 left-12 w-96 h-96 bg-blue-300/6 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-12 left-12 w-96 h-96 bg-gray-300/6 rounded-full blur-3xl"></div>
         </div>
 
         <div className="section-container text-center relative z-10">
@@ -363,7 +357,7 @@ export default function ContactPage() {
             {t("contact.cta.title")}
           </h2>
           <p
-            className="text-lg md:text-xl text-blue-50 max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-gray-50 max-w-2xl mx-auto"
             style={{ marginBottom: "1.75rem" }}
           >
             {t("contact.cta.desc")}
@@ -375,7 +369,7 @@ export default function ContactPage() {
           >
             <Link
               href="/order"
-              className="inline-flex items-center justify-center bg-white text-[#003580] rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center justify-center bg-white text-[#1f2937] rounded-full px-8 py-3 font-semibold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
               {t("nav.order")}
             </Link>
@@ -387,7 +381,7 @@ export default function ContactPage() {
             </a>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-[#001f3f]/40 to-[#001f3f]/80 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-[#111827]/40 to-[#111827]/80 pointer-events-none"></div>
       </section>
 
       <style jsx>{`

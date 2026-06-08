@@ -126,7 +126,7 @@ export default function TermsPage() {
 
         <footer className="mt-12 pt-6 border-t border-gray-200 text-sm text-gray-600">
           <p className="mb-2">
-            Viimeksi päivitetty: 1.12.2025 • Siivousote / Y-tunnus 2166541–5 • <a href="https://www.siivousote.fi" className="text-[#0ea5a4] hover:underline">www.siivousote.fi</a>
+            Viimeksi päivitetty: 1.12.2025 • Siivousote / Y-tunnus 2166541–5 • <a href="https://www.siivousote.fi" className="text-[#6b7280] hover:underline">www.siivousote.fi</a>
           </p>
          
         </footer>
@@ -237,7 +237,7 @@ export default function TermsPage() {
 
             <footer className="mt-12 pt-6 border-t border-gray-200 text-sm text-gray-600">
               <p className="mb-2">
-                Last updated: 1.12.2025 • Siivousote / Business ID 2166541–5 • <a href="https://www.siivousote.fi" className="text-[#0ea5a4] hover:underline">www.siivousote.fi</a>
+                Last updated: 1.12.2025 • Siivousote / Business ID 2166541–5 • <a href="https://www.siivousote.fi" className="text-[#6b7280] hover:underline">www.siivousote.fi</a>
               </p>
           
             </footer>

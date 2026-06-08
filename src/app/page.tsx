@@ -66,8 +66,6 @@ export default function HomePage() {
       <Hero
         variant="main"
         title={t("home.hero.title")}
-        titleClassName="text-shadow-hero"
-        subtitleClassName="text-shadow-hero font-bold"
         subtitle={t("home.hero.subtitle")}
         imageSrc="/images/bloom.jpg"
         imageAlt={t("home.hero.title")}
@@ -87,7 +85,7 @@ export default function HomePage() {
             <Link
               key={index}
               href={service.href}
-              className="group relative bg-white/80 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden block"
+              className="group relative bg-white/80 backdrop-blur-sm rounded-2xl transition-all duration-300 border border-gray-100 overflow-hidden block"
               style={{ padding: "1.75rem" }}
             >
               {/* Hover gradient overlay */}
@@ -99,7 +97,7 @@ export default function HomePage() {
                   style={{ aspectRatio: "4 / 3" }}
                 >
                   <Image
-                    src={service.imageSrc ?? "/images/sky.jpg"}
+                    src={service.imageSrc}
                     alt={service.title}
                     fill
                     className="object-cover object-center"
@@ -108,7 +106,7 @@ export default function HomePage() {
                   />
                 </div>
                 <h3
-                  className="text-lg font-semibold text-primary group-hover:text-primary-light transition-colors"
+                  className="text-lg font-semibold text-[#1f2937] group-hover:text-[#1f2937] transition-colors"
                   style={{ marginBottom: "0.75rem" }}
                 >
                   {service.title}
@@ -130,19 +128,14 @@ export default function HomePage() {
       {/* CTA Section - PARANNETTU SIIRTYMÄ FOOTERIIN */}
       <section
         className="relative text-white section-padding overflow-hidden"
-        style={{
-          backgroundImage: `url('/images/cta.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       >
         {/* Background overlay for contrast and airy look */}
-        <div className="absolute inset-0 bg-linear-to-b from-[#05263a]/60 via-primary/55 to-primary/65"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-[#374151] via-[#4b5563] to-[#6b7280]"></div>
 
         {/* Soft decorative shapes (keeps previous feel) */}
         <div className="absolute inset-0 opacity-25 pointer-events-none">
           <div className="absolute top-12 right-12 w-72 h-72 bg-white/6 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-12 left-12 w-96 h-96 bg-blue-300/6 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-12 left-12 w-96 h-96 bg-gray-300/6 rounded-full blur-3xl"></div>
         </div>
 
         <div className="section-container text-center relative z-10">
@@ -153,7 +146,7 @@ export default function HomePage() {
             {t("home.hero.cta")}
           </h2>
           <p
-            className="text-lg md:text-xl text-blue-50 max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-gray-50 max-w-2xl mx-auto"
             style={{ marginBottom: "1.75rem" }}
           >
             {t("contact.subtitle")}
@@ -165,7 +158,7 @@ export default function HomePage() {
           >
             <Link
               href="/order"
-              className="inline-flex items-center justify-center bg-white text-primary rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center justify-center bg-white text-[#1f2937] rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
               {t("nav.order")}
             </Link>
@@ -179,7 +172,7 @@ export default function HomePage() {
         </div>
 
         {/* UUSI: Pehmeä gradient-siirtymä footeriin - Luo saumattoman siirtymän */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-b from-transparent via-[#001f3f]/40 to-[#001f3f]/80 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-b from-transparent via-[#111827]/40 to-[#111827]/80 pointer-events-none"></div>
       </section>
     </div>
   );

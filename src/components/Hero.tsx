@@ -36,7 +36,7 @@ export default function Hero({
 }: HeroProps) {
   const config = {
     main: {
-      background: "bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#0056d6]",
+      background: "bg-gradient-to-br from-[#4b5563] via-[#6b7280] to-[#9ca3af]",
       showWave: true,
       padding: "section-padding",
       alignment: "text-center",
@@ -44,7 +44,7 @@ export default function Hero({
       titleClass: `text-4xl md:text-5xl lg:text-7xl font-bold animate-fade-in ${
         titleClassName || ""
       }`,
-      subtitleClass: `text-xl md:text-2xl text-blue-50 leading-relaxed ${
+      subtitleClass: `text-xl md:text-2xl leading-relaxed ${
         subtitleClassName || ""
       }`,
       showAnimation: true,
@@ -58,7 +58,7 @@ export default function Hero({
       contentPositionClass: "flex flex-col justify-end md:justify-center",
     },
     service: {
-      background: "bg-gradient-to-br from-[#003580] via-[#0047ab] to-[#003580]",
+      background: "bg-gradient-to-br from-[#4b5563] via-[#6b7280] to-[#4b5563]",
       showWave: false,
       padding: "",
       alignment: "",
@@ -66,7 +66,7 @@ export default function Hero({
       titleClass: `text-3xl md:text-4xl lg:text-5xl font-bold leading-tight ${
         titleClassName || ""
       }`,
-      subtitleClass: `text-base md:text-lg text-blue-100 leading-relaxed ${
+      subtitleClass: `text-base md:text-lg leading-relaxed ${
         subtitleClassName || ""
       }`,
       showAnimation: false,
@@ -77,13 +77,13 @@ export default function Hero({
       paddingClass: "pt-12 pb-12 md:pt-24 md:pb-24",
     },
     simple: {
-      background: "bg-gradient-to-br from-[#003580] to-[#0047ab]",
+      background: "bg-gradient-to-br from-[#4b5563] to-[#6b7280]",
       showWave: false,
       padding: "section-padding",
       alignment: "text-center",
       containerMaxWidth: "max-w-4xl",
       titleClass: `text-4xl md:text-5xl font-bold ${titleClassName || ""}`,
-      subtitleClass: `text-xl md:text-2xl text-gray-100 leading-relaxed ${
+      subtitleClass: `text-xl md:text-2xl leading-relaxed ${
         subtitleClassName || ""
       }`,
       showAnimation: false,
@@ -91,12 +91,19 @@ export default function Hero({
     },
   }[variant];
 
+  // Ilman kuvaa heroista tulee vaalea (yhtenäinen kaikilla alasivuilla)
+  const isLight = !imageSrc;
+
   return (
     <>
       <section
         className={`relative ${
           variant === "main" ? config.minHeightClass : ""
-        } ${config.background} text-white overflow-hidden`}
+        } ${
+          imageSrc
+            ? "bg-neutral-900 text-white"
+            : "bg-gradient-to-b from-[#f7f9f7] to-white text-[#1f2937]"
+        } overflow-hidden`}
       >
         {/** Render background image if provided */}
         {/** Image is placed before decorative circles so overlay and circles remain visible */}
@@ -112,17 +119,17 @@ export default function Hero({
               blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI3Ij48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjY2ZlM2ZmIi8+PC9zdmc+"
               priority={imagePriority}
             />
-            {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-linear-to-b from-primary/80 via-black/40 to-primary/80" />
+            {/* Neutral gradient overlay for text contrast (no color tint) */}
+            <div className="absolute inset-0 bg-linear-to-b from-black/35 via-black/25 to-black/50" />
           </>
         )}
-        {config.decorativeCircles && (
+        {imageSrc && config.decorativeCircles && (
           <div className="absolute inset-0 opacity-10">
             <div
               className={`absolute ${config.decorativeCircles.top} bg-white rounded-full blur-3xl`}
             ></div>
             <div
-              className={`absolute ${config.decorativeCircles.bottom} bg-blue-300 rounded-full blur-3xl`}
+              className={`absolute ${config.decorativeCircles.bottom} bg-gray-300 rounded-full blur-3xl`}
             ></div>
           </div>
         )}
@@ -160,7 +167,11 @@ export default function Hero({
                 {ctaButton && (
                   <Link
                     href={ctaButton.href || "/order"}
-                    className="inline-flex items-center gap-2 bg-white text-[#003580] px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 hover:gap-3"
+                    className={`inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold transition-all duration-300 hover:gap-3 ${
+                      isLight
+                        ? "bg-[#1f2937] text-white hover:bg-[#374151]"
+                        : "bg-white text-[#1f2937] hover:bg-gray-50"
+                    }`}
                   >
                     {ctaButton.text}
                     {ctaButton.icon ? (
@@ -187,7 +198,7 @@ export default function Hero({
           </div>
         </div>
 
-        {config.showWave && <WaveBottom />}
+        {config.showWave && imageSrc && <WaveBottom />}
       </section>
 
       {config.showAnimation && (
