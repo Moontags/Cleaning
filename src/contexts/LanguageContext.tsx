@@ -191,7 +191,7 @@ const translations = {
       "* Hinnat ovat alkaen-hintoja ja voivat vaihdella kohteen koon, sijainnin ja palvelun laajuuden mukaan.",
 
     "pricing.window_cleaning_info":
-      "* Ikkunan pesu 60€/h tunti minimiveloitus 2 tuntia!",
+      "* Ikkunan pesu 50€/h minimiveloitus 2 tuntia!",
 
     // Edut
     "pricing.benefits.title": "Hintaan sisältyy aina",
@@ -734,7 +734,7 @@ const translations = {
       "* Prices are starting prices and may vary depending on the size, location, and scope of the service.",
 
     "pricing.window_cleaning_info":
-      "* Window cleaning 60€/h per hour, minimum charge 2 hours!",
+      "* Window cleaning 50€/h, minimum charge 2 hours!",
 
     // Benefits
     "pricing.benefits.title": "Always included in the price",
