@@ -1,0 +1,383 @@
+/* Kartoituslomake — sisäinen työkalusivu.
+   Näytöllä sivuston oma greige-ilme, tulostettaessa tiivistetty yhdelle A4:lle.
+   Värit tulevat globals.css:n @theme-muuttujista. */
+
+/* ---------------- Näyttö ---------------- */
+
+.k-page {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 4rem;
+}
+
+@media (min-width: 640px) {
+  .k-page {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.k-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.k-toolbar-hint {
+  font-size: 0.875rem;
+  color: var(--color-text-gray);
+  margin-top: 0.25rem;
+}
+
+.k-print-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Itse "paperi" */
+.k-doc {
+  background: #fff;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .k-doc {
+    padding: 2rem;
+  }
+}
+
+.k-doc-head {
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.k-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.k-logo {
+  width: 2.25rem;
+  height: auto;
+  flex: none;
+}
+
+.k-brand-name {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-primary-dark);
+}
+
+.k-doc-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-gray-900);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .k-doc-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Osiot */
+.k-section + .k-section {
+  margin-top: 1.5rem;
+}
+
+.k-section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  border-bottom: 1px solid var(--color-gray-300);
+  padding-bottom: 0.25rem;
+  margin: 0 0 0.625rem;
+}
+
+.k-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.k-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .k-row {
+    grid-template-columns: 15rem 1fr;
+    gap: 0.75rem;
+    align-items: center;
+  }
+}
+
+.k-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-gray-700);
+}
+
+.k-input {
+  width: 100%;
+  font: inherit;
+  font-size: 0.9375rem;
+  color: var(--color-text-dark);
+  background: #fff;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.k-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(101, 92, 78, 0.25);
+}
+
+.k-input--inline {
+  width: 8rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Valintaryhmät */
+.k-opts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+}
+
+/* Palstat kuten paperiversiossa: lista täyttyy ylhäältä alas, sitten oikealle */
+.k-grid2 {
+  columns: 1;
+  column-gap: 1.5rem;
+}
+
+.k-grid2 > .k-check {
+  break-inside: avoid;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .k-grid2 {
+    columns: 2;
+  }
+}
+
+.k-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  color: var(--color-gray-700);
+  cursor: pointer;
+}
+
+/* Omat valintaruudut, jotka tulostuvat luotettavasti myös tyhjinä */
+.k-check input[type="checkbox"],
+.k-check input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1em;
+  height: 1em;
+  flex: none;
+  margin: 0;
+  display: inline-grid;
+  place-content: center;
+  background: #fff;
+  border: 1px solid var(--color-gray-400);
+  border-radius: 3px;
+  cursor: pointer;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.k-check input[type="radio"] {
+  border-radius: 50%;
+}
+
+.k-check input[type="checkbox"]:checked::after,
+.k-check input[type="radio"]:checked::after {
+  content: "";
+  width: 0.55em;
+  height: 0.55em;
+  background: var(--color-primary);
+  border-radius: 1px;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.k-check input[type="radio"]:checked::after {
+  border-radius: 50%;
+}
+
+.k-check input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.k-question {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-gray-800);
+  margin: 0 0 0.5rem;
+}
+
+.k-print-foot {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  border-top: 1px solid var(--color-gray-200);
+  margin-top: 1.25rem;
+  padding-top: 0.5rem;
+}
+
+/* ---------------- Tuloste: yksi A4 pystyssä ---------------- */
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 9mm 10mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  /* Piilota layoutin tuomat osat vain tältä sivulta */
+  body:has(.k-page) header,
+  body:has(.k-page) footer,
+  body:has(.k-page) #cc-main {
+    display: none !important;
+  }
+
+  .k-noprint {
+    display: none !important;
+  }
+
+  .k-page {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    font-size: 8.5pt;
+  }
+
+  .k-doc {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .k-doc-head {
+    border-bottom-width: 1.5pt;
+    padding-bottom: 2pt;
+    margin-bottom: 5pt;
+  }
+
+  .k-brand {
+    gap: 4pt;
+    margin-bottom: 0;
+  }
+
+  .k-logo {
+    width: 9mm;
+  }
+
+  .k-brand-name {
+    font-size: 9pt;
+  }
+
+  .k-doc-title {
+    font-size: 12pt;
+  }
+
+  .k-section {
+    break-inside: avoid;
+  }
+
+  .k-section + .k-section {
+    margin-top: 5pt;
+  }
+
+  .k-section-title {
+    font-size: 7.5pt;
+    padding-bottom: 1pt;
+    margin-bottom: 2.5pt;
+  }
+
+  .k-rows {
+    gap: 2.5pt;
+  }
+
+  .k-row {
+    grid-template-columns: 46mm 1fr;
+    gap: 3pt;
+    align-items: center;
+  }
+
+  .k-label {
+    font-size: 8.5pt;
+    font-weight: 600;
+  }
+
+  .k-input {
+    font-size: 8.5pt;
+    min-height: 14pt;
+    padding: 0 3pt;
+    border-radius: 2pt;
+    border-color: #b9ad98;
+    box-shadow: none;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .k-input--inline {
+    width: 24mm;
+  }
+
+  .k-opts {
+    gap: 2pt 8pt;
+  }
+
+  .k-grid2 {
+    columns: 2;
+    column-gap: 8pt;
+  }
+
+  .k-grid2 > .k-check {
+    margin-bottom: 2.5pt;
+  }
+
+  .k-check {
+    font-size: 8.5pt;
+    gap: 3pt;
+  }
+
+  .k-question {
+    font-size: 8.5pt;
+    margin-bottom: 2.5pt;
+  }
+
+  .k-print-foot {
+    font-size: 6.5pt;
+    margin-top: 5pt;
+    padding-top: 2pt;
+  }
+}
