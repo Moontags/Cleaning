@@ -69,6 +69,9 @@ const translations = {
     "why.flexible.title": "Joustavuus",
     "why.flexible.desc": "Räätälöimme palvelumme asiakkaan tarpeiden mukaan.",
 
+    // Laatutakuu-ketjujäsenyys
+    "laatutakuu.alt": "Laatutakuu-yrittäjä",
+
     "footer.rights": "Kaikki oikeudet pidätetään.",
     "footer.company": "Yritys",
     "footer.services": "Palvelut",
@@ -600,6 +603,9 @@ const translations = {
       "We primarily use effective cleaning products that respect the environment.",
     "why.flexible.title": "Flexibility",
     "why.flexible.desc": "We tailor our services to customer needs.",
+
+    // Laatutakuu chain membership
+    "laatutakuu.alt": "Laatutakuu chain member",
 
     // Footer
     "footer.rights": "All rights reserved.",

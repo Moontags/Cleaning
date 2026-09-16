@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Logo } from "./Logo";
+import LaatutakuuBadge from "./LaatutakuuBadge";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -131,6 +132,9 @@ export default function Header() {
             className="hidden lg:flex items-center flex-shrink-0"
             style={{ gap: "1.5rem" }}
           >
+            {/* Laatutakuu-ketjujäsenyys - näytetään vain kun tilaa riittää */}
+            <LaatutakuuBadge height={12} className="hidden xl:inline-flex" />
+
             {/* CTA Button */}
             <Link
               href="/order"
@@ -309,6 +313,14 @@ export default function Header() {
                   <span className="text-lg">🇬🇧</span>
                   <span className="text-sm font-medium">EN</span>
                 </button>
+              </div>
+
+              {/* Laatutakuu-ketjujäsenyys (mobiili) */}
+              <div
+                className="flex justify-center"
+                style={{ paddingTop: "0.75rem" }}
+              >
+                <LaatutakuuBadge height={14} />
               </div>
             </div>
           </div>
