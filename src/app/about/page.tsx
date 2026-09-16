@@ -62,6 +62,9 @@ export default function AboutPage() {
               <p className="text-gray-700 leading-relaxed text-lg">
                 {t('about.story.p3')}
               </p>
+              <p className="text-gray-700 leading-relaxed text-lg">
+                {t('about.story.laatutakuu')}
+              </p>
             </div>
           </div>
         </div>

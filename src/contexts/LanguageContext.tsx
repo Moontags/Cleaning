@@ -317,6 +317,10 @@ const translations = {
       "Käytämme ensisijaisesti ympäristöystävällisiä puhdistusaineita ja moderneja menetelmiä varmistaaksemme sekä tehokkuuden että turvallisuuden tiloissasi. Puhdas ympäristö on tuottavan työn perusta.",
     "about.story.p3":
       "Uskomme pitkäaikaisiin asiakassuhteisiin ja räätälöimme palvelumme jokaisen asiakkaan yksilöllisten tarpeiden mukaan. Asiakastyytyväisyys on toimintamme ydin. Tavoitteemme on olla se luotettava kumppanisi, joka takaa puhtauden ylläpidon ilman, että sinun tarvitsee murehtia siitä.",
+    // HUOM: Lisää liittymisvuosi tähän kappaleeseen, kun tieto on varmistettu
+    // Marikalta (esim. "Vuonna 2026 Siivousote liittyi osaksi...").
+    "about.story.laatutakuu":
+      "Siivousote on osa Laatutakuu-ketjua. Laatutakuu on vuonna 1993 perustettu, valtakunnallinen siivousalan franchising-ketju, johon kuuluu noin 100 itsenäistä ammattilaista. Ketjujäsenyys tarkoittaa asiakkaillemme alan parasta välineistöä, ympäristöystävällisiä siivousaineita sekä laadukasta, yhtenäistä palvelutasoa jokaisessa kohteessa.",
     "about.values.title": "Arvomme",
     // UUSI: Arvot (jatkoa "about.values.title":n alle)
     "about.values.reliability.title": "Luotettavuus",
@@ -859,6 +863,10 @@ const translations = {
       "We primarily use eco-friendly cleaning products and modern methods to ensure both efficiency and safety in your premises. Clean environment is the foundation for productive work and a good life.",
     "about.story.p3":
       "We believe in long-term customer relationships and tailor our services to meet the individual needs of each client. Customer satisfaction is the core of our operations. Our goal is to be the reliable partner that guarantees cleanliness maintenance without you having to worry about it.",
+    // NOTE: Add the year Siivousote joined once confirmed with Marika
+    // (e.g. "In 2026, Siivousote joined the Laatutakuu chain.").
+    "about.story.laatutakuu":
+      "Siivousote is part of the Laatutakuu chain. Laatutakuu is a nationwide cleaning industry franchising chain founded in 1993, with around 100 independent professionals. For our customers, chain membership means the best equipment in the industry, environmentally friendly cleaning agents and a consistently high level of service at every site.",
     "about.values.title": "Our Values",
     // NEW: Values (continuation below "about.values.title")
     "about.values.reliability.title": "Reliability",
