@@ -17,7 +17,7 @@ type LaatutakuuBadgeProps = {
 };
 
 export default function LaatutakuuBadge({
-  height = 14,
+  height = 16,
   className = "",
 }: LaatutakuuBadgeProps) {
   const { t } = useLanguage();

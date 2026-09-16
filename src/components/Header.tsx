@@ -133,7 +133,9 @@ export default function Header() {
             style={{ gap: "1.5rem" }}
           >
             {/* Laatutakuu-ketjujäsenyys - näytetään vain kun tilaa riittää */}
-            <LaatutakuuBadge height={12} className="hidden xl:inline-flex" />
+            <span className="hidden xl:flex items-center">
+              <LaatutakuuBadge height={18} />
+            </span>
 
             {/* CTA Button */}
             <Link
@@ -320,7 +322,7 @@ export default function Header() {
                 className="flex justify-center"
                 style={{ paddingTop: "0.75rem" }}
               >
-                <LaatutakuuBadge height={14} />
+                <LaatutakuuBadge height={18} />
               </div>
             </div>
           </div>

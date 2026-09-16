@@ -99,7 +99,7 @@ export default function Footer() {
                 </span>
               </li>
               <li style={{ marginTop: '0.375rem' }}>
-                <LaatutakuuBadge height={12} />
+                <LaatutakuuBadge height={16} />
               </li>
             </ul>
           </div>
