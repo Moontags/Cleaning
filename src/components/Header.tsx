@@ -8,6 +8,13 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Logo } from "./Logo";
 import LaatutakuuBadge from "./LaatutakuuBadge";
 
+// Headerin oikean laidan kontrollit (tilausnappi, kielivalitsin,
+// Laatutakuu-badge) pidetään samassa korkeudessa. Aiemmin ne olivat
+// 32 / 44 / 34 px, koska korkeus syntyi paddingista ja kullakin oli eri
+// rivikorkeus - nyt korkeus asetetaan suoraan.
+const CONTROL_HEIGHT = 40;
+const MOBILE_CONTROL_HEIGHT = 52;
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
@@ -134,14 +141,18 @@ export default function Header() {
           >
             {/* Laatutakuu-ketjujäsenyys - näytetään vain kun tilaa riittää */}
             <span className="hidden xl:flex items-center">
-              <LaatutakuuBadge height={18} />
+              <LaatutakuuBadge height={CONTROL_HEIGHT} />
             </span>
 
             {/* CTA Button */}
             <Link
               href="/order"
-              className="bg-primary-dark hover:bg-primary-darker text-white text-center rounded-lg font-medium transition-all duration-300"
-              style={{ padding: "0.5rem 0.875rem", fontSize: "0.875rem" }}
+              className="bg-primary-dark hover:bg-primary-darker text-white flex items-center justify-center rounded-lg font-medium transition-all duration-300"
+              style={{
+                height: CONTROL_HEIGHT,
+                padding: "0 0.875rem",
+                fontSize: "0.875rem",
+              }}
             >
               {t("nav.order")}
             </Link>
@@ -162,7 +173,11 @@ export default function Header() {
                     ? "bg-primary-dark text-white"
                     : "text-gray-700 hover:bg-gray-100 border border-gray-200"
                 }`}
-                style={{ gap: "0.25rem", padding: "0.5rem 0.875rem" }}
+                style={{
+                  gap: "0.25rem",
+                  height: CONTROL_HEIGHT,
+                  padding: "0 0.875rem",
+                }}
               >
                 <span className="text-lg">🇫🇮</span>
                 <span className="text-sm font-medium">FI</span>
@@ -174,7 +189,11 @@ export default function Header() {
                     ? "bg-primary-dark text-white"
                     : "text-gray-700 hover:bg-gray-100 border border-gray-200"
                 }`}
-                style={{ gap: "0.25rem", padding: "0.5rem 0.875rem" }}
+                style={{
+                  gap: "0.25rem",
+                  height: CONTROL_HEIGHT,
+                  padding: "0 0.875rem",
+                }}
               >
                 <span className="text-lg">🇬🇧</span>
                 <span className="text-sm font-medium">EN</span>
@@ -280,8 +299,12 @@ export default function Header() {
               <Link
                 href="/order"
                 onClick={() => setIsMenuOpen(false)}
-                className="bg-primary-dark hover:bg-primary-darker text-white text-center rounded-xl font-medium transition-all duration-300 block"
-                style={{ marginTop: "1rem", padding: "1.125rem 2rem" }}
+                className="bg-primary-dark hover:bg-primary-darker text-white flex items-center justify-center rounded-xl font-medium transition-all duration-300"
+                style={{
+                  marginTop: "1rem",
+                  height: MOBILE_CONTROL_HEIGHT,
+                  padding: "0 2rem",
+                }}
               >
                 {t("nav.order")}
               </Link>
@@ -298,7 +321,11 @@ export default function Header() {
                       ? "bg-primary-dark text-white"
                       : "text-gray-700 hover:bg-gray-50 border border-gray-200"
                   }`}
-                  style={{ gap: "0.25rem", padding: "0.875rem 1rem" }}
+                  style={{
+                    gap: "0.25rem",
+                    height: MOBILE_CONTROL_HEIGHT,
+                    padding: "0 1rem",
+                  }}
                 >
                   <span className="text-lg">🇫🇮</span>
                   <span className="text-sm font-medium">FI</span>
@@ -310,7 +337,11 @@ export default function Header() {
                       ? "bg-primary-dark text-white"
                       : "text-gray-700 hover:bg-gray-50 border border-gray-200"
                   }`}
-                  style={{ gap: "0.25rem", padding: "0.875rem 1rem" }}
+                  style={{
+                    gap: "0.25rem",
+                    height: MOBILE_CONTROL_HEIGHT,
+                    padding: "0 1rem",
+                  }}
                 >
                   <span className="text-lg">🇬🇧</span>
                   <span className="text-sm font-medium">EN</span>
@@ -322,7 +353,7 @@ export default function Header() {
                 className="flex justify-center"
                 style={{ paddingTop: "0.75rem" }}
               >
-                <LaatutakuuBadge height={18} />
+                <LaatutakuuBadge height={MOBILE_CONTROL_HEIGHT} />
               </div>
             </div>
           </div>

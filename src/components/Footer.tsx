@@ -98,8 +98,12 @@ export default function Footer() {
                   Y-tunnus: 2166541-5
                 </span>
               </li>
+              {/* Badge on omalla rivillään, joten sillä ei ole samalla rivillä
+                  olevia elementtejä joihin korkeus pitäisi sovittaa. Sarakkeen
+                  tekstirivit ovat 16 px, joten badge pidetään maltillisena -
+                  tätä pienemmällä logon alarivi ei enää ole luettavissa. */}
               <li style={{ marginTop: '0.375rem' }}>
-                <LaatutakuuBadge height={16} />
+                <LaatutakuuBadge height={30} />
               </li>
             </ul>
           </div>

@@ -6,22 +6,41 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const LAATUTAKUU_URL = "https://laatutakuu.fi/siivousote/";
 
 // Laatutakuu-ketjun virallinen logo on valkoinen, joten se asetetaan ketjun
-// brändivärisen (#009549) pillerin päälle. Näin logoa ei tarvitse värittää
-// uudelleen ja se toimii sivuston vaaleilla taustoilla.
+// brändivärisen pillerin päälle. Näin logoa ei tarvitse värittää uudelleen ja
+// se toimii sivuston vaaleilla taustoilla.
+//
+// Väri on tarkoituksella kirjoitettu tähän eikä otettu --color-primary
+// -muuttujasta: tämä on Laatutakuun brändiväri ja sen pitää pysyä vihreänä,
+// vaikka sivuston oma pääväri joskus vaihdettaisiin.
+const LAATUTAKUU_GREEN = "#009549";
+
 const LOGO_ASPECT = 283.5 / 99;
 
+// Logo saa noin 56 % badgen korkeudesta, loput on pystypaddingia. Kokoa
+// säädetään paddingilla eikä logoa venytetä: width pysyy aina automaattisena,
+// joten mittasuhteet säilyvät.
+const PADDING_Y_RATIO = 0.22;
+const PADDING_X_RATIO = 0.6;
+
 type LaatutakuuBadgeProps = {
-  /** Logon korkeus pikseleinä. Leveys skaalautuu automaattisesti. */
+  /**
+   * Koko badge-elementin korkeus pikseleinä (ei pelkän logon korkeus).
+   * Aseta samaksi kuin viereisillä kontrolleilla.
+   */
   height?: number;
   className?: string;
 };
 
 export default function LaatutakuuBadge({
-  height = 16,
+  height = 40,
   className = "",
 }: LaatutakuuBadgeProps) {
   const { t } = useLanguage();
   const alt = t("laatutakuu.alt");
+
+  const paddingY = Math.round(height * PADDING_Y_RATIO);
+  const logoHeight = height - 2 * paddingY;
+  const paddingX = Math.round(logoHeight * PADDING_X_RATIO);
 
   return (
     <a
@@ -29,15 +48,19 @@ export default function LaatutakuuBadge({
       target="_blank"
       rel="noopener noreferrer"
       title={alt}
-      className={`inline-flex items-center bg-[#009549] rounded-md transition-opacity duration-200 hover:opacity-85 ${className}`}
-      style={{ padding: `${Math.round(height * 0.45)}px ${Math.round(height * 0.6)}px` }}
+      className={`inline-flex items-center justify-center rounded-lg transition-opacity duration-200 hover:opacity-85 ${className}`}
+      style={{
+        height,
+        padding: `${paddingY}px ${paddingX}px`,
+        backgroundColor: LAATUTAKUU_GREEN,
+      }}
     >
       <Image
         src="/laatutakuu-logo-white.svg"
         alt={alt}
-        width={Math.round(height * LOGO_ASPECT)}
-        height={height}
-        style={{ height, width: "auto" }}
+        width={Math.round(logoHeight * LOGO_ASPECT)}
+        height={logoHeight}
+        style={{ height: logoHeight, width: "auto" }}
       />
     </a>
   );
