@@ -51,6 +51,11 @@ export default function Footer() {
               </li>
               <li>
                 <span className="text-xs text-[#6e6557]">
+                  {t('footer.area.hameenlinna')}
+                </span>
+              </li>
+              <li>
+                <span className="text-xs text-[#6e6557]">
                   {t('footer.area.kanta_hame')}
                 </span>
               </li>

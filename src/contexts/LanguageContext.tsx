@@ -86,6 +86,7 @@ const translations = {
     "footer.area.jarvenpaa": "Järvenpää",
     "footer.area.tuusula": "Tuusula",
     "footer.area.riihimaki": "Riihimäki",
+    "footer.area.hameenlinna": "Hämeenlinna",
 
     // Yhteystiedot
     "contact.title": "Ota yhteyttä",
@@ -629,6 +630,7 @@ const translations = {
     "footer.area.jarvenpaa": "Järvenpää",
     "footer.area.tuusula": "Tuusula",
     "footer.area.riihimaki": "Riihimäki",
+    "footer.area.hameenlinna": "Hämeenlinna",
 
     // Contact (OLD + NEW KEYS)
     "contact.title": "Contact Us",
