@@ -74,12 +74,12 @@ export default function HomePage() {
 
               <div className="relative z-10">
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-gray-100 text-[#655c4e] group-hover:bg-gray-200 transition-colors"
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-gray-100 text-primary group-hover:bg-gray-200 transition-colors"
                 >
                   <service.icon className="h-6 w-6" />
                 </div>
                 <h3
-                  className="text-lg font-semibold text-[#36302a] group-hover:text-[#36302a] transition-colors"
+                  className="text-lg font-semibold text-[#36302a] group-hover:text-primary-dark transition-colors"
                   style={{ marginBottom: "0.75rem" }}
                 >
                   {service.title}
@@ -103,7 +103,7 @@ export default function HomePage() {
         className="relative text-white section-padding overflow-hidden"
       >
         {/* Background overlay for contrast and airy look */}
-        <div className="absolute inset-0 bg-linear-to-b from-[#4e463b] via-[#655c4e] to-[#847866]"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-primary-darkest via-primary-darker to-primary-dark"></div>
 
         {/* Soft decorative shapes (keeps previous feel) */}
         <div className="absolute inset-0 opacity-25 pointer-events-none">
@@ -131,7 +131,7 @@ export default function HomePage() {
           >
             <Link
               href="/order"
-              className="inline-flex items-center justify-center bg-white text-[#36302a] rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center justify-center bg-white text-primary-dark rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
               {t("nav.order")}
             </Link>

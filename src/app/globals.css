@@ -1,10 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  /* Lämmin, neutraali greige-paletti (yhtenäinen koko sovelluksessa) */
-  --color-primary: #655c4e;
-  --color-primary-dark: #4e463b;
-  --color-primary-light: #847866;
+  /* Pääväri: Laatutakuu-ketjun brändivihreä.
+     Taustat ja tekstivärit pysyvät lämpimässä greige-paletissa (ks. alla).
+
+     Sävyn valinta kontrastin mukaan (WCAG AA):
+     - --color-primary (#009549) vain grafiikkaan: ikonit, reunat, koristeet,
+       gradienttien vaalea pää. Valkoinen tämän päällä on 3.9:1, mikä riittää
+       graafisille elementeille (3:1) mutta EI leipätekstille (4.5:1).
+     - --color-primary-dark (#00803f) aina kun mukana on tekstiä: valkoinen
+       teksti sen päällä 5.1:1, vihreä teksti vaalealla taustalla 4.8:1.
+     - --color-primary-darker / -darkest hover-tiloihin ja gradienttien
+       tummaan päähän. */
+  --color-primary: #009549;
+  --color-primary-dark: #00803f;
+  --color-primary-darker: #00682f;
+  --color-primary-darkest: #005527;
+  --color-primary-light: #00b457;
 
   /* Tekstivärit */
   --color-text-dark: #221e19;
@@ -53,7 +65,7 @@ body {
 
 /* Custom utility classes */
 .btn-primary {
-  background-color: #655c4e;
+  background-color: var(--color-primary-dark);
   color: white;
   font-weight: 600;
   padding: 0.75rem 2rem;
@@ -63,18 +75,18 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #4e463b;
+  background-color: var(--color-primary-darker);
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
 }
 
 .btn-secondary {
   background-color: white;
-  color: #655c4e;
+  color: var(--color-primary-dark);
   font-weight: 600;
   padding: 0.75rem 2rem;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
-  border: 2px solid #655c4e;
+  border: 2px solid var(--color-primary-dark);
 }
 
 .btn-secondary:hover {
@@ -191,7 +203,7 @@ button {
 /* Focus states for accessibility */
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid #655c4e;
+  outline: 2px solid var(--color-primary-dark);
   outline-offset: 2px;
 }
 

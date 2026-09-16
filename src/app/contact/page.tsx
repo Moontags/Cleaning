@@ -42,9 +42,9 @@ export default function ContactPage() {
       desc: t("contact.phone_card.desc"),
       link: "tel:+358402183270",
       linkText: "+358 40 2183270",
-      borderColor: "border-[#655c4e]",
-      iconBg: "bg-gradient-to-br from-[#655c4e] to-[#847866]",
-      buttonBg: "bg-gradient-to-r from-[#655c4e] to-[#847866]",
+      borderColor: "border-primary",
+      iconBg: "bg-gradient-to-br from-primary-dark to-primary",
+      buttonBg: "bg-gradient-to-r from-primary-darker to-primary-dark",
     },
     {
       icon: Mail,
@@ -52,9 +52,9 @@ export default function ContactPage() {
       desc: t("contact.email_card.desc"),
       link: "mailto:info@siivousote.fi",
       linkText: "info@siivousote.fi",
-      borderColor: "border-[#655c4e]",
-      iconBg: "bg-gradient-to-br from-[#655c4e] to-[#847866]",
-      buttonBg: "bg-gradient-to-r from-[#655c4e] to-[#847866]",
+      borderColor: "border-primary",
+      iconBg: "bg-gradient-to-br from-primary-dark to-primary",
+      buttonBg: "bg-gradient-to-r from-primary-darker to-primary-dark",
     },
     {
       icon: MessageCircle,
@@ -62,9 +62,9 @@ export default function ContactPage() {
       desc: t("contact.form_card.desc"),
       link: "/order",
       linkText: t("contact.form_card.button"),
-      borderColor: "border-[#655c4e]",
-      iconBg: "bg-gradient-to-br from-[#655c4e] to-[#847866]",
-      buttonBg: "bg-gradient-to-r from-[#655c4e] to-[#847866]",
+      borderColor: "border-primary",
+      iconBg: "bg-gradient-to-br from-primary-dark to-primary",
+      buttonBg: "bg-gradient-to-r from-primary-darker to-primary-dark",
       isInternal: true,
     },
   ];
@@ -98,7 +98,7 @@ export default function ContactPage() {
               className="group relative bg-white/60 backdrop-blur-sm rounded-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1"
             >
               <div className="relative z-10 p-6">
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 border border-white/20 bg-white/10 text-[#36302a]">
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 border border-white/20 bg-white/10 text-primary">
                   <info.icon className="h-7 w-7" />
                 </div>
                 <h3
@@ -110,7 +110,7 @@ export default function ContactPage() {
                 {info.link ? (
                   <a
                     href={info.link}
-                    className="text-gray-700 hover:text-[#847866] transition-colors font-medium"
+                    className="text-gray-700 hover:text-primary-dark transition-colors font-medium"
                     target={info.link.startsWith("http") ? "_blank" : undefined}
                     rel={
                       info.link.startsWith("http")
@@ -167,8 +167,8 @@ export default function ContactPage() {
                     <div
                       className={`${card.iconBg} w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300`}
                       style={{
-                        background: "linear-gradient(135deg,#655c4e,#847866)",
-                        boxShadow: "0 6px 14px rgba(0,53,128,0.08)",
+                        background: "linear-gradient(135deg,#00803f,#009549)",
+                        boxShadow: "0 6px 14px rgba(0,149,73,0.08)",
                       }}
                     >
                       <card.icon className="h-6 w-6 text-white" />
@@ -188,7 +188,7 @@ export default function ContactPage() {
                       </p>
                       <Link
                         href={card.link}
-                        className={`inline-block text-[#36302a] bg-white rounded-full border border-white/30 transition-all duration-300 font-semibold`}
+                        className={`inline-block text-primary-dark bg-white rounded-full border border-white/30 transition-all duration-300 font-semibold`}
                         style={{ padding: "0.5rem 1rem" }}
                       >
                         {card.linkText}
@@ -213,7 +213,7 @@ export default function ContactPage() {
               <div className="bg-gradient-to-br from-gray-50 to-gray-100 h-[500px] flex items-center justify-center relative overflow-hidden">
                 <div className="text-center z-10" style={{ padding: "2rem" }}>
                   <div
-                    className="bg-gradient-to-br from-[#655c4e] to-[#847866] w-20 h-20 rounded-2xl flex items-center justify-center mx-auto"
+                    className="bg-gradient-to-br from-primary-dark to-primary w-20 h-20 rounded-2xl flex items-center justify-center mx-auto"
                     style={{ marginBottom: "1.5rem" }}
                   >
                     <MapPin className="h-10 w-10 text-white" />
@@ -236,7 +236,7 @@ export default function ContactPage() {
                     href="https://maps.google.com/?q=Riihimäki"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-gradient-to-r from-[#655c4e] to-[#847866] text-white rounded-lg transition-all duration-300 font-semibold"
+                    className="inline-block bg-gradient-to-r from-primary-darker to-primary-dark text-white rounded-lg transition-all duration-300 font-semibold"
                     style={{ padding: "0.875rem 1.5rem" }}
                   >
                     {t("contact.map.button")}
@@ -244,7 +244,7 @@ export default function ContactPage() {
                 </div>
                 {/* Decorative elements */}
                 <div
-                  className="absolute bg-[#655c4e] rounded-full"
+                  className="absolute bg-primary rounded-full"
                   style={{
                     top: "2.5rem",
                     left: "2.5rem",
@@ -254,7 +254,7 @@ export default function ContactPage() {
                   }}
                 ></div>
                 <div
-                  className="absolute bg-[#847866] rounded-full"
+                  className="absolute bg-primary-light rounded-full"
                   style={{
                     bottom: "2.5rem",
                     right: "2.5rem",
@@ -267,7 +267,7 @@ export default function ContactPage() {
 
               {/* Business Hours Info */}
               <div
-                className="bg-gradient-to-r from-[#655c4e] to-[#847866] text-white"
+                className="bg-gradient-to-r from-primary-darker to-primary-dark text-white"
                 style={{ padding: "1.5rem" }}
               >
                 <div className="flex items-center justify-between">
@@ -318,10 +318,10 @@ export default function ContactPage() {
                 className="group bg-white/90 backdrop-blur-sm rounded-xl transition-all border border-gray-100"
                 style={{ padding: "1.5rem" }}
               >
-                <summary className="font-semibold text-[#36302a] cursor-pointer list-none flex items-center justify-between group-hover:text-[#847866] transition-colors">
+                <summary className="font-semibold text-[#36302a] cursor-pointer list-none flex items-center justify-between group-hover:text-primary-dark transition-colors">
                   {t(`contact.faq${num}.title`)}
                   <span
-                    className="text-2xl group-open:rotate-45 transition-transform bg-gradient-to-br from-[#655c4e] to-[#847866] w-8 h-8 rounded-lg flex items-center justify-center text-white"
+                    className="text-2xl group-open:rotate-45 transition-transform bg-gradient-to-br from-primary-dark to-primary w-8 h-8 rounded-lg flex items-center justify-center text-white"
                     style={{ marginLeft: "1rem" }}
                   >
                     +
@@ -343,7 +343,7 @@ export default function ContactPage() {
       <section
         className="relative text-white section-padding overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#4e463b] via-[#655c4e] to-[#847866]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-darkest via-primary-darker to-primary-dark"></div>
 
         <div className="absolute inset-0 opacity-25 pointer-events-none">
           <div className="absolute top-12 right-12 w-72 h-72 bg-white/6 rounded-full blur-3xl"></div>
@@ -370,7 +370,7 @@ export default function ContactPage() {
           >
             <Link
               href="/order"
-              className="inline-flex items-center justify-center bg-white text-[#36302a] rounded-full px-8 py-3 font-semibold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center justify-center bg-white text-primary-dark rounded-full px-8 py-3 font-semibold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
               {t("nav.order")}
             </Link>

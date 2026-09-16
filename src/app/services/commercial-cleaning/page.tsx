@@ -149,7 +149,7 @@ export default function CommercialCleaningPage() {
       <section
         className="relative text-white overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#4e463b] via-[#655c4e] to-[#847866]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-darkest via-primary-darker to-primary-dark"></div>
 
         <div className="absolute inset-0 opacity-25 pointer-events-none">
           <div className="absolute top-12 right-12 w-72 h-72 bg-white/6 rounded-full blur-3xl"></div>
@@ -169,7 +169,7 @@ export default function CommercialCleaningPage() {
             </p>
             <Link
               href="/order"
-              className="inline-flex items-center gap-2 bg-white text-[#36302a] px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-white text-primary-dark px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
               {t("service.business.cta.button")}
               <ArrowRight className="w-5 h-5" />

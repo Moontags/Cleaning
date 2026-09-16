@@ -192,7 +192,7 @@ export default function PricingPage() {
                   className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-3 border border-white/20 bg-white/10"
                   style={{ marginBottom: "0.75rem" }}
                 >
-                  <benefit.icon className="h-6 w-6 text-[#36302a]" />
+                  <benefit.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3
                   className="text-lg font-semibold text-[#36302a]"
@@ -226,7 +226,7 @@ export default function PricingPage() {
                   style={{ gap: "0.75rem" }}
                 >
                   <div
-                    className="rounded-xl flex-shrink-0 p-2 bg-gradient-to-br from-[#655c4e] to-[#847866]"
+                    className="rounded-xl flex-shrink-0 p-2 bg-gradient-to-br from-primary-dark to-primary"
                     style={{ boxShadow: "0 6px 14px rgba(0,53,128,0.12)" }}
                   >
                     <Check className="h-5 w-5 text-white" />
@@ -276,10 +276,10 @@ export default function PricingPage() {
               className="group bg-white/90 backdrop-blur-sm rounded-xl transition-all border border-gray-100"
               style={{ padding: "1.5rem" }}
             >
-              <summary className="font-semibold text-[#36302a] cursor-pointer list-none flex items-center justify-between group-hover:text-[#847866] transition-colors">
+              <summary className="font-semibold text-[#36302a] cursor-pointer list-none flex items-center justify-between group-hover:text-primary-dark transition-colors">
                 {t(`pricing.faq${num}.title`)}
                 <span
-                  className="bg-gradient-to-br from-[#655c4e] to-[#847866] w-8 h-8 rounded-lg flex items-center justify-center text-white transition-transform group-open:rotate-180"
+                  className="bg-gradient-to-br from-primary-dark to-primary w-8 h-8 rounded-lg flex items-center justify-center text-white transition-transform group-open:rotate-180"
                   style={{ marginLeft: "1rem" }}
                 >
                   <ChevronDown className="h-5 w-5" />
@@ -300,7 +300,7 @@ export default function PricingPage() {
       <section
         className="relative text-white section-padding overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#4e463b] via-[#655c4e] to-[#847866]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-darkest via-primary-darker to-primary-dark"></div>
 
         <div className="absolute inset-0 opacity-25 pointer-events-none">
           <div className="absolute top-12 right-12 w-72 h-72 bg-white/6 rounded-full blur-3xl"></div>
@@ -322,7 +322,7 @@ export default function PricingPage() {
           </p>
           <Link
             href="/order"
-            className="inline-flex items-center justify-center bg-white text-[#36302a] rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+            className="inline-flex items-center justify-center bg-white text-primary-dark rounded-full px-8 py-3 font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
           >
             {t("pricing.final_cta.button")}
           </Link>

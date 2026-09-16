@@ -76,7 +76,7 @@ export default function Header() {
                 <button
                   aria-haspopup="true"
                   aria-expanded={desktopServicesOpen}
-                  className="relative text-base font-medium transition-all duration-300 whitespace-nowrap text-gray-700 hover:text-[#36302a] flex items-center gap-1"
+                  className="relative text-base font-medium transition-all duration-300 whitespace-nowrap text-gray-700 hover:text-primary-dark flex items-center gap-1"
                   style={{ paddingBottom: "0.25rem" }}
                 >
                   {t("services.title")}
@@ -101,7 +101,7 @@ export default function Header() {
                       <Link
                         key={svc.href}
                         href={svc.href}
-                        className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 hover:text-[#36302a] transition-all duration-200"
+                        className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-gray-50 hover:to-gray-100 hover:text-primary-dark transition-all duration-200"
                       >
                         {svc.name}
                       </Link>
@@ -140,7 +140,7 @@ export default function Header() {
             {/* CTA Button */}
             <Link
               href="/order"
-              className="bg-[#36302a] hover:bg-[#4e463b] text-white text-center rounded-lg font-medium transition-all duration-300"
+              className="bg-primary-dark hover:bg-primary-darker text-white text-center rounded-lg font-medium transition-all duration-300"
               style={{ padding: "0.5rem 0.875rem", fontSize: "0.875rem" }}
             >
               {t("nav.order")}
@@ -159,7 +159,7 @@ export default function Header() {
                 onClick={() => setLanguage("fi")}
                 className={`flex items-center rounded-lg transition-all duration-300 ${
                   language === "fi"
-                    ? "bg-[#36302a] text-white"
+                    ? "bg-primary-dark text-white"
                     : "text-gray-700 hover:bg-gray-100 border border-gray-200"
                 }`}
                 style={{ gap: "0.25rem", padding: "0.5rem 0.875rem" }}
@@ -171,7 +171,7 @@ export default function Header() {
                 onClick={() => setLanguage("en")}
                 className={`flex items-center rounded-lg transition-all duration-300 ${
                   language === "en"
-                    ? "bg-[#36302a] text-white"
+                    ? "bg-primary-dark text-white"
                     : "text-gray-700 hover:bg-gray-100 border border-gray-200"
                 }`}
                 style={{ gap: "0.25rem", padding: "0.5rem 0.875rem" }}
@@ -189,9 +189,9 @@ export default function Header() {
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <X className="h-6 w-6 text-[#36302a]" />
+              <X className="h-6 w-6 text-primary" />
             ) : (
-              <Menu className="h-6 w-6 text-[#36302a]" />
+              <Menu className="h-6 w-6 text-primary" />
             )}
           </button>
         </div>
@@ -218,8 +218,8 @@ export default function Header() {
                   onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
                   className={`w-full text-left relative text-base font-medium transition-all duration-300 overflow-hidden flex items-center justify-between ${
                     mobileServicesOpen
-                      ? "text-[#36302a] font-semibold bg-gradient-to-r from-gray-50 to-gray-100"
-                      : "text-gray-700 hover:text-[#36302a] hover:bg-gray-50"
+                      ? "text-primary-dark font-semibold bg-gradient-to-r from-gray-50 to-gray-100"
+                      : "text-gray-700 hover:text-primary-dark hover:bg-gray-50"
                   }`}
                   style={{ padding: "0.875rem 1rem", borderRadius: "0.75rem" }}
                 >
@@ -248,7 +248,7 @@ export default function Header() {
                           setIsMenuOpen(false);
                           setMobileServicesOpen(false);
                         }}
-                        className="block text-gray-700 hover:text-[#36302a] px-4 py-2 rounded-md hover:bg-gray-50 transition-colors duration-200"
+                        className="block text-gray-700 hover:text-primary-dark px-4 py-2 rounded-md hover:bg-gray-50 transition-colors duration-200"
                       >
                         {svc.name}
                       </Link>
@@ -264,14 +264,14 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                   className={`relative text-base font-medium transition-all duration-300 overflow-hidden ${
                     isActive(item.href)
-                      ? "text-[#36302a] font-semibold bg-gradient-to-r from-gray-50 to-gray-100"
-                      : "text-gray-700 hover:text-[#36302a] hover:bg-gray-50"
+                      ? "text-primary-dark font-semibold bg-gradient-to-r from-gray-50 to-gray-100"
+                      : "text-gray-700 hover:text-primary-dark hover:bg-gray-50"
                   }`}
                   style={{ padding: "0.875rem 1rem", borderRadius: "0.75rem" }}
                 >
                   {item.name}
                   {isActive(item.href) && (
-                    <span className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#36302a] to-[#4e463b] rounded-r"></span>
+                    <span className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-dark to-primary-darker rounded-r"></span>
                   )}
                 </Link>
               ))}
@@ -280,7 +280,7 @@ export default function Header() {
               <Link
                 href="/order"
                 onClick={() => setIsMenuOpen(false)}
-                className="bg-[#36302a] hover:bg-[#4e463b] text-white text-center rounded-xl font-medium transition-all duration-300 block"
+                className="bg-primary-dark hover:bg-primary-darker text-white text-center rounded-xl font-medium transition-all duration-300 block"
                 style={{ marginTop: "1rem", padding: "1.125rem 2rem" }}
               >
                 {t("nav.order")}
@@ -295,7 +295,7 @@ export default function Header() {
                   onClick={() => setLanguage("fi")}
                   className={`flex items-center rounded-xl transition-all duration-300 flex-1 justify-center ${
                     language === "fi"
-                      ? "bg-[#36302a] text-white"
+                      ? "bg-primary-dark text-white"
                       : "text-gray-700 hover:bg-gray-50 border border-gray-200"
                   }`}
                   style={{ gap: "0.25rem", padding: "0.875rem 1rem" }}
@@ -307,7 +307,7 @@ export default function Header() {
                   onClick={() => setLanguage("en")}
                   className={`flex items-center rounded-xl transition-all duration-300 flex-1 justify-center ${
                     language === "en"
-                      ? "bg-[#36302a] text-white"
+                      ? "bg-primary-dark text-white"
                       : "text-gray-700 hover:bg-gray-50 border border-gray-200"
                   }`}
                   style={{ gap: "0.25rem", padding: "0.875rem 1rem" }}

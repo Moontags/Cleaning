@@ -12,7 +12,7 @@ export default function Footer() {
   const headingClass =
     "text-[11px] font-medium text-[#9c9182] uppercase tracking-[0.8px]";
   const linkClass =
-    "text-xs text-[#6e6557] hover:text-[#36302a] transition-colors duration-200 inline-block";
+    "text-xs text-[#6e6557] hover:text-primary-dark transition-colors duration-200 inline-block";
 
   return (
     <footer className="bg-[#faf8f3] border-t border-[#e7ded0] text-[#6e6557]">
@@ -145,19 +145,19 @@ export default function Footer() {
             </h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
               <li className="flex items-center" style={{ gap: '0.5rem' }}>
-                <Mail className="h-4 w-4 text-[#36302a] shrink-0" />
+                <Mail className="h-4 w-4 text-primary shrink-0" />
                 <a href="mailto:info@siivousote.fi" className={linkClass}>
                   info@siivousote.fi
                 </a>
               </li>
               <li className="flex items-center" style={{ gap: '0.5rem' }}>
-                <Phone className="h-4 w-4 text-[#36302a] shrink-0" />
+                <Phone className="h-4 w-4 text-primary shrink-0" />
                 <a href="tel:+358402183270" className={linkClass}>
                   +358 40 218 3270
                 </a>
               </li>
               <li className="flex items-start" style={{ gap: '0.5rem' }}>
-                <MapPin className="h-4 w-4 text-[#36302a] shrink-0" style={{ marginTop: '2px' }} />
+                <MapPin className="h-4 w-4 text-primary shrink-0" style={{ marginTop: '2px' }} />
                 <span className="text-xs text-[#6e6557]">
                   Petsamonkatu
                   <br />

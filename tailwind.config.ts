@@ -9,10 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Huom: Tailwind 4 lukee paletin globals.css:n @theme-lohkosta.
+        // Nämä pidetään samoina, jotta arvot eivät eroa kahdessa paikassa.
         primary: {
-          DEFAULT: '#4b5563',
-          dark: '#374151',
-          light: '#6b7280',
+          DEFAULT: '#009549',
+          dark: '#00803f',
+          darker: '#00682f',
+          darkest: '#005527',
+          light: '#00b457',
         },
         emerald: {
           100: '#f3f4f6',

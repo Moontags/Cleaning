@@ -21,7 +21,7 @@ export default function Card({ icon: Icon, title, description, priceFrom, priceU
     <article className="group relative bg-[#fbf8f2] border border-[#e7ded0] rounded-xl overflow-hidden flex flex-col transform hover:-translate-y-1 hover:bg-[#f3eee5] hover:border-[#d5c9b6] transition-all duration-200">
       <div className="relative z-10 flex flex-col flex-grow p-6">
         {Icon && (
-          <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-3 border border-white/20 bg-white/10 text-[#36302a]" style={{ marginBottom: '0.75rem' }}>
+          <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-3 border border-white/20 bg-white/10 text-primary" style={{ marginBottom: '0.75rem' }}>
             <Icon className="h-6 w-6" />
           </div>
         )}
@@ -35,7 +35,7 @@ export default function Card({ icon: Icon, title, description, priceFrom, priceU
         {(priceFrom || priceUnit) && (
           <div style={{ marginBottom: '1rem' }}>
             <div className="flex items-baseline">
-              <span className="text-3xl md:text-4xl font-bold text-[#36302a]">{priceFrom}</span>
+              <span className="text-3xl md:text-4xl font-bold text-primary-dark">{priceFrom}</span>
               {priceUnit && <span className="text-gray-600 font-medium" style={{ marginLeft: '0.5rem' }}>{priceUnit}</span>}
             </div>
           </div>

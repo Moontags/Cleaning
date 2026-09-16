@@ -84,7 +84,7 @@ export default function AboutPage() {
                 style={{ padding: '1.25rem' }}
               >
                 <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-3 border border-white/20 bg-white/10 text-[#36302a]" style={{ marginBottom: '0.75rem' }}>
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-3 border border-white/20 bg-white/10 text-primary" style={{ marginBottom: '0.75rem' }}>
                     <value.icon className="h-6 w-6" />
                   </div>
                   <h3 className="text-lg font-semibold text-[#36302a]" style={{ marginBottom: '0.5rem' }}>

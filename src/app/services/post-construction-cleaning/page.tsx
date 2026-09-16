@@ -168,7 +168,7 @@ export default function PostConstructionCleaningPage() {
                 key={index}
                 className="flex items-start gap-4 bg-white p-6 rounded-lg border border-gray-100 transition-colors duration-300"
               >
-                <div className="w-10 h-10 bg-[#655c4e] text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                <div className="w-10 h-10 bg-primary-dark text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
                   {index + 1}
                 </div>
                 <p className="text-gray-700 leading-relaxed pt-2">{step}</p>
@@ -182,7 +182,7 @@ export default function PostConstructionCleaningPage() {
       <section
         className="relative text-white overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#4e463b] via-[#655c4e] to-[#847866]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-darkest via-primary-darker to-primary-dark"></div>
 
         <div className="absolute inset-0 opacity-25 pointer-events-none">
           <div className="absolute top-12 right-12 w-72 h-72 bg-white/6 rounded-full blur-3xl"></div>
@@ -202,7 +202,7 @@ export default function PostConstructionCleaningPage() {
             </p>
             <Link
               href="/order"
-              className="inline-flex items-center gap-2 bg-white text-[#36302a] px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-white text-primary-dark px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
             >
               {t("service.construction.cta.button")}
               <ArrowRight className="w-5 h-5" />

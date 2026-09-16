@@ -129,7 +129,7 @@ export default function OrderPage() {
                 value={formData.company}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#655c4e] focus:border-transparent outline-none transition"
+                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
                 style={{ padding: "0.75rem 1rem" }}
                 // KORJAUS: Paikkamerkki käännettäväksi
                 placeholder={t("order.form.placeholder.company")}
@@ -152,7 +152,7 @@ export default function OrderPage() {
                 value={formData.contact}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#655c4e] focus:border-transparent outline-none transition"
+                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
                 style={{ padding: "0.75rem 1rem" }}
                 // KORJAUS: Paikkamerkki käännettäväksi
                 placeholder={t("order.form.placeholder.contact")}
@@ -179,7 +179,7 @@ export default function OrderPage() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#655c4e] focus:border-transparent outline-none transition"
+                  className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
                   style={{ padding: "0.75rem 1rem" }}
                   // KORJAUS: Paikkamerkki käännettäväksi
                   placeholder={t("order.form.placeholder.email")}
@@ -201,7 +201,7 @@ export default function OrderPage() {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#655c4e] focus:border-transparent outline-none transition"
+                  className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
                   style={{ padding: "0.75rem 1rem" }}
                   // KORJAUS: Paikkamerkki käännettäväksi
                   placeholder={t("order.form.placeholder.phone")}
@@ -224,7 +224,7 @@ export default function OrderPage() {
                 value={formData.service}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#655c4e] focus:border-transparent outline-none transition bg-white"
+                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white"
                 style={{ padding: "0.75rem 1rem" }}
               >
                 {/* KORJAUS: Oletusvalinnan teksti käännettäväksi */}
@@ -254,7 +254,7 @@ export default function OrderPage() {
                 value={formData.message}
                 onChange={handleChange}
                 rows={6}
-                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#655c4e] focus:border-transparent outline-none transition resize-none"
+                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition resize-none"
                 style={{ padding: "0.75rem 1rem" }}
                 // KORJAUS: Paikkamerkki käännettäväksi
                 placeholder={t("order.form.placeholder.message")}
@@ -291,7 +291,7 @@ export default function OrderPage() {
             <ol className="flex flex-col gap-4 text-gray-700">
               {[t('order.next.step1'), t('order.next.step2'), t('order.next.step3'), t('order.next.step4')].map((step, i) => (
                 <li key={i} className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#655c4e] text-white flex items-center justify-center font-semibold flex-shrink-0">{i + 1}</div>
+                  <div className="w-8 h-8 rounded-full bg-primary-dark text-white flex items-center justify-center font-semibold flex-shrink-0">{i + 1}</div>
                   <div className="flex-1">{step}</div>
                 </li>
               ))}

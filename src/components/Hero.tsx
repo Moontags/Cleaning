@@ -36,7 +36,7 @@ export default function Hero({
 }: HeroProps) {
   const config = {
     main: {
-      background: "bg-gradient-to-br from-[#655c4e] via-[#847866] to-[#ab9e88]",
+      background: "bg-gradient-to-br from-primary-darker via-primary-dark to-primary",
       showWave: true,
       padding: "section-padding",
       alignment: "text-center",
@@ -58,7 +58,7 @@ export default function Hero({
       contentPositionClass: "flex flex-col justify-end md:justify-center",
     },
     service: {
-      background: "bg-gradient-to-br from-[#655c4e] via-[#847866] to-[#655c4e]",
+      background: "bg-gradient-to-br from-primary-darker via-primary-dark to-primary-darker",
       showWave: false,
       padding: "",
       alignment: "",
@@ -77,7 +77,7 @@ export default function Hero({
       paddingClass: "pt-12 pb-12 md:pt-24 md:pb-24",
     },
     simple: {
-      background: "bg-gradient-to-br from-[#655c4e] to-[#847866]",
+      background: "bg-gradient-to-br from-primary-dark to-primary",
       showWave: false,
       padding: "section-padding",
       alignment: "text-center",
@@ -169,8 +169,8 @@ export default function Hero({
                     href={ctaButton.href || "/order"}
                     className={`inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold transition-all duration-300 hover:gap-3 ${
                       isLight
-                        ? "bg-[#36302a] text-white hover:bg-[#4e463b]"
-                        : "bg-white text-[#36302a] hover:bg-gray-50"
+                        ? "bg-primary-dark text-white hover:bg-primary-darker"
+                        : "bg-white text-primary-dark hover:bg-gray-50"
                     }`}
                   >
                     {ctaButton.text}

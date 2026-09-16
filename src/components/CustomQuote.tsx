@@ -18,7 +18,7 @@ export default function CustomQuote() {
           <h2 className="text-3xl md:text-4xl font-bold" style={{ marginBottom: '1rem' }}>{t('pricing.custom_cta.title')}</h2>
           <p className="text-lg text-gray-50 mx-auto" style={{ marginBottom: '2rem' }}>{t('pricing.custom_cta.desc')}</p>
           <div className="flex flex-col sm:flex-row justify-center" style={{ gap: '1rem' }}>
-            <Link href="/order" className="inline-block bg-white text-[#36302a] rounded-full px-6 py-3 font-semibold shadow-md">
+            <Link href="/order" className="inline-block bg-white text-primary-dark rounded-full px-6 py-3 font-semibold shadow-md">
               {t('pricing.contact.cta')}
             </Link>
             <a href="tel:+358402183270" className="inline-block bg-white/20 text-white rounded-full px-6 py-3 font-medium border border-white/25">
