@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import LaatutakuuBadge from "./LaatutakuuBadge";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -91,6 +92,9 @@ export default function Footer() {
                 <span className="text-xs text-[#6e6557]">
                   Y-tunnus: 2166541-5
                 </span>
+              </li>
+              <li style={{ marginTop: '0.375rem' }}>
+                <LaatutakuuBadge height={12} />
               </li>
             </ul>
           </div>
