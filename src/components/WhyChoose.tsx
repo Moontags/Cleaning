@@ -26,6 +26,11 @@ export default function WhyChoose() {
       title: t("why.flexible.title"),
       desc: t("why.flexible.desc"),
     },
+    {
+      key: "chain",
+      title: t("why.chain.title"),
+      desc: t("why.chain.desc"),
+    },
   ];
 
   return (
@@ -35,7 +40,7 @@ export default function WhyChoose() {
           {t("why.title")}
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {items.map((it) => (
             <div
               key={it.key}

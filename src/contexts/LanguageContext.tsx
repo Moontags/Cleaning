@@ -68,6 +68,9 @@ const translations = {
       "Käytämme ensisijaisesti luontoa kunnioittavia puhdistusaineita.",
     "why.flexible.title": "Joustavuus",
     "why.flexible.desc": "Räätälöimme palvelumme asiakkaan tarpeiden mukaan.",
+    "why.chain.title": "Osa Laatutakuu-ketjua",
+    "why.chain.desc":
+      "Toimimme osana vuonna 1993 perustettua, valtakunnallista Laatutakuu-ketjua. Se takaa käyttöömme alan parhaan välineistön, ympäristöystävälliset siivousaineet sekä kattavan ketjun tuen.",
 
     // Laatutakuu-ketjujäsenyys
     "laatutakuu.alt": "Laatutakuu-yrittäjä",
@@ -603,6 +606,9 @@ const translations = {
       "We primarily use effective cleaning products that respect the environment.",
     "why.flexible.title": "Flexibility",
     "why.flexible.desc": "We tailor our services to customer needs.",
+    "why.chain.title": "Part of the Laatutakuu chain",
+    "why.chain.desc":
+      "We operate as part of Laatutakuu, a nationwide chain founded in 1993. Membership gives us access to the best equipment in the industry, environmentally friendly cleaning agents and comprehensive chain support.",
 
     // Laatutakuu chain membership
     "laatutakuu.alt": "Laatutakuu chain member",
