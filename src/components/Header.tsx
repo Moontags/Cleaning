@@ -8,12 +8,21 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Logo } from "./Logo";
 import LaatutakuuBadge from "./LaatutakuuBadge";
 
-// Headerin oikean laidan kontrollit (tilausnappi, kielivalitsin,
-// Laatutakuu-badge) pidetään samassa korkeudessa. Aiemmin ne olivat
-// 32 / 44 / 34 px, koska korkeus syntyi paddingista ja kullakin oli eri
-// rivikorkeus - nyt korkeus asetetaan suoraan.
+// Headerin oikean laidan kontrollit (tilausnappi ja kielivalitsin) pidetään
+// samassa korkeudessa. Aiemmin ne olivat 32 / 44 px, koska korkeus syntyi
+// paddingista ja kummallakin oli eri rivikorkeus - nyt korkeus asetetaan
+// suoraan.
 const CONTROL_HEIGHT = 40;
 const MOBILE_CONTROL_HEIGHT = 52;
+
+// Laatutakuu-badge on tarkoituksella hieman muita kontrolleja isompi, jotta
+// ketjujäsenyys erottuu. 15 % riittää tekemään eron näkyväksi ilman että badge
+// alkaa kilpailla Siivousotteen oman logon kanssa.
+const LAATUTAKUU_SCALE = 1.15;
+const LAATUTAKUU_HEIGHT = Math.round(CONTROL_HEIGHT * LAATUTAKUU_SCALE);
+const LAATUTAKUU_MOBILE_HEIGHT = Math.round(
+  MOBILE_CONTROL_HEIGHT * LAATUTAKUU_SCALE,
+);
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -141,7 +150,7 @@ export default function Header() {
           >
             {/* Laatutakuu-ketjujäsenyys - näytetään vain kun tilaa riittää */}
             <span className="hidden xl:flex items-center">
-              <LaatutakuuBadge height={CONTROL_HEIGHT} />
+              <LaatutakuuBadge height={LAATUTAKUU_HEIGHT} />
             </span>
 
             {/* CTA Button */}
@@ -353,7 +362,7 @@ export default function Header() {
                 className="flex justify-center"
                 style={{ paddingTop: "0.75rem" }}
               >
-                <LaatutakuuBadge height={MOBILE_CONTROL_HEIGHT} />
+                <LaatutakuuBadge height={LAATUTAKUU_MOBILE_HEIGHT} />
               </div>
             </div>
           </div>
