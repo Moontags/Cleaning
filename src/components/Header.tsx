@@ -8,20 +8,20 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Logo } from "./Logo";
 import LaatutakuuBadge from "./LaatutakuuBadge";
 
-// Headerin oikean laidan kontrollit (tilausnappi ja kielivalitsin) pidetään
-// samassa korkeudessa. Aiemmin ne olivat 32 / 44 px, koska korkeus syntyi
-// paddingista ja kummallakin oli eri rivikorkeus - nyt korkeus asetetaan
-// suoraan.
+// Headerin oikean laidan kontrollit saavat korkeutensa näistä vakioista eivätkä
+// paddingista - muuten kunkin oma rivikorkeus määräisi korkeuden ja ne olisivat
+// eri kokoisia vahingossa, kuten aiemmin (32 / 44 px).
+//
+// Kielivalitsin on perustaso. Laatutakuu-badge ja tilausnappi ovat 15 %
+// korkeampia, jotta ne erottuvat parina; 15 % riittää tekemään eron näkyväksi
+// ilman että ne alkavat kilpailla Siivousotteen oman logon kanssa.
 const CONTROL_HEIGHT = 40;
 const MOBILE_CONTROL_HEIGHT = 52;
 
-// Laatutakuu-badge on tarkoituksella hieman muita kontrolleja isompi, jotta
-// ketjujäsenyys erottuu. 15 % riittää tekemään eron näkyväksi ilman että badge
-// alkaa kilpailla Siivousotteen oman logon kanssa.
-const LAATUTAKUU_SCALE = 1.15;
-const LAATUTAKUU_HEIGHT = Math.round(CONTROL_HEIGHT * LAATUTAKUU_SCALE);
-const LAATUTAKUU_MOBILE_HEIGHT = Math.round(
-  MOBILE_CONTROL_HEIGHT * LAATUTAKUU_SCALE,
+const EMPHASIS_SCALE = 1.15;
+const EMPHASIS_HEIGHT = Math.round(CONTROL_HEIGHT * EMPHASIS_SCALE);
+const MOBILE_EMPHASIS_HEIGHT = Math.round(
+  MOBILE_CONTROL_HEIGHT * EMPHASIS_SCALE,
 );
 
 export default function Header() {
@@ -150,7 +150,7 @@ export default function Header() {
           >
             {/* Laatutakuu-ketjujäsenyys - näytetään vain kun tilaa riittää */}
             <span className="hidden xl:flex items-center">
-              <LaatutakuuBadge height={LAATUTAKUU_HEIGHT} />
+              <LaatutakuuBadge height={EMPHASIS_HEIGHT} />
             </span>
 
             {/* CTA Button */}
@@ -158,7 +158,7 @@ export default function Header() {
               href="/order"
               className="bg-primary-dark hover:bg-primary-darker text-white flex items-center justify-center rounded-lg font-medium transition-all duration-300"
               style={{
-                height: CONTROL_HEIGHT,
+                height: EMPHASIS_HEIGHT,
                 padding: "0 0.875rem",
                 fontSize: "0.875rem",
               }}
@@ -311,7 +311,7 @@ export default function Header() {
                 className="bg-primary-dark hover:bg-primary-darker text-white flex items-center justify-center rounded-xl font-medium transition-all duration-300"
                 style={{
                   marginTop: "1rem",
-                  height: MOBILE_CONTROL_HEIGHT,
+                  height: MOBILE_EMPHASIS_HEIGHT,
                   padding: "0 2rem",
                 }}
               >
@@ -362,7 +362,7 @@ export default function Header() {
                 className="flex justify-center"
                 style={{ paddingTop: "0.75rem" }}
               >
-                <LaatutakuuBadge height={LAATUTAKUU_MOBILE_HEIGHT} />
+                <LaatutakuuBadge height={MOBILE_EMPHASIS_HEIGHT} />
               </div>
             </div>
           </div>
