@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const LAATUTAKUU_URL = "https://laatutakuu.fi/siivousote/";
+export const LAATUTAKUU_URL = "https://laatutakuu.fi/siivousote/";
 
 // Laatutakuu-ketjun virallinen logo on valkoinen, joten se asetetaan ketjun
 // brändivärisen pillerin päälle. Näin logoa ei tarvitse värittää uudelleen ja

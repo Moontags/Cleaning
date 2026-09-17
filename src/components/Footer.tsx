@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import LaatutakuuBadge from "./LaatutakuuBadge";
+import { LAATUTAKUU_URL } from "./LaatutakuuBadge";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -93,17 +93,24 @@ export default function Footer() {
                   {t('nav.responsibility')}
                 </Link>
               </li>
+              {/* Footerissa ketjujäsenyys on pelkkä tekstilinkki muiden
+                  linkkien joukossa - logopilleri veti täällä liikaa huomiota.
+                  Näkyvä teksti on lyhyt, joten koko nimi jää title-attribuuttiin. */}
+              <li>
+                <a
+                  href={LAATUTAKUU_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={t('laatutakuu.alt')}
+                  className={linkClass}
+                >
+                  Laatutakuu
+                </a>
+              </li>
               <li>
                 <span className="text-xs text-[#6e6557]">
                   Y-tunnus: 2166541-5
                 </span>
-              </li>
-              {/* Badge on omalla rivillään, joten sillä ei ole samalla rivillä
-                  olevia elementtejä joihin korkeus pitäisi sovittaa. Sarakkeen
-                  tekstirivit ovat 16 px, joten badge pidetään maltillisena -
-                  tätä pienemmällä logon alarivi ei enää ole luettavissa. */}
-              <li style={{ marginTop: '0.375rem' }}>
-                <LaatutakuuBadge height={30} />
               </li>
             </ul>
           </div>
