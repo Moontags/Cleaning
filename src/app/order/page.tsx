@@ -66,6 +66,7 @@ export default function OrderPage() {
   };
 
   const services = [
+    { value: "machine_floor_cleaning", label: t("order.form.service.floor") },
     { value: "office", label: t("order.form.service.office") },
     { value: "business", label: t("order.form.service.business") },
     { value: "industrial", label: t("order.form.service.industrial") },
@@ -110,8 +111,7 @@ export default function OrderPage() {
           )}
           <form
             onSubmit={handleSubmit}
-            className="bg-white rounded-xl border border-gray-100"
-            style={{ padding: "2rem" }}
+            className="bg-white rounded-xl border border-gray-100 p-4 sm:p-8"
           >
             {/* Company Name */}
             <div style={{ marginBottom: "1.5rem" }}>
@@ -224,7 +224,7 @@ export default function OrderPage() {
                 value={formData.service}
                 onChange={handleChange}
                 required
-                className="w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white"
+                className="w-full min-w-0 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white"
                 style={{ padding: "0.75rem 1rem" }}
               >
                 {/* KORJAUS: Oletusvalinnan teksti käännettäväksi */}

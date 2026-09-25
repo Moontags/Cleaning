@@ -32,6 +32,7 @@ export async function sendContactEmail(data: ContactEmailData) {
 
   // Service type labels
   const serviceLabels: Record<string, string> = {
+    'machine_floor_cleaning': 'Lattioiden koneellinen pesu / Machine floor cleaning',
     'office': 'Toimistosiivoukset / Office Cleaning',
     'business': 'Liiketilojen siivous / Commercial Cleaning',
     'industrial': 'Teollisuussiivoukset / Industrial Cleaning',

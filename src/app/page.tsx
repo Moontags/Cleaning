@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Building2, Store, Factory, Home, Construction } from "lucide-react";
+import { Building2, Store, Factory, Home, Construction, Sparkles } from "lucide-react";
 import Hero from "@/components/Hero";
 import WhyChoose from "@/components/WhyChoose";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -10,6 +10,7 @@ export default function HomePage() {
   const { t } = useLanguage();
 
   const services = [
+    { icon: Sparkles, title: t("services.floor.title"), description: t("services.floor.desc"), href: "/services/machine-floor-cleaning" },
     {
       icon: Building2,
       title: t("services.office.title"),
@@ -59,7 +60,7 @@ export default function HomePage() {
         style={{ marginTop: "-3rem" }}
       >
         <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           style={{ gap: "1.5rem" }}
         >
           {services.map((service, index) => (

@@ -17,6 +17,24 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 // Käännökset
 const translations = {
   fi: {
+    "services.floor.title": "Lattioiden koneellinen pesu",
+    "services.floor.desc": "Kovien, pesunkestävien lattioiden koneellinen pesu toimistoihin, myymälöihin ja muihin toimitiloihin.",
+    "service.floor.subtitle": "Huolellista lattianpesua toimitilasi tarpeisiin.",
+    "service.floor.intro": "Koneellinen lattianpesu sopii esimerkiksi toimistojen, myymälöiden ja muiden toimitilojen koville, pesunkestäville lattioille. Arvioimme lattian soveltuvuuden käsittelyyn ennen työn aloittamista.",
+    "service.floor.method.title": "Lattian mukaan valittu menetelmä",
+    "service.floor.method.desc": "Valitsemme pesumenetelmän, välineet ja puhdistusaineet lattiamateriaalin ja lattian kunnon mukaan. Työn laajuus ja aikataulu sovitaan kohdekohtaisesti.",
+    "service.floor.scope.title": "Selkeästi sovittu työn sisältö",
+    "service.floor.scope.desc": "Konepesu ei sisällä vanhan vahan poistoa tai vahausta. Vahanpoisto ja vahaus ovat erikseen arvioitavia ja sovittavia töitä. Kaikki lattiamateriaalit eivät sovellu konepesuun.",
+    "service.floor.quote.title": "Pyydä tarjous lattioiden koneelliseen pesuun",
+    "service.floor.quote.desc": "Kerro tilan käyttötarkoitus, sijainti, arvioitu pinta-ala sekä lattiamateriaali ja kunto, jos ne ovat tiedossasi. Arvioimme sopivan toteutuksen ja työn hinnan.",
+    "service.floor.cta": "Pyydä tarjous",
+    "pricing.floor.from": "Alkaen 195 € + alv",
+    "pricing.floor.consumer": "Alkaen 244,73 € sis. alv 25,5 %",
+    "pricing.floor.minimum": "3 tunnin vähimmäisveloitus",
+    "pricing.floor.extra": "Lisätyö 65 €/h + alv",
+    "pricing.floor.details": "Tutustu palveluun",
+    "order.form.service.floor": "Lattioiden koneellinen pesu",
+
     // Navigaatio
     "nav.home": "Palvelumme",
     "nav.about": "Tarinamme",
@@ -560,6 +578,24 @@ const translations = {
     "service.construction.cta.button": "Tilaa siivous",
   },
   en: {
+    "services.floor.title": "Machine floor cleaning",
+    "services.floor.desc": "Machine cleaning for hard, washable floors in offices, shops and other business premises.",
+    "service.floor.subtitle": "Careful floor cleaning tailored to your premises.",
+    "service.floor.intro": "Machine floor cleaning is suitable for hard, washable floors in offices, shops and other business premises. We assess whether the floor is suitable for the treatment before starting work.",
+    "service.floor.method.title": "A method suited to your floor",
+    "service.floor.method.desc": "We select the cleaning method, equipment and cleaning agents according to the floor material and its condition. The scope and schedule are agreed for each site.",
+    "service.floor.scope.title": "A clearly agreed scope of work",
+    "service.floor.scope.desc": "Machine cleaning does not include stripping old wax or waxing. Wax stripping and waxing are assessed and agreed separately. Not all floor materials are suitable for machine cleaning.",
+    "service.floor.quote.title": "Request a quote for machine floor cleaning",
+    "service.floor.quote.desc": "Tell us the type of premises, location, approximate floor area, and the floor material and condition if known. We will assess the appropriate method and price.",
+    "service.floor.cta": "Request a quote",
+    "pricing.floor.from": "From €195 + VAT",
+    "pricing.floor.consumer": "From €244.73 incl. 25.5% VAT",
+    "pricing.floor.minimum": "Minimum charge: 3 hours",
+    "pricing.floor.extra": "Additional work: €65/hour + VAT",
+    "pricing.floor.details": "Explore the service",
+    "order.form.service.floor": "Machine floor cleaning",
+
     // Navigation
     "nav.home": "Services",
     "nav.about": "Our Story",

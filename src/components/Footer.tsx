@@ -122,6 +122,11 @@ export default function Footer() {
             </h4>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.375rem' }}>
               <li>
+                <Link href="/services/machine-floor-cleaning" className={linkClass}>
+                  {t("services.floor.title")}
+                </Link>
+              </li>
+              <li>
                 <Link href="/services/office-cleaning" className={linkClass}>
                   {t('services.office.title')}
                 </Link>

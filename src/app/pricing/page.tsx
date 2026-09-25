@@ -15,6 +15,7 @@ import {
 import { useLanguage } from "@/contexts/LanguageContext";
 import Hero from "@/components/Hero";
 import Card from "@/components/Card";
+import FloorCleaningPrice from "@/components/FloorCleaningPrice";
 
 export default function PricingPage() {
   const { t } = useLanguage();
@@ -138,9 +139,10 @@ export default function PricingPage() {
         style={{ marginTop: "-3rem" }}
       >
         <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           style={{ gap: "1.25rem" }}
         >
+          <FloorCleaningPrice showDetails />
           {pricingPlans.map((plan, index) => (
             <Card
               key={index}

@@ -36,6 +36,7 @@ export default function Header() {
   ];
 
   const services = [
+    { name: t("services.floor.title"), href: "/services/machine-floor-cleaning" },
     { name: t("services.office.title"), href: "/services/office-cleaning" },
     {
       name: t("services.business.title"),
@@ -90,6 +91,7 @@ export default function Header() {
                 onMouseLeave={() => setDesktopServicesOpen(false)}
               >
                 <button
+                  onClick={() => setDesktopServicesOpen(!desktopServicesOpen)}
                   aria-haspopup="true"
                   aria-expanded={desktopServicesOpen}
                   className="relative text-base font-medium transition-all duration-300 whitespace-nowrap text-gray-700 hover:text-primary-dark flex items-center gap-1"
@@ -227,7 +229,7 @@ export default function Header() {
         {/* Mobile Navigation - Modernisoidtu */}
         {isMenuOpen && (
           <div
-            className="lg:hidden border-t border-gray-100 bg-white/95 backdrop-blur-sm rounded-b-2xl"
+            className="lg:hidden max-h-[calc(100dvh-6rem)] overflow-y-auto border-t border-gray-100 bg-white/95 backdrop-blur-sm rounded-b-2xl"
             style={{
               paddingTop: "1rem",
               paddingBottom: "1rem",
