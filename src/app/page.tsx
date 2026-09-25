@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Building2, Store, Factory, Home, Construction, Sparkles, ArrowRight } from "lucide-react";
+import { Building2, Store, Factory, Home, Construction, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import WhyChoose from "@/components/WhyChoose";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -10,7 +10,6 @@ export default function HomePage() {
   const { t } = useLanguage();
 
   const services = [
-    { icon: Sparkles, title: t("services.floor.title"), description: t("services.floor.desc"), image: "/images/d0-431.avif", href: "/services/machine-floor-cleaning" },
     {
       icon: Building2,
       title: t("services.office.title"),
@@ -88,14 +87,14 @@ export default function HomePage() {
           <p className="text-body">{t("home.services.intro")}</p>
         </div>
         <div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6"
           style={{ gap: "1.5rem" }}
         >
           {services.map((service, index) => (
             <Link
               key={index}
               href={service.href}
-              className="group relative flex flex-col rounded-2xl border border-gray-200 bg-white overflow-hidden transition-shadow duration-300 hover:shadow-lg"
+              className={`group relative flex flex-col rounded-2xl border border-gray-200 bg-white overflow-hidden transition-shadow duration-300 hover:shadow-lg ${index < 2 ? "lg:col-span-3" : "lg:col-span-2"}`}
             >
               <div className="relative aspect-[16/9] overflow-hidden bg-white">
                 <Image src={service.image} alt="" fill sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" className={service.href.endsWith("machine-floor-cleaning") ? "object-contain p-4" : "object-cover transition-transform duration-300 group-hover:scale-105"} />
