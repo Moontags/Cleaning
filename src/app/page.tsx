@@ -29,14 +29,14 @@ export default function HomePage() {
       title: t("services.industrial.title"),
       description: t("services.industrial.desc"),
       href: "/services/industrial-cleaning",
-      image: "/images/teollisuus.webp",
+      image: "/images/teollisuussiivous.jpeg",
     },
     {
       icon: Construction,
       title: t("services.construction_end.title"),
       description: t("services.construction_end.desc"),
       href: "/services/post-construction-cleaning",
-      image: "/images/loppusiivous.webp",
+      image: "/images/loppusiivous.jpeg",
     },
     {
       icon: Home,
