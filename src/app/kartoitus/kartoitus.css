@@ -148,7 +148,7 @@
 
 .k-input:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 2px rgba(0, 149, 73, 0.25);
+  box-shadow: 0 0 0 2px rgba(87, 69, 53, 0.25);
 }
 
 .k-input--inline {

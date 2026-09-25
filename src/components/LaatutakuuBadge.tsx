@@ -5,15 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export const LAATUTAKUU_URL = "https://laatutakuu.fi/siivousote/";
 
-// Laatutakuu-ketjun virallinen logo on valkoinen, joten se asetetaan ketjun
-// brändivärisen pillerin päälle. Näin logoa ei tarvitse värittää uudelleen ja
-// se toimii sivuston vaaleilla taustoilla.
-//
-// Väri on tarkoituksella kirjoitettu tähän eikä otettu --color-primary
-// -muuttujasta: tämä on Laatutakuun brändiväri ja sen pitää pysyä vihreänä,
-// vaikka sivuston oma pääväri joskus vaihdettaisiin.
-const LAATUTAKUU_GREEN = "#009549";
-
+// Valkoinen logo säilyy alkuperäisenä sivuston neutraalilla taustalla.
 const LOGO_ASPECT = 283.5 / 99;
 
 // Logo saa noin 56 % badgen korkeudesta, loput on pystypaddingia. Kokoa
@@ -52,7 +44,7 @@ export default function LaatutakuuBadge({
       style={{
         height,
         padding: `${paddingY}px ${paddingX}px`,
-        backgroundColor: LAATUTAKUU_GREEN,
+        backgroundColor: "var(--color-primary-dark)",
       }}
     >
       <Image

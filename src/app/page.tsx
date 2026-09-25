@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Building2, Store, Factory, Home, Construction, Sparkles } from "lucide-react";
-import Hero from "@/components/Hero";
+import { Building2, Store, Factory, Home, Construction, Sparkles, ArrowRight } from "lucide-react";
+import Image from "next/image";
 import WhyChoose from "@/components/WhyChoose";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -10,55 +10,83 @@ export default function HomePage() {
   const { t } = useLanguage();
 
   const services = [
-    { icon: Sparkles, title: t("services.floor.title"), description: t("services.floor.desc"), href: "/services/machine-floor-cleaning" },
+    { icon: Sparkles, title: t("services.floor.title"), description: t("services.floor.desc"), image: "/images/d0-431.avif", href: "/services/machine-floor-cleaning" },
     {
       icon: Building2,
       title: t("services.office.title"),
       description: t("services.office.desc"),
       href: "/services/office-cleaning",
+      image: "/images/toimisto.webp",
     },
     {
       icon: Store,
       title: t("services.business.title"),
       description: t("services.business.desc"),
       href: "/services/commercial-cleaning",
+      image: "/images/liiketila.webp",
     },
     {
       icon: Factory,
       title: t("services.industrial.title"),
       description: t("services.industrial.desc"),
       href: "/services/industrial-cleaning",
+      image: "/images/teollisuus.webp",
     },
     {
       icon: Construction,
       title: t("services.construction_end.title"),
       description: t("services.construction_end.desc"),
       href: "/services/post-construction-cleaning",
+      image: "/images/loppusiivous.webp",
     },
     {
       icon: Home,
       title: t("services.home_cleaning.title"),
       description: t("services.home_cleaning.desc"),
       href: "/services/home-cleaning",
+      image: "/images/kotisiivous.webp",
     },
   ];
 
   return (
     <div>
-      <Hero
-        variant="main"
-        title={t("home.hero.title")}
-        subtitle={t("home.hero.subtitle")}
-        imageSrc="/images/kitchen.png"
-        imageAlt={t("home.hero.title")}
-        imagePriority
-      />
+      <section className="border-b border-gray-200 bg-linear-to-br from-gray-100 via-[#faf8f3] to-white">
+        <div className="section-container grid items-center gap-10 py-12 md:py-16 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
+          <div>
+            <p className="mb-5 text-sm font-semibold uppercase tracking-widest text-primary-dark">{t("home.floor.eyebrow")}</p>
+            <h1 className="text-4xl font-bold leading-tight tracking-tight text-gray-800 sm:text-5xl lg:text-6xl">{t("home.floor.title")}</h1>
+            <p className="text-body mt-6 max-w-xl">{t("home.floor.description")}</p>
+            <div className="my-7 border-l-2 border-primary-light pl-5">
+              <p className="text-2xl font-bold text-primary-dark">{t("pricing.floor.from")}</p>
+              <p className="mt-1 text-sm text-gray-600">{t("pricing.floor.consumer")}</p>
+              <p className="mt-1 text-sm text-gray-600">{t("pricing.floor.minimum")}</p>
+            </div>
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Link href="/services/machine-floor-cleaning" className="btn-primary inline-flex items-center justify-center gap-2 text-center">
+                {t("home.floor.explore")}<ArrowRight className="h-4 w-4 shrink-0" aria-hidden="true" />
+              </Link>
+              <Link href="/order" className="btn-secondary inline-flex items-center justify-center text-center">{t("service.floor.cta")}</Link>
+            </div>
+          </div>
+          <figure className="relative rounded-3xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+            <Image src="/images/d0-431.avif" alt={t("service.floor.equipment.alt")} width={1200} height={1200} priority sizes="(max-width: 1023px) 90vw, 45vw" className="h-64 w-full object-contain sm:h-80 lg:h-96" />
+            <figcaption className="mt-4 border-t border-gray-100 pt-4 text-center">
+              <p className="text-sm font-semibold text-gray-800">Kärcher K-Mop 46 Bp Pack</p>
+              <p className="mt-1 text-sm text-gray-600">{t("home.floor.caption")}</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
 
-      {/* Services Section - Glassmorphism kortit - MARGIN KORJATTU */}
+      {/* Other services remain easy to find below the main service. */}
       <section
         className="section-container section-padding"
-        style={{ marginTop: "-3rem" }}
+        aria-labelledby="home-services-title"
       >
+        <div className="mb-8 max-w-2xl">
+          <h2 id="home-services-title" className="heading-2">{t("home.services.heading")}</h2>
+          <p className="text-body">{t("home.services.intro")}</p>
+        </div>
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           style={{ gap: "1.5rem" }}
@@ -67,13 +95,15 @@ export default function HomePage() {
             <Link
               key={index}
               href={service.href}
-              className="group relative bg-white/80 backdrop-blur-sm rounded-2xl transition-all duration-300 border border-gray-100 overflow-hidden block"
-              style={{ padding: "1.75rem" }}
+              className="group relative flex flex-col rounded-2xl border border-gray-200 bg-white overflow-hidden transition-shadow duration-300 hover:shadow-lg"
             >
+              <div className="relative aspect-[16/9] overflow-hidden bg-white">
+                <Image src={service.image} alt="" fill sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw" className={service.href.endsWith("machine-floor-cleaning") ? "object-contain p-4" : "object-cover transition-transform duration-300 group-hover:scale-105"} />
+              </div>
               {/* Hover gradient overlay */}
               <div className="absolute inset-0 bg-linear-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-              <div className="relative z-10">
+              <div className="relative z-10 flex flex-1 flex-col p-6">
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-gray-100 text-primary group-hover:bg-gray-200 transition-colors"
                 >
@@ -88,6 +118,7 @@ export default function HomePage() {
                 <p className="text-gray-600 leading-relaxed text-sm">
                   {service.description}
                 </p>
+                <span className="mt-auto flex items-center gap-2 pt-5 text-sm font-semibold text-primary-dark">{t("home.services.more")}<ArrowRight className="h-4 w-4" aria-hidden="true" /></span>
               </div>
 
               {/* Dekoratiivinen elementti */}

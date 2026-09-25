@@ -1,22 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  /* Pääväri: Laatutakuu-ketjun brändivihreä.
-     Taustat ja tekstivärit pysyvät lämpimässä greige-paletissa (ks. alla).
-
-     Sävyn valinta kontrastin mukaan (WCAG AA):
-     - --color-primary (#009549) vain grafiikkaan: ikonit, reunat, koristeet,
-       gradienttien vaalea pää. Valkoinen tämän päällä on 3.9:1, mikä riittää
-       graafisille elementeille (3:1) mutta EI leipätekstille (4.5:1).
-     - --color-primary-dark (#00803f) aina kun mukana on tekstiä: valkoinen
-       teksti sen päällä 5.1:1, vihreä teksti vaalealla taustalla 4.8:1.
-     - --color-primary-darker / -darkest hover-tiloihin ja gradienttien
-       tummaan päähän. */
-  --color-primary: #009549;
-  --color-primary-dark: #00803f;
-  --color-primary-darker: #00682f;
-  --color-primary-darkest: #005527;
-  --color-primary-light: #00b457;
+  /* Lämmin ruskea pääväri täydentää sivuston greige-pohjaa. */
+  --color-primary: #78644f;
+  --color-primary-dark: #574535;
+  --color-primary-darker: #403226;
+  --color-primary-darkest: #2b241e;
+  --color-primary-light: #b7a38a;
 
   /* Tekstivärit */
   --color-text-dark: #221e19;
@@ -223,4 +213,12 @@ a:focus-visible {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #655c4e;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

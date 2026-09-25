@@ -167,8 +167,8 @@ export default function ContactPage() {
                     <div
                       className={`${card.iconBg} w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-transform duration-300`}
                       style={{
-                        background: "linear-gradient(135deg,#00803f,#009549)",
-                        boxShadow: "0 6px 14px rgba(0,149,73,0.08)",
+                        background: "linear-gradient(135deg,var(--color-primary-dark),var(--color-primary))",
+                        boxShadow: "0 6px 14px rgba(87,69,53,0.12)",
                       }}
                     >
                       <card.icon className="h-6 w-6 text-white" />
