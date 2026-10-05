@@ -26,12 +26,12 @@ export default function MachineFloorCleaningPage() {
               <h2 className="heading-2">{t("service.floor.equipment.title")}</h2>
               <p className="text-body">{t("service.floor.intro")}</p>
             </div>
-            <figure className="rounded-2xl border border-gray-200 bg-white p-6">
+            <figure className="rounded-2xl border border-gray-200 p-6">
               <Image
-                src="/images/d0-431.avif"
+                src="/images/k.png"
                 alt={t("service.floor.equipment.alt")}
-                width={1200}
-                height={1200}
+                width={500}
+                height={500}
                 sizes="(max-width: 767px) 100vw, 50vw"
                 className="mx-auto h-72 w-full object-contain md:h-96"
               />

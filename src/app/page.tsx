@@ -67,8 +67,8 @@ export default function HomePage() {
               <Link href="/order" className="btn-secondary inline-flex items-center justify-center text-center">{t("service.floor.cta")}</Link>
             </div>
           </div>
-          <figure className="relative rounded-3xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
-            <Image src="/images/d0-431.avif" alt={t("service.floor.equipment.alt")} width={1200} height={1200} priority sizes="(max-width: 1023px) 90vw, 45vw" className="h-64 w-full object-contain sm:h-80 lg:h-96" />
+          <figure className="relative rounded-3xl p-6 sm:p-8">
+            <Image src="/images/k.png" alt={t("service.floor.equipment.alt")} width={500} height={500} priority sizes="(max-width: 1023px) 90vw, 45vw" className="h-64 w-full object-contain sm:h-80 lg:h-96" />
             <figcaption className="mt-4 border-t border-gray-100 pt-4 text-center">
               <p className="text-sm font-semibold text-gray-800">Kärcher K-Mop 46 Bp Pack</p>
               <p className="mt-1 text-sm text-gray-600">{t("home.floor.caption")}</p>
