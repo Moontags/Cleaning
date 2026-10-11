@@ -37,6 +37,7 @@ export async function sendContactEmail(data: ContactEmailData) {
     'business': 'Liiketilojen siivous / Commercial Cleaning',
     'industrial': 'Teollisuussiivoukset / Industrial Cleaning',
     'home_cleaning': 'Kotisiivous / Home Cleaning',
+    'textile': 'Tekstiilipesu (sohvat, matot, auton penkit) / Upholstery cleaning (sofas, rugs, car seats)',
     'other': 'Muu palvelu / Other Service',
   };
   const serviceLabel = serviceLabels[service] || service;

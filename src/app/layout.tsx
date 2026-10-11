@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Luotettava kumppanisi puhtauden ylläpidossa. Keskitymme yritysten, toimistojen ja yhteisöjen siivouspalveluihin ammattitaidolla ja luotettavuudella.",
   keywords:
-    "siivousote, siivous, yrityssiivous, toimistosiivoukset, liiketilat, teollisuussiivous, siivouspalvelu, ammattisiivous, siivousyritys", 
+    "siivousote, siivous, yrityssiivous, toimistosiivoukset, liiketilat, teollisuussiivous, siivouspalvelu, ammattisiivous, siivousyritys, tekstiilipesu, sohvan pesu, sohvanpesu, auton penkkien pesu",
 
   // Open Graph -tiedot (Facebook, LinkedIn jne.)
   openGraph: {

@@ -1,12 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { Send, CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Hero from "@/components/Hero";
 
 export default function OrderPage() {
+  return (
+    <Suspense>
+      <OrderFromQuery />
+    </Suspense>
+  );
+}
+
+function OrderFromQuery() {
+  const searchParams = useSearchParams();
+  const service = searchParams.get("service") || "";
+  return <OrderForm key={service} initialService={service} />;
+}
+
+function OrderForm({ initialService }: { initialService: string }) {
   const { t } = useLanguage();
+  const services = [
+    { value: "machine_floor_cleaning", label: t("order.form.service.floor") },
+    { value: "office", label: t("order.form.service.office") },
+    { value: "business", label: t("order.form.service.business") },
+    { value: "industrial", label: t("order.form.service.industrial") },
+    { value: "home_cleaning", label: t("order.form.service.home_cleaning") },
+    { value: "textile", label: t("order.form.service.textile") },
+    { value: "other", label: t("order.form.service.other") },
+  ];
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -15,7 +39,9 @@ export default function OrderPage() {
     contact: "",
     email: "",
     phone: "",
-    service: "",
+    service: services.some((service) => service.value === initialService)
+      ? initialService
+      : "",
     message: "",
   });
 
@@ -64,15 +90,6 @@ export default function OrderPage() {
       setIsLoading(false);
     }
   };
-
-  const services = [
-    { value: "machine_floor_cleaning", label: t("order.form.service.floor") },
-    { value: "office", label: t("order.form.service.office") },
-    { value: "business", label: t("order.form.service.business") },
-    { value: "industrial", label: t("order.form.service.industrial") },
-    { value: "home_cleaning", label: t("order.form.service.home_cleaning") },
-    { value: "other", label: t("order.form.service.other") },
-  ];
 
   if (isSubmitted) {
     return (

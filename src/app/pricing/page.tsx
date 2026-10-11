@@ -168,6 +168,9 @@ export default function PricingPage() {
           <p className="text-gray-600 text-base">
             {t("pricing.window_cleaning_info")}
           </p>
+          <p className="text-gray-600 text-base" style={{ marginTop: "1rem" }}>
+            {t("pricing.textile_info")}
+          </p>
         </div>
       </section>
 

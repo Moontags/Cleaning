@@ -17,6 +17,14 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 // Käännökset
 const translations = {
   fi: {
+    "service.home.what.item9": "Sohvien, nojatuolien ja muiden tekstiilien pesu (lisäpalvelu)",
+    "service.home.textile.title": "Tekstiilipesu – sohvat, patjat ja auton penkit",
+    "service.home.textile.text": "Pesemme kodin tekstiilipinnat painehuuhtelumenetelmällä paikan päällä. Menetelmä irrottaa lian, tahrat ja hajut syvältä kuiduista. Sopii sohville, nojatuoleille, pehmustetuille tuoleille, patjoille, matoille ja auton penkeille. Palvelun voi tilata erikseen tai kotisiivouksen yhteydessä.",
+    "service.home.textile.note": "Kotona tehty tekstiilipesu oikeuttaa kotitalousvähennykseen. Tarkistamme aina ennen pesua, että materiaali kestää märkäpuhdistuksen.",
+    "service.home.textile.button": "Pyydä tarjous",
+    "pricing.textile_info": "* Tekstiilipesu (sohvat, nojatuolit, patjat, auton penkit): esim. nojatuoli alkaen 49 €, 3-istuttava sohva alkaen 109 €. Tarkka hinta tarjouksella.",
+    "order.form.service.textile": "Tekstiilipesu (sohvat, matot, auton penkit)",
+
     "services.floor.title": "Lattioiden koneellinen pesu",
     "services.floor.desc": "Kovien, pesunkestävien lattioiden koneellinen pesu toimistoihin, myymälöihin ja muihin toimitiloihin.",
     "service.floor.subtitle": "Huolellista lattianpesua toimitilasi tarpeisiin.",
@@ -605,6 +613,14 @@ const translations = {
     "service.construction.cta.button": "Tilaa siivous",
   },
   en: {
+    "service.home.what.item9": "Washing of sofas, armchairs and other upholstery (add-on service)",
+    "service.home.textile.title": "Upholstery cleaning – sofas, mattresses and car seats",
+    "service.home.textile.text": "We clean your home textiles on site using spray extraction. The method lifts dirt, stains and odours from deep within the fibres. Suitable for sofas, armchairs, upholstered chairs, mattresses, rugs and car seats. Available on its own or together with home cleaning.",
+    "service.home.textile.note": "Upholstery cleaning done in your home qualifies for the Finnish household tax deduction. We always check that the fabric tolerates wet cleaning before we start.",
+    "service.home.textile.button": "Request a quote",
+    "pricing.textile_info": "* Upholstery cleaning (sofas, armchairs, mattresses, car seats): e.g. armchair from €49, 3-seater sofa from €109. Exact price on request.",
+    "order.form.service.textile": "Upholstery cleaning (sofas, rugs, car seats)",
+
     "services.floor.title": "Machine floor cleaning",
     "services.floor.desc": "Machine cleaning for hard, washable floors in offices, shops and other business premises.",
     "service.floor.subtitle": "Careful floor cleaning tailored to your premises.",

@@ -42,6 +42,7 @@ export default function HomeCleaningPage() {
     t("service.home.what.item6"),
     t("service.home.what.item7"),
     t("service.home.what.item8"),
+    t("service.home.what.item9"),
   ];
 
   const options = [
@@ -161,6 +162,28 @@ export default function HomeCleaningPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Upholstery cleaning add-on */}
+      <section
+        className="section-container"
+        style={{ paddingTop: "4rem", paddingBottom: "4rem" }}
+      >
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#36302a] mb-6">
+            {t("service.home.textile.title")}
+          </h2>
+          <p className="text-lg text-gray-700 leading-relaxed mb-4">
+            {t("service.home.textile.text")}
+          </p>
+          <p className="text-sm text-gray-600 leading-relaxed mb-8">
+            {t("service.home.textile.note")}
+          </p>
+          <Link href="/order?service=textile" className="btn-primary inline-flex items-center gap-2">
+            {t("service.home.textile.button")}
+            <ArrowRight className="w-5 h-5" />
+          </Link>
         </div>
       </section>
 
