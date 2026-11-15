@@ -10,16 +10,16 @@ export default function ResponsibilityPage() {
     <div className="min-h-screen bg-surface">
       <div className="max-w-4xl mx-auto px-6 py-12">
         <header className="border-b border-gray-200 pb-6 mb-8">
-          <div className="flex items-center gap-6 mb-4">
+          <div className="flex flex-col items-start gap-4 mb-4 sm:flex-row sm:items-center sm:gap-6">
             <Image
               src="/images/siivousote_logo_550x550.png"
               alt="Siivousote logo"
               width={120}
               height={120}
-              className="rounded-lg"
+              className="h-24 w-24 shrink-0 rounded-lg object-contain sm:h-[120px] sm:w-[120px]"
             />
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">
+            <div className="min-w-0">
+              <h1 className="text-3xl font-bold text-gray-900 mb-2 break-words">
                 {t('responsibility.title')}
               </h1>
               <p className="text-gray-600">
