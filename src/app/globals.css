@@ -231,8 +231,8 @@ a:focus-visible {
 /* Floor-cleaning campaign — real work, warm neutrals and a clear next step. */
 .floor-campaign-hero { position: relative; isolation: isolate; overflow: hidden; background: #f3eee5; border-bottom: 1px solid #e7ded0; }
 .floor-campaign-hero-background { position: absolute; inset: 0; z-index: -1; }
-.floor-campaign-hero-background img { object-position: center; }
-.floor-campaign-hero-background::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #f3eee5fa 0%, #f3eee5ed 30%, #f3eee5a6 52%, #2b241e33 100%); }
+.floor-campaign-hero-background img { object-position: center 28%; }
+.floor-campaign-hero-background::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, #f3eee5e0 0%, #f3eee5bd 30%, #f3eee559 52%, #2b241e14 100%); }
 .floor-campaign-hero-grid { position: relative; display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; min-height: 640px; padding-block: 80px 64px; }
 .floor-campaign-hero-caption { align-self: end; justify-self: end; max-width: 320px; padding: 20px 24px; border-radius: 12px; color: #36302a; background: transparent; }
 .floor-campaign-hero-caption strong { font-size: clamp(22px, 2.5vw, 32px); line-height: 1.2; font-weight: 600; }
@@ -310,8 +310,8 @@ a:focus-visible {
   .floor-campaign-copy h1 { font-size: clamp(37px, 8.5vw, 54px); }
   .floor-campaign-eyebrow { font-size: 10px; margin-bottom: 16px; }
   .floor-campaign-lead { margin-block: 22px; font-size: 15px; line-height: 1.8; }
-  .floor-campaign-hero-background img { object-position: 65% center; }
-  .floor-campaign-hero-background::after { background: linear-gradient(90deg, #f3eee5f5, #f3eee5d9 65%, #f3eee599); }
+  .floor-campaign-hero-background img { object-position: 65% 28%; }
+  .floor-campaign-hero-background::after { background: linear-gradient(90deg, #f3eee5d1, #f3eee5a3 65%, #f3eee552); }
   .floor-campaign-hero-caption { justify-self: start; max-width: 100%; padding: 14px 18px; }
   .floor-campaign-hero-grid { min-height: auto; }
   .floor-campaign-assurances { gap: 12px; padding-block: 18px; }
