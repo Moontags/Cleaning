@@ -20,7 +20,7 @@ export function FloorCleaningHero() {
           <h1 id="floor-campaign-title">{t("campaign.hero.title")}<br /><span>{t("campaign.hero.titleAccent")}</span></h1>
           <p className="floor-campaign-lead">{t("campaign.hero.description")}</p>
           <div className="floor-campaign-actions">
-            <Link href={quoteHref} className="btn-primary floor-campaign-button">{t("campaign.quote")}<ArrowUpRight size={19} aria-hidden="true" /></Link>
+            <Link href={quoteHref} className="btn-primary floor-campaign-button">{t("campaign.quote")}</Link>
             <a href="#tyon-jalki" className="floor-campaign-text-link">{t("campaign.seeResults")}<ArrowDown size={17} aria-hidden="true" /></a>
           </div>
           <div className="floor-campaign-price">
@@ -105,8 +105,8 @@ export function FloorCleaningGallery() {
   const photos = [{src:"/images/siivous-tyovaihe.jpeg",key:"preparation"}, {src:"/images/puhdas-lattia.jpeg",key:"finish"}, {src:"/images/toimiston-lattia.png",key:"office"}];
   return (
     <section className="section-container floor-campaign-section floor-campaign-gallery" aria-labelledby="floor-gallery-title">
-      <div className="floor-campaign-section-heading"><div><p className="floor-campaign-eyebrow">{t("campaign.gallery.eyebrow")}</p><h2 id="floor-gallery-title">{t("campaign.gallery.title")}</h2></div><p>{t("campaign.gallery.description")}</p></div>
-      <div className="floor-campaign-gallery-grid">{photos.map(({src,key})=><figure key={key}><div className="floor-campaign-gallery-image"><Image src={src} alt={t(`campaign.gallery.${key}.alt`)} fill sizes={key === "preparation" ? "(max-width: 767px) 100vw, 55vw" : "(max-width: 767px) 100vw, 45vw"} className="floor-campaign-cover" /></div><figcaption><span>{t(`campaign.gallery.${key}.label`)}</span><h3>{t(`campaign.gallery.${key}.title`)}</h3></figcaption></figure>)}</div>
+      <div className="floor-campaign-section-heading"><div><h2 id="floor-gallery-title">{t("campaign.gallery.title")}</h2></div><p>{t("campaign.gallery.description")}</p></div>
+      <div className="floor-campaign-gallery-grid">{photos.map(({src,key})=><figure key={key} className={key === "office" ? "self-end" : undefined}><div className="floor-campaign-gallery-image"><Image src={src} alt={t(`campaign.gallery.${key}.alt`)} fill sizes={key === "preparation" ? "(max-width: 767px) 100vw, 55vw" : "(max-width: 767px) 100vw, 45vw"} className="floor-campaign-cover" /></div><figcaption><span>{t(`campaign.gallery.${key}.label`)}</span><h3>{t(`campaign.gallery.${key}.title`)}</h3></figcaption></figure>)}</div>
     </section>
   );
 }
