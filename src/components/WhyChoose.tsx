@@ -26,25 +26,20 @@ export default function WhyChoose() {
       title: t("why.flexible.title"),
       desc: t("why.flexible.desc"),
     },
-    {
-      key: "chain",
-      title: t("why.chain.title"),
-      desc: t("why.chain.desc"),
-    },
   ];
 
   return (
-    <section className="bg-[#faf8f3] border-t border-[#e7ded0]">
-      <div className="section-container py-16">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-[#36302a] mb-6">
+    <section className="home-why">
+      <div className="section-container home-why-inner">
+        <h2 className="home-why-title">
           {t("why.title")}
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="home-why-grid">
           {items.map((it) => (
             <div
               key={it.key}
-              className="bg-white border border-[#e7ded0] p-4 rounded-[10px] min-h-[120px] flex flex-col"
+              className="home-why-item"
             >
               <h3 className="text-[#36302a] font-medium text-base mb-1.5">{it.title}</h3>
               <p className="text-[#6e6557] text-sm flex-1 leading-relaxed">{it.desc}</p>
@@ -52,7 +47,6 @@ export default function WhyChoose() {
           ))}
         </div>
 
-        {/* Contact CTA removed per request - kept section spacing intact */}
       </div>
     </section>
   );

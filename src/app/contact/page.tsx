@@ -70,23 +70,22 @@ export default function ContactPage() {
   ];
 
   return (
-    <div>
+    <div className="contact-page">
       <Hero
-        variant="main"
+        variant="simple"
         title={t("contact.title")}
         subtitle={t("contact.subtitle")}
         imageSrc="/images/olohuone.png"
         maxWidth="48rem"
         titleClassName="text-4xl md:text-5xl lg:text-6xl font-bold animate-fade-in"
-        subtitleClassName="text-xl md:text-2xl text-gray-50 leading-relaxed"
+        subtitleClassName="text-xl md:text-2xl text-gray-700 leading-relaxed"
         imageAlt={t("contact.title")}
-        imagePriority
+        pageBackground
       />
 
       {/* Contact Information Grid - Modernisoidtu */}
       <section
-        className="section-container section-padding"
-        style={{ marginTop: "-3rem" }}
+        className="section-container pb-16 md:pb-24"
       >
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
@@ -95,7 +94,7 @@ export default function ContactPage() {
           {contactInfo.map((info, index) => (
             <div
               key={index}
-              className="group relative bg-white/60 backdrop-blur-sm rounded-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1"
+              className="group relative bg-transparent rounded-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1"
             >
               <div className="relative z-10 p-6">
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 border border-white/20 bg-white/10 text-primary">
@@ -153,7 +152,7 @@ export default function ContactPage() {
               {quickContact.map((card, index) => (
                 <div
                   key={index}
-                  className={`group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-100 overflow-hidden transition-all duration-300 transform hover:-translate-y-1`}
+                  className={`group relative bg-transparent rounded-2xl border border-gray-100 overflow-hidden transition-all duration-300 transform hover:-translate-y-1`}
                   style={{ padding: "1.5rem" }}
                 >
                   {/* Border accent */}
@@ -208,9 +207,9 @@ export default function ContactPage() {
             >
               {t("contact.map.title")}
             </h2>
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-100">
+            <div className="bg-transparent rounded-2xl overflow-hidden border border-gray-100">
               {/* Map Placeholder */}
-              <div className="bg-gradient-to-br from-gray-50 to-gray-100 h-[500px] flex items-center justify-center relative overflow-hidden">
+              <div className="bg-transparent h-[500px] flex items-center justify-center relative overflow-hidden">
                 <div className="text-center z-10" style={{ padding: "2rem" }}>
                   <div
                     className="bg-gradient-to-br from-primary-dark to-primary w-20 h-20 rounded-2xl flex items-center justify-center mx-auto"
@@ -267,7 +266,7 @@ export default function ContactPage() {
 
               {/* Business Hours Info */}
               <div
-                className="bg-gradient-to-r from-primary-darker to-primary-dark text-white"
+                className="bg-transparent border-t border-gray-200 text-gray-800"
                 style={{ padding: "1.5rem" }}
               >
                 <div className="flex items-center justify-between">
@@ -278,7 +277,7 @@ export default function ContactPage() {
                     >
                       {t("contact.map.hours_title")}
                     </h4>
-                    <p className="text-gray-100">
+                    <p className="text-gray-700">
                       {t("contact.map.hours_period")}
                     </p>
                   </div>
@@ -294,113 +293,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ Section - Modernisoidtu */}
-      <section className="relative bg-gradient-to-b from-gray-50 to-white section-padding">
-        <div className="section-container">
-          <h2
-            className="heading-2 text-center text-[#36302a]"
-            style={{ marginBottom: "3rem" }}
-          >
-            {t("contact.faq.title")}
-          </h2>
-          <div
-            style={{
-              maxWidth: "48rem",
-              margin: "0 auto",
-              display: "flex",
-              flexDirection: "column",
-              gap: "1rem",
-            }}
-          >
-            {[1, 2, 3, 4].map((num) => (
-              <details
-                key={num}
-                className="group bg-white/90 backdrop-blur-sm rounded-xl transition-all border border-gray-100"
-                style={{ padding: "1.5rem" }}
-              >
-                <summary className="font-semibold text-[#36302a] cursor-pointer list-none flex items-center justify-between group-hover:text-primary-dark transition-colors">
-                  {t(`contact.faq${num}.title`)}
-                  <span
-                    className="text-2xl group-open:rotate-45 transition-transform bg-gradient-to-br from-primary-dark to-primary w-8 h-8 rounded-lg flex items-center justify-center text-white"
-                    style={{ marginLeft: "1rem" }}
-                  >
-                    +
-                  </span>
-                </summary>
-                <p
-                  className="text-gray-600 leading-relaxed"
-                  style={{ marginTop: "1rem" }}
-                >
-                  {t(`contact.faq${num}.desc`)}
-                </p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section - image background */}
-      <section
-        className="relative text-white section-padding overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-darkest via-primary-darker to-primary-dark"></div>
-
-        <div className="absolute inset-0 opacity-25 pointer-events-none">
-          <div className="absolute top-12 right-12 w-72 h-72 bg-white/6 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-12 left-12 w-96 h-96 bg-gray-300/6 rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="section-container text-center relative z-10">
-          <h2
-            className="text-4xl md:text-5xl font-extrabold leading-tight"
-            style={{ marginBottom: "1.25rem" }}
-          >
-            {t("contact.cta.title")}
-          </h2>
-          <p
-            className="text-lg md:text-xl text-gray-50 max-w-2xl mx-auto"
-            style={{ marginBottom: "1.75rem" }}
-          >
-            {t("contact.cta.desc")}
-          </p>
-
-          <div
-            className="flex flex-col sm:flex-row justify-center items-center"
-            style={{ gap: "1rem" }}
-          >
-            <Link
-              href="/order"
-              className="inline-flex items-center justify-center bg-white text-primary-dark rounded-full px-8 py-3 font-semibold hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
-            >
-              {t("nav.order")}
-            </Link>
-            <a
-              href="tel:+358402183270"
-              className="inline-flex items-center justify-center bg-white/20 text-white rounded-full px-6 py-3 font-medium border border-white/25 backdrop-blur-sm hover:backdrop-brightness-110 transition-all duration-300"
-            >
-              {t("contact.cta.phone_number")}
-            </a>
-          </div>
-        </div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-[#221e19]/40 to-[#221e19]/80 pointer-events-none"></div>
-      </section>
-
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-fade-in {
-          animation: fade-in 0.8s ease-out;
-        }
-      `}</style>
     </div>
   );
 }

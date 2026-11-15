@@ -2,7 +2,7 @@
 
 import { Suspense, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { Send, CheckCircle } from "lucide-react";
+import { Send, CheckCircle, ChevronDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Hero from "@/components/Hero";
 
@@ -93,7 +93,7 @@ function OrderForm({ initialService }: { initialService: string }) {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="min-h-screen flex items-center justify-center bg-transparent">
         <div className="text-center p-8">
           <div className="bg-gray-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="h-10 w-10 text-gray-600" />
@@ -108,18 +108,18 @@ function OrderForm({ initialService }: { initialService: string }) {
   }
 
   return (
-    <div>
+    <div className="order-page">
       <Hero
         variant="simple"
         title={t("order.title")}
         subtitle={t("order.subtitle")}
         imageSrc="/images/olohuone.png"
         imageAlt={t('order.title')}
-        imagePriority
+        pageBackground
       />
 
       {/* Form Section */}
-      <section className="section-container section-padding">
+      <section className="section-container pb-16 md:pb-24">
         <div style={{ maxWidth: "48rem", margin: "0 auto" }}>
           {error && (
             <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
@@ -128,7 +128,7 @@ function OrderForm({ initialService }: { initialService: string }) {
           )}
           <form
             onSubmit={handleSubmit}
-            className="bg-white rounded-xl border border-gray-100 p-4 sm:p-8"
+            className="bg-transparent rounded-xl border border-gray-100 p-4 sm:p-8"
           >
             {/* Company Name */}
             <div style={{ marginBottom: "1.5rem" }}>
@@ -235,14 +235,15 @@ function OrderForm({ initialService }: { initialService: string }) {
               >
                 {t("order.form.service")} *
               </label>
+              <div className="relative">
               <select
                 id="service"
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
                 required
-                className="w-full min-w-0 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-white"
-                style={{ padding: "0.75rem 1rem" }}
+                className="w-full min-w-0 appearance-none border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition bg-transparent"
+                style={{ padding: "0.75rem 3rem 0.75rem 1rem" }}
               >
                 {/* KORJAUS: Oletusvalinnan teksti käännettäväksi */}
                 <option value="">
@@ -254,6 +255,11 @@ function OrderForm({ initialService }: { initialService: string }) {
                   </option>
                 ))}
               </select>
+              <ChevronDown
+                className="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-700"
+                aria-hidden="true"
+              />
+              </div>
             </div>
 
             {/* Message */}
@@ -302,7 +308,7 @@ function OrderForm({ initialService }: { initialService: string }) {
           </form>
 
           {/* Additional Info - KORJATTU KÄYTTÄMÄÄN KÄÄNNÖSAVAIMIA */}
-          <div className="bg-white/6 backdrop-blur-sm p-5 rounded-xl" style={{ marginTop: '2rem' }}>
+          <div className="bg-transparent p-5 rounded-xl" style={{ marginTop: '2rem' }}>
             <h3 className="font-semibold text-[#36302a] mb-3">{t('order.next.title')}</h3>
 
             <ol className="flex flex-col gap-4 text-gray-700">

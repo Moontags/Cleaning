@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Header from "@/components/Header";
+import PageBackground from "@/components/PageBackground";
 import Footer from "@/components/Footer";
 import { ConsentDialog } from "@/components/consent-dialog";
 import { Open_Sans, Lato } from "next/font/google";
@@ -170,6 +171,7 @@ export default function RootLayout({
       </head>
       <body>
         <LanguageProvider>
+          <PageBackground />
           <ConsentDialog />
           <Header />
           <main className="min-h-screen">{children}</main>

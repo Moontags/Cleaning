@@ -1,12 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { LAATUTAKUU_URL } from "./LaatutakuuBadge";
 
 export default function Footer() {
   const { t } = useLanguage();
+  const pathname = usePathname();
+
+  if (pathname === "/pricing" || pathname === "/contact") return null;
   const currentYear = new Date().getFullYear();
 
   const headingClass =

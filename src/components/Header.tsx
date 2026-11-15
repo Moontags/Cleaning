@@ -36,6 +36,7 @@ export default function Header() {
   ];
 
   const services = [
+    { name: t("services.title"), href: "/services" },
     { name: t("services.floor.title"), href: "/services/machine-floor-cleaning" },
     { name: t("services.office.title"), href: "/services/office-cleaning" },
     {
@@ -62,9 +63,18 @@ export default function Header() {
   const isActive = (href: string) => pathname === href;
 
   return (
-    <header className="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
+    <header
+      className="relative z-50 bg-transparent"
+      onKeyDown={(event) => {
+        if (event.key === "Escape") {
+          setIsMenuOpen(false);
+          setMobileServicesOpen(false);
+          setDesktopServicesOpen(false);
+        }
+      }}
+    >
       <nav className="section-container">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-[var(--site-header-height)]">
           {/* Logo - Modernisoidtu */}
           <Link
             href="/"
@@ -217,6 +227,8 @@ export default function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2.5 rounded-xl hover:bg-gradient-to-br hover:from-gray-50 hover:to-gray-100 transition-all duration-300"
             aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
           >
             {isMenuOpen ? (
               <X className="h-6 w-6 text-primary" />
@@ -229,7 +241,8 @@ export default function Header() {
         {/* Mobile Navigation - Modernisoidtu */}
         {isMenuOpen && (
           <div
-            className="lg:hidden max-h-[calc(100dvh-6rem)] overflow-y-auto border-t border-gray-100 bg-white/95 backdrop-blur-sm rounded-b-2xl"
+            id="mobile-navigation"
+            className="site-mobile-menu lg:hidden max-h-[calc(100dvh-6rem)] overflow-y-auto rounded-2xl"
             style={{
               paddingTop: "1rem",
               paddingBottom: "1rem",
@@ -246,6 +259,8 @@ export default function Header() {
               <div>
                 <button
                   onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                  aria-expanded={mobileServicesOpen}
+                  aria-controls="mobile-services"
                   className={`w-full text-left relative text-base font-medium transition-all duration-300 overflow-hidden flex items-center justify-between ${
                     mobileServicesOpen
                       ? "text-primary-dark font-semibold bg-gradient-to-r from-gray-50 to-gray-100"
@@ -262,6 +277,7 @@ export default function Header() {
                 </button>
                 {mobileServicesOpen && (
                   <div
+                    id="mobile-services"
                     style={{
                       display: "flex",
                       flexDirection: "column",
@@ -278,7 +294,7 @@ export default function Header() {
                           setIsMenuOpen(false);
                           setMobileServicesOpen(false);
                         }}
-                        className="block text-gray-700 hover:text-primary-dark px-4 py-2 rounded-md hover:bg-gray-50 transition-colors duration-200"
+                        className="block min-h-11 text-gray-700 hover:text-primary-dark px-4 py-2.5 rounded-md hover:bg-gray-50 transition-colors duration-200"
                       >
                         {svc.name}
                       </Link>

@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import WaveBottom from "@/components/WaveBottom";
 
 interface HeroProps {
   variant: "main" | "service" | "simple";
@@ -12,6 +11,7 @@ interface HeroProps {
   imageSrc?: string;
   imageAlt?: string;
   imagePriority?: boolean;
+  pageBackground?: boolean;
   ctaButton?: {
     text: string;
     href?: string;
@@ -29,6 +29,7 @@ export default function Hero({
   imageSrc,
   imageAlt,
   imagePriority,
+  pageBackground = false,
   ctaButton,
   maxWidth,
   titleClassName,
@@ -91,9 +92,6 @@ export default function Hero({
     },
   }[variant];
 
-  // Ilman kuvaa heroista tulee vaalea (yhtenäinen kaikilla alasivuilla)
-  const isLight = !imageSrc;
-
   return (
     <>
       <section
@@ -101,29 +99,30 @@ export default function Hero({
           variant === "main" ? config.minHeightClass : ""
         } ${
           imageSrc
-            ? "bg-neutral-900 text-white"
-            : "bg-gradient-to-b from-[#faf8f3] to-white text-[#36302a]"
+            ? "site-photo-hero"
+            : "bg-surface text-[#36302a]"
         } overflow-hidden`}
       >
         {/** Render background image if provided */}
         {/** Image is placed before decorative circles so overlay and circles remain visible */}
         {/** Use a very small SVG blurDataURL fallback when placeholder not provided */}
-        {imageSrc && (
+        {imageSrc && !pageBackground && (
           <>
             <Image
               src={imageSrc}
               alt={imageAlt || title}
               fill
+              sizes="100vw"
               className="object-cover object-center"
               placeholder="blur"
               blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI3Ij48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjY2ZlM2ZmIi8+PC9zdmc+"
               priority={imagePriority}
             />
-            {/* Neutral gradient overlay for text contrast (no color tint) */}
-            <div className="absolute inset-0 bg-linear-to-b from-black/35 via-black/25 to-black/50" />
+            {/* Warm overlay keeps text readable and blends the photo into the page. */}
+            <div className="site-photo-hero-overlay" />
           </>
         )}
-        {imageSrc && config.decorativeCircles && (
+        {imageSrc && !pageBackground && config.decorativeCircles && (
           <div className="absolute inset-0 opacity-10">
             <div
               className={`absolute ${config.decorativeCircles.top} bg-white rounded-full blur-3xl`}
@@ -167,11 +166,7 @@ export default function Hero({
                 {ctaButton && (
                   <Link
                     href={ctaButton.href || "/order"}
-                    className={`inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold transition-all duration-300 hover:gap-3 ${
-                      isLight
-                        ? "bg-primary-dark text-white hover:bg-primary-darker"
-                        : "bg-white text-primary-dark hover:bg-gray-50"
-                    }`}
+                    className="inline-flex items-center gap-2 px-6 md:px-8 py-3 md:py-4 rounded-lg font-semibold transition-all duration-300 hover:gap-3 bg-primary-dark text-white hover:bg-primary-darker"
                   >
                     {ctaButton.text}
                     {ctaButton.icon ? (
@@ -197,8 +192,6 @@ export default function Hero({
             )}
           </div>
         </div>
-
-        {config.showWave && imageSrc && <WaveBottom />}
       </section>
 
       {config.showAnimation && (
