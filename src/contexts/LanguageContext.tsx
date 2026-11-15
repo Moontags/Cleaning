@@ -17,6 +17,11 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 // Käännökset
 const translations = {
   fi: {
+    "campaign.results.corridor.beforeAlt": "Käytävän lattia ennen puhdistusta",
+    "campaign.results.corridor.afterAlt": "Käytävän lattia puhdistuksen jälkeen",
+    "campaign.results.corridor.beforeCaption": "Käytävä ennen puhdistusta.",
+    "campaign.results.corridor.afterCaption": "Käytävä puhdistuksen jälkeen.",
+
     "compact.services.title": "Palvelut tilasi tarpeisiin",
     "compact.services.intro": "Valitse palvelu ja pyydä kohteeseesi sopiva tarjous.",
     "compact.services.back": "Kaikki palvelut",
@@ -71,7 +76,7 @@ const translations = {
     "campaign.results.afterAlt": "Puhdistettu toimitilan lattia työn jälkeen, kuvattuna käytävän suunnasta",
     "campaign.results.beforeCaption": "Lähtötilanne: pinttynyttä likaa lattiassa.",
     "campaign.results.afterCaption": "Työn jälkeen: puhdistettu ja siisti lattiapinta.",
-    "campaign.results.note": "Kuvat samasta työkohteesta eri kuvakulmista. Lopputulos riippuu lattian materiaalista, kunnosta ja sovitusta käsittelystä.",
+    "campaign.results.note": "Kuvaparit on otettu ennen ja jälkeen puhdistuksen. Kuvakulmat voivat poiketa toisistaan. Lopputulos riippuu lattian materiaalista, kunnosta ja sovitusta käsittelystä.",
     "campaign.results.cta": "Katsotaan, mitä lattiasi tarvitsee",
     "campaign.process.eyebrow": "Huolellinen ote alusta loppuun",
     "campaign.process.title": "Oikea menetelmä. Lattiasi mukaan.",
@@ -690,6 +695,11 @@ const translations = {
     "service.construction.cta.button": "Tilaa siivous",
   },
   en: {
+    "campaign.results.corridor.beforeAlt": "Corridor floor before cleaning",
+    "campaign.results.corridor.afterAlt": "Corridor floor after cleaning",
+    "campaign.results.corridor.beforeCaption": "Corridor before cleaning.",
+    "campaign.results.corridor.afterCaption": "Corridor after cleaning.",
+
     "compact.services.title": "Cleaning for your space",
     "compact.services.intro": "Choose a service and request a quote for your space.",
     "compact.services.back": "All services",
@@ -744,7 +754,7 @@ const translations = {
     "campaign.results.afterAlt": "The cleaned floor after the work, photographed towards the corridor",
     "campaign.results.beforeCaption": "Before: built-up dirt on the floor.",
     "campaign.results.afterCaption": "After: a clean, tidy floor surface.",
-    "campaign.results.note": "Photos from the same premises, taken from different angles. Results depend on the material, floor condition and agreed treatment.",
+    "campaign.results.note": "Photo pairs show the floor before and after cleaning. Camera angles may differ. Results depend on the material, floor condition and agreed treatment.",
     "campaign.results.cta": "Let’s find out what your floor needs",
     "campaign.process.eyebrow": "Care from start to finish",
     "campaign.process.title": "The right method. For your floor.",

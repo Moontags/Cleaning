@@ -55,6 +55,33 @@ export function FloorCleaningResults() {
           <figcaption>{t("campaign.results.afterCaption")}</figcaption>
         </figure>
       </div>
+      <div
+        id="kaytava-vertailu"
+        className="floor-campaign-comparison"
+        style={{ marginTop: "2.5rem" }}
+      >
+        {(["before", "after"] as const).map((stage) => (
+          <figure key={stage}>
+            <div
+              className="floor-campaign-comparison-image [--corridor-ratio:9/20] md:[--corridor-ratio:4/3]"
+              style={{ aspectRatio: "var(--corridor-ratio)" }}
+            >
+              <Image
+                src={stage === "before" ? "/images/kaytava-ennen.jpg" : "/images/kaytava-jalkeen.jpg"}
+                alt={t(`campaign.results.corridor.${stage}Alt`)}
+                fill
+                sizes="(max-width: 767px) 45vw, 50vw"
+                className={`floor-campaign-cover ${stage === "after" ? "[--corridor-position:65%] md:[--corridor-position:100%]" : "[--corridor-position:65%]"}`}
+                style={{ objectPosition: "center var(--corridor-position)" }}
+              />
+              <span className={`floor-campaign-image-tag ${stage === "after" ? "floor-campaign-image-tag-after" : ""}`}>
+                {t(`campaign.results.${stage}`)}
+              </span>
+            </div>
+            <figcaption>{t(`campaign.results.corridor.${stage}Caption`)}</figcaption>
+          </figure>
+        ))}
+      </div>
       <div className="floor-campaign-results-footer"><p>{t("campaign.results.note")}</p><Link href={quoteHref} className="floor-campaign-text-link">{t("campaign.results.cta")}<ArrowUpRight size={18} aria-hidden="true" /></Link></div>
     </section>
   );
